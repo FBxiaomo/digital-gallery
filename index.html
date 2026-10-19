@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数码图鉴 | 手机·充电宝·充电器</title>
+<link rel="icon" type="image/x-icon" href="logo/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+<link rel="manifest" href="logo/site.webmanifest">
+<style>
+@font-face {
+  font-family: 'SmileySans';
+  src: url('fonts/SmileySans-Oblique.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg: #f5f6f8;
+  --text: #2c2c2a;
+  --text2: #5f5e5a;
+  --text3: #999;
+  --border: #e0e0db;
+  --primary: #185fa5;
+  --primary-bg: #e6f1fb;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+  --card-mask-from: rgba(255,255,255,0.92);
+  --card-mask-mid: rgba(255,255,255,0.78);
+  --card-mask-to: rgba(255,255,255,0.3);
+  --card-glow: rgba(56,89,138,0.15);
+  --card-name-shadow: none;
+  --badge-bg: rgba(0,0,0,0.06);
+  --badge-border: rgba(0,0,0,0.08);
+  --badge-color: #2c2c2a;
+  --badge-power-bg: linear-gradient(135deg,#f59e0b,#ef4444);
+  --badge-power-color: #fff;
+  --badge-port-bg: rgba(24,95,165,0.1);
+  --badge-port-border: rgba(24,95,165,0.2);
+  --badge-port-color: #185fa5;
+  --badge-proto-bg: rgba(0,0,0,0.04);
+  --badge-proto-border: rgba(0,0,0,0.06);
+  --badge-proto-color: #5f5e5a;
+  --badge-purple-bg: rgba(124,58,237,0.1);
+  --badge-purple-border: rgba(124,58,237,0.2);
+  --badge-purple-color: #7c3aed;
+  --badge-bat-bg: rgba(220,38,38,0.08);
+  --badge-bat-border: rgba(220,38,38,0.15);
+  --badge-bat-color: #dc2626;
+  --badge-cap-bg: rgba(234,88,12,0.08);
+  --badge-cap-border: rgba(234,88,12,0.15);
+  --badge-cap-color: #ea580c;
+  --badge-cyan-bg: rgba(8,145,178,0.08);
+  --badge-cyan-border: rgba(8,145,178,0.15);
+  --badge-cyan-color: #0891b2;
+  --badge-proc-perf-bg: rgba(22,163,74,0.08);
+  --badge-proc-perf-border: rgba(22,163,74,0.15);
+  --badge-proc-perf-color: #16a34a;
+  --expand-bar-bg: rgba(0,0,0,0.15);
+  --expand-bar-active: rgba(0,0,0,0.25);
+  --panel-bg: #ffffff;
+  --panel-border: rgba(0,0,0,0.06);
+  --detail-label: rgba(0,0,0,0.4);
+  --detail-border: rgba(0,0,0,0.06);
+  --detail-note-color: rgba(0,0,0,0.4);
+  --surface-subtle: rgba(0,0,0,0.04);
+  --perf-bar-track-bg: rgba(0,0,0,0.08);
+  --perf-bar-label: rgba(0,0,0,0.5);
+  --perf-bar-name: rgba(0,0,0,0.35);
+  --slider-track: rgba(0,0,0,0.08);
+  --slider-thumb-border: #ffffff;
+  --proc-phone-item-bg: rgba(24,95,165,0.08);
+  --proc-phone-item-color: #185fa5;
+  --proc-link-color: #185fa5;
+  --modal-mask: rgba(0,0,0,0.3);
+  --modal-bg: #ffffff;
+  --modal-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  --modal-border: #e0e0db;
+  --topbar-bg: rgba(255,255,255,0.72);
+  --drawer-bg: rgba(255,255,255,0.6);
+  --drawer-border: rgba(0,0,0,0.05);
+  --perf-high: #3b6d11;
+  --perf-mid: #185fa5;
+  --perf-low: #92400e;
+  --changelog-devices-bg: #f5f6f8;
+}
+
+[data-theme="dark"] {
+  --bg: #111111;
+  --text: #f0f0f0;
+  --text2: #a0a0a0;
+  --text3: #666666;
+  --border: rgba(255,255,255,0.08);
+  --primary: #3b82f6;
+  --primary-bg: rgba(59,130,246,0.15);
+  --card-bg: #1a1a1a;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.06);
+  --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+  --card-mask-from: rgba(17,17,17,0.93);
+  --card-mask-mid: rgba(17,17,17,0.75);
+  --card-mask-to: rgba(17,17,17,0.35);
+  --card-glow: rgba(80,80,80,0.4);
+  --card-name-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  --badge-bg: rgba(255,255,255,0.1);
+  --badge-border: rgba(255,255,255,0.15);
+  --badge-color: #fff;
+  --badge-port-bg: rgba(255,255,255,0.08);
+  --badge-port-border: rgba(255,255,255,0.12);
+  --badge-port-color: #93c5fd;
+  --badge-proto-bg: rgba(255,255,255,0.06);
+  --badge-proto-border: rgba(255,255,255,0.1);
+  --badge-proto-color: #cbd5e1;
+  --badge-purple-bg: rgba(167,139,250,0.2);
+  --badge-purple-border: rgba(167,139,250,0.3);
+  --badge-purple-color: #c4b5fd;
+  --badge-bat-bg: rgba(251,113,133,0.2);
+  --badge-bat-border: rgba(251,113,133,0.3);
+  --badge-bat-color: #fda4af;
+  --badge-cap-bg: rgba(251,146,60,0.2);
+  --badge-cap-border: rgba(251,146,60,0.3);
+  --badge-cap-color: #fdba74;
+  --badge-cyan-bg: rgba(34,211,238,0.15);
+  --badge-cyan-border: rgba(34,211,238,0.25);
+  --badge-cyan-color: #67e8f9;
+  --badge-proc-perf-bg: rgba(74,222,128,0.15);
+  --badge-proc-perf-border: rgba(74,222,128,0.25);
+  --badge-proc-perf-color: #86efac;
+  --expand-bar-bg: rgba(255,255,255,0.4);
+  --expand-bar-active: rgba(255,255,255,0.5);
+  --panel-bg: #222222;
+  --panel-border: rgba(255,255,255,0.08);
+  --detail-label: rgba(255,255,255,0.4);
+  --detail-border: rgba(255,255,255,0.06);
+  --detail-note-color: rgba(255,255,255,0.4);
+  --surface-subtle: rgba(255,255,255,0.05);
+  --perf-bar-track-bg: rgba(255,255,255,0.08);
+  --perf-bar-label: rgba(255,255,255,0.5);
+  --perf-bar-name: rgba(255,255,255,0.35);
+  --slider-track: rgba(255,255,255,0.1);
+  --slider-thumb-border: #1e293b;
+  --proc-phone-item-bg: rgba(255,255,255,0.08);
+  --proc-phone-item-color: #93c5fd;
+  --proc-link-color: #93c5fd;
+  --modal-mask: rgba(0,0,0,0.5);
+  --modal-bg: #1a1a1a;
+  --modal-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --modal-border: rgba(255,255,255,0.08);
+  --topbar-bg: rgba(17,17,17,0.85);
+  --drawer-bg: rgba(17,17,17,0.7);
+  --drawer-border: rgba(255,255,255,0.05);
+  --perf-high: #4ade80;
+  --perf-mid: #60a5fa;
+  --perf-low: #fbbf24;
+  --changelog-devices-bg: rgba(255,255,255,0.04);
+}
+
+.glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px double rgba(255,255,255,0.12);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.7),inset -2px 2px 1px -1px rgba(255,255,255,0.7),inset 6px -6px 1px -6px rgba(255,255,255,0.4),inset -6px 6px 1px -6px rgba(255,255,255,0.4),inset 0 0 2px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.12);transition:background .3s ease,border-color .3s ease,box-shadow .3s ease}
+.glass::before{content:'';position:absolute;z-index:-1;top:40%;left:50%;transform:translateX(-50%);width:calc(100% - 12px);height:calc(100% - 12px);border-radius:inherit;border:1px solid rgba(0,0,0,0.6);filter:blur(8px)}
+.glass::after{content:'';position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;border-radius:inherit;filter:blur(2px);background:linear-gradient(135deg,rgba(255,255,255,0.6) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.6) 100%);pointer-events:none}
+
+[data-theme="dark"] .glass{background:rgba(255,255,255,0.02);border-color:rgba(255,255,255,0.04);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.25),inset -2px 2px 1px -1px rgba(255,255,255,0.25),inset 6px -6px 1px -6px rgba(255,255,255,0.1),inset -6px 6px 1px -6px rgba(255,255,255,0.1),inset 0 0 2px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.3)}
+[data-theme="dark"] .glass::before{border-color:rgba(0,0,0,0.8)}
+[data-theme="dark"] .glass::after{background:linear-gradient(135deg,rgba(255,255,255,0.08) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.08) 100%)}
+[data-theme="dark"] .fab-toggle.glass::after{background:linear-gradient(90deg,transparent 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.08) 100%)}
+[data-theme="dark"] .topbar.glass{border:none;border-bottom:1px solid rgba(255,255,255,0.04);box-shadow:inset 0 -2px 1px -1px rgba(255,255,255,0.1),0 4px 16px rgba(0,0,0,0.3)}
+.drawer.glass::before,.fab-toggle.glass::before{display:none}
+.fab-toggle.glass::after{background:linear-gradient(90deg,transparent 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.6) 100%)}
+[data-theme="dark"] .search-inner #search-input{border-color:transparent;background:rgba(255,255,255,0.03)}
+[data-theme="dark"] .search-inner #search-input:focus{border-color:transparent}
+[data-theme="dark"] .search-inner .search-clear{background:rgba(255,255,255,0.08)}
+[data-theme="dark"] .search-inner .search-clear:hover{background:rgba(255,255,255,0.15)}
+[data-theme="dark"] .search-inner .search-btn{border-color:rgba(255,255,255,0.08);background:rgba(255,255,255,0.06);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.3),inset -1px 1px 1px -1px rgba(255,255,255,0.3),0 2px 8px rgba(0,0,0,0.2)}
+[data-theme="dark"] .search-inner .search-btn:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15)}
+
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+html{scrollbar-gutter:stable}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--text3)}
+
+.topbar{position:sticky;top:0;z-index:100;background:var(--topbar-bg);border-bottom:none;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
+.topbar h1,.topbar .sort-group{position:relative;z-index:2;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.15))}
+.topbar h1{font-size:18px;font-weight:600;display:flex;align-items:center}
+.site-logo{height:30px;width:30px;border-radius:6px;vertical-align:middle;margin-right:6px;transition:transform .35s cubic-bezier(.22,1,.36,1);cursor:pointer;display:inline-block}
+.site-logo:hover{transform:rotate(15deg)}
+.sort-group{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.sort-btn{font-size:11px;padding:4px 9px;border-radius:6px;border:0.5px solid var(--border);background:var(--card-bg);color:var(--text2);cursor:pointer;transition:border-color .15s,color .15s;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
+.sort-btn:hover{background:var(--primary-bg);border-color:var(--primary)}
+.sort-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+.about-mask,.changelog-mask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--modal-mask);z-index:200;align-items:center;justify-content:center;padding:20px}
+.about-mask.open,.changelog-mask.open{display:flex}
+.about-panel,.changelog-panel{background:var(--modal-bg);border-radius:24px;max-width:520px;width:100%;max-height:80vh;overflow-y:auto;padding:24px 28px;position:relative;box-shadow:var(--modal-shadow);border:0.5px solid var(--modal-border)}
+.about-panel.glass,.changelog-panel.glass{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px double rgba(255,255,255,0.12);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.7),inset -2px 2px 1px -1px rgba(255,255,255,0.7),inset 6px -6px 1px -6px rgba(255,255,255,0.4),inset -6px 6px 1px -6px rgba(255,255,255,0.4),inset 0 0 2px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.12)}
+.about-panel.glass::after,.changelog-panel.glass::after{display:none}
+[data-theme="dark"] .about-panel.glass,[data-theme="dark"] .changelog-panel.glass{background:rgba(26,26,26,0.92);border-color:rgba(255,255,255,0.04);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.25),inset -2px 2px 1px -1px rgba(255,255,255,0.25),inset 6px -6px 1px -6px rgba(255,255,255,0.1),inset -6px 6px 1px -6px rgba(255,255,255,0.1),inset 0 0 2px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.3)}
+.about-panel h3,.changelog-panel h3{font-size:15px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;justify-content:space-between}
+.about-close,.changelog-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2);padding:0 4px}
+.about-close:hover,.changelog-close:hover{color:var(--text)}
+.about-body{font-size:13px;line-height:1.8}
+.about-body hr{border:none;border-top:1px solid var(--border);margin:12px 0}
+.about-body h4{font-size:14px;font-weight:600;margin:8px 0 4px}
+.about-body a{color:var(--primary);text-decoration:none}
+.about-body a:hover{text-decoration:underline}
+.perf-note{font-size:13px;color:var(--text);margin-bottom:12px}
+.perf-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px}
+.perf-table th,.perf-table td{padding:6px 8px;border-bottom:0.5px solid var(--border);text-align:left}
+.perf-table th{background:var(--surface-subtle);font-weight:600;color:var(--text)}
+
+.changelog-list{list-style:none}
+.changelog-list li{font-size:13px;color:var(--text);padding:10px 0;border-bottom:0.5px solid var(--border);line-height:1.6}
+.changelog-list li:last-child{border-bottom:none}
+.changelog-date{font-size:11px;color:var(--text2);font-weight:500}
+.changelog-devices{display:none;margin-top:6px;padding:6px 8px;background:var(--changelog-devices-bg);border-radius:6px;font-size:12px;color:var(--text);line-height:1.8}
+.changelog-devices.open{display:block}
+.changelog-toggle{font-size:11px;color:var(--primary);cursor:pointer;border:none;background:none;padding:0;margin-top:4px}
+.changelog-toggle:hover{text-decoration:underline}
+
+.main{display:flex;min-height:calc(100vh - 56px)}
+.drawer-mask{display:contents}
+.drawer{width:180px;flex-shrink:0;padding:16px 0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;display:flex;flex-direction:column;background:var(--drawer-bg)}
+.drawer h3{font-size:11px;color:var(--text3);letter-spacing:1px;padding:0 20px;margin-bottom:8px}
+.drawer-list{list-style:none;padding:0;margin:0}
+.drawer-item{display:flex;align-items:center;gap:10px;padding:10px 20px;font-size:14px;cursor:pointer;border-left:3px solid transparent;transition:border-color .15s,color .15s;color:var(--text2)}
+.drawer-item:hover{background:var(--primary-bg)}
+.drawer-item.active{border-left-color:var(--primary);background:var(--primary-bg);color:var(--primary);font-weight:500}
+.drawer-theme-wrap{position:relative;margin-top:auto;width:calc(100% - 24px);margin-left:12px;margin-right:12px;display:flex;border-top:0.5px solid var(--drawer-border);height:36px;align-items:center}
+.theme-anchor{position:relative;height:36px;width:62px;flex-shrink:0;overflow:visible;z-index:11}
+.theme-selector{position:absolute;bottom:0;left:0;border-radius:999px;overflow:hidden;cursor:pointer;transition:max-height .35s cubic-bezier(.22,1,.36,1);max-height:36px}
+.theme-selector.open{max-height:108px}
+.theme-selector-track{transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.theme-option{height:36px;line-height:36px;padding:0 16px;font-size:13px;text-align:center;color:var(--text2);cursor:pointer;transition:color .15s;white-space:nowrap}
+.theme-option:hover{color:var(--primary)}
+.theme-option.active{color:var(--text);font-weight:500}
+.side-btns{position:absolute;right:0;bottom:0;display:flex;gap:6px;z-index:12}
+.side-btn{width:36px;height:36px;border-radius:999px;border:0.5px solid var(--border);background:var(--card-bg);color:var(--text3);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:color .15s,border-color .15s}
+.side-btn:hover{background:var(--primary-bg);color:var(--primary)}
+[data-theme="dark"] .theme-selector.glass,[data-theme="dark"] .side-btn{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.15);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.08),inset -1px 1px 1px -1px rgba(255,255,255,0.08),0 2px 8px rgba(0,0,0,0.3);color:var(--text)}
+.content{flex:1;padding:24px}
+.content-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.content-header h2{font-size:20px;font-weight:600}
+
+.search-bar-bottom{position:fixed;bottom:8px;left:16px;right:16px;z-index:90;border-radius:24px}
+.search-inner{position:relative;display:flex;align-items:center;padding:6px}
+.search-inner #search-input{flex:1;padding:10px 14px;padding-right:68px;font-size:14px;border:0.5px solid transparent;border-radius:999px;background:rgba(255,255,255,0.06);color:var(--text);outline:none;transition:border-color .15s}
+.search-inner #search-input:focus{border-color:transparent}
+.search-inner #search-input::placeholder{color:var(--text3)}
+.search-inner .search-clear{display:none;position:absolute;right:50px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;border:none;background:rgba(255,255,255,0.15);color:var(--text3);font-size:14px;cursor:pointer;align-items:center;justify-content:center}
+.search-inner .search-clear:hover{background:rgba(255,255,255,0.25);color:var(--text)}
+.search-inner .search-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--text);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.5),inset -1px 1px 1px -1px rgba(255,255,255,0.5),0 2px 8px rgba(0,0,0,0.1)}
+.search-inner .search-btn:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.25)}
+.device-count{font-size:13px;color:var(--text3)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;padding-bottom:24px}
+#grid{position:relative}
+
+/* ===== 卡片（三层叠加：bg → mask → content） ===== */
+.card{position:relative;overflow:hidden;min-height:170px;border-radius:24px;background:var(--card-bg);box-shadow:var(--card-shadow);cursor:pointer;transition:box-shadow .3s ease,transform .3s ease,min-height .15s ease-out;contain:layout style paint;content-visibility:auto;contain-intrinsic-size:260px 170px}
+.card::before{content:'';position:absolute;inset:0;z-index:0;border-radius:inherit;background:radial-gradient(ellipse 80% 70% at 80% 50%,var(--card-glow),transparent 70%);opacity:0;transition:opacity .6s cubic-bezier(.22,1,.36,1);pointer-events:none;transform:none;width:100%;height:100%;border:none;filter:none}
+.card[data-cat-type="device"].has-img.expanded::before{opacity:0.3}
+.card:hover{transform:translateY(-2px);box-shadow:var(--card-shadow-hover);will-change:transform}
+.card.expanded{min-height:200px;content-visibility:visible}
+
+/* Layer 0: 产品图/品牌渐变背景 */
+.card-bg{position:absolute;inset:0;z-index:0;border-radius:inherit;opacity:0.6;background-size:contain;background-repeat:no-repeat;background-position:88% center;transform:translateX(0) scale(1);transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .6s ease,background-position .6s cubic-bezier(.22,1,.36,1),z-index 0s}
+.card-bg.bg-init{opacity:0;transform:translateX(60px) scale(0.9)}
+.card:hover .card-bg{transform:scale(1.05) translateX(-5px);opacity:0.85}
+.card[data-cat-type="device"].has-img.expanded .card-bg{z-index:3;background-position:center center;transform:scale(1.1);opacity:1}
+
+/* Layer 1: 斜向渐变遮罩 */
+.card-mask{position:absolute;inset:0;z-index:1;border-radius:inherit;background:linear-gradient(100deg,var(--card-mask-from) 0%,var(--card-mask-mid) 30%,var(--card-mask-to) 55%,transparent 80%);transition:opacity .5s cubic-bezier(.22,1,.36,1)}
+.card[data-cat-type="device"].has-img.expanded .card-mask{opacity:0.15}
+
+/* Layer 2: 内容层 */
+.card-head{position:relative;z-index:2;padding:16px 18px 14px;display:flex;align-items:center;gap:12px;background:none;transition:padding .5s cubic-bezier(.22,1,.36,1),opacity .4s cubic-bezier(.22,1,.36,1);filter:drop-shadow(0 1px 2px rgba(0,0,0,0.15))}
+.card[data-cat-type="device"].has-img.expanded .card-head{opacity:0.25}
+/* 处理器卡片：展开时隐藏背景光晕 */
+.card[data-cat-type="processor"].has-img.expanded::before{opacity:0}
+.card-name{font-size:15px;font-weight:450;margin-bottom:8px;line-height:1.3;flex:1;min-width:0;color:var(--text);text-shadow:var(--card-name-shadow);font-family:'SmileySans',sans-serif}
+.card-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.card-info{flex:1;min-width:0}
+
+.meta-badge{display:inline-flex;align-items:center;font-size:11px;padding:2px 7px;border-radius:6px;font-weight:600;background:var(--badge-bg);border:1px solid var(--badge-border);color:var(--badge-color)}
+.meta-power{background:var(--badge-power-bg);border-color:transparent;font-weight:800;color:var(--badge-power-color)}
+.meta-port{background:var(--badge-port-bg);border-color:var(--badge-port-border);color:var(--badge-port-color)}
+.meta-proto{background:var(--badge-proto-bg);border-color:var(--badge-proto-border);color:var(--badge-proto-color)}
+.meta-phone-cpu{background:var(--badge-purple-bg);border-color:var(--badge-purple-border);color:var(--badge-purple-color)}
+.meta-phone-bat{background:var(--badge-bat-bg);border-color:var(--badge-bat-border);color:var(--badge-bat-color)}
+.meta-pb-cap{background:var(--badge-cap-bg);border-color:var(--badge-cap-border);color:var(--badge-cap-color)}
+.meta-phone-screen{background:var(--badge-cyan-bg);border-color:var(--badge-cyan-border);color:var(--badge-cyan-color)}
+.meta-phone-power{background:var(--badge-power-bg);border-color:transparent;font-weight:800;color:var(--badge-power-color)}
+.meta-proc-brand{background:var(--badge-purple-bg);border-color:var(--badge-purple-border);color:var(--badge-purple-color)}
+.meta-proc-process{background:var(--badge-cyan-bg);border-color:var(--badge-cyan-border);color:var(--badge-cyan-color)}
+.meta-proc-perf{background:var(--badge-proc-perf-bg);border-color:var(--badge-proc-perf-border);color:var(--badge-proc-perf-color)}
+
+.perf-slider-wrap{display:flex;align-items:center;gap:8px;margin-top:6px;padding:0 2px}
+.perf-slider{flex:1;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:var(--slider-track);outline:none;cursor:default;pointer-events:none}
+.perf-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--badge-proc-perf-color);border:2px solid var(--slider-thumb-border);cursor:ew-resize;pointer-events:auto;box-shadow:0 0 6px rgba(134,239,172,0.4);transition:transform .15s,box-shadow .15s}
+.perf-slider::-webkit-slider-thumb:hover{transform:scale(1.2);box-shadow:0 0 10px rgba(134,239,172,0.6)}
+.perf-slider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--badge-proc-perf-color);border:2px solid var(--slider-thumb-border);cursor:ew-resize;pointer-events:auto;box-shadow:0 0 6px rgba(134,239,172,0.4)}
+
+
+.card-expand-bar{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:24px;height:2px;background:var(--expand-bar-bg);border-radius:1px;opacity:0.5;transition:all .2s ease;z-index:2}
+.card:hover .card-expand-bar{width:48px;opacity:0.8}
+.card.expanded .card-expand-bar,.card-expand-bar.expanding{width:100%!important;background:var(--expand-bar-active)!important;opacity:1!important;bottom:0;border-radius:0}
+
+.card-detail-panel{display:none;position:absolute;top:100%;left:0;background:var(--panel-bg);border:0.5px solid var(--panel-border);border-radius:0 0 24px 24px;overflow:hidden;z-index:10;will-change:transform,opacity;box-sizing:border-box}
+.card-detail-panel.open{display:block;max-height:0;opacity:0;overflow:hidden;transform-origin:top center;transition:max-height .35s cubic-bezier(.22,1,.36,1),opacity .25s ease}
+.card-detail-panel .detail-inner{padding:14px 16px}
+.card-detail-panel.closing{display:block;overflow:hidden;transform-origin:top center;transition:max-height .25s cubic-bezier(.22,1,.36,1),opacity .15s ease;max-height:0;opacity:0}
+
+.card-overlay{position:fixed;top:56px;left:0;right:0;bottom:0;z-index:15;background:rgba(0,0,0,0.5);opacity:0;transition:opacity .25s ease}
+.card-overlay.show{opacity:1}
+.card.overlay-active{z-index:20;position:relative}
+
+.detail-info{font-size:12px;color:var(--detail-label);margin-bottom:10px;display:flex;gap:12px;flex-wrap:wrap}
+.detail-info span{color:var(--text);font-weight:500}
+.detail-specs{list-style:none;font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:820px;margin:0 auto}
+.detail-specs li{display:flex;padding:7px 10px;border-bottom:0.5px solid var(--detail-border);gap:10px;align-items:baseline}
+.detail-specs li:nth-last-child(-n+2){border-bottom:none}
+.detail-specs .sk{color:var(--detail-label);flex-shrink:0;min-width:76px;font-size:11px}
+.detail-specs .sv{color:var(--text);word-break:break-all}
+.detail-note{margin-top:10px;font-size:11px;color:var(--detail-note-color);line-height:1.6;font-style:italic;max-width:820px;margin-left:auto;margin-right:auto}
+.proc-phones{margin-top:12px;padding:10px 12px;background:var(--surface-subtle);border-radius:8px}
+.proc-phones-title{font-size:12px;color:var(--detail-label);margin-bottom:6px;font-weight:600}
+.proc-phone-item{display:inline-block;font-size:12px;color:var(--proc-phone-item-color);background:var(--proc-phone-item-bg);padding:3px 10px;border-radius:6px;margin:2px 4px 2px 0;cursor:pointer}
+.proc-phone-item:hover{background:var(--primary-bg)}
+.proc-link{color:var(--proc-link-color);cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+.proc-link:hover{text-decoration-style:solid}
+
+.perf-bar-container{margin:8px 0 10px;padding:8px 10px;background:var(--surface-subtle);border-radius:6px}
+.perf-bar-track{height:4px;background:var(--perf-bar-track-bg);border-radius:2px;overflow:hidden}
+.perf-bar-fill{height:100%;border-radius:2px;transition:width .5s ease}
+.proc-perf-source{margin:6px 0 0;padding:6px 10px;background:var(--surface-subtle);border-radius:6px;font-size:11px;color:var(--perf-bar-label)}
+.perf-bar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.perf-bar-label{font-size:11px;color:var(--perf-bar-label);font-weight:500}
+.perf-bar-value{font-size:15px;font-weight:700}
+.perf-bar-name{font-size:10px;color:var(--perf-bar-name);margin-top:3px}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.empty{grid-column:1 / -1;text-align:center;padding:80px 20px;color:var(--text3)}
+.empty .icon{font-size:48px;margin-bottom:16px}
+.empty p{font-size:15px}
+.error-text{color:#e11d48}
+.fab-toggle{display:none}
+
+@media (max-width:768px){
+.topbar{padding:0 12px;flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:6px}
+.sort-group{flex-wrap:wrap;justify-content:flex-end}
+.sort-btn{font-size:10px;padding:3px 7px}
+.content{padding:16px}
+.grid{grid-template-columns:repeat(2,1fr) !important;gap:10px}
+.card{min-height:150px}
+.card.expanded{min-height:180px}
+.card-head{padding:12px 14px 10px;gap:10px}
+.card-name{font-size:13px;margin-bottom:6px}
+.meta-badge{font-size:10px;padding:1px 5px}
+.detail-specs{font-size:11px;grid-template-columns:1fr}
+.detail-specs .sk{min-width:64px}
+.search-inner{padding:5px 6px}
+.search-inner #search-input{font-size:13px;padding:8px 12px;padding-right:58px}
+.search-inner .search-clear{right:46px}
+.search-inner .search-btn{right:5px;width:36px;height:36px}
+.fab-toggle{display:flex;align-items:center;justify-content:center;position:fixed;bottom:8px;left:16px;z-index:90;width:48px;height:48px;border-radius:50%;color:var(--text2);font-size:20px;cursor:pointer;transition:background .15s}
+.fab-toggle:hover{color:var(--text)}
+.fab-toggle:active{transform:scale(0.92)}
+.drawer-mask{display:block;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:opacity .25s ease}
+.drawer-mask.open{opacity:1;pointer-events:auto}
+.drawer{position:absolute;left:0;top:0;height:100%;width:240px;transform:translateX(-100%);transition:transform .25s cubic-bezier(.22,1,.36,1);padding:20px 0;background:var(--drawer-bg)}
+.drawer-mask.open .drawer{transform:translateX(0)}
+.drawer h3{margin-bottom:12px}
+.drawer-item{padding:12px 20px;font-size:15px}
+.search-bar-bottom{left:72px}
+}
+@media (min-width:769px){
+.search-bar-bottom{left:196px}
+}
+</style>
+</head>
+<body>
+<div class="topbar glass">
+  <h1><img class="site-logo" src="logo/apple-touch-icon.png" alt="数码图鉴">数码图鉴</h1>
+  <div class="sort-group">
+    <div id="sort-buttons"></div>
+  </div>
+</div>
+<div class="main">
+  <div class="drawer-mask" id="drawer-mask">
+    <nav class="drawer glass" aria-label="设备分类">
+      <h3>分类</h3>
+      <ul class="drawer-list">
+        <li class="drawer-item active" data-cat="全部">&#9776; 全部设备</li>
+        <li class="drawer-item" data-cat="手机">&#128241; 手机</li>
+        <li class="drawer-item" data-cat="充电宝">&#128267; 充电宝</li>
+        <li class="drawer-item" data-cat="充电器">&#9889; 充电器</li>
+        <li class="drawer-item" data-cat="处理器">&#128187; 处理器</li>
+      </ul>
+      <div class="drawer-theme-wrap" id="drawer-theme">
+        <div class="theme-anchor">
+          <div class="theme-selector glass" id="theme-selector">
+            <div class="theme-selector-track" id="theme-selector-track">
+              <div class="theme-option" data-value="auto">自动</div>
+              <div class="theme-option" data-value="light">浅色</div>
+              <div class="theme-option active" data-value="dark">深色</div>
+            </div>
+          </div>
+        </div>
+        <div class="side-btns">
+          <button type="button" class="side-btn" id="btn-changelog" title="更新日志" aria-label="更新日志">&#128196;</button>
+          <button type="button" class="side-btn" id="btn-about" title="关于" aria-label="关于">&#8505;</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="content-header">
+      <h2 id="cat-title">全部设备</h2>
+      <span class="device-count" id="device-count"></span>
+    </div>
+    <div class="grid" id="grid" role="list" aria-label="设备列表"></div>
+  </div>
+</div>
+<button type="button" class="fab-toggle glass" id="drawer-toggle" aria-label="打开分类">&#9776;</button>
+
+<div class="search-bar-bottom glass" id="search-bar-bottom">
+  <div class="search-inner">
+    <input type="text" id="search-input" placeholder="搜索设备或参数..." aria-label="搜索设备或参数" maxlength="100">
+    <button type="button" id="search-clear" class="search-clear" aria-label="清除搜索">&times;</button>
+    <button type="button" id="search-btn" class="search-btn" aria-label="搜索">&#128269;</button>
+  </div>
+</div>
+
+<div class="changelog-mask" id="changelog-mask" role="dialog" aria-modal="true" aria-label="更新日志">
+  <div class="changelog-panel glass">
+    <h3>更新日志 <button type="button" class="changelog-close" id="changelog-close" aria-label="关闭">&times;</button></h3>
+    <ul class="changelog-list" id="changelog-list"></ul>
+  </div>
+</div>
+
+<div class="about-mask" id="about-mask" role="dialog" aria-modal="true" aria-label="关于">
+  <div class="about-panel glass">
+    <h3>关于<button type="button" class="about-close" id="about-close" aria-label="关闭">&times;</button></h3>
+    <div class="about-body">
+      <div id="perf-note" class="perf-note"></div>
+      <table class="perf-table" id="perf-table"></table>
+      <hr>
+      <h4>关于作者</h4>
+      <p>作者B站主页：<a href="https://space.bilibili.com/267057576" target="_blank" rel="noopener noreferrer">@风暴小末</a></p>
+      <hr>
+      <h4>免责声明</h4>
+      <p>本网站为个人非商业项目，所有数据仅供参考，不构成任何购买建议。</p>
+      <p>跑分数据来源于极客湾、IT之家、NotebookCheck等公开评测，如有误差以官方数据为准。</p>
+    </div>
+  </div>
+</div>
+
+<script src="db/processors.js"></script>
+<script src="db/phones.js"></script>
+<script src="db/chargers.js"></script>
+<script src="db/powerbanks.js"></script>
+<script src="db/changelogs.js"></script>
+
+<script>
+(function() {
+'use strict';
+
+(function initTheme() {
+  var saved = localStorage.getItem('theme');
+  if (saved === 'auto') {
+    var mql = window.matchMedia('(prefers-color-scheme: dark)');
+    document.documentElement.setAttribute('data-theme', mql.matches ? 'dark' : 'light');
+    updateThemeIcon('auto');
+    mql.addEventListener('change', function(e) {
+      if (localStorage.getItem('theme') === 'auto') {
+        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        updateThemeIcon('auto');
+      }
+    });
+    return;
+  }
+  if (!saved) {
+    saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeIcon(saved);
+})();
+
+function updateThemeIcon(mode) {
+  var theme = document.documentElement.getAttribute('data-theme');
+  var selector = document.getElementById('theme-selector');
+  var track = document.getElementById('theme-selector-track');
+  if (!selector || !track) return;
+  
+  var options = track.querySelectorAll('.theme-option');
+  var activeIndex = 0;
+  options.forEach(function(opt, idx) {
+    var val = opt.dataset.value;
+    var isActive = (mode === 'auto' && val === 'auto') || 
+                   (mode !== 'auto' && val === theme);
+    opt.classList.toggle('active', isActive);
+    if (isActive) activeIndex = idx;
+  });
+  
+  var optionHeight = 36;
+  var targetOffset = -activeIndex * optionHeight;
+  
+  if (selector.classList.contains('open')) {
+    track.style.transform = 'translateY(0)';
+  } else {
+    track.style.transform = 'translateY(' + targetOffset + 'px)';
+  }
+}
+
+function refreshAllSliders() {
+  refreshPerfColors();
+  document.querySelectorAll('.perf-slider').forEach(function(slider) {
+    var val = parseInt(slider.value);
+    var color = getPerfColor(val);
+    slider.style.background = 'linear-gradient(to right, ' + color + ' ' + (val/200*100) + '%, var(--slider-track) ' + (val/200*100) + '%)';
+  });
+}
+
+function setTheme(val) {
+  document.documentElement.setAttribute('data-theme', val);
+  localStorage.setItem('theme', val);
+  updateThemeIcon(val);
+  refreshAllSliders();
+}
+
+function followSystemTheme() {
+  localStorage.setItem('theme', 'auto');
+  var mql = window.matchMedia('(prefers-color-scheme: dark)');
+  document.documentElement.setAttribute('data-theme', mql.matches ? 'dark' : 'light');
+  updateThemeIcon('auto');
+  refreshAllSliders();
+}
+
+window._hmt = window._hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d6dd70b42c6f413a8fe8f0a746bc44c4";
+  hm.async = true;
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+var IMG_V = '20260607';
+var imgCache = {};
+var devices = [];
+var processorsMap = {};
+var sortCache = new Map();
+var PERF_BASELINE = { GB6s: 2036, GB6m: 5697, WLE: 3782, GB5s: 1485, GB5m: 5195, MH31: 226 };
+
+function initDatabase() {
+    if (typeof phones !== 'undefined') { for (let i = 0; i < phones.length; i++) devices.push(phones[i]); }
+    if (typeof chargers !== 'undefined') { for (let i = 0; i < chargers.length; i++) devices.push(chargers[i]); }
+    if (typeof powerbanks !== 'undefined') { for (let i = 0; i < powerbanks.length; i++) devices.push(powerbanks[i]); }
+    if (typeof processors !== 'undefined') {
+        for (let i = 0; i < processors.length; i++) {
+            if (processors[i].id) processorsMap[processors[i].id] = processors[i];
+        }
+    }
+    precomputeSortKeys();
+}
+initDatabase();
+
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
+
+let searchQuery = '';
+var searchBar = document.getElementById('search-bar-bottom');
+
+document.addEventListener('click', function(e) {
+  if (!searchBar.contains(e.target)) document.getElementById('search-input').blur();
+});
+
+searchBar.addEventListener('click', function(e) {
+  document.getElementById('search-input').focus();
+});
+
+function handleSearch() {
+    const input = document.getElementById('search-input');
+    if (!input) return;
+    searchQuery = input.value.toLowerCase().trim();
+    toggleClearBtn();
+    if (currentCat === '处理器') renderProcessors(); else render();
+    document.getElementById('search-input').blur();
+}
+
+function clearSearch() {
+    const input = document.getElementById('search-input');
+    if (!input) return;
+    input.value = '';
+    searchQuery = '';
+    toggleClearBtn();
+    if (currentCat === '处理器') renderProcessors(); else render();
+    document.getElementById('search-input').blur();
+}
+
+function toggleClearBtn() {
+    const btn = document.getElementById('search-clear');
+    const input = document.getElementById('search-input');
+    if (btn && input) btn.style.display = input.value.trim() ? 'flex' : 'none';
+}
+
+// === 品牌族谱 ===
+var BRAND_FAMILIES = {
+  '红米': { parent: '小米', en: ['redmi'] }, '小米': { en: ['xiaomi', 'mi '] },
+  '爱酷': { parent: 'vivo', en: ['iqoo'] }, '真我': { parent: 'OPPO', en: ['realme'] },
+  '一加': { parent: 'OPPO', en: ['oneplus', 'one plus'] }, '荣耀': { en: ['honor'] },
+  '苹果': { en: ['apple', 'iphone'] }, '华为': { en: ['huawei'] }, '海思': { en: ['huawei', 'hisilicon'] }, '三星': { en: ['samsung'] },
+  '酷态科': { en: ['cuktech'] }, '安克': { en: ['anker'] }, '绿联': { en: ['ugreen'] },
+  '闪极': { en: ['sharge'] }, '奥海': { en: ['aohai'] }, '米物': { en: ['miiiw'] },
+  '高通': { en: ['qualcomm', 'snapdragon', '骁龙'] }, '联发科': { en: ['mediatek', '天玑', 'dimensity'] },
+  '努比亚': { en: ['nubia'] }, '红魔': { parent: '努比亚', en: ['redmagic', 'red magic'] },
+  '摩托罗拉': { en: ['motorola', 'moto'] }, '华硕': { en: ['asus', 'rog'] }, '联想': { en: ['lenovo'] },
+};
+
+var SEARCH_ALIASES = {
+  'gan': '氮化镓', '快充头': '充电器', '充电头': '充电器', '充电插头': '充电器',
+  '充电块': '充电宝', '移动电源': '充电宝', '电能棒': '充电宝', '电能块': '充电宝',
+  'pb': '充电宝', 'powerbank': '充电宝', 'power bank': '充电宝',
+  '处理器': '处理器', 'cpu': '处理器', 'soc': '处理器', '芯片': '处理器',
+};
+
+var BRAND_LOOKUP = {};
+(function() {
+  for (const cn in BRAND_FAMILIES) {
+    BRAND_LOOKUP[cn] = cn;
+    const fam = BRAND_FAMILIES[cn];
+    if (fam.en) { for (let i = 0; i < fam.en.length; i++) BRAND_LOOKUP[fam.en[i].toLowerCase()] = cn; }
+    if (fam.parent && !BRAND_FAMILIES[fam.parent]) BRAND_LOOKUP[fam.parent] = fam.parent;
+  }
+})();
+
+var _searchIndex = new Map();
+var _searchIndexLite = new Map();
+function buildSearchIndex() {
+  for (let i = 0; i < devices.length; i++) {
+    const d = devices[i];
+    const baseParts = [d.name || '', d.brand || '', d.model || ''];
+    if (d.tags) baseParts.push(d.tags.join(' '));
+    if (d.processor_id) { const proc = processorsMap[d.processor_id]; if (proc) baseParts.push(proc.name); }
+    const liteText = baseParts.join(' ').toLowerCase();
+    _searchIndexLite.set(d, { text: liteText, textNorm: liteText.replace(/[\s\-_]/g, ''),
+      nameNorm: (d.name || '').toLowerCase().replace(/[\s\-_]/g, ''),
+      brandNorm: (d.brand || '').toLowerCase().replace(/[\s\-_]/g, '') });
+    const fullParts = baseParts.slice();
+    if (d.specs) { for (const key in d.specs) { if (d.specs[key]) fullParts.push(String(d.specs[key])); } }
+    const text = fullParts.join(' ').toLowerCase();
+    _searchIndex.set(d, { text: text, textNorm: text.replace(/[\s\-_]/g, ''),
+      nameNorm: (d.name || '').toLowerCase().replace(/[\s\-_]/g, ''),
+      brandNorm: (d.brand || '').toLowerCase().replace(/[\s\-_]/g, '') });
+  }
+}
+
+var _procSearchIndex = new Map();
+function buildProcSearchIndex() {
+  if (typeof processors === 'undefined') return;
+  for (let i = 0; i < processors.length; i++) {
+    const p = processors[i];
+    const parts = [p.name || '', p.brand || ''];
+    if (p.specs) { for (const key in p.specs) { if (p.specs[key]) parts.push(String(p.specs[key])); } }
+    const text = parts.join(' ').toLowerCase();
+    _procSearchIndex.set(p, { text: text, textNorm: text.replace(/[\s\-_]/g, ''),
+      nameNorm: (p.name || '').toLowerCase().replace(/[\s\-_]/g, ''),
+      brandNorm: (p.brand || '').toLowerCase().replace(/[\s\-_]/g, '') });
+  }
+}
+
+function tokenize(query) {
+  const tokens = []; let current = '', lastType = null;
+  for (let i = 0; i < query.length; i++) {
+    const ch = query[i];
+    const type = /[\u4e00-\u9fff]/.test(ch) ? 'cn' : /[a-z]/.test(ch) ? 'en' : /[0-9]/.test(ch) ? 'num' : 'other';
+    if (type === 'other') { if (current) tokens.push(current); current = ''; lastType = null; continue; }
+    if (lastType && lastType !== type && !(lastType === 'en' && type === 'num') && !(lastType === 'num' && type === 'en')) {
+      if (current) tokens.push(current); current = '';
+    }
+    current += ch; lastType = type;
+  }
+  if (current) tokens.push(current);
+  return tokens;
+}
+
+function extractBrandFromQuery(q) {
+  const qn = q.replace(/\s+/g, '');
+  for (const cn in BRAND_FAMILIES) { if (qn.indexOf(cn) === 0) return { brand: cn, rest: qn.slice(cn.length) }; }
+  const qLower = qn.toLowerCase();
+  for (const cn in BRAND_FAMILIES) {
+    const fam = BRAND_FAMILIES[cn];
+    if (fam.en) { for (let i = 0; i < fam.en.length; i++) { const en = fam.en[i].toLowerCase(); if (qLower.indexOf(en) === 0) return { brand: cn, rest: qn.slice(fam.en[i].length) }; } }
+  }
+  for (const alias in SEARCH_ALIASES) { if (qLower.indexOf(alias) === 0) return { brand: null, category: SEARCH_ALIASES[alias], rest: qn.slice(alias.length) }; }
+  return null;
+}
+
+function getBrandNames(cn) {
+  let names = [cn]; const fam = BRAND_FAMILIES[cn];
+  if (fam) { if (fam.en) names = names.concat(fam.en); }
+  return names;
+}
+
+function tokenInIndex(index, token, indexMap) {
+  const tNorm = token.replace(/[\s\-_]/g, '');
+  if (!tNorm) return false;
+  const map = indexMap || _searchIndex;
+  const data = map.get(index) || _procSearchIndex.get(index);
+  if (!data) return false;
+  if (data.text.indexOf(token) !== -1) return true;
+  if (data.textNorm.indexOf(tNorm) !== -1) return true;
+  const aliasResult = SEARCH_ALIASES[token];
+  if (aliasResult && data.text.indexOf(aliasResult) !== -1) return true;
+  const pyCn = BRAND_LOOKUP[token];
+  if (pyCn && data.text.indexOf(pyCn) !== -1) return true;
+  return false;
+}
+
+function brandMatch(brandField, searchBrands) {
+  if (!brandField) return false;
+  const bl = brandField.toLowerCase().replace(/[\s\-_]/g, '');
+  for (let i = 0; i < searchBrands.length; i++) { if (bl.indexOf(searchBrands[i].toLowerCase().replace(/[\s\-_]/g, '')) !== -1) return true; }
+  return false;
+}
+
+function smartSearch(d) {
+  if (!searchQuery) return 100;
+  let score = 0; const sq = searchQuery;
+  const useLite = currentCat === '全部';
+  const indexMap = useLite ? _searchIndexLite : _searchIndex;
+  const index = indexMap.get(d);
+  if (!index) return 0;
+  const brandParts = extractBrandFromQuery(sq);
+  if (brandParts && brandParts.brand) {
+    const searchBrands = getBrandNames(brandParts.brand);
+    if (!brandMatch(d.brand, searchBrands) && !brandMatch(d.name, searchBrands)) return 0;
+    if (brandParts.rest) {
+      const restNorm = brandParts.rest.replace(/[\s\-_]/g, '');
+      if (index.nameNorm.indexOf(restNorm) !== -1) score = 100;
+      else if (tokenInIndex(d, brandParts.rest, indexMap)) score = 80;
+      else return 0;
+    } else {
+      score = 50;
+    }
+    return score;
+  }
+  if (index.text.indexOf(sq) !== -1 || index.textNorm.indexOf(sq.replace(/[\s\-_]/g, '')) !== -1) score = Math.max(score, 90);
+  const tokens = tokenize(sq);
+  if (tokens.length > 1) {
+    let allHit = true;
+    for (let i = 0; i < tokens.length; i++) { if (!tokenInIndex(d, tokens[i], indexMap)) { allHit = false; break; } }
+    if (allHit) score = Math.max(score, 80);
+  }
+  for (let i = 0; i < tokens.length; i++) {
+    const tk = tokens[i];
+    if (tokenInIndex(d, tk, indexMap)) {
+      if (index.nameNorm.indexOf(tk.replace(/[\s\-_]/g, '')) !== -1 || index.brandNorm.indexOf(tk.replace(/[\s\-_]/g, '')) !== -1) score = Math.max(score, 60);
+      else score = Math.max(score, 30);
+    }
+  }
+  const aliasResult = SEARCH_ALIASES[sq];
+  if (aliasResult && index.text.indexOf(aliasResult) !== -1) score = Math.max(score, 50);
+  const brandLookup = BRAND_LOOKUP[sq];
+  if (brandLookup && (index.text.indexOf(brandLookup) !== -1 || brandMatch(d.brand, [brandLookup]))) score = Math.max(score, 50);
+  return score;
+}
+
+function smartProcSearch(p) {
+  if (!searchQuery) return 100;
+  let score = 0; const sq = searchQuery; const index = _procSearchIndex.get(p);
+  if (!index) return 0;
+  const brandParts = extractBrandFromQuery(sq);
+  if (brandParts && brandParts.brand) {
+    const searchBrands = getBrandNames(brandParts.brand);
+    if (!brandMatch(p.brand, searchBrands) && !brandMatch(p.name, searchBrands)) return 0;
+    if (brandParts.rest) {
+      const restNorm = brandParts.rest.replace(/[\s\-_]/g, '');
+      if (index.nameNorm.indexOf(restNorm) !== -1) score = 100;
+      else if (tokenInIndex(p, brandParts.rest)) score = 80;
+      else return 0;
+    } else {
+      score = 50;
+    }
+    return score;
+  }
+  if (index.text.indexOf(sq) !== -1 || index.textNorm.indexOf(sq.replace(/[\s\-_]/g, '')) !== -1) score = Math.max(score, 90);
+  const tokens = tokenize(sq);
+  if (tokens.length > 1) {
+    let allHit = true;
+    for (let i = 0; i < tokens.length; i++) { if (!tokenInIndex(p, tokens[i])) { allHit = false; break; } }
+    if (allHit) score = Math.max(score, 80);
+  }
+  for (let i = 0; i < tokens.length; i++) { if (tokenInIndex(p, tokens[i])) score = Math.max(score, 30); }
+  return score;
+}
+
+buildSearchIndex();
+buildProcSearchIndex();
+
+// === 字段顺序规范 ===
+var FIELD_ORDER = {
+  '手机': ['处理器','--- 存储与屏幕 ---','内存/存储','内存','存储','屏幕','--- 相机 ---','后置摄像头','后置相机','前置摄像头','前置相机','--- 充电规格 ---','电池容量','有线快充','无线快充','反向充电','PD协议','PPS协议','QC协议','UFCS','标配充电器','--- 其他 ---','网络与连接','散热','尺寸','重量','防水防尘','配色','出厂系统','材质','视频播放'],
+  '充电器': ['最大功率','接口配置','输入电压','C口输出','C口最大输出','C口PPS','C口 UFCS','C1/C2输出','C1/C2 PPS','C1/C2 AVS','C1/C2 UFCS','C1/C2/C3输出','C1自带线输出','C1输出','C1 PPS','C1 UFCS','C2输出','C2 PPS','C2 UFCS','C3输出','C3 PPS','C3 UFCS','A口输出','A口 UFCS','DC口输出','磁吸无线充','无线充','多口功率分配','私有协议','尺寸','体积','重量','快充协议','特色功能','附赠线材','配色'],
+  '充电宝': ['电池容量','最大功率','接口配置','C口输出','C口最大输出','C口PPS','C口 UFCS','C口输入','C1/C2输出','C1/C2 PPS','C1输出','C1 PPS','C2输出','C2 PPS','A口输出','A口 UFCS','多口同时输出','多口功率分配','私有协议','尺寸','重量','快充协议','特色功能','电池类型','附赠线材','配色'],
+  '处理器': ['制程','CPU架构','GPU','NPU','内存支持','基带','安兔兔 V10','GeekBench 5 单核','GeekBench 5 多核','GeekBench 6 单核','GeekBench 6 多核','3DMark WLE','GFXBench Manhattan 3.0','GFXBench Manhattan 3.1','发布日期','说明']
+};
+
+function sortKeysByCategory(keys, category) {
+  const order = FIELD_ORDER[category];
+  if (!order) return keys;
+  const ordered = [], rest = [], used = {};
+  for (let i = 0; i < order.length; i++) {
+    for (let j = 0; j < keys.length; j++) { if (!used[j] && keys[j] === order[i]) { ordered.push(keys[j]); used[j] = true; } }
+  }
+  for (let i = 0; i < order.length; i++) {
+    for (let j = 0; j < keys.length; j++) { if (!used[j] && (keys[j].indexOf(order[i]) === 0 || order[i].indexOf(keys[j]) === 0)) { ordered.push(keys[j]); used[j] = true; } }
+  }
+  for (let j = 0; j < keys.length; j++) { if (!used[j]) rest.push(keys[j]); }
+  return ordered.concat(rest);
+}
+
+function toggleModal(mask, onOpen) { if (onOpen && !mask.classList.contains('open')) onOpen(); mask.classList.toggle('open'); if (mask.classList.contains('open')) { document.body.style.overflow = 'hidden'; requestAnimationFrame(function() { void mask.offsetWidth; }); } else { document.body.style.overflow = ''; } }
+function toggleChangelog() { toggleModal(document.getElementById('changelog-mask')); }
+function toggleAbout() { toggleModal(document.getElementById('about-mask'), renderPerfTable); }
+
+function renderPerfTable() {
+  const t = document.getElementById('perf-table');
+  if (!t || t.rows.length > 0) return;
+  const rows = [['基准项目','骁龙8 Gen 2（100%）','说明'],['GeekBench 5 单核','1,485','IT之家实测'],['GeekBench 5 多核','5,195','IT之家实测'],['GeekBench 6 单核','2,036','极客湾 socpk.com'],['GeekBench 6 多核','5,697','极客湾 socpk.com'],['3DMark Wild Life Extreme','3,782','极客湾 socpk.com'],['GFXBench Manhattan 3.0','332 fps','用户实测'],['GFXBench Manhattan 3.1','226 fps','用户实测'],['安兔兔 V10','1,563,190','IT之家实测（仅供参考）']];
+  let html = '<thead><tr>';
+  for (let ci = 0; ci < rows[0].length; ci++) html += '<th>' + esc(rows[0][ci]) + '</th>';
+  html += '</tr></thead><tbody>';
+  for (let ri = 1; ri < rows.length; ri++) { html += '<tr>'; for (let cj = 0; cj < rows[ri].length; cj++) html += '<td>' + esc(rows[ri][cj]) + '</td>'; html += '</tr>'; }
+  html += '</tbody>';
+  t.innerHTML = html;
+  const note = document.getElementById('perf-note');
+  if (note) note.innerHTML = '<b>性能评分方案：</b><br>▸ 方案A（有GB6数据）：GB6单核×37.5% + GB6多核×37.5% + GPU×25%<br>▸ 方案B（仅GB5数据）：GB5单核×30% + GB5多核×40% + GPU×30%<br>▸ GPU优先级：3DMark WLE > GFXBench Manhattan 3.1（按帧率等比换算为WLE等效值）<br>▸ 安兔兔V10仅供参考，不参与评分计算';
+}
+
+function renderChangelog() {
+  const list = document.getElementById('changelog-list'); let html = '';
+  for (let i = 0; i < changelogs.length; i++) {
+    const c = changelogs[i];
+    html += '<li><div class="changelog-date">' + esc(c.date) + ' · ' + esc(c.ver) + '</div>' + esc(c.text);
+    const devs = c.devices || [];
+    if (devs.length > 0) {
+      html += '<br><button type="button" class="changelog-toggle" data-cl-idx="' + i + '">查看新增设备 ▶</button><div class="changelog-devices">';
+      for (let j = 0; j < devs.length; j++) html += '· ' + esc(devs[j]) + '<br>';
+      html += '</div>';
+    }
+    html += '</li>';
+  }
+  list.innerHTML = html;
+}
+
+var _perfColors = { high: '', mid: '', low: '' };
+function refreshPerfColors() {
+  var cs = getComputedStyle(document.documentElement);
+  _perfColors.high = cs.getPropertyValue('--perf-high').trim();
+  _perfColors.mid = cs.getPropertyValue('--perf-mid').trim();
+  _perfColors.low = cs.getPropertyValue('--perf-low').trim();
+}
+refreshPerfColors();
+function getPerfColor(val) { return val >= 200 ? _perfColors.high : val >= 100 ? _perfColors.mid : _perfColors.low; }
+function parseNum(v) { if (!v) return null; const n = parseFloat(String(v).replace(/[,~\s]/g, '')); return isNaN(n) ? null : n; }
+function getProcById(id) { return processorsMap[id] || null; }
+function getProcNameById(id) { const p = getProcById(id); return p ? p.name : ''; }
+
+function calcPerf(procSpecs) {
+  if (!procSpecs) return null;
+  const g6s = parseNum(procSpecs['GeekBench 6 单核']), g6m = parseNum(procSpecs['GeekBench 6 多核']);
+  const wle = parseNum(procSpecs['3DMark WLE']), mh31 = parseNum(procSpecs['GFXBench Manhattan 3.1']);
+  const gpu = wle !== null ? wle : (mh31 !== null ? Math.round(mh31 / PERF_BASELINE.MH31 * PERF_BASELINE.WLE) : null);
+  if (g6s && g6m && gpu) return ((g6s/PERF_BASELINE.GB6s)*0.375 + (g6m/PERF_BASELINE.GB6m)*0.375 + (gpu/PERF_BASELINE.WLE)*0.25) * 100;
+  const g5s = parseNum(procSpecs['GeekBench 5 单核']), g5m = parseNum(procSpecs['GeekBench 5 多核']);
+  if (g5s && g5m && gpu) return ((g5s/PERF_BASELINE.GB5s)*0.30 + (g5m/PERF_BASELINE.GB5m)*0.40 + (gpu/PERF_BASELINE.WLE)*0.30) * 100;
+  return null;
+}
+function calculatePerfRatio(d) { if (!d.processor_id) return null; const proc = getProcById(d.processor_id); return proc ? calcPerf(proc.specs) : null; }
+
+var detailCache = {};
+let activePanel = null;
+function closeActivePanel() {
+  if (!activePanel) return;
+  const grid = document.getElementById('grid'), old = activePanel;
+  var parentCard = old.parentNode;
+  if (parentCard && parentCard.classList.contains('card')) {
+    parentCard.style.overflow = '';
+    parentCard.style.contain = '';
+    parentCard.style.zIndex = '';
+    parentCard.style.borderRadius = '';
+    parentCard.style.boxShadow = '';
+    parentCard.classList.remove('overlay-active');
+    panelObserver.unobserve(parentCard);
+    panelObserver.unobserve(old);
+    var idx = parentCard.dataset.idx;
+    if (idx && _observeMap[idx]) delete _observeMap[idx];
+    var bar = parentCard.querySelector('.card-expand-bar');
+    if (bar) bar.classList.remove('expanding');
+  }
+  removeOverlay();
+  activePanel = null;
+  document.querySelectorAll('.card').forEach(function(card) { card.style.contentVisibility = ''; });
+  grid.style.paddingBottom = '';
+  old.style.maxHeight = old.scrollHeight + 'px';
+  old.classList.add('closing');
+  requestAnimationFrame(function() { old.classList.remove('open'); old.style.maxHeight = '0'; setTimeout(function() { if (old.parentNode) old.parentNode.removeChild(old); }, 300); });
+}
+let resizeTick = false;
+window.addEventListener('resize', function() {
+  if (resizeTick) return;
+  resizeTick = true;
+  requestAnimationFrame(function() {
+    updatePanelPosition();
+    resizeTick = false;
+  });
+}, { passive: true });
+function updatePanelPosition() {
+  if (!activePanel) return;
+  const expandedCard = document.querySelector('.card.expanded');
+  if (!expandedCard) return;
+  const grid = document.getElementById('grid');
+  activePanel.style.top = (expandedCard.offsetTop + expandedCard.offsetHeight + 14) + 'px';
+  grid.style.paddingBottom = (activePanel.offsetHeight + 20) + 'px';
+}
+
+function parseMaxPower(d) { const pw = (d.specs || {})['最大功率'] || ''; const m = pw.match(/(\d+)W/); return m ? parseInt(m[1]) : 0; }
+function parseSinglePortPower(d) {
+  const s = d.specs || {}; let maxW = 0;
+  const explicitFields = ['C口最大输出', '单口最大输出'];
+  for (let i = 0; i < explicitFields.length; i++) { const val = s[explicitFields[i]]; if (val) { const m = String(val).match(/(\d+)W/); if (m) return parseInt(m[1]); } }
+  const excludeKeywords = ['输入','总功率','多口','同时','分配','无线','磁吸','UFCS','PPS','AVS'];
+  const outputFields = [];
+  for (const key in s) {
+    const val = s[key]; if (!val) continue;
+    let skip = false; for (let j = 0; j < excludeKeywords.length; j++) { if (key.indexOf(excludeKeywords[j]) > -1) { skip = true; break; } }
+    if (skip) continue;
+    if (key.indexOf('输出') === -1 && key.indexOf('口') === -1) continue;
+    outputFields.push({ key: key, value: String(val) });
+  }
+  for (let fi = 0; fi < outputFields.length; fi++) {
+    const fieldVal = outputFields[fi].value;
+    const directRe = /\b(\d{1,3})W\b/g; let dm;
+    while ((dm = directRe.exec(fieldVal)) !== null) { const w = parseInt(dm[1]); if (w >= 15 && w <= 200) maxW = Math.max(maxW, w); }
+    const vaRe = /(?:\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?V)\/([\d.]+A)/g; let vm;
+    while ((vm = vaRe.exec(fieldVal)) !== null) {
+      const voltageStr = vm[0].split('/')[0], currentStr = vm[1];
+      const currents = currentStr.split('/'); let maxCurrent = 0;
+      for (let ci = 0; ci < currents.length; ci++) { const c = parseFloat(currents[ci].replace('A', '')); if (!isNaN(c) && c > maxCurrent) maxCurrent = c; }
+      const voltages = voltageStr.replace('V', '').split('-'); let maxVoltage = 0;
+      for (let vi = 0; vi < voltages.length; vi++) { const v = parseFloat(voltages[vi]); if (!isNaN(v) && v > maxVoltage) maxVoltage = v; }
+      if (maxVoltage > 0 && maxCurrent > 0) { const calcW = Math.round(maxVoltage * maxCurrent); if (calcW >= 15 && calcW <= 240) maxW = Math.max(maxW, calcW); }
+    }
+  }
+  if (maxW > 200) console.warn('[数码图鉴] 警告：设备「' + (d.name || '未知') + '」单口功率解析结果异常（' + maxW + 'W）');
+  return maxW;
+}
+function parseCapacity(d) { const cap = (d.specs || {})['电池容量'] || ''; const m = cap.match(/(\d+)mAh/); return m ? parseInt(m[1]) : 0; }
+
+function precomputeSortKeys() {
+  for (let i = 0; i < devices.length; i++) {
+    const d = devices[i];
+    sortCache.set(d, { total_power: parseMaxPower(d), single_power: parseSinglePortPower(d), capacity: parseCapacity(d), perf: calculatePerfRatio(d) || 0, release_date: d.release_date || '' });
+  }
+  if (typeof processors !== 'undefined') {
+    for (let i = 0; i < processors.length; i++) {
+      const p = processors[i];
+      sortCache.set(p, { perf: calcPerf(p.specs) || 0, release_date: (p.specs || {})['发布日期'] || '', name: p.name || '' });
+    }
+  }
+}
+function getCachedSortValue(d, field) { const c = sortCache.get(d); if (!c) return ''; return c[field] !== undefined ? c[field] : (d[field] || ''); }
+
+const CATEGORY_SORT_OPTIONS = {
+    '全部': [{f:'release_date',l:'发布时间'}],
+    '手机': [{f:'release_date',l:'发布时间'},{f:'perf',l:'性能'}],
+    '充电器': [{f:'release_date',l:'发布时间'},{f:'total_power',l:'总功率'},{f:'single_power',l:'单口功率'}],
+    '充电宝': [{f:'release_date',l:'发布时间'},{f:'total_power',l:'总功率'},{f:'single_power',l:'单口功率'},{f:'capacity',l:'容量'}],
+    '处理器': [{f:'release_date',l:'发布时间'},{f:'perf',l:'性能'}]
+};
+
+function updateSortButtons() {
+  const list = CATEGORY_SORT_OPTIONS[currentCat] || CATEGORY_SORT_OPTIONS['全部'];
+  let hasField = false;
+  for (let i = 0; i < list.length; i++) { if (list[i].f === currentSortField) { hasField = true; break; } }
+  if (!hasField) { currentSortField = 'release_date'; currentSortDir = 'desc'; }
+  let html = '';
+  for (let j = 0; j < list.length; j++) {
+    const b = list[j], active = currentSortField === b.f;
+    const arrow = active ? (currentSortDir === 'desc' ? ' ↓' : ' ↑') : '';
+    html += '<button type="button" class="sort-btn' + (active ? ' active' : '') + '" data-sort-field="' + b.f + '">' + b.l + (active ? '<span>' + arrow + '</span>' : '') + '</button>';
+  }
+  const container = document.getElementById('sort-buttons');
+  if (container) container.innerHTML = html;
+}
+
+let currentCat = '全部', currentSortField = 'release_date', currentSortDir = 'desc';
+
+function toggleSort(field) {
+  if (currentSortField === field) currentSortDir = currentSortDir === 'desc' ? 'asc' : 'desc';
+  else { currentSortField = field; currentSortDir = 'desc'; }
+  updateSortButtons();
+  if (currentCat === '处理器') renderProcessors(); else render();
+}
+
+function sortDevices(list) {
+  const sortArr = [];
+  for (let si = 0; si < list.length; si++) sortArr.push({ d: list[si], v: getCachedSortValue(list[si], currentSortField) });
+  sortArr.sort(function(a, b) { if (a.v < b.v) return currentSortDir === 'asc' ? -1 : 1; if (a.v > b.v) return currentSortDir === 'asc' ? 1 : -1; return 0; });
+  const sorted = []; for (let oi = 0; oi < sortArr.length; oi++) sorted.push(sortArr[oi].d);
+  return sorted;
+}
+
+function getSummary(d) {
+  const s = d.specs || {}; const power = s['最大功率'] || '', port = s['接口配置'] || '', protocols = [];
+  const ppsStr = s['C口PPS'] || s['C1/C2 PPS'] || '';
+  if (ppsStr) { const segs = ppsStr.split(/[、,，]/); for (let si = 0; si < segs.length; si++) { const pm = segs[si].trim().match(/(\d+)-(\d+)V\/([\d.]+)A/); if (pm) { const w = Math.round(parseFloat(pm[2]) * parseFloat(pm[3])); if (w > 0) protocols.push('PPS ' + w + 'W'); } } }
+  const protoAll = s['快充协议'] || '';
+  if (protoAll.indexOf('PD') > -1) protocols.unshift('PD');
+  const privStr = s['私有协议'] || '';
+  if (privStr) { const privBrands = privStr.split(/[；;]/); for (let bi = 0; bi < privBrands.length; bi++) { const bSeg = privBrands[bi].trim(); if (!bSeg) continue; const ci = Math.max(bSeg.indexOf('：'), bSeg.indexOf(':')); const brandName = ci > 0 ? bSeg.substring(0, ci).trim() : bSeg; const watts = bSeg.match(/(\d+)W/g); let maxW = 0; if (watts) { for (let wi = 0; wi < watts.length; wi++) { const w = parseInt(watts[wi]); if (w > maxW) maxW = w; } } if (brandName && maxW > 0) protocols.push(brandName + ' ' + maxW + 'W'); } }
+  if (protoAll.indexOf('UFCS') > -1) protocols.push('UFCS 33W');
+  if (protoAll.indexOf('QC') > -1) protocols.push('QC');
+  if (protoAll.indexOf('FCP') > -1) protocols.push('FCP');
+  if (protoAll.indexOf('SCP') > -1) protocols.push('SCP');
+  return { power: power, port: port, protocols: protocols, capacity: s['电池容量'] || '' };
+}
+
+function getPhoneSummary(d) {
+  const s = d.specs || {}; const tags = [];
+  const cpu = s['处理器'] || ''; if (cpu) tags.push({ text: cpu.split('（')[0].trim(), cls: 'meta-phone-cpu' });
+  const bat = s['电池容量'] || ''; const bm = bat.match(/(\d+)mAh/); if (bm) tags.push({ text: bm[1] + 'mAh', cls: 'meta-phone-bat' });
+  const screen = s['屏幕'] || '';
+  if (screen) { const sz = screen.match(/[\d.]+″/), res = screen.match(/\d+×\d+/); let st = ''; if (sz) st = sz[0]; if (res) st += (st ? ' ' : '') + res[0]; if (st) tags.push({ text: st, cls: 'meta-phone-screen' }); }
+  const wired = s['有线快充'] || ''; const pm = wired.match(/(\d+)W/); if (pm) tags.push({ text: pm[1] + 'W快充', cls: 'meta-phone-power' });
+  return tags;
+}
+
+let detailData = [];
+
+function buildDeviceDetail(d, i) {
+  const isPhone = d.category === '手机';
+  let detailHtml = '', detailInfo = '';
+  if (d.brand) detailInfo += '<div>品牌：<span>' + esc(d.brand) + '</span></div>';
+  if (d.model) detailInfo += '<div>型号：<span>' + esc(d.model) + '</span></div>';
+  if (d.price) detailInfo += '<div>价格：<span>' + esc(d.price) + '</span></div>';
+  if (d.release_date) detailInfo += '<div>发布：<span>' + esc(d.release_date) + '</span></div>';
+  if (detailInfo) detailHtml += '<div class="detail-info">' + detailInfo + '</div>';
+  if (isPhone && d.processor_id) {
+    const perfRatio = calculatePerfRatio(d);
+    if (perfRatio !== null) {
+      const procName = getProcNameById(d.processor_id);
+      const barColor = getPerfColor(perfRatio);
+      detailHtml += '<div class="perf-bar-container"><div class="perf-bar-header">';
+      detailHtml += '<span class="perf-bar-label">性能基准（骁龙8 Gen 2 = 100%）</span>';
+      detailHtml += '<span class="perf-bar-value" style="color:' + barColor + ';">' + Math.round(perfRatio) + '%</span></div>';
+      detailHtml += '<div class="perf-bar-track"><div class="perf-bar-fill" style="width:' + Math.min(perfRatio/2,100) + '%;background:' + barColor + ';"></div></div>';
+      detailHtml += '<div class="perf-bar-name">' + esc(procName) + '</div></div>';
+    }
+  }
+  detailHtml += '<ul class="detail-specs">';
+  const keys = sortKeysByCategory(Object.keys(d.specs || {}), d.category);
+  for (let k = 0; k < keys.length; k++) {
+    if (keys[k].indexOf('---') === 0) continue;
+    let sv = esc(String(d.specs[keys[k]] || ''));
+    if (keys[k] === '处理器' && d.processor_id) sv = '<span class="proc-link" data-proc-id="' + esc(d.processor_id) + '">' + sv + '</span>';
+    detailHtml += '<li><span class="sk">' + esc(keys[k]) + '</span><span class="sv">' + sv + '</span></li>';
+  }
+  detailHtml += '</ul>';
+  if (d.processor_id) {
+    let hasGB6 = false; const specKeys = Object.keys(d.specs || {});
+    for (let si = 0; si < specKeys.length; si++) { if (specKeys[si].indexOf('GeekBench') > -1) { hasGB6 = true; break; } }
+    if (!hasGB6) { const proc = getProcById(d.processor_id); if (proc && proc.specs) { const g6s = proc.specs['GeekBench 6 单核'], g6m = proc.specs['GeekBench 6 多核']; if (g6s && g6m) detailHtml += '<div class="proc-perf-source">GeekBench 6：' + esc(g6s) + ' / ' + esc(g6m) + '（单/多核，来自处理器数据）</div>'; } }
+  }
+  if (d.notes) detailHtml += '<div class="detail-note">' + esc(d.notes) + '</div>';
+  return detailHtml;
+}
+
+function buildCardBg(item) {
+  var bg, mask = '<div class="card-mask"></div>';
+  var catMap = {'手机':'phones','充电器':'chargers','充电宝':'powerbanks'};
+  var cat = catMap[item.category] || '';
+  var exts = ['.webp'];
+  var brand = item.brand || '';
+  var candidates = [];
+  if (item.image) candidates.push(item.image);
+  if (cat) {
+    var names = [];
+    if (item.id) names.push(item.id);
+    if (item.model) names.push(item.model);
+    if (item.name) names.push(item.name.replace(/\s+/g, ''));
+    // 生成多种命名风格的候选路径
+    for (var n = 0; n < names.length; n++) {
+      var rawName = names[n];
+      for (var e = 0; e < exts.length; e++) {
+        var ext = exts[e];
+        var path = 'db/images/' + cat + '/' + rawName + ext;
+        if (candidates.indexOf(path) === -1) candidates.push(path);
+        var noHyphen = rawName.replace(/-/g, '');
+        if (noHyphen !== rawName) {
+          var path2 = 'db/images/' + cat + '/' + noHyphen + ext;
+          if (candidates.indexOf(path2) === -1) candidates.push(path2);
+        }
+        var capitalized = rawName.replace(/(^|-)([a-z])/g, function(m, p1, p2) { return (p1 || '') + p2.toUpperCase(); });
+        if (capitalized !== rawName) {
+          var path3 = 'db/images/' + cat + '/' + capitalized + ext;
+          if (candidates.indexOf(path3) === -1) candidates.push(path3);
+        }
+        var capNoHyphen = capitalized.replace(/-/g, '');
+        if (capNoHyphen !== rawName) {
+          var path4 = 'db/images/' + cat + '/' + capNoHyphen + ext;
+          if (candidates.indexOf(path4) === -1) candidates.push(path4);
+        }
+      }
+    }
+  }
+  // 品牌 logo 兜底（取中文品牌名，如 "小米 Xiaomi" -> "小米"）
+  var brandCn = brand.split(' ')[0];
+  if (brandCn) {
+    for (var b = 0; b < exts.length; b++) {
+      var logoPath = 'logo/' + brandCn + 'logo' + exts[b];
+      if (candidates.indexOf(logoPath) === -1) candidates.push(logoPath);
+    }
+  }
+  if (candidates.length) {
+    bg = '<div class="card-bg bg-init" data-img-candidates="' + esc(JSON.stringify(candidates)) + '"></div>';
+  } else {
+    bg = '<div class="card-bg"></div>';
+  }
+  return bg + mask;
+}
+
+function tryLoadImage(bg, candidates, idx, card) {
+  if (idx >= candidates.length) {
+    // 所有图片都失败，留空白背景
+    bg.classList.remove('bg-init');
+    return;
+  }
+  var src = candidates[idx];
+  var srcV = src + '?v=' + IMG_V;
+  // JS内存缓存：已加载过的图片直接使用，跳过网络请求
+  if (imgCache[srcV]) {
+    bg.style.backgroundImage = 'url(' + imgCache[srcV] + ')';
+    if (card && card.isConnected) card.classList.add('has-img');
+    bg.classList.remove('bg-init');
+    requestAnimationFrame(function() { bg.classList.add('bg-init'); requestAnimationFrame(function() { bg.classList.remove('bg-init'); }); });
+    return;
+  }
+  var img = new Image();
+  img.decoding = 'async';
+  var done = false;
+  var timer = setTimeout(function() { if (!done && !img.complete) img.onerror && img.onerror(); }, 5000);
+  function onSuccess() {
+    if (done) return; done = true;
+    clearTimeout(timer);
+    if (!bg.isConnected) return;
+    imgCache[srcV] = srcV;
+    bg.style.backgroundImage = 'url(' + srcV + ')';
+    if (card && card.isConnected) card.classList.add('has-img');
+    bg.classList.remove('bg-init');
+    requestAnimationFrame(function() { bg.classList.add('bg-init'); requestAnimationFrame(function() { bg.classList.remove('bg-init'); }); });
+  }
+  img.onload = onSuccess;
+  img.onerror = function() {
+    if (done) return;
+    clearTimeout(timer);
+    tryLoadImage(bg, candidates, idx + 1, card);
+  };
+  img.src = srcV;
+  if (img.complete) onSuccess();
+}
+
+var _imgIO = null;
+function bindImgErrors(container) {
+  var els = container.querySelectorAll('.card-bg[data-img-candidates]');
+  if (!els.length) return;
+  if ('IntersectionObserver' in window) {
+    if (_imgIO) _imgIO.disconnect();
+    _imgIO = new IntersectionObserver(function(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          _imgIO.unobserve(entries[i].target);
+          loadImageForBg(entries[i].target);
+        }
+      }
+    }, { rootMargin: '300px' });
+    els.forEach(function(el) { _imgIO.observe(el); });
+  } else {
+    els.forEach(function(el) { loadImageForBg(el); });
+  }
+}
+
+function loadImageForBg(bg) {
+  var raw = bg.getAttribute('data-img-candidates');
+  if (!raw) return;
+  var candidates;
+  try { candidates = JSON.parse(raw); } catch(e) { return; }
+  if (!candidates || !candidates.length) return;
+  var card = bg.closest('.card');
+  tryLoadImage(bg, candidates, 0, card);
+}
+
+function renderCards(items, type) {
+  const grid = document.getElementById('grid');
+  document.getElementById('device-count').textContent = items.length + ' 款';
+  if (items.length === 0) {
+    closeActivePanel(); detailData = [];
+    const label = type === 'processor' ? '处理器' : '设备';
+    const emptyMsg = searchQuery ? '未找到与「' + esc(searchQuery) + '」相关的' + label : '暂无' + label;
+    grid.innerHTML = '<div class="empty" role="status"><div class="icon">&#128237;</div><p>' + emptyMsg + '</p></div>';
+    return;
+  }
+  closeActivePanel(); detailData = [];
+  let html = '';
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const delaySec = i < 12 ? Math.min(i * 0.04, 0.6) : -1;
+    if (type === 'processor') {
+      const p = item, s = p.specs || {};
+      const cached = sortCache.get(p) || {};
+      const perfPct = cached.perf !== undefined ? cached.perf : calcPerf(s);
+      const brandShort = (p.brand || '').split(' ')[0];
+      const processNode = s['制程'] || '';
+      detailData[i] = { type: 'processor', ref: p };
+      const sliderVal = perfPct !== null ? Math.round(perfPct) : 0;
+      const sliderColor = getPerfColor(sliderVal);
+      html += '<div class="card" role="listitem" tabindex="0" data-id="' + esc(p.id) + '" data-idx="' + i + '" data-cat-type="processor"' + (delaySec >= 0 ? ' style="animation:fadeIn .3s ease ' + delaySec + 's both"' : '') + '>'
+        + buildCardBg(p)
+        + '<div class="card-head"><div class="card-info"><div class="card-name">' + esc(p.name) + '</div><div class="card-meta">'
+        + '<span class="meta-badge meta-proc-brand">' + esc(brandShort) + '</span>';
+      if (processNode) html += '<span class="meta-badge meta-proc-process">' + esc(processNode) + '</span>';
+      if (perfPct !== null) html += '<span class="meta-badge meta-proc-perf" data-real="' + perfPct + '">性能 <span class="perf-dyn-val">' + Math.round(perfPct) + '</span>%</span>';
+      html += '</div>';
+      if (perfPct !== null) html += '<div class="perf-slider-wrap"><input type="range" class="perf-slider" min="0" max="200" step="5" value="' + sliderVal + '" data-real="' + perfPct + '" style="background:linear-gradient(to right,' + sliderColor + ' ' + (sliderVal/200*100) + '%,var(--slider-track) ' + (sliderVal/200*100) + '%)"></div>';
+      html += '</div></div></div><div class="card-expand-bar"></div>';
+    } else {
+      const d = item; detailData[i] = { type: 'device', ref: d };
+      const isPhone = d.category === '手机';
+      html += '<div class="card" role="listitem" tabindex="0" data-id="' + esc(d.id || '') + '" data-idx="' + i + '" data-cat-type="device"' + (delaySec >= 0 ? ' style="animation:fadeIn .3s ease ' + delaySec + 's both"' : '') + '>'
+        + buildCardBg(d)
+        + '<div class="card-head"><div class="card-info"><div class="card-name">' + esc(d.name) + '</div><div class="card-meta">';
+      if (isPhone) {
+        const phoneTags = getPhoneSummary(d);
+        for (let ti = 0; ti < phoneTags.length; ti++) html += '<span class="meta-badge ' + phoneTags[ti].cls + '">' + esc(phoneTags[ti].text) + '</span>';
+      } else {
+        const sm = getSummary(d);
+        if (sm.power) html += '<span class="meta-badge meta-power">' + esc(sm.power) + '</span>';
+        if (sm.port) html += '<span class="meta-badge meta-port">' + esc(sm.port) + '</span>';
+        if (d.category === '充电宝' && sm.capacity) { const capShort = sm.capacity.match(/\d+mAh/); html += '<span class="meta-badge meta-pb-cap">' + esc(capShort ? capShort[0] : sm.capacity) + '</span>'; }
+        for (let pi = 0; pi < sm.protocols.length; pi++) { if (sm.protocols[pi]) html += '<span class="meta-badge meta-proto">' + esc(sm.protocols[pi]) + '</span>'; }
+      }
+      html += '</div></div></div><div class="card-expand-bar"></div></div>';
+    }
+  }
+  grid.innerHTML = html;
+  bindImgErrors(grid);
+}
+
+function getFilteredDevices() {
+  let filtered = [];
+  if (currentCat === '全部') { for (let fi = 0; fi < devices.length; fi++) filtered.push(devices[fi]); }
+  else { for (let fi = 0; fi < devices.length; fi++) { if (devices[fi].category === currentCat) filtered.push(devices[fi]); } }
+  if (searchQuery) {
+    const scoreMap = new Map(), searchFiltered = [];
+    for (let fi = 0; fi < filtered.length; fi++) { const sc = smartSearch(filtered[fi]); if (sc) { scoreMap.set(filtered[fi], sc); searchFiltered.push(filtered[fi]); } }
+    filtered = searchFiltered;
+    filtered.sort(function(a, b) { return scoreMap.get(b) - scoreMap.get(a); });
+    return filtered;
+  }
+  return sortDevices(filtered);
+}
+
+function getSortedProcessors() {
+  if (typeof processors === 'undefined') return [];
+  let sorted = processors.slice();
+  if (searchQuery) {
+    const scoreMap = new Map(), filtered = [];
+    for (let si = 0; si < processors.length; si++) { const sc = smartProcSearch(processors[si]); if (sc) { scoreMap.set(processors[si], sc); filtered.push(processors[si]); } }
+    sorted = filtered;
+    sorted.sort(function(a, b) { return scoreMap.get(b) - scoreMap.get(a); });
+  } else {
+    sorted.sort(function(a, b) {
+      let va, vb;
+      if (currentSortField === 'perf') { const ca = sortCache.get(a) || {}, cb = sortCache.get(b) || {}; va = ca.perf || 0; vb = cb.perf || 0; }
+      else if (currentSortField === 'release_date') { va = (a.specs || {})['发布日期'] || ''; vb = (b.specs || {})['发布日期'] || ''; }
+      else { va = a.name || ''; vb = b.name || ''; }
+      if (va < vb) return currentSortDir === 'asc' ? -1 : 1; if (va > vb) return currentSortDir === 'asc' ? 1 : -1; return 0;
+    });
+  }
+  return sorted;
+}
+
+function render() { document.getElementById('cat-title').textContent = currentCat === '全部' ? '全部设备' : currentCat; renderCards(getFilteredDevices(), 'device'); }
+function renderProcessors() { document.getElementById('cat-title').textContent = '处理器'; renderCards(getSortedProcessors(), 'processor'); }
+
+function buildProcDetail(p) {
+  const s = p.specs || {};
+  let dh = '<div class="detail-info"><div>品牌：<span>' + esc(p.brand) + '</span></div>';
+  if (s['发布日期']) dh += '<div>发布：<span>' + esc(s['发布日期']) + '</span></div>';
+  dh += '</div><ul class="detail-specs">';
+  const keys = sortKeysByCategory(Object.keys(s), '处理器');
+  for (let k = 0; k < keys.length; k++) dh += '<li><span class="sk">' + esc(keys[k]) + '</span><span class="sv">' + esc(String(s[keys[k]])) + '</span></li>';
+  dh += '</ul>';
+  const linkedPhones = devices.filter(function(d) { return d.processor_id === p.id; });
+  if (linkedPhones.length) {
+    dh += '<div class="proc-phones"><div class="proc-phones-title">搭载机型（' + linkedPhones.length + '）</div>';
+    for (let pi = 0; pi < linkedPhones.length; pi++) dh += '<span class="proc-phone-item" data-phone-id="' + esc(linkedPhones[pi].id) + '">' + esc(linkedPhones[pi].name) + '</span>';
+    dh += '</div>';
+  }
+  return dh;
+}
+
+function toggleCard(el, idx) {
+  var detailHtml = '';
+  var detailRef = detailData[idx];
+  if (detailRef) {
+    var cacheKey = detailRef.type + '-' + (detailRef.ref.id || idx);
+    if (!detailCache[cacheKey]) {
+      if (detailRef.type === 'processor') {
+        detailCache[cacheKey] = buildProcDetail(detailRef.ref);
+      } else {
+        detailCache[cacheKey] = buildDeviceDetail(detailRef.ref, idx);
+      }
+    }
+    detailHtml = detailCache[cacheKey];
+  }
+  const wasExpanded = el.classList.contains('expanded');
+  const grid = document.getElementById('grid');
+  const bar = el.querySelector('.card-expand-bar');
+  const cards = document.querySelectorAll('.card.expanded');
+  cards.forEach(function(c) {
+    if (c !== el) {
+      c.classList.remove('expanded');
+      var otherBar = c.querySelector('.card-expand-bar');
+      if (otherBar) otherBar.classList.remove('expanding');
+    }
+  });
+  closeActivePanel();
+  removeOverlay();
+  if (!wasExpanded) {
+    if (bar) bar.classList.add('expanding');
+    el.classList.add('expanded');
+    el.classList.add('overlay-active');
+    el.style.zIndex = '20';
+    el.style.borderRadius = '24px 24px 0 0';
+    el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
+    var allCards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+    var currentIndex = allCards.indexOf(el);
+    var belowCards = allCards.slice(currentIndex + 1);
+    belowCards.forEach(function(card) { card.style.opacity = '0.99'; });
+    const np = document.createElement('div');
+    np.className = 'card-detail-panel';
+    np.innerHTML = '<div class="detail-inner">' + detailHtml + '</div>';
+    el.style.overflow = 'visible';
+    el.style.contain = 'layout style';
+    el.appendChild(np);
+    createOverlay();
+    requestAnimationFrame(function() {
+      var gridRect = grid.getBoundingClientRect();
+      var cardRect = el.getBoundingClientRect();
+      np.style.left = -(cardRect.left - gridRect.left) + 'px';
+      np.style.width = gridRect.width + 'px';
+      np.classList.add('open');
+      np.style.opacity = '1';
+      np.style.maxHeight = np.scrollHeight + 'px';
+      setTimeout(function() { np.style.maxHeight = 'none'; }, 360);
+    });
+    activePanel = np;
+    setTimeout(function() {
+      if (activePanel) {
+        grid.style.paddingBottom = (activePanel.offsetHeight + 20) + 'px';
+      }
+      belowCards.forEach(function(card) { card.style.opacity = ''; });
+    }, 300);
+    el.setAttribute('aria-expanded', 'true');
+    observePanel(np, el);
+  } else {
+    el.classList.remove('expanded');
+    el.classList.remove('overlay-active');
+    var panel = el.querySelector('.card-detail-panel');
+    panelObserver.unobserve(el);
+    if (panel) panelObserver.unobserve(panel);
+    var idx = el.dataset.idx;
+    if (idx && _observeMap[idx]) delete _observeMap[idx];
+    if (bar) bar.classList.remove('expanding');
+    grid.style.paddingBottom = ''; el.setAttribute('aria-expanded', 'false');
+  }
+}
+
+function createOverlay() {
+  var existing = document.querySelector('.card-overlay');
+  if (existing) return;
+  var overlay = document.createElement('div');
+  overlay.className = 'card-overlay';
+  document.body.appendChild(overlay);
+  requestAnimationFrame(function() {
+    overlay.classList.add('show');
+  });
+  overlay.addEventListener('click', function() {
+    var expandedCard = document.querySelector('.card.expanded');
+    if (expandedCard) {
+      toggleCard(expandedCard, parseInt(expandedCard.dataset.idx));
+    }
+  });
+}
+
+function removeOverlay() {
+  var overlay = document.querySelector('.card-overlay');
+  if (overlay) {
+    overlay.classList.remove('show');
+    setTimeout(function() { overlay.remove(); }, 250);
+  }
+}
+
+var _observeMap = {};
+var panelObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    var el = entry.target;
+    var idx = el.dataset.observeIdx;
+    var type = el.dataset.observeType;
+    if (!idx || !type) return;
+    if (!_observeMap[idx]) _observeMap[idx] = {};
+    _observeMap[idx][type] = entry.isIntersecting;
+    var map = _observeMap[idx];
+    if (map.card === false && map.panel === false) {
+      var card = document.querySelector('.card[data-idx="' + CSS.escape(idx) + '"]');
+      if (card && card.classList.contains('expanded')) {
+        toggleCard(card, parseInt(idx));
+      }
+    }
+  });
+}, { threshold: 0 });
+
+function observePanel(panel, card) {
+  var idx = card.dataset.idx;
+  card.dataset.observeIdx = idx;
+  card.dataset.observeType = 'card';
+  panel.dataset.observeIdx = idx;
+  panel.dataset.observeType = 'panel';
+  _observeMap[idx] = { card: true, panel: true };
+  panelObserver.observe(card);
+  panelObserver.observe(panel);
+}
+
+function jumpToPhone(phoneId) {
+  filterCat('手机');
+  setTimeout(function() { var t = document.querySelector('.card[data-id="' + CSS.escape(phoneId) + '"]'); if (t) { t.click(); t.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }, 100);
+}
+
+var drawerMask = document.getElementById('drawer-mask');
+function openDrawer() { drawerMask.classList.add('open'); }
+function closeDrawer() { drawerMask.classList.remove('open'); closeThemeSelector(); }
+function closeThemeSelector() {
+  var sel = document.getElementById('theme-selector');
+  var trk = document.getElementById('theme-selector-track');
+  if (!sel || !sel.classList.contains('open')) return;
+  var idx = 0;
+  trk.querySelectorAll('.theme-option').forEach(function(o, i) { if (o.classList.contains('active')) idx = i; });
+  sel.classList.remove('open');
+  trk.style.transform = 'translateY(' + (-idx * 36) + 'px)';
+}
+
+function filterCat(cat) {
+  currentCat = cat;
+  const catOptions = CATEGORY_SORT_OPTIONS[cat];
+  if (catOptions) { let hasField = false; for (let i = 0; i < catOptions.length; i++) { if (catOptions[i].f === currentSortField) { hasField = true; break; } } if (!hasField) { currentSortField = 'release_date'; currentSortDir = 'desc'; } }
+  else { currentSortField = 'release_date'; currentSortDir = 'desc'; }
+  updateSortButtons();
+  const drawerItems = document.querySelectorAll('.drawer-item');
+  drawerItems.forEach(function(d) { d.classList.remove('active'); if (d.dataset.cat === cat) d.classList.add('active'); });
+  closeDrawer();
+  if (cat === '处理器') renderProcessors(); else render();
+}
+
+function validateData() {
+  const warnings = [], pids = {};
+  if (typeof processors !== 'undefined') { for (let i = 0; i < processors.length; i++) { const p = processors[i]; if (!p.id) { warnings.push('处理器 "' + (p.name || '(无名)') + '" 缺少 id'); continue; } if (pids[p.id]) warnings.push('处理器 id "' + p.id + '" 重复'); pids[p.id] = true; if (!p.name) warnings.push('处理器 id="' + p.id + '" 缺少 name'); if (!p.brand) warnings.push('处理器 id="' + p.id + '" 缺少 brand'); if (!p.specs) warnings.push('处理器 id="' + p.id + '" 缺少 specs'); } }
+  for (let j = 0; j < devices.length; j++) { const d = devices[j]; if (!d.name) warnings.push('设备 index=' + j + ' 缺少 name'); if (!d.category) warnings.push('设备 "' + (d.name || j) + '" 缺少 category'); if (!d.specs) warnings.push('设备 "' + (d.name || j) + '" 缺少 specs'); if (d.processor_id && !pids[d.processor_id]) warnings.push('设备 "' + d.name + '" 的 processor_id "' + d.processor_id + '" 不存在'); }
+  if (warnings.length) console.warn('[数码图鉴] 数据校验 (' + warnings.length + '):\n' + warnings.join('\n'));
+}
+
+function setupEventDelegation() {
+  const grid = document.getElementById('grid');
+  grid.addEventListener('click', function(e) {
+    const phoneItem = e.target.closest('.proc-phone-item');
+    if (phoneItem) { e.stopPropagation(); const pid = phoneItem.dataset.phoneId; if (pid) jumpToPhone(pid); return; }
+    const procLink = e.target.closest('.proc-link');
+    if (procLink) { e.stopPropagation(); const pid = procLink.dataset.procId; if (pid) { filterCat('处理器'); setTimeout(function() { var t = document.querySelector('.card[data-id="' + CSS.escape(pid) + '"]'); if (t) { t.click(); t.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }, 100); } return; }
+    const card = e.target.closest('.card');
+    if (!card) return;
+    if (e.target.closest('.perf-slider')) return;
+    if (e.target.closest('.card-detail-panel')) return;
+    toggleCard(card, parseInt(card.dataset.idx));
+  });
+  grid.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { const card = e.target.closest('.card'); if (card && !e.target.closest('.card-detail-panel')) { e.preventDefault(); card.click(); } } });
+  document.getElementById('sort-buttons').addEventListener('click', function(e) { const btn = e.target.closest('.sort-btn'); if (btn && btn.dataset.sortField) toggleSort(btn.dataset.sortField); });
+  document.getElementById('drawer-toggle').addEventListener('click', openDrawer);
+  drawerMask.addEventListener('click', function(e) { if (e.target === drawerMask) closeDrawer(); });
+  document.querySelector('.drawer-list').addEventListener('click', function(e) { const item = e.target.closest('.drawer-item'); if (item && item.dataset.cat) filterCat(item.dataset.cat); });
+  document.getElementById('search-input').addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); handleSearch(); } if (e.key === 'Escape') { document.getElementById('search-input').blur(); } });
+  document.getElementById('search-input').addEventListener('input', function() {
+    toggleClearBtn();
+    if (this.value.trim() === '33550336' && !window.__loopCollapse) {
+      this.value = ''; toggleClearBtn();
+      var s = document.createElement('script');
+      s.src = 'easter-egg.js'; s.async = true;
+      document.body.appendChild(s);
+    }
+  });
+  document.getElementById('search-btn').addEventListener('click', handleSearch);
+  document.getElementById('search-clear').addEventListener('click', clearSearch);
+  document.getElementById('drawer-theme').addEventListener('click', function(e) {
+    var selector = document.getElementById('theme-selector');
+    var track = document.getElementById('theme-selector-track');
+    var option = e.target.closest('.theme-option');
+    
+    if (!selector.classList.contains('open')) {
+      selector.classList.add('open');
+      track.style.transform = 'translateY(0)';
+      return;
+    }
+    
+    if (option) {
+      var val = option.dataset.value;
+      var options = track.querySelectorAll('.theme-option');
+      var newActiveIndex = 0;
+      options.forEach(function(opt, idx) {
+        if (opt.dataset.value === val) newActiveIndex = idx;
+      });
+      
+      var optionHeight = 36;
+      var newOffset = -newActiveIndex * optionHeight;
+      selector.classList.remove('open');
+      track.style.transform = 'translateY(' + newOffset + 'px)';
+      
+      if (val === 'auto') {
+        followSystemTheme();
+      } else {
+        setTheme(val);
+      }
+    }
+  });
+  document.addEventListener('click', function(e) {
+    var sel = document.getElementById('theme-selector');
+    if (sel && sel.classList.contains('open') && !sel.contains(e.target)) closeThemeSelector();
+  });
+  document.getElementById('btn-changelog').addEventListener('click', function(e) { e.stopPropagation(); toggleChangelog(); });
+  document.getElementById('btn-about').addEventListener('click', function(e) { e.stopPropagation(); toggleAbout(); });
+  document.getElementById('changelog-close').addEventListener('click', toggleChangelog);
+  document.getElementById('about-close').addEventListener('click', toggleAbout);
+  document.getElementById('changelog-mask').addEventListener('click', function(e) { if (e.target === this) toggleChangelog(); });
+  document.getElementById('about-mask').addEventListener('click', function(e) { if (e.target === this) toggleAbout(); });
+  document.getElementById('changelog-list').addEventListener('click', function(e) { const t = e.target.closest('.changelog-toggle'); if (t) { const dd = t.nextElementSibling; if (dd) { dd.classList.toggle('open'); t.textContent = dd.classList.contains('open') ? '收起设备▼' : '查看新增设备 ▶'; } } });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { const sel = document.getElementById('theme-selector'); if (sel && sel.classList.contains('open')) { closeThemeSelector(); return; } const cl = document.getElementById('changelog-mask'), ab = document.getElementById('about-mask'); if (cl.classList.contains('open')) toggleChangelog(); else if (ab.classList.contains('open')) toggleAbout(); else if (document.querySelector('.card.expanded')) closeActivePanel(); } });
+  var sliderRafId = null;
+  grid.addEventListener('input', function(e) {
+    const slider = e.target.closest('.perf-slider');
+    if (!slider) return;
+    const val = parseInt(slider.value);
+    const realVal = parseFloat(slider.dataset.real) || 1;
+    const card = slider.closest('.card');
+    const trackColor = getPerfColor(val);
+    slider.style.background = 'linear-gradient(to right, ' + trackColor + ' ' + (val/200*100) + '%, var(--slider-track) ' + (val/200*100) + '%)';
+    if (card) { const badgeVal = card.querySelector('.perf-dyn-val'); if (badgeVal) badgeVal.textContent = val; }
+    if (sliderRafId) cancelAnimationFrame(sliderRafId);
+    sliderRafId = requestAnimationFrame(function() {
+      sliderRafId = null;
+      grid.querySelectorAll('.perf-slider').forEach(function(other) {
+        if (other === slider) return;
+        var otherNew = Math.round((parseFloat(other.dataset.real) || 1) / realVal * val);
+        other.value = otherNew;
+        var otherCard = other.closest('.card');
+        if (otherCard) { var b = otherCard.querySelector('.perf-dyn-val'); if (b) b.textContent = otherNew; }
+        other.style.background = 'linear-gradient(to right, ' + getPerfColor(otherNew) + ' ' + (otherNew/200*100) + '%, var(--slider-track) ' + (otherNew/200*100) + '%)';
+      });
+    });
+  });
+  grid.addEventListener('mousedown', function(e) { if (e.target.closest('.perf-slider')) e.stopPropagation(); });
+  grid.addEventListener('touchstart', function(e) { if (e.target.closest('.perf-slider')) e.stopPropagation(); }, { passive: true });
+  grid.addEventListener('click', function(e) { if (e.target.closest('.perf-slider')) e.stopPropagation(); });
+  grid.addEventListener('dblclick', function(e) {
+    var slider = e.target.closest('.perf-slider');
+    if (!slider) return;
+    e.stopPropagation();
+    slider.value = 100;
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+}
+
+try {
+  validateData(); renderChangelog(); updateSortButtons(); setupEventDelegation(); render();
+} catch(e) {
+  const g = document.getElementById('grid');
+  if (g) g.innerHTML = '<div class="empty"><p class="error-text">加载出错，请刷新页面重试</p></div>';
+  console.error('[数码图鉴]', e);
+}
+})();
+</script>
+</body>
+</html>

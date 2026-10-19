@@ -15,3 +15,6 @@ Desktop.ini
 # 编辑器目录
 .idea/
 .vscode/
+
+# 本地工具脚本
+db/压缩图片.ps1

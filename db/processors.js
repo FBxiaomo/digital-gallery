@@ -542,5 +542,23 @@ var processors =
    "发布日期": "2026-05",
    "说明": "vivo S60元气版实测"
   }
+ },
+ {
+  "id": "sd835",
+  "name": "骁龙835",
+  "brand": "高通 Qualcomm",
+  "specs": {
+   "制程": "三星 10nm",
+   "CPU架构": "4×Kryo 280 Gold 2.45GHz（Cortex-A73）+ 4×Kryo 280 Silver 1.9GHz（Cortex-A53）",
+   "GPU": "Adreno 540（710MHz）",
+   "内存支持": "LPDDR4X 1866MHz",
+   "基带": "骁龙X16 LTE（外挂）",
+   "安兔兔 V10": "~320,000（V10等效）",
+   "GeekBench 6 单核": "427",
+   "GeekBench 6 多核": "1,500",
+   "3DMark WLE": "368",
+   "发布日期": "2017-01",
+   "说明": "NanoReview（GB6/3DMark）"
+  }
  }
 ];

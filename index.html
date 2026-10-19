@@ -86,6 +86,7 @@
   --perf-mid: #185fa5;
   --perf-low: #92400e;
   --changelog-devices-bg: #f5f6f8;
+  --searchbar-clearance:72px;
 }
 
 [data-theme="dark"] {
@@ -240,6 +241,12 @@ html{scrollbar-gutter:stable}
 .side-btns{position:absolute;right:0;bottom:0;display:flex;gap:6px;z-index:12}
 .side-btn{width:36px;height:36px;border-radius:999px;border:0.5px solid var(--border);background:var(--card-bg);color:var(--text3);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:color .15s,border-color .15s}
 .side-btn:hover{background:var(--primary-bg);color:var(--primary)}
+.ico{width:1em;height:1em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:-0.125em}
+.drawer-item .ico{font-size:18px}
+.side-btn .ico{font-size:17px}
+.fab-toggle .ico{font-size:20px}
+.search-btn .ico{font-size:18px}
+.empty .ico{font-size:44px;stroke-width:1.5;margin-bottom:16px}
 [data-theme="dark"] .theme-selector.glass,[data-theme="dark"] .side-btn{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.15);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.08),inset -1px 1px 1px -1px rgba(255,255,255,0.08),0 2px 8px rgba(0,0,0,0.3);color:var(--text)}
 .content{flex:1;padding:24px}
 .content-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
@@ -256,7 +263,7 @@ html{scrollbar-gutter:stable}
 .search-inner .search-btn:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.25)}
 .device-count{font-size:13px;color:var(--text3)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;padding-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;padding-bottom:var(--searchbar-clearance,72px)}
 #grid{position:relative}
 
 /* ===== 卡片（三层叠加：bg → mask → content） ===== */
@@ -271,6 +278,10 @@ html{scrollbar-gutter:stable}
 .card-bg.bg-init{opacity:0;transform:translateX(60px) scale(0.9)}
 .card:hover .card-bg{transform:scale(1.05) translateX(-5px);opacity:0.85}
 .card[data-cat-type="device"].has-img.expanded .card-bg{z-index:3;background-position:center center;transform:scale(1.1);opacity:1}
+/* 处理器卡片：logo 水印缩小放角落，避免喧宾夺主 */
+.card[data-cat-type="processor"] .card-bg{background-size:36%;background-position:92% 80%;opacity:0.38}
+.card[data-cat-type="processor"]:hover .card-bg{transform:scale(1.02) translateX(-2px);opacity:0.5}
+.card[data-cat-type="processor"].expanded .card-bg{z-index:0;background-position:92% 80%;transform:none;opacity:0.38}
 
 /* Layer 1: 斜向渐变遮罩 */
 .card-mask{position:absolute;inset:0;z-index:1;border-radius:inherit;background:linear-gradient(100deg,var(--card-mask-from) 0%,var(--card-mask-mid) 30%,var(--card-mask-to) 55%,transparent 80%);transition:opacity .5s cubic-bezier(.22,1,.36,1)}
@@ -297,6 +308,8 @@ html{scrollbar-gutter:stable}
 .meta-proc-brand{background:var(--badge-purple-bg);border-color:var(--badge-purple-border);color:var(--badge-purple-color)}
 .meta-proc-process{background:var(--badge-cyan-bg);border-color:var(--badge-cyan-border);color:var(--badge-cyan-color)}
 .meta-proc-perf{background:var(--badge-proc-perf-bg);border-color:var(--badge-proc-perf-border);color:var(--badge-proc-perf-color)}
+.meta-proc-date{background:var(--badge-bg);border-color:var(--badge-border);color:var(--text2)}
+.proc-card-summary{margin-top:7px;font-size:11px;line-height:1.45;color:var(--text3);opacity:0.92;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 
 .perf-slider-wrap{display:flex;align-items:center;gap:8px;margin-top:6px;padding:0 2px}
 .perf-slider{flex:1;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:var(--slider-track);outline:none;cursor:default;pointer-events:none}
@@ -309,9 +322,10 @@ html{scrollbar-gutter:stable}
 .card:hover .card-expand-bar{width:48px;opacity:0.8}
 .card.expanded .card-expand-bar,.card-expand-bar.expanding{width:100%!important;background:var(--expand-bar-active)!important;opacity:1!important;bottom:0;border-radius:0}
 
-.card-detail-panel{display:none;position:absolute;top:100%;left:0;background:var(--panel-bg);border:0.5px solid var(--panel-border);border-radius:0 0 24px 24px;overflow:hidden;z-index:10;will-change:transform,opacity;box-sizing:border-box}
+.card-detail-panel{display:none;position:absolute;top:calc(100% + 10px);left:0;background:var(--panel-bg);border:0.5px solid var(--panel-border);border-radius:24px;overflow:hidden;z-index:10;will-change:transform,opacity;box-sizing:border-box;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
 .card-detail-panel.open{display:block;max-height:0;opacity:0;overflow:hidden;transform-origin:top center;transition:max-height .35s cubic-bezier(.22,1,.36,1),opacity .25s ease}
 .card-detail-panel .detail-inner{padding:14px 16px}
+[data-theme="dark"] .card-detail-panel{box-shadow:0 4px 16px rgba(0,0,0,0.35)}
 .card-detail-panel.closing{display:block;overflow:hidden;transform-origin:top center;transition:max-height .25s cubic-bezier(.22,1,.36,1),opacity .15s ease;max-height:0;opacity:0}
 
 .card-overlay{position:fixed;top:56px;left:0;right:0;bottom:0;z-index:15;background:rgba(0,0,0,0.5);opacity:0;transition:opacity .25s ease}
@@ -383,6 +397,17 @@ html{scrollbar-gutter:stable}
 </style>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+<symbol id="i-powerbank" viewBox="0 0 24 24"><rect x="6.5" y="3" width="11" height="18.5" rx="3"/><rect x="8.5" y="4.8" width="2.2" height="1.5" rx="0.4"/><rect x="13.3" y="4.8" width="2.2" height="1.5" rx="0.75"/><path d="M12.9 8 9.6 12.5h2.1l-.7 4 3.4-4.7h-2.1z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-charger" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="14.5" rx="2.5"/><path d="M12.9 5 9.6 9.5h2.1l-.7 4 3.4-4.7h-2.1z" fill="currentColor" stroke="none"/><path d="M8.5 22v-5.5M11.5 22v-5.5"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><path d="M9.5 10h5v5h-5zM12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4M8 4.5v2M16 4.5v2M8 17.5v2M16 17.5v2M4.5 8h2M4.5 16h2M17.5 8h2M17.5 16h2"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h9l4 4V21a.5.5 0 0 1-.5.5h-12A.5.5 0 0 1 6 21V3a.5.5 0 0 1 .5-.5z"/><path d="M14.5 2.5v4.5H19M9 12h7M9 16h7"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><path d="M12 5v9"/><path d="M12 18.5v.3"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-empty" viewBox="0 0 24 24"><path d="M21 19H3M5 19V9l3.5-4.5h7L19 9v10"/><path d="M9.5 4.5v4.5h5"/><path d="M9.5 19v-5h5v5"/></symbol>
+</svg>
 <div class="topbar glass">
   <h1><img class="site-logo" src="logo/apple-touch-icon.png" alt="数码图鉴">数码图鉴</h1>
   <div class="sort-group">
@@ -394,11 +419,11 @@ html{scrollbar-gutter:stable}
     <nav class="drawer glass" aria-label="设备分类">
       <h3>分类</h3>
       <ul class="drawer-list">
-        <li class="drawer-item active" data-cat="全部">&#9776; 全部设备</li>
-        <li class="drawer-item" data-cat="手机">&#128241; 手机</li>
-        <li class="drawer-item" data-cat="充电宝">&#128267; 充电宝</li>
-        <li class="drawer-item" data-cat="充电器">&#9889; 充电器</li>
-        <li class="drawer-item" data-cat="处理器">&#128187; 处理器</li>
+        <li class="drawer-item active" data-cat="全部"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>全部设备</li>
+        <li class="drawer-item" data-cat="手机"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>手机</li>
+        <li class="drawer-item" data-cat="充电宝"><svg class="ico" aria-hidden="true"><use href="#i-powerbank"/></svg>充电宝</li>
+        <li class="drawer-item" data-cat="充电器"><svg class="ico" aria-hidden="true"><use href="#i-charger"/></svg>充电器</li>
+        <li class="drawer-item" data-cat="处理器"><svg class="ico" aria-hidden="true"><use href="#i-chip"/></svg>处理器</li>
       </ul>
       <div class="drawer-theme-wrap" id="drawer-theme">
         <div class="theme-anchor">
@@ -411,8 +436,8 @@ html{scrollbar-gutter:stable}
           </div>
         </div>
         <div class="side-btns">
-          <button type="button" class="side-btn" id="btn-changelog" title="更新日志" aria-label="更新日志">&#128196;</button>
-          <button type="button" class="side-btn" id="btn-about" title="关于" aria-label="关于">&#8505;</button>
+          <button type="button" class="side-btn" id="btn-changelog" title="更新日志" aria-label="更新日志"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg></button>
+          <button type="button" class="side-btn" id="btn-about" title="关于" aria-label="关于"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg></button>
         </div>
       </div>
     </nav>
@@ -425,13 +450,13 @@ html{scrollbar-gutter:stable}
     <div class="grid" id="grid" role="list" aria-label="设备列表"></div>
   </div>
 </div>
-<button type="button" class="fab-toggle glass" id="drawer-toggle" aria-label="打开分类">&#9776;</button>
+<button type="button" class="fab-toggle glass" id="drawer-toggle" aria-label="打开分类"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
 
 <div class="search-bar-bottom glass" id="search-bar-bottom">
   <div class="search-inner">
     <input type="text" id="search-input" placeholder="搜索设备或参数..." aria-label="搜索设备或参数" maxlength="100">
     <button type="button" id="search-clear" class="search-clear" aria-label="清除搜索">&times;</button>
-    <button type="button" id="search-btn" class="search-btn" aria-label="搜索">&#128269;</button>
+    <button type="button" id="search-btn" class="search-btn" aria-label="搜索"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></button>
   </div>
 </div>
 
@@ -1118,11 +1143,13 @@ function buildCardBg(item) {
       }
     }
   }
-  // 品牌 logo 兜底（取中文品牌名，如 "小米 Xiaomi" -> "小米"）
+  // 品牌 logo 兜底（取中文品牌名，如 "小米 Xiaomi" -> "小米"；logo 为 png）
   var brandCn = brand.split(' ')[0];
   if (brandCn) {
-    for (var b = 0; b < exts.length; b++) {
-      var logoPath = 'logo/' + brandCn + 'logo' + exts[b];
+    var logoNames = [brandCn];
+    if (brandCn === '华为') logoNames.push('海思'); // 麒麟芯片使用海思 logo
+    for (var lb = 0; lb < logoNames.length; lb++) {
+      var logoPath = 'logo/' + logoNames[lb] + 'logo.png';
       if (candidates.indexOf(logoPath) === -1) candidates.push(logoPath);
     }
   }
@@ -1211,7 +1238,7 @@ function renderCards(items, type) {
     closeActivePanel(); detailData = [];
     const label = type === 'processor' ? '处理器' : '设备';
     const emptyMsg = searchQuery ? '未找到与「' + esc(searchQuery) + '」相关的' + label : '暂无' + label;
-    grid.innerHTML = '<div class="empty" role="status"><div class="icon">&#128237;</div><p>' + emptyMsg + '</p></div>';
+    grid.innerHTML = '<div class="empty" role="status"><svg class="ico" aria-hidden="true"><use href="#i-empty"/></svg><p>' + emptyMsg + '</p></div>';
     return;
   }
   closeActivePanel(); detailData = [];
@@ -1234,8 +1261,17 @@ function renderCards(items, type) {
         + '<span class="meta-badge meta-proc-brand">' + esc(brandShort) + '</span>';
       if (processNode) html += '<span class="meta-badge meta-proc-process">' + esc(processNode) + '</span>';
       if (perfPct !== null) html += '<span class="meta-badge meta-proc-perf" data-real="' + perfPct + '">性能 <span class="perf-dyn-val">' + Math.round(perfPct) + '</span>%</span>';
+      if (s['发布日期']) html += '<span class="meta-badge meta-proc-date">' + esc(s['发布日期']) + '</span>';
       html += '</div>';
       if (perfPct !== null) html += '<div class="perf-slider-wrap"><input type="range" class="perf-slider" min="0" max="200" step="5" value="' + sliderVal + '" data-real="' + perfPct + '" style="background:linear-gradient(to right,' + sliderColor + ' ' + (sliderVal/200*100) + '%,var(--slider-track) ' + (sliderVal/200*100) + '%)"></div>';
+      var procSum = [];
+      if (s['GPU']) procSum.push(s['GPU']);
+      var coreTotal = 0, cm, coreRe = /(\d+)\s*×/g;
+      while ((cm = coreRe.exec(s['CPU架构'] || '')) !== null) coreTotal += parseInt(cm[1]);
+      if (coreTotal > 0) procSum.push(coreTotal + '核');
+      var gb6m = s['GeekBench 6 多核'];
+      if (gb6m) procSum.push('GB6多核 ' + gb6m);
+      if (procSum.length) html += '<div class="proc-card-summary">' + esc(procSum.join(' · ')) + '</div>';
       html += '</div></div></div><div class="card-expand-bar"></div>';
     } else {
       const d = item; detailData[i] = { type: 'device', ref: d };
@@ -1346,7 +1382,7 @@ function toggleCard(el, idx) {
     el.classList.add('expanded');
     el.classList.add('overlay-active');
     el.style.zIndex = '20';
-    el.style.borderRadius = '24px 24px 0 0';
+    el.style.borderRadius = '24px';
     el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
     var allCards = Array.prototype.slice.call(document.querySelectorAll('.card'));
     var currentIndex = allCards.indexOf(el);
@@ -1359,20 +1395,19 @@ function toggleCard(el, idx) {
     el.style.contain = 'layout style';
     el.appendChild(np);
     createOverlay();
-    requestAnimationFrame(function() {
-      var gridRect = grid.getBoundingClientRect();
-      var cardRect = el.getBoundingClientRect();
-      np.style.left = -(cardRect.left - gridRect.left) + 'px';
-      np.style.width = gridRect.width + 'px';
-      np.classList.add('open');
-      np.style.opacity = '1';
-      np.style.maxHeight = np.scrollHeight + 'px';
-      setTimeout(function() { np.style.maxHeight = 'none'; }, 360);
-    });
+    var gridRect = grid.getBoundingClientRect();
+    var cardRect = el.getBoundingClientRect();
+    np.style.left = -(cardRect.left - gridRect.left) + 'px';
+    np.style.width = gridRect.width + 'px';
+    np.classList.add('open');
+    void np.offsetHeight; /* 同步确立起始态后再过渡 */
+    np.style.opacity = '1';
+    np.style.maxHeight = np.scrollHeight + 'px';
+    setTimeout(function() { np.style.maxHeight = 'none'; }, 360);
     activePanel = np;
     setTimeout(function() {
       if (activePanel) {
-        grid.style.paddingBottom = (activePanel.offsetHeight + 20) + 'px';
+        grid.style.paddingBottom = 'calc(' + activePanel.offsetHeight + 'px + var(--searchbar-clearance, 72px) + 10px)';
       }
       belowCards.forEach(function(card) { card.style.opacity = ''; });
     }, 300);

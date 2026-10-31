@@ -282,6 +282,19 @@ html{scrollbar-gutter:stable}
 .content-header{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 16px;margin-bottom:20px}
 .content-header h2{font-size:20px;font-weight:600}
 .content-intro{grid-column:1/-1;margin:0;font-size:12px;color:var(--text2);line-height:1.5}
+.site-footer{padding:28px 0 calc(var(--searchbar-clearance,72px) + 20px);border-top:1px solid var(--border)}
+.footer-main{display:grid;grid-template-columns:minmax(200px,2fr) repeat(3,minmax(100px,1fr));gap:28px}
+.footer-brand{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;color:var(--text)}
+.footer-brand img{width:30px;height:30px;border-radius:7px}
+.footer-desc{max-width:270px;margin-top:12px;color:var(--text2);font-size:12px;line-height:1.8}
+.footer-heading{font-size:12px;font-weight:600;color:var(--text);margin-bottom:12px}
+.footer-list{list-style:none;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.footer-link{font:inherit;font-size:12px;line-height:1.5;text-align:left;color:var(--text2);background:none;border:0;padding:0;text-decoration:none;cursor:pointer;transition:color .2s ease}
+.footer-link:hover{color:var(--accent-text)}
+.footer-link:focus-visible,.footer-author:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
+.footer-author{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:9px 13px;border:1px solid var(--accent-border);border-radius:10px;background:var(--accent-soft);color:var(--accent-text);font-size:12px;font-weight:600;text-decoration:none;transition:background .2s ease}
+.footer-author:hover{background:var(--primary-bg)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--text2);line-height:1.6}
 
 .search-bar-bottom{position:fixed;bottom:8px;left:16px;right:16px;z-index:90;border-radius:24px}
 .search-inner{position:relative;display:flex;align-items:center;padding:6px}
@@ -341,6 +354,7 @@ html{scrollbar-gutter:stable}
 .meta-badge{display:inline-flex;align-items:center;font-size:11px;line-height:1.35;padding:3px 7px;border-radius:7px;font-weight:500;background:var(--surface-subtle);border:1px solid transparent;color:var(--text2)}
 .meta-phone-cpu,.meta-proc-perf{background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-text);font-weight:600}
 .proc-card-meta{display:flex;align-items:center;gap:4px 10px;flex-wrap:wrap;font-size:11px;line-height:1.5;color:var(--text2)}
+.proc-estimate-mark{margin-left:4px;font-size:11px;font-weight:400;color:var(--text2);vertical-align:super}
 .proc-card-meta time{margin-left:auto;font-variant-numeric:tabular-nums}
 .proc-performance{display:flex;align-items:baseline;gap:6px;margin-top:10px;color:var(--text2);font-size:11px}
 .proc-performance .perf-dyn-val{color:var(--accent-text);font-size:20px;line-height:1.2;font-weight:600;font-variant-numeric:tabular-nums}
@@ -373,6 +387,16 @@ html{scrollbar-gutter:stable}
 
 .detail-info{font-size:12px;color:var(--text2);margin-bottom:10px;display:flex;gap:12px;flex-wrap:wrap}
 .detail-info span{color:var(--text);font-weight:500}
+.proc-detail-info{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:4px 12px}
+.proc-meta-group{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px}
+.proc-meta-brand,.proc-meta-release{display:flex;align-items:center;min-height:32px;min-width:0;overflow-wrap:anywhere}
+.perf-scheme-row{display:flex;align-items:center;gap:6px;min-height:32px;grid-column:2;grid-row:1;justify-self:end}
+.perf-scheme-row .perf-scheme-label{color:var(--text2);font-weight:400}
+.perf-scheme-options{display:inline-flex;gap:6px}
+.perf-scheme-button{min-width:32px;min-height:32px;padding:4px 10px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font:inherit;cursor:pointer}
+.perf-scheme-button.active{background:var(--surface-subtle);border-color:var(--primary);color:var(--primary);font-weight:600}
+.perf-scheme-button:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+
 .detail-specs{list-style:none;font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:820px;margin:0 auto}
 .detail-specs li{display:flex;padding:7px 10px;border-bottom:0.5px solid var(--detail-border);gap:10px;align-items:baseline}
 .detail-specs li:nth-last-child(-n+2){border-bottom:none}
@@ -403,6 +427,8 @@ html{scrollbar-gutter:stable}
 .fab-toggle{display:none}
 
 @media (max-width:768px){
+.footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+.footer-intro{grid-column:1/-1}
 .topbar{padding:0 12px;flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:6px}
 .sort-group{justify-content:flex-end}
 #sort-buttons{justify-content:flex-end;border-radius:18px}
@@ -498,6 +524,30 @@ html{scrollbar-gutter:stable}
       <span class="device-count" id="device-count"></span>
     </div>
     <div class="grid" id="grid" role="list" aria-label="设备列表"></div>
+    <footer class="site-footer" aria-label="站点信息">
+      <div class="footer-main">
+        <div class="footer-intro">
+          <div class="footer-brand"><img src="logo/apple-touch-icon.png" alt="">数码图鉴</div>
+          <p class="footer-desc">汇集数码设备的公开参数与跑分数据，让查阅和比较更轻松。</p>
+          <a class="footer-author" href="https://fbxiaomo.github.io/" target="_blank" rel="noopener noreferrer">访问作者个人主页 <span aria-hidden="true">↗</span></a>
+        </div>
+        <nav aria-label="图鉴分类"><h2 class="footer-heading">探索图鉴</h2><ul class="footer-list">
+          <li><button type="button" class="footer-link" data-footer-cat="手机">手机</button></li>
+          <li><button type="button" class="footer-link" data-footer-cat="处理器">处理器</button></li>
+          <li><button type="button" class="footer-link" data-footer-cat="充电器">充电器</button></li>
+          <li><button type="button" class="footer-link" data-footer-cat="充电宝">充电宝</button></li>
+        </ul></nav>
+        <nav aria-label="站点相关"><h2 class="footer-heading">了解本站</h2><ul class="footer-list">
+          <li><button type="button" class="footer-link" data-footer-action="about">关于数码图鉴</button></li>
+          <li><button type="button" class="footer-link" data-footer-action="changelog">更新日志</button></li>
+        </ul></nav>
+        <nav aria-label="友情链接与作者"><h2 class="footer-heading">友情链接</h2><ul class="footer-list">
+          <li><a class="footer-link" href="https://socpk.com/" target="_blank" rel="noopener noreferrer">SOCPK <span aria-hidden="true">↗</span></a></li>
+          <li><a class="footer-link" href="https://space.bilibili.com/267057576" target="_blank" rel="noopener noreferrer">作者 B 站主页 <span aria-hidden="true">↗</span></a></li>
+        </ul></nav>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footer-year">2026</span> 风暴小末 · 个人非商业项目</span><span>数据仅供参考，具体信息以官方为准</span></div>
+    </footer>
   </main>
 </div>
 <button type="button" class="fab-toggle glass" id="drawer-toggle" aria-label="打开分类"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
@@ -652,7 +702,11 @@ var imgCache = {};
 var devices = [];
 var processorsMap = {};
 var sortCache = new Map();
-var PERF_BASELINE = { GB6s: 2036, GB6m: 5697, WLE: 3782, GB5s: 1485, GB5m: 5195, MH31: 226 };
+var selectedPerfSchemes = new Map();
+var PERF_BASELINE = { GB6s: 2036, GB6m: 5697, WLE: 3782, GB5s: 1485, GB5m: 5195, MH31: 226, antutuCpu: 610530, antutuGpu: 424415 };
+// 方案C 的安兔兔 CPU/GPU 权重。取 68/32 而非旧的 55/45：安兔兔 GPU 分项的离散度约为 WLE 的 1.5 倍，
+// 旧权重会给这条本就更分散的轴过高比例，把旗舰端整体放大约 20%，导致 A 与 C 百分比系统性偏离。
+var PERF_ANTUTU_WEIGHT = { cpu: 0.68, gpu: 0.32 };
 
 function initDatabase() {
     if (typeof phones !== 'undefined') { for (let i = 0; i < phones.length; i++) devices.push(phones[i]); }
@@ -904,7 +958,7 @@ var FIELD_ORDER = {
   '手机': ['处理器','--- 存储与屏幕 ---','内存/存储','内存','存储','屏幕','--- 相机 ---','后置摄像头','后置相机','前置摄像头','前置相机','--- 充电规格 ---','电池容量','有线快充','无线快充','反向充电','PD协议','PPS协议','QC协议','UFCS','标配充电器','--- 其他 ---','网络与连接','散热','尺寸','重量','防水防尘','配色','出厂系统','材质','视频播放'],
   '充电器': ['最大功率','接口配置','输入电压','C口输出','C口最大输出','C口PPS','C口 UFCS','C1/C2输出','C1/C2 PPS','C1/C2 AVS','C1/C2 UFCS','C1/C2/C3输出','C1自带线输出','C1输出','C1 PPS','C1 UFCS','C2输出','C2 PPS','C2 UFCS','C3输出','C3 PPS','C3 UFCS','A口输出','A口 UFCS','DC口输出','磁吸无线充','无线充','多口功率分配','私有协议','尺寸','体积','重量','快充协议','特色功能','附赠线材','配色'],
   '充电宝': ['电池容量','最大功率','接口配置','C口输出','C口最大输出','C口PPS','C口 UFCS','C口输入','C1/C2输出','C1/C2 PPS','C1输出','C1 PPS','C2输出','C2 PPS','A口输出','A口 UFCS','多口同时输出','多口功率分配','私有协议','尺寸','重量','快充协议','特色功能','电池类型','附赠线材','配色'],
-  '处理器': ['制程','CPU架构','GPU','NPU','内存支持','基带','安兔兔 V10','GeekBench 5 单核','GeekBench 5 多核','GeekBench 6 单核','GeekBench 6 多核','3DMark WLE','GFXBench Manhattan 3.0','GFXBench Manhattan 3.1','发布日期','说明']
+  '处理器': ['制程','CPU架构','GPU','NPU','内存支持','基带','安兔兔 SoC CPU','安兔兔 SoC GPU','GeekBench 5 单核','GeekBench 5 多核','GeekBench 6 单核','GeekBench 6 多核','3DMark WLE','3DMark SNL','GFXBench 5 1080p','GFXBench 5 1440p','GFXBench Manhattan 3.0','GFXBench Manhattan 3.1','发布日期','说明']
 };
 
 function sortKeysByCategory(keys, category) {
@@ -928,7 +982,7 @@ function toggleAbout() { toggleModal(document.getElementById('about-mask'), rend
 function renderPerfTable() {
   const t = document.getElementById('perf-table');
   if (!t || t.rows.length > 0) return;
-  const rows = [['基准项目','骁龙8 Gen 2（100%）','说明'],['GeekBench 5 单核','1,485','IT之家实测'],['GeekBench 5 多核','5,195','IT之家实测'],['GeekBench 6 单核','2,036','极客湾 socpk.com'],['GeekBench 6 多核','5,697','极客湾 socpk.com'],['3DMark Wild Life Extreme','3,782','极客湾 socpk.com'],['GFXBench Manhattan 3.0','332 fps','用户实测'],['GFXBench Manhattan 3.1','226 fps','用户实测'],['安兔兔 V10','1,563,190','IT之家实测（仅供参考）']];
+  const rows = [['基准项目','骁龙8 Gen 2（100%）','说明'],['GeekBench 5 单核','1,485','IT之家实测'],['GeekBench 5 多核','5,195','IT之家实测'],['GeekBench 6 单核','2,036','极客湾 socpk.com'],['GeekBench 6 多核','5,697','极客湾 socpk.com'],['3DMark Wild Life Extreme','3,782','极客湾 socpk.com'],['GFXBench Manhattan 3.0','332 fps','用户实测'],['GFXBench Manhattan 3.1','226 fps','用户实测'],['安兔兔 SoC CPU','610,530','安兔兔官网均分'],['安兔兔 SoC GPU','424,415','安兔兔官网均分']];
   let html = '<thead><tr>';
   for (let ci = 0; ci < rows[0].length; ci++) html += '<th>' + esc(rows[0][ci]) + '</th>';
   html += '</tr></thead><tbody>';
@@ -936,7 +990,7 @@ function renderPerfTable() {
   html += '</tbody>';
   t.innerHTML = html;
   const note = document.getElementById('perf-note');
-  if (note) note.innerHTML = '<b>性能评分方案：</b><br>▸ 方案A（有GB6数据）：GB6单核×37.5% + GB6多核×37.5% + GPU×25%<br>▸ 方案B（仅GB5数据）：GB5单核×30% + GB5多核×40% + GPU×30%<br>▸ GPU优先级：3DMark WLE > GFXBench Manhattan 3.1（按帧率等比换算为WLE等效值）<br>▸ 安兔兔V10仅供参考，不参与评分计算';
+  if (note) note.innerHTML = '<b>性能评分方案：</b><br>▸ 方案A（GB6数据）：GB6单核×37.5% + GB6多核×37.5% + GPU×25%<br>▸ 方案B（GB5数据）：GB5单核×30% + GB5多核×40% + GPU×30%<br>▸ 方案C（安兔兔数据）：（安兔兔 SoC CPU分数×68% + GPU分数×32%）÷ 骁龙8 Gen 2的同口径加权分数 × 100%<br>▸ GPU优先级：3DMark WLE > GFXBench Manhattan 3.1（按帧率等比换算为WLE等效值，属于估算）<br>▸ 默认优先使用可用的方案A，其次B、C；在处理器详情可手动切换，缺失数据的方案不显示切换按钮<br>▸ 安兔兔 SoC CPU 和 GPU 为官网用户上传成绩的统计均分，用于方案C；采集于 2026-10-29，<a href="https://www.antutu.com/ranking/soc?level=1" target="_blank" rel="noopener noreferrer">查看安兔兔官网</a><br>▸ ◇表示评分含估算或拟合数据';
 }
 
 function renderChangelog() {
@@ -968,17 +1022,47 @@ function parseNum(v) { if (!v) return null; const n = parseFloat(String(v).repla
 function getProcById(id) { return processorsMap[id] || null; }
 function getProcNameById(id) { const p = getProcById(id); return p ? p.name : ''; }
 
-function calcPerf(procSpecs) {
-  if (!procSpecs) return null;
-  const g6s = parseNum(procSpecs['GeekBench 6 单核']), g6m = parseNum(procSpecs['GeekBench 6 多核']);
-  const wle = parseNum(procSpecs['3DMark WLE']), mh31 = parseNum(procSpecs['GFXBench Manhattan 3.1']);
-  const gpu = wle !== null ? wle : (mh31 !== null ? Math.round(mh31 / PERF_BASELINE.MH31 * PERF_BASELINE.WLE) : null);
-  if (g6s && g6m && gpu) return ((g6s/PERF_BASELINE.GB6s)*0.375 + (g6m/PERF_BASELINE.GB6m)*0.375 + (gpu/PERF_BASELINE.WLE)*0.25) * 100;
-  const g5s = parseNum(procSpecs['GeekBench 5 单核']), g5m = parseNum(procSpecs['GeekBench 5 多核']);
-  if (g5s && g5m && gpu) return ((g5s/PERF_BASELINE.GB5s)*0.30 + (g5m/PERF_BASELINE.GB5m)*0.40 + (gpu/PERF_BASELINE.WLE)*0.30) * 100;
-  return null;
+function getPerfSchemes(s) {
+  const schemes = {};
+  if (!s) return schemes;
+  const readScore = function(key) { const n = parseNum(String(s[key] || '').replace(/～/g, '~')); return Number.isFinite(n) && n > 0 ? n : null; };
+  const g6s = readScore('GeekBench 6 单核'), g6m = readScore('GeekBench 6 多核');
+  const g5s = readScore('GeekBench 5 单核'), g5m = readScore('GeekBench 5 多核');
+  const wle = readScore('3DMark WLE'), mh31 = readScore('GFXBench Manhattan 3.1');
+  const gpu = wle !== null ? wle : (mh31 !== null ? mh31 / PERF_BASELINE.MH31 * PERF_BASELINE.WLE : null);
+  const isEstimated = function(keys) { return keys.some(function(key) { return /[~～]|估算|拟合/.test(String(s[key] || '')); }); };
+  const gpuKey = wle !== null ? '3DMark WLE' : 'GFXBench Manhattan 3.1';
+  if (g6s && g6m && gpu) {
+    schemes.A = { value: ((g6s/PERF_BASELINE.GB6s)*0.375 + (g6m/PERF_BASELINE.GB6m)*0.375 + (gpu/PERF_BASELINE.WLE)*0.25) * 100, estimated: wle === null || isEstimated(['GeekBench 6 单核', 'GeekBench 6 多核', gpuKey]), scheme: 'A' };
+  }
+  if (g5s && g5m && gpu) {
+    schemes.B = { value: ((g5s/PERF_BASELINE.GB5s)*0.30 + (g5m/PERF_BASELINE.GB5m)*0.40 + (gpu/PERF_BASELINE.WLE)*0.30) * 100, estimated: wle === null || isEstimated(['GeekBench 5 单核', 'GeekBench 5 多核', gpuKey]), scheme: 'B' };
+  }
+  const antutuCpu = readScore('安兔兔 SoC CPU'), antutuGpu = readScore('安兔兔 SoC GPU');
+  if (antutuCpu && antutuGpu) {
+    const wCpu = PERF_ANTUTU_WEIGHT.cpu, wGpu = PERF_ANTUTU_WEIGHT.gpu;
+    schemes.C = { value: (antutuCpu*wCpu + antutuGpu*wGpu) / (PERF_BASELINE.antutuCpu*wCpu + PERF_BASELINE.antutuGpu*wGpu) * 100, estimated: isEstimated(['安兔兔 SoC CPU', '安兔兔 SoC GPU']), scheme: 'C' };
+  }
+  return schemes;
 }
-function calculatePerfRatio(d) { if (!d.processor_id) return null; const proc = getProcById(d.processor_id); return proc ? calcPerf(proc.specs) : null; }
+function getPerfResult(s, preferred) {
+  const schemes = getPerfSchemes(s);
+  if (Object.prototype.hasOwnProperty.call(schemes, preferred)) return schemes[preferred];
+  return schemes.A || schemes.B || schemes.C || null;
+}
+function calcPerf(procSpecs) { const result = getPerfResult(procSpecs); return result ? result.value : null; }
+function hasEstimatedPerf(s) { const result = getPerfResult(s); return result ? result.estimated : false; }
+function getProcessorPerfResult(p) { return p ? getPerfResult(p.specs, selectedPerfSchemes.get(p.id)) : null; }
+function calculatePerfRatio(d) { const result = getProcessorPerfResult(getProcById(d.processor_id)); return result ? result.value : null; }
+
+function setProcessorPerfScheme(id, scheme) {
+  const p = getProcById(id);
+  if (!p || !Object.prototype.hasOwnProperty.call(getPerfSchemes(p.specs), scheme)) return false;
+  selectedPerfSchemes.set(id, scheme);
+  precomputeSortKeys();
+  detailCache = {};
+  return true;
+}
 
 var detailCache = {};
 let activePanel = null;
@@ -1078,7 +1162,8 @@ function precomputeSortKeys() {
   if (typeof processors !== 'undefined') {
     for (let i = 0; i < processors.length; i++) {
       const p = processors[i];
-      sortCache.set(p, { perf: calcPerf(p.specs) || 0, release_date: (p.specs || {})['发布日期'] || '', name: p.name || '' });
+      const perf = getProcessorPerfResult(p);
+      sortCache.set(p, { perf: perf ? perf.value : null, release_date: (p.specs || {})['发布日期'] || '', name: p.name || '' });
     }
   }
 }
@@ -1339,7 +1424,8 @@ function renderCards(items, type) {
     if (type === 'processor') {
       const p = item, s = p.specs || {};
       const cached = sortCache.get(p) || {};
-      const perfPct = cached.perf !== undefined ? cached.perf : calcPerf(s);
+      const perf = getProcessorPerfResult(p);
+      const perfPct = cached.perf !== undefined ? cached.perf : (perf ? perf.value : null);
       const brandShort = (p.brand || '').split(' ')[0];
       const processNode = s['制程'] || '';
       detailData[i] = { type: 'processor', ref: p };
@@ -1347,7 +1433,7 @@ function renderCards(items, type) {
       const sliderColor = getPerfColor(sliderVal);
       html += '<div class="card" role="listitem" tabindex="0" data-id="' + esc(p.id) + '" data-idx="' + i + '" data-cat-type="processor"' + (delaySec >= 0 ? ' style="animation:fadeIn .3s ease ' + delaySec + 's both"' : '') + '>'
         + buildCardBg(p)
-        + '<div class="card-head"><div class="card-info"><div class="card-name">' + esc(p.name) + '</div><div class="proc-card-meta">'
+        + '<div class="card-head"><div class="card-info"><div class="card-name">' + esc(p.name) + (perf && perf.estimated ? '<span class="proc-estimate-mark" role="img" aria-label="评分含估算或拟合数据" title="评分含估算或拟合数据">◇</span>' : '') + '</div><div class="proc-card-meta">'
         + '<span>' + esc(brandShort) + '</span>';
       if (processNode) html += '<span>' + esc(processNode) + '</span>';
       if (s['发布日期']) html += '<time>' + esc(s['发布日期']) + '</time>';
@@ -1426,10 +1512,67 @@ function getSortedProcessors() {
 function render() { document.getElementById('cat-title').textContent = currentCat === '全部' ? '全部设备' : currentCat; renderCards(getFilteredDevices(), 'device'); }
 function renderProcessors() { document.getElementById('cat-title').textContent = '处理器'; renderCards(getSortedProcessors(), 'processor'); }
 
+function buildPerfSchemeControl(p) {
+  const schemes = getPerfSchemes(p.specs), keys = Object.keys(schemes);
+  const selected = getProcessorPerfResult(p);
+  let html = '<div class="perf-scheme-row"><span class="perf-scheme-label">评分方案：</span>';
+  if (keys.length > 1) {
+    html += '<span class="perf-scheme-options" role="group" aria-label="评分方案">';
+    keys.forEach(function(key) {
+      const active = selected && selected.scheme === key;
+      const label = '方案 ' + key + (schemes[key].estimated ? '（含估算或拟合数据）' : '');
+      html += '<button type="button" class="perf-scheme-button' + (active ? ' active' : '') + '" data-proc-id="' + esc(p.id) + '" data-perf-scheme="' + esc(key) + '" aria-pressed="' + active + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">' + esc(key) + '</button>';
+    });
+    html += '</span>';
+  } else html += '<span class="perf-scheme-value">' + (keys.length ? esc(keys[0]) : '暂无可用方案') + '</span>';
+  return html + '</div>';
+}
+
+function changeProcessorPerfScheme(button) {
+  const id = button.dataset.procId, scheme = button.dataset.perfScheme;
+  if (!setProcessorPerfScheme(id, scheme)) return;
+  const grid = document.getElementById('grid');
+  if (currentSortField === 'perf' && !searchQuery) {
+    renderProcessors();
+    const card = grid.querySelector('.card[data-id="' + CSS.escape(id) + '"]');
+    if (card) {
+      toggleCard(card, Number(card.dataset.idx));
+      card.scrollIntoView({ block: 'nearest' });
+    }
+  } else {
+    // Refresh scores from the selected schemes, including any manually rescaled sliders.
+    grid.querySelectorAll('.card[data-cat-type="processor"]').forEach(function(card) {
+      const result = getProcessorPerfResult(getProcById(card.dataset.id));
+      if (!result) return;
+      const value = Math.round(result.value), slider = card.querySelector('.perf-slider');
+      const performance = card.querySelector('.proc-performance');
+      if (performance) performance.dataset.real = result.value;
+      const label = card.querySelector('.perf-dyn-val');
+      if (label) label.textContent = value;
+      if (slider) {
+        slider.dataset.real = result.value;
+        slider.value = value;
+        slider.style.background = 'linear-gradient(to right,' + getPerfColor(value) + ' ' + (value/200*100) + '%,var(--slider-track) ' + (value/200*100) + '%)';
+      }
+      const name = card.querySelector('.card-name'), mark = name && name.querySelector('.proc-estimate-mark');
+      if (mark && !result.estimated) mark.remove();
+      else if (name && !mark && result.estimated) name.insertAdjacentHTML('beforeend', '<span class="proc-estimate-mark" role="img" aria-label="评分含估算或拟合数据" title="评分含估算或拟合数据">◇</span>');
+    });
+    if (activePanel) {
+      const oldRow = activePanel.querySelector('.perf-scheme-row');
+      if (oldRow) oldRow.outerHTML = buildPerfSchemeControl(getProcById(id));
+      updatePanelPosition();
+    }
+  }
+  const activeButton = grid.querySelector('.card[data-id="' + CSS.escape(id) + '"] [data-perf-scheme="' + CSS.escape(scheme) + '"]');
+  if (activeButton) activeButton.focus({ preventScroll: true });
+}
+
 function buildProcDetail(p) {
   const s = p.specs || {};
-  let dh = '<div class="detail-info"><div>品牌：<span>' + esc(p.brand) + '</span></div>';
-  if (s['发布日期']) dh += '<div>发布：<span>' + esc(s['发布日期']) + '</span></div>';
+  let dh = '<div class="detail-info proc-detail-info"><div class="proc-meta-group"><div class="proc-meta-brand">品牌：<span>' + esc(p.brand) + '</span></div>';
+  if (s['发布日期']) dh += '<div class="proc-meta-release">发布：<span>' + esc(s['发布日期']) + '</span></div>';
+  dh += '</div>' + buildPerfSchemeControl(p);
   dh += '</div><ul class="detail-specs">';
   const keys = sortKeysByCategory(Object.keys(s), '处理器');
   for (let k = 0; k < keys.length; k++) dh += '<li><span class="sk">' + esc(keys[k]) + '</span><span class="sv">' + esc(String(s[keys[k]])) + '</span></li>';
@@ -1609,6 +1752,13 @@ function validateData() {
 function setupEventDelegation() {
   const grid = document.getElementById('grid');
   grid.addEventListener('click', function(e) {
+    const schemeButton = e.target.closest('.perf-scheme-button');
+    if (schemeButton) {
+      e.stopPropagation();
+      if (sliderRafId) { cancelAnimationFrame(sliderRafId); sliderRafId = null; }
+      changeProcessorPerfScheme(schemeButton);
+      return;
+    }
     const phoneItem = e.target.closest('.proc-phone-item');
     if (phoneItem) { e.stopPropagation(); const pid = phoneItem.dataset.phoneId; if (pid) jumpToDevice('手机', pid); return; }
     const procLink = e.target.closest('.proc-link');
@@ -1684,6 +1834,13 @@ function setupEventDelegation() {
   });
   document.getElementById('btn-changelog').addEventListener('click', function(e) { e.stopPropagation(); toggleChangelog(); });
   document.getElementById('btn-about').addEventListener('click', function(e) { e.stopPropagation(); toggleAbout(); });
+  document.querySelector('.site-footer').addEventListener('click', function(e) {
+    var category = e.target.closest('[data-footer-cat]');
+    if (category) { filterCat(category.dataset.footerCat); window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); return; }
+    var action = e.target.closest('[data-footer-action]');
+    if (action && action.dataset.footerAction === 'about') toggleAbout();
+    else if (action && action.dataset.footerAction === 'changelog') toggleChangelog();
+  });
   document.getElementById('changelog-close').addEventListener('click', toggleChangelog);
   document.getElementById('about-close').addEventListener('click', toggleAbout);
   document.getElementById('changelog-mask').addEventListener('click', function(e) { if (e.target === this) toggleChangelog(); });
@@ -1726,6 +1883,7 @@ function setupEventDelegation() {
 }
 
 try {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
   validateData(); renderChangelog(); updateSortButtons(); setupEventDelegation(); updateCategoryIndicator(); render();
 } catch(e) {
   const g = document.getElementById('grid');

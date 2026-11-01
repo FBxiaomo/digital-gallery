@@ -594,6 +594,14 @@ html{scrollbar-gutter:stable}
 (function() {
 'use strict';
 
+// 图片首次访问后由 Service Worker 保存；刷新时直接读取本地缓存。
+if ('serviceWorker' in navigator && window.isSecureContext &&
+    (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+  navigator.serviceWorker.register('image-sw.js').catch(function(err) {
+    console.warn('[数码图鉴] 图片缓存未启用', err);
+  });
+}
+
 (function initTheme() {
   var saved = localStorage.getItem('theme');
   var mql = window.matchMedia('(prefers-color-scheme: dark)');
@@ -697,7 +705,7 @@ window._hmt = window._hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-var IMG_V = '20260607';
+var IMG_V = '20261102';
 var imgCache = {};
 var devices = [];
 var processorsMap = {};
@@ -766,6 +774,7 @@ var BRAND_FAMILIES = {
   '一加': { parent: 'OPPO', en: ['oneplus', 'one plus'] }, '荣耀': { en: ['honor'] },
   '苹果': { en: ['apple', 'iphone'] }, '华为': { en: ['huawei'] }, '海思': { en: ['huawei', 'hisilicon'] }, '三星': { en: ['samsung'] },
   '酷态科': { en: ['cuktech'] }, '安克': { en: ['anker'] }, '绿联': { en: ['ugreen'] },
+  '航嘉': { en: ['huntkey'] }, '倍思': { en: ['baseus'] },
   '闪极': { en: ['sharge'] }, '奥海': { en: ['aohai'] }, '米物': { en: ['miiiw'] },
   '高通': { en: ['qualcomm', 'snapdragon', '骁龙'] }, '联发科': { en: ['mediatek', '天玑', 'dimensity'] },
   '努比亚': { en: ['nubia'] }, '红魔': { parent: '努比亚', en: ['redmagic', 'red magic'] },
@@ -891,7 +900,7 @@ function smartSearch(d) {
     const searchBrands = getBrandNames(brandParts.brand);
     if (!brandMatch(d.brand, searchBrands) && !brandMatch(d.name, searchBrands)) return 0;
     if (brandParts.rest) {
-      const restNorm = brandParts.rest.replace(/[\s\-_]/g, '');
+      const restNorm = brandParts.rest.replace(/[\s\-_]/g, '').toLowerCase();
       if (index.nameNorm.indexOf(restNorm) !== -1) score = 100;
       else if (tokenInIndex(d, brandParts.rest, indexMap)) score = 80;
       else return 0;
@@ -956,7 +965,7 @@ buildProcSearchIndex();
 // === 字段顺序规范 ===
 var FIELD_ORDER = {
   '手机': ['处理器','--- 存储与屏幕 ---','内存/存储','内存','存储','屏幕','--- 相机 ---','后置摄像头','后置相机','前置摄像头','前置相机','--- 充电规格 ---','电池容量','有线快充','无线快充','反向充电','PD协议','PPS协议','QC协议','UFCS','标配充电器','--- 其他 ---','网络与连接','散热','尺寸','重量','防水防尘','配色','出厂系统','材质','视频播放'],
-  '充电器': ['最大功率','接口配置','输入电压','C口输出','C口最大输出','C口PPS','C口 UFCS','C1/C2输出','C1/C2 PPS','C1/C2 AVS','C1/C2 UFCS','C1/C2/C3输出','C1自带线输出','C1输出','C1 PPS','C1 UFCS','C2输出','C2 PPS','C2 UFCS','C3输出','C3 PPS','C3 UFCS','A口输出','A口 UFCS','DC口输出','磁吸无线充','无线充','多口功率分配','私有协议','尺寸','体积','重量','快充协议','特色功能','附赠线材','配色'],
+  '充电器': ['最大功率','接口配置','输入电压','AC供电','单口最大输出','C口输出','C口最大输出','C口PPS','C口 UFCS','C1/C2输出','C1/C2 PPS','C1/C2 AVS','C1/C2 UFCS','C1/C2/C3输出','C1自带线输出','C1输出','C1 PPS','C1 UFCS','C2输出','C2 PPS','C2 UFCS','C3输出','C3 PPS','C3 UFCS','A口输出','A口 UFCS','C3/A口输出','DC口输出','PogoPin输出','磁吸无线充','无线充','多口功率分配','私有协议','尺寸','体积','重量','快充协议','特色功能','附赠线材','配色'],
   '充电宝': ['电池容量','最大功率','接口配置','C口输出','C口最大输出','C口PPS','C口 UFCS','C口输入','C1/C2输出','C1/C2 PPS','C1输出','C1 PPS','C2输出','C2 PPS','A口输出','A口 UFCS','多口同时输出','多口功率分配','私有协议','尺寸','重量','快充协议','特色功能','电池类型','附赠线材','配色'],
   '处理器': ['制程','CPU架构','GPU','NPU','内存支持','基带','安兔兔 SoC CPU','安兔兔 SoC GPU','GeekBench 5 单核','GeekBench 5 多核','GeekBench 6 单核','GeekBench 6 多核','3DMark WLE','3DMark SNL','GFXBench 5 1080p','GFXBench 5 1440p','GFXBench Manhattan 3.0','GFXBench Manhattan 3.1','发布日期','说明']
 };

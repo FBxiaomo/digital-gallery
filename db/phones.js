@@ -43,9 +43,6 @@ var phones = [
       "配色": "黑色、白色、旷野绿、远山蓝、水泥灰",
       "出厂系统": "MIUI 14（可升级至Xiaomi HyperOS）"
     },
-    "price": "3999 元起（8+128GB）",
-    "release_date": "2022-12-11",
-    "notes": "小米小尺寸旗舰，徕卡专业光学镜头；公有PD/PPS约27W，私有67W；IP68防水",
     "referencePrice": {
       "amount": 3999,
       "currency": "CNY",
@@ -63,8 +60,43 @@ var phones = [
         "author": "极客湾Geekerwan",
         "publishedAt": "2022-12-12",
         "scope": "小米13与小米13 Pro性能测试"
+      },
+      {
+        "title": "【大家测】3999元起售 小米13开箱体验 | 直角边框+6.36寸直屏 | 联合徕卡研发！第二代骁龙8 / IP68防尘防水",
+        "url": "https://www.bilibili.com/video/BV1LA4119756/",
+        "platform": "哔哩哔哩",
+        "author": "大家测",
+        "cover": "https://i2.hdslb.com/bfs/archive/9351f01507ae4fa7042dbaadc5e51b16a6dd6a53.jpg",
+        "publishedAt": "2022-12-12"
+      },
+      {
+        "title": "「小白」小米13测评：确实像苹果但确实够精致！",
+        "url": "https://www.bilibili.com/video/BV1SP411K7DL/",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "cover": "https://i0.hdslb.com/bfs/archive/54f35aa1fc57bcecb10c339587c4a0538952279e.jpg",
+        "publishedAt": "2022-12-12"
+      },
+      {
+        "title": "续航离谱！小米13、13Pro体验评测：有小米6内味了 | 大米评测",
+        "url": "https://www.bilibili.com/video/BV1F84y1x7Mu/",
+        "platform": "哔哩哔哩",
+        "author": "大米评测",
+        "cover": "https://i2.hdslb.com/bfs/archive/20a1618c853342dc31b95174e3c64002ae2e501d.jpg",
+        "publishedAt": "2022-12-24"
+      },
+      {
+        "title": "「花生」超越标准的标准版/小米13使用报告",
+        "url": "https://www.bilibili.com/video/BV1jA41197UU/",
+        "platform": "哔哩哔哩",
+        "author": "花生説",
+        "cover": "https://i1.hdslb.com/bfs/archive/4a94bb1ecb5b3f02cc7893846b6e1c4140a19452.jpg",
+        "publishedAt": "2022-12-12"
       }
-    ]
+    ],
+    "price": "3999 元起（8+128GB）",
+    "release_date": "2022-12-11",
+    "notes": "小米小尺寸旗舰，徕卡专业光学镜头；公有PD/PPS约27W，私有67W；IP68防水"
   },
   {
     "id": "xiaomi-13-pro",
@@ -165,7 +197,36 @@ var phones = [
     },
     "price": "5999 元起（12+256GB）",
     "release_date": "2023-04-18",
-    "notes": "小米影像旗舰，1英寸可变光圈主摄+四摄全焦段；徕卡Summilux光学系统；公有PD/PPS约27W，私有90W"
+    "notes": "小米影像旗舰，1英寸可变光圈主摄+四摄全焦段；徕卡Summilux光学系统；公有PD/PPS约27W，私有90W",
+    "reviews": [
+      {
+        "title": "「小白」小米13 Ultra全面测评：这是直接发台“相机”么？",
+        "url": "https://www.bilibili.com/video/BV1mM411L7HJ/",
+        "cover": "https://i2.hdslb.com/bfs/archive/bb7c69f038fdc9ef6fb7747017c9ba58eb1782c0.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2023-04-19",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小泽」小米 13 Ultra 影像评测：来自小米和徕卡的礼物",
+        "url": "https://www.bilibili.com/video/BV1oh4y1H7d8/",
+        "cover": "https://i1.hdslb.com/bfs/archive/c3683a7093cf749ea4709e8234be6ac7dabef450.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2023-04-19",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学体验」小米13 Ultra详细体验 | 5999元起售！全新外观 小米联合徕卡联合共同打造影像旗舰",
+        "url": "https://www.bilibili.com/video/BV1824y1c7EG/",
+        "cover": "https://i1.hdslb.com/bfs/archive/f2ce0d519f5dc763416be6e78fecad840af8af7c.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2023-04-19",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-14-pro",
@@ -277,7 +338,27 @@ var phones = [
     },
     "price": "6499 元起（12+256GB）",
     "release_date": "2024-02-22",
-    "notes": "1英寸索尼LYT-900可变光圈主摄+徕卡Summilux光学四摄；80W无线快充；双向卫星通信；公有PD/PPS约27W，私有90W"
+    "notes": "1英寸索尼LYT-900可变光圈主摄+徕卡Summilux光学四摄；80W无线快充；双向卫星通信；公有PD/PPS约27W，私有90W",
+    "reviews": [
+      {
+        "title": "「小白」小米14 Ultra全面测评：手感进化 全能旗舰？",
+        "url": "https://www.bilibili.com/video/BV1cW421K7Yd/",
+        "cover": "https://i1.hdslb.com/bfs/archive/194acf4557fe97584486829af82c22f0e2f56a40.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2024-02-23",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学」详细测试 小米14 Ultra | 6499元起售 AI大模型加持 全新一代影像旗舰 徕卡四摄六焦段",
+        "url": "https://www.bilibili.com/video/BV11m411U7pu/",
+        "cover": "https://i0.hdslb.com/bfs/archive/71ca1b728088a56ea5e17e10db712af282b35323.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2024-02-23",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-14",
@@ -384,7 +465,29 @@ var phones = [
     },
     "price": "4499元起（12+256GB）",
     "release_date": "2024-10-29",
-    "notes": "小尺寸旗舰，光影猎人900主摄+徕卡光学；5400mAh金沙江电池；骁龙8至尊版"
+    "notes": "小尺寸旗舰，光影猎人900主摄+徕卡光学；5400mAh金沙江电池；骁龙8至尊版",
+    "reviews": [
+      {
+        "title": "「小白」关于小米 15/15 Pro 都在这了！",
+        "url": "https://www.bilibili.com/video/BV139SbYPE6u/",
+        "cover": "https://i1.hdslb.com/bfs/archive/307ca2b6f3f12e8111cecff35d3c207acf5920bc.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2024-10-30",
+        "checkedAt": "2026-11-07",
+        "scope": "小米 15 与 15 Pro 双机测评"
+      },
+      {
+        "title": "小米15系列上手体验：能效给力，系统大优化！",
+        "url": "https://www.bilibili.com/video/BV1WWyDYvEr8/",
+        "cover": "https://i0.hdslb.com/bfs/archive/e3d5ad2b19e6b961f61294a290384950d69ec8ec.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极客湾Geekerwan",
+        "publishedAt": "2024-10-25",
+        "checkedAt": "2026-11-07",
+        "scope": "小米15 系列上手体验，覆盖 15/15 Pro"
+      }
+    ]
   },
   {
     "id": "xiaomi-15-pro",
@@ -488,7 +591,27 @@ var phones = [
     },
     "price": "6499元起（12+256GB）",
     "release_date": "2025-02-27",
-    "notes": "1英寸主摄+2亿超级长焦+四摄徕卡超纯光学；80W无线充电；天通卫星通信；骁龙8至尊版"
+    "notes": "1英寸主摄+2亿超级长焦+四摄徕卡超纯光学；80W无线充电；天通卫星通信；骁龙8至尊版",
+    "reviews": [
+      {
+        "title": "最后一次6499元？小米15 Ultra值得吗？",
+        "url": "https://www.bilibili.com/video/BV1979NY5EXA/",
+        "cover": "https://i2.hdslb.com/bfs/archive/7a4e219d8e89a56e88e13e8bbc8ddb84bdadfc34.jpg",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "publishedAt": "2025-02-28",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白」小米15Ultra全面测评：除了2亿长焦 还有什么？",
+        "url": "https://www.bilibili.com/video/BV1Sb9TYyER7/",
+        "cover": "https://i0.hdslb.com/bfs/archive/4960f5cd34b0cf0a6dec9e57b299e82abb8afd09.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-02-28",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-17-ultra",
@@ -544,6 +667,15 @@ var phones = [
         "author": "小白测评",
         "publishedAt": "2025-12-25",
         "cover": "http://i0.hdslb.com/bfs/archive/d5eaa969f0f02dca42f2cbf717fb2d896c53a133.jpg"
+      },
+      {
+        "title": "小米 17 Ultra 徕卡版评测：自带两款殿堂级徕卡相机",
+        "url": "https://www.bilibili.com/video/BV1cuBRBJEia/",
+        "cover": "https://i2.hdslb.com/bfs/archive/c65757c07e00b5d59441513914fa4aea129c1fe0.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2025-12-26",
+        "checkedAt": "2026-11-07"
       }
     ]
   },
@@ -630,7 +762,29 @@ var phones = [
     },
     "price": "7999 元起（128GB）",
     "release_date": "2022-09-08",
-    "notes": "A16仿生芯片，灵动岛设计；仅支持PD协议最高27W，15W MagSafe无线；无标配充电器；支持车祸检测"
+    "notes": "A16仿生芯片，灵动岛设计；仅支持PD协议最高27W，15W MagSafe无线；无标配充电器；支持车祸检测",
+    "reviews": [
+      {
+        "title": "「小泽」iPhone 14 Pro系列评测：灵动岛居然不是终极大招？",
+        "url": "https://www.bilibili.com/video/BV1Ae411g7VM/",
+        "cover": "https://i0.hdslb.com/bfs/archive/411b1ac1c68b19637d38fbcc748132b7a62119d0.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2022-09-14",
+        "checkedAt": "2026-11-07",
+        "scope": "iPhone 14 Pro 系列评测，覆盖 Pro 与 Pro Max"
+      },
+      {
+        "title": "大胆创新or摆烂升级？iPhone 14 Pro上手评测",
+        "url": "https://www.bilibili.com/video/BV1p14y1v757/",
+        "cover": "https://i0.hdslb.com/bfs/archive/e92319bf26bfb355e65c181b7c37fd8ce8708494.jpg",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "publishedAt": "2022-09-14",
+        "checkedAt": "2026-11-07",
+        "scope": "iPhone 14 Pro 与 Pro Max 上手评测"
+      }
+    ]
   },
   {
     "id": "xiaomi-10",
@@ -716,7 +870,36 @@ var phones = [
     },
     "price": "4999 元起（8+256GB）",
     "release_date": "2020-02-13",
-    "notes": "小米10高配版，1亿像素四摄+50W有线+30W无线；公有PD/PPS约50W，私有Charge Turbo 50W"
+    "notes": "小米10高配版，1亿像素四摄+50W有线+30W无线；公有PD/PPS约50W，私有Charge Turbo 50W",
+    "reviews": [
+      {
+        "title": "「科技美学直播」小米10 Pro（5G）开箱上手体验 骁龙865 一亿像素四摄 | 全系双曲面屏、LPDDR5 |3999元起售",
+        "url": "https://www.bilibili.com/video/BV1v741137cs/",
+        "cover": "https://i2.hdslb.com/bfs/archive/9945197a68c5ef8f2f367e21ed74977563583cbb.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2020-02-13",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "【小泽】小米10 Pro体验：一亿像素十倍变焦",
+        "url": "https://www.bilibili.com/video/BV1U7411V7CF/",
+        "cover": "https://i1.hdslb.com/bfs/archive/8855923a8885803f7dbcebb026a2728864db5d8b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2020-02-13",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白测评」关于小米10Pro的一切 一台很“稳”的机",
+        "url": "https://www.bilibili.com/video/BV127411G7pz/",
+        "cover": "https://i2.hdslb.com/bfs/archive/55141cc10ecd475f0e08516388d98e30b6734e1d.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2020-02-13",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-10-ultra",
@@ -759,7 +942,36 @@ var phones = [
     },
     "price": "5299 元起（8+128GB）",
     "release_date": "2020-08-11",
-    "notes": "小米十周年至尊版，首款120W有线+50W无线；120倍变焦；公有PD/PPS约27W，私有120W"
+    "notes": "小米十周年至尊版，首款120W有线+50W无线；120倍变焦；公有PD/PPS约27W，私有120W",
+    "reviews": [
+      {
+        "title": "【小泽】小米10至尊纪念版评测：120倍变焦对决华为超大杯100倍",
+        "url": "https://www.bilibili.com/video/BV1DK4y1v7q1/",
+        "cover": "https://i2.hdslb.com/bfs/archive/7bcbc7928081826d9cffcce720623a15bcde0103.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2020-08-12",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白测评」小米10至尊纪念版深度测评 十年饮冰 难凉热血！",
+        "url": "https://www.bilibili.com/video/BV12T4y1L7mH/",
+        "cover": "https://i1.hdslb.com/bfs/archive/28705b4a016ee4152f84164cc663b25b192c53cf.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2020-08-28",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学直播」小米10至尊纪念版开箱上手体验 | 120倍变焦 120W快充 120Hz刷新率等 诚意满满 5299元起售",
+        "url": "https://www.bilibili.com/video/BV1y54y1i7PQ/",
+        "cover": "https://i2.hdslb.com/bfs/archive/23f329813b9bfac5221ea7e1b12e24b61b1de30a.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2020-08-12",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-10s",
@@ -803,7 +1015,27 @@ var phones = [
     },
     "price": "3299 元起（8+128GB）",
     "release_date": "2021-03-10",
-    "notes": "哈曼卡顿对称式双扬声器立体声；骁龙870加持；公有PD/PPS约27W，私有33W"
+    "notes": "哈曼卡顿对称式双扬声器立体声；骁龙870加持；公有PD/PPS约27W，私有33W",
+    "reviews": [
+      {
+        "title": "「小白」小米10S体验：换上Ultra皮肤的最强音乐手机",
+        "url": "https://www.bilibili.com/video/BV17i4y1K7Gq/",
+        "cover": "https://i1.hdslb.com/bfs/archive/21816ea652a230e64593c0bfb9f35a62e2bb7e27.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2021-03-10",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学直播」彻底拔掉小米6钉子户？小米10S开箱体验 | 3299元起售 | 骁龙 870 旗舰处理器 升级后的双扬声器",
+        "url": "https://www.bilibili.com/video/BV1nK4y1U7gD/",
+        "cover": "https://i1.hdslb.com/bfs/archive/d6c1c2e595aa3f8cb04642b705c0ef553fdbd48e.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2021-03-10",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-10-youth",
@@ -845,7 +1077,27 @@ var phones = [
     },
     "price": "2099 元起（6+64GB）",
     "release_date": "2020-04-27",
-    "notes": "潜望式5倍光学变焦，50倍数码变焦；仅7.88mm厚；保留3.5mm耳机孔；20W有线快充（标配22.5W充电器），无无线充电"
+    "notes": "潜望式5倍光学变焦，50倍数码变焦；仅7.88mm厚；保留3.5mm耳机孔；20W有线快充（标配22.5W充电器），无无线充电",
+    "reviews": [
+      {
+        "title": "「科技美学直播」小米10青春版开箱上手体验 | 骁龙765G | 50倍潜望镜头 售价2099元起",
+        "url": "https://www.bilibili.com/video/BV16i4y1t74z/",
+        "cover": "https://i2.hdslb.com/bfs/archive/b1c15803be1a8085d5816556d891f01130cfec06.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2020-04-27",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白测评」小米10青春版体验测评 你的青春回来了么？",
+        "url": "https://www.bilibili.com/video/BV1Vz411z7BJ/",
+        "cover": "https://i0.hdslb.com/bfs/archive/4ad282ca83941a519d586ee54e1be14818215cd3.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2020-04-27",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "iphone-14",
@@ -888,7 +1140,28 @@ var phones = [
     },
     "price": "5999 元起（128GB）",
     "release_date": "2022-09-08",
-    "notes": "A15仿生（5核GPU）；20W有线+15W MagSafe；60Hz刘海屏；支持车祸检测"
+    "notes": "A15仿生（5核GPU）；20W有线+15W MagSafe；60Hz刘海屏；支持车祸检测",
+    "reviews": [
+      {
+        "title": "「小泽」iPhone 14 评测：就差一个电商大促",
+        "url": "https://www.bilibili.com/video/BV14e4y187YN/",
+        "cover": "https://i0.hdslb.com/bfs/archive/ea78aa94d30fa7f91d4ddef12fc88af5d28afd49.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2022-09-14",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "浅谈iPhone14系列：这就是当年的iPhone7/诚意不足可以不买",
+        "url": "https://www.bilibili.com/video/BV1x24y1o7gj/",
+        "cover": "https://i2.hdslb.com/bfs/archive/6c234d3ff6e150f83c545c29974ffc2248344d53.jpg",
+        "platform": "哔哩哔哩",
+        "author": "花生説",
+        "publishedAt": "2022-09-24",
+        "checkedAt": "2026-11-07",
+        "scope": "iPhone14 系列浅谈，标准款为主体"
+      }
+    ]
   },
   {
     "id": "iphone-14-plus",
@@ -931,7 +1204,36 @@ var phones = [
     },
     "price": "6999 元起（128GB）",
     "release_date": "2022-09-08",
-    "notes": "A15仿生（5核GPU）；20W有线+15W MagSafe；6.7寸大屏60Hz；支持车祸检测；2022年10月上市"
+    "notes": "A15仿生（5核GPU）；20W有线+15W MagSafe；6.7寸大屏60Hz；支持车祸检测；2022年10月上市",
+    "reviews": [
+      {
+        "title": "「小泽」iPhone 14 Plus评测：这块大屏适合谁？",
+        "url": "https://www.bilibili.com/video/BV1ve4y1i7e3/",
+        "cover": "https://i2.hdslb.com/bfs/archive/fc9986b4a61d1fc65c5b283201431433ebc87bbf.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2022-10-06",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「花生」原价，___都不买！/iPhone 14 Plus使用报告",
+        "url": "https://www.bilibili.com/video/BV1i14y177ma/",
+        "cover": "https://i1.hdslb.com/bfs/archive/183477affc24440a793e52d9f7b1c63d42a5988b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "花生説",
+        "publishedAt": "2022-10-15",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "iPhone 14 Plus性能简评，是新一代8 Plus吗？和mini 6相比游戏性能又如何",
+        "url": "https://www.bilibili.com/video/BV1MR4y1976g/",
+        "cover": "https://i0.hdslb.com/bfs/archive/86a9280f33c266fc74f9c97cf2f619b9e8b72cbf.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极客湾Geekerwan",
+        "publishedAt": "2022-10-19",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "iphone-14-pro-max",
@@ -976,7 +1278,19 @@ var phones = [
     },
     "price": "8999 元起（128GB）",
     "release_date": "2022-09-08",
-    "notes": "A16仿生；4800万主摄四像素传感器；120Hz ProMotion灵动岛；Always-On Display；20W有线+15W MagSafe；支持车祸检测"
+    "notes": "A16仿生；4800万主摄四像素传感器；120Hz ProMotion灵动岛；Always-On Display；20W有线+15W MagSafe；支持车祸检测",
+    "reviews": [
+      {
+        "title": "「小泽」iPhone 14 Pro系列评测：灵动岛居然不是终极大招？",
+        "url": "https://www.bilibili.com/video/BV1Ae411g7VM/",
+        "cover": "https://i0.hdslb.com/bfs/archive/411b1ac1c68b19637d38fbcc748132b7a62119d0.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2022-09-14",
+        "checkedAt": "2026-11-07",
+        "scope": "iPhone 14 Pro 系列评测，覆盖 Pro 与 Pro Max"
+      }
+    ]
   },
   {
     "id": "iphone-17",
@@ -1153,7 +1467,6 @@ var phones = [
     "category": "手机",
     "name": "iPhone 17 Pro Max",
     "brand": "苹果 Apple",
-    "release_date": "2025-09-10",
     "tags": [
       "A19 Pro",
       "6.9″",
@@ -1187,9 +1500,6 @@ var phones = [
       "材质": "铝金属一体成型，超瓷晶面板2",
       "视频播放": "最长37小时"
     },
-    "price": "9999元起",
-    "notes": "史上最长续航iPhone，6.9英寸大屏，支持ProRes 4K 120fps",
-    "image": "db/images/phones/iPhone17ProMax.webp",
     "reviews": [
       {
         "title": "iPhone 17 Pro 系列评测：成为 Pro！",
@@ -1200,8 +1510,20 @@ var phones = [
         "cover": "https://i1.hdslb.com/bfs/archive/e28cb0ba9a33841acbecc43be7936e96e019e255.jpg",
         "checkedAt": "2026-11-06",
         "scope": "iPhone 17 Pro 系列评测"
+      },
+      {
+        "title": "外观变了，值得买吗？iPhone 17 Pro&Air评测",
+        "url": "https://www.bilibili.com/video/BV1Enpxz5Ef3/",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "cover": "https://i0.hdslb.com/bfs/archive/ffcc0191d049481fa39325249780999a67c29f65.jpg",
+        "publishedAt": "2025-09-17"
       }
-    ]
+    ],
+    "price": "9999元起",
+    "release_date": "2025-09-10",
+    "notes": "史上最长续航iPhone，6.9英寸大屏，支持ProRes 4K 120fps",
+    "image": "db/images/phones/iPhone17ProMax.webp"
   },
   {
     "id": "xiaomi-17",
@@ -1244,7 +1566,19 @@ var phones = [
     },
     "price": "4499元起（12+256GB）",
     "release_date": "2025-09-25",
-    "notes": "史上最强标准版；7000mAh金沙江电池；第五代骁龙8至尊版；入网型号暂未公开"
+    "notes": "史上最强标准版；7000mAh金沙江电池；第五代骁龙8至尊版；入网型号暂未公开",
+    "reviews": [
+      {
+        "title": "小米17系列上手体验：这款17表现如何？",
+        "url": "https://www.bilibili.com/video/BV1cSnuzYE88/",
+        "cover": "https://i2.hdslb.com/bfs/archive/200d770287e6dc151cd2b1bd645195a2ec812a82.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极客湾Geekerwan",
+        "publishedAt": "2025-09-26",
+        "checkedAt": "2026-11-07",
+        "scope": "小米17 系列上手体验，标准款为主体"
+      }
+    ]
   },
   {
     "id": "xiaomi-17-max",
@@ -1288,7 +1622,27 @@ var phones = [
     },
     "price": "4799元起（12+256GB）",
     "release_date": "2026-05-21",
-    "notes": "小米17系列大屏旗舰；2亿像素徕卡三摄；8000mAh超大电池；第五代骁龙8至尊版；玻纤版219g/玻璃版225g"
+    "notes": "小米17系列大屏旗舰；2亿像素徕卡三摄；8000mAh超大电池；第五代骁龙8至尊版；玻纤版219g/玻璃版225g",
+    "reviews": [
+      {
+        "title": "「小白」小米17 Max测评：变大了 也变强了？",
+        "url": "https://www.bilibili.com/video/BV1jQLi6MEi5/",
+        "cover": "https://i1.hdslb.com/bfs/archive/09d6bb08ad899939921a31128d5da4cfa969fc9b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2026-05-22",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "不花哨 才实用 小米17 Max 开箱体验 | 尺寸电池更大 配旗舰处理器 升级2亿主摄、潜望长焦「科技美学开箱」",
+        "url": "https://www.bilibili.com/video/BV1seLi6SE41/",
+        "cover": "https://i2.hdslb.com/bfs/archive/d54199a84516ed22fcf43a6796b265c19499da27.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2026-05-22",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-17-pro",
@@ -1441,7 +1795,17 @@ var phones = [
     "price": "5999 元起（128GB）",
     "release_date": "2024-09-10",
     "notes": "A18芯片；20W有线+15W MagSafe无线；60Hz灵动岛；新增拍摄按钮；支持Apple Intelligence",
-    "reviews": []
+    "reviews": [
+      {
+        "title": "「小白」iPhone16上手体验：梦回iPhone X？",
+        "url": "https://www.bilibili.com/video/BV1SMpHe4EbD/",
+        "cover": "https://i1.hdslb.com/bfs/archive/d23552790e25a47cead350de8ec6422a820af1c1.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2024-09-10",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "iphone-16-plus",
@@ -1485,7 +1849,19 @@ var phones = [
     },
     "price": "6999 元起（128GB）",
     "release_date": "2024-09-10",
-    "notes": "A18芯片；20W有线+15W MagSafe无线；6.7寸大屏60Hz灵动岛；新增拍摄按钮；支持Apple Intelligence"
+    "notes": "A18芯片；20W有线+15W MagSafe无线；6.7寸大屏60Hz灵动岛；新增拍摄按钮；支持Apple Intelligence",
+    "reviews": [
+      {
+        "title": "iPhone16 Plus详细充电实测：27分钟充电50%，峰值36W与Max表现持平",
+        "url": "https://www.bilibili.com/video/BV1xt2GYKECG/",
+        "cover": "https://i1.hdslb.com/bfs/archive/0814f28a7b58163b43eb6dcbc219b5a91171c3bb.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2024-10-10",
+        "checkedAt": "2026-11-07",
+        "scope": "iPhone 16 Plus 充电实测"
+      }
+    ]
   },
   {
     "id": "iphone-16-pro",
@@ -1663,7 +2039,45 @@ var phones = [
     },
     "price": "4499 元起（128GB）",
     "release_date": "2025-02-19",
-    "notes": "A18芯片（4核GPU）；6.1寸刘海屏60Hz；单摄4800万融合式；20W有线+15W MagSafe无线；iPhone SE系列替代品；支持Apple Intelligence"
+    "notes": "A18芯片（4核GPU）；6.1寸刘海屏60Hz；单摄4800万融合式；20W有线+15W MagSafe无线；iPhone SE系列替代品；支持Apple Intelligence",
+    "reviews": [
+      {
+        "title": "iPhone 16e深度评测：苹果C1自研通信模块省电吗？信号如何？",
+        "url": "https://www.bilibili.com/video/BV1ERPEeXEtR/",
+        "cover": "https://i2.hdslb.com/bfs/archive/29ad6cdfa1060aec213ede7ef2eb88219a6ba044.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极客湾Geekerwan",
+        "publishedAt": "2025-02-27",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "iPhone 16e 开箱评测：厨的刀",
+        "url": "https://www.bilibili.com/video/BV1okPJeSEox/",
+        "cover": "https://i1.hdslb.com/bfs/archive/c24d05d100a6eb2aa3b01387497d71fa5644528c.jpg",
+        "platform": "哔哩哔哩",
+        "author": "钟文泽",
+        "publishedAt": "2025-02-27",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白」iPhone 16e测评：最便宜苹果机体验如何？",
+        "url": "https://www.bilibili.com/video/BV1fhPLerEEy/",
+        "cover": "https://i0.hdslb.com/bfs/archive/37c67126f4ddcc68587f9a59f3ee9d5ffbc8594e.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-02-27",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学」iPhone 16e 详细测试对比 iPhone 16 | 到底是否值得购买？",
+        "url": "https://www.bilibili.com/video/BV1TW9cYREjH/",
+        "cover": "https://i0.hdslb.com/bfs/archive/4b14558488f0125c69f6d9f7a2906239ece77242.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2025-02-27",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "vivo-s30",
@@ -1706,7 +2120,29 @@ var phones = [
     },
     "price": "2699 元起（8+256GB）",
     "release_date": "2025-05-29",
-    "notes": "主打影像中端机，潜望长焦+5000万前置；6500mAh蓝海电池；7.49mm轻薄机身；实况拼图+视频转实况"
+    "notes": "主打影像中端机，潜望长焦+5000万前置；6500mAh蓝海电池；7.49mm轻薄机身；实况拼图+视频转实况",
+    "reviews": [
+      {
+        "title": "「小白」vivo S30系列体验：撞色设计 氛围感出片！",
+        "url": "https://www.bilibili.com/video/BV1BE7Vz8EQk/",
+        "cover": "https://i0.hdslb.com/bfs/archive/a7428b18773ff892e541a56013e775a378662992.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-05-29",
+        "checkedAt": "2026-11-07",
+        "scope": "vivo S30 系列体验，覆盖 S30 与 S30 Pro mini"
+      },
+      {
+        "title": "我变小了，却变强了！vivo S30系列体验",
+        "url": "https://www.bilibili.com/video/BV1GojYz3EB6/",
+        "cover": "https://i1.hdslb.com/bfs/archive/0024d8bb2db61f6939cd7358cb03b3c07c470ab8.jpg",
+        "platform": "哔哩哔哩",
+        "author": "花生説",
+        "publishedAt": "2025-05-29",
+        "checkedAt": "2026-11-07",
+        "scope": "vivo S30 系列体验，覆盖 S30 与 S30 Pro mini"
+      }
+    ]
   },
   {
     "id": "vivo-s30-pro-mini",
@@ -1795,7 +2231,27 @@ var phones = [
     },
     "price": "3999 元起（12+256GB）",
     "release_date": "2025-12-26",
-    "notes": "电竞旗舰，内置25000转防水防尘风扇；10000mAh青海湖电池+100W有线+80W无线；IP69K最高防护；第五代骁龙8至尊版；185Hz 1.5K直屏"
+    "notes": "电竞旗舰，内置25000转防水防尘风扇；10000mAh青海湖电池+100W有线+80W无线；IP69K最高防护；第五代骁龙8至尊版；185Hz 1.5K直屏",
+    "reviews": [
+      {
+        "title": "荣耀WIN上手体验：10000mAh大电池+风扇的西装暴徒！",
+        "url": "https://www.bilibili.com/video/BV1mFBiBkE8z/",
+        "cover": "https://i0.hdslb.com/bfs/archive/e91ef6e6806264e20c223cd33d77ac5f8ce61423.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极客湾Geekerwan",
+        "publishedAt": "2025-12-26",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「小白」荣耀WIN测评：续航性能都耀赢？",
+        "url": "https://www.bilibili.com/video/BV1iRBDBwELR/",
+        "cover": "https://i0.hdslb.com/bfs/archive/066c18c46df3c8a011b75a59d6912aabd23b8477.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-12-26",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "honor-win-rt",
@@ -1839,7 +2295,19 @@ var phones = [
     },
     "price": "2699 元起（12+256GB）",
     "release_date": "2025-12-26",
-    "notes": "电竞旗舰RT版，骁龙8至尊版；10000mAh青海湖电池+100W有线；内置防水防尘风扇；IP69K最高防护；185Hz 1.5K直屏；无长焦和无线充电"
+    "notes": "电竞旗舰RT版，骁龙8至尊版；10000mAh青海湖电池+100W有线；内置防水防尘风扇；IP69K最高防护；185Hz 1.5K直屏；无长焦和无线充电",
+    "reviews": [
+      {
+        "title": "全网都在吹，到底行不行？荣耀WIN RT全面评测 vs K90、Ace6、Neo11 | 大米评测",
+        "url": "https://www.bilibili.com/video/BV1W4rkBFE9P/",
+        "cover": "https://i0.hdslb.com/bfs/archive/def893ad6c28f7622253e432b2684d900c149ea6.jpg",
+        "platform": "哔哩哔哩",
+        "author": "大米评测",
+        "publishedAt": "2026-01-16",
+        "checkedAt": "2026-11-07",
+        "scope": "荣耀WIN RT 全面评测，附 K90、Ace6、Neo11 对比"
+      }
+    ]
   },
   {
     "id": "redmi-k80",
@@ -1932,7 +2400,18 @@ var phones = [
     },
     "price": "2499元起",
     "release_date": "2025-06-26",
-    "notes": "K系列顶配旗舰，天玑9400+ + D2独显；7410mAh+100W；6.83寸144Hz 1.5K电竞屏，峰值3200nit；光影猎人800主摄；3D超声波指纹；6500mm²冰封循环冷泵"
+    "notes": "K系列顶配旗舰，天玑9400+ + D2独显；7410mAh+100W；6.83寸144Hz 1.5K电竞屏，峰值3200nit；光影猎人800主摄；3D超声波指纹；6500mm²冰封循环冷泵",
+    "reviews": [
+      {
+        "title": "「小白」红米K80 至尊版测评：这次调校如何？",
+        "url": "https://www.bilibili.com/video/BV1vBNnz1EbE/",
+        "cover": "https://i2.hdslb.com/bfs/archive/6ad03e7dd16bcf96236cac785289b776f8cabb6c.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-06-19",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "redmi-k90",
@@ -2281,7 +2760,18 @@ var phones = [
     },
     "price": "3299元起",
     "release_date": "2024-11-27",
-    "notes": "K系列旗舰，骁龙8至尊版+光影猎人800主摄；6000mAh+120W；IP68"
+    "notes": "K系列旗舰，骁龙8至尊版+光影猎人800主摄；6000mAh+120W；IP68",
+    "reviews": [
+      {
+        "title": "「小白」REDMI K80 Pro测评：影像元年？",
+        "url": "https://www.bilibili.com/video/BV12BB9YcEMf/",
+        "cover": "https://i0.hdslb.com/bfs/archive/7e1cd9664319cbe4bfd8cbe823372c42e857e9f8.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2024-11-27",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "redmi-note-15",
@@ -2499,7 +2989,18 @@ var phones = [
     },
     "price": "2199元起（12+256GB）",
     "release_date": "2026-01-29",
-    "notes": "Turbo系列首款Max机型；天玑9500s全球首发；9000mAh金沙江电池+100W秒充；光影猎人600主摄；Wi-Fi 7；3D超声波指纹；满级防水"
+    "notes": "Turbo系列首款Max机型；天玑9500s全球首发；9000mAh金沙江电池+100W秒充；光影猎人600主摄；Wi-Fi 7；3D超声波指纹；满级防水",
+    "reviews": [
+      {
+        "title": "搭载天玑9500s REDMI Turbo 5 Max 日常游戏性能前瞻测试",
+        "url": "https://www.bilibili.com/video/BV1arrfB9E7P/",
+        "cover": "https://i0.hdslb.com/bfs/archive/8cbc4a938cd9e847d45324505a1abe74798f3cab.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2026-01-15",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-mix-flip-2",
@@ -2544,7 +3045,18 @@ var phones = [
     },
     "price": "5999 元起",
     "release_date": "2025-06-26",
-    "notes": "小米小折叠旗舰，搭载骁龙8至尊版，4.01英寸超大外屏，5165mAh大电池，IPX8防水"
+    "notes": "小米小折叠旗舰，搭载骁龙8至尊版，4.01英寸超大外屏，5165mAh大电池，IPX8防水",
+    "reviews": [
+      {
+        "title": "用了一个月小米MIX Flip 2之后，我有点儿没蚌住。。。【X.PIN】",
+        "url": "https://www.bilibili.com/video/BV11KbQz3EwV/",
+        "cover": "https://i0.hdslb.com/bfs/archive/f65077f9be5ed3b08c3197a5fb291137dc4904ea.jpg",
+        "platform": "哔哩哔哩",
+        "author": "差评硬件部",
+        "publishedAt": "2025-07-25",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "oneplus-15",
@@ -2783,7 +3295,18 @@ var phones = [
     },
     "price": "5299 元起（12+256GB）",
     "release_date": "2026-04-21",
-    "notes": "天玑9500小屏旗舰，7025mAh+80W+50W无线，2亿三主摄+哈苏，2.8×光学/120×数码变焦"
+    "notes": "天玑9500小屏旗舰，7025mAh+80W+50W无线，2亿三主摄+哈苏，2.8×光学/120×数码变焦",
+    "reviews": [
+      {
+        "title": "OPPO Find X9s Pro 详细体验 | 哈苏双2亿 旅拍小Ultra",
+        "url": "https://www.bilibili.com/video/BV14WoTBuEzr/",
+        "cover": "https://i2.hdslb.com/bfs/archive/230f442c97655e52c9648feec15cfccea711983a.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2026-04-21",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "oppo-find-x9",
@@ -2933,7 +3456,18 @@ var phones = [
     },
     "price": "3799 元起（12+256GB）",
     "release_date": "2026-05-20",
-    "notes": "首发天玑9500 Monster定制芯片，8000mAh超大电池+100W闪充，2K 144Hz珠峰屏，8K冰穹VC液冷散热，主打高性价比电竞体验"
+    "notes": "首发天玑9500 Monster定制芯片，8000mAh超大电池+100W闪充，2K 144Hz珠峰屏，8K冰穹VC液冷散热，主打高性价比电竞体验",
+    "reviews": [
+      {
+        "title": "「小白」iQOO15T测评：超核引擎+8000mAh体验如何？",
+        "url": "https://www.bilibili.com/video/BV1eGL16dEqK/",
+        "cover": "https://i1.hdslb.com/bfs/archive/9bb43846fabe8d9e8e3fb12640471deb72e8c965.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2026-05-20",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "vivo-s60",
@@ -3109,7 +3643,27 @@ var phones = [
     },
     "price": "4999 元起（12+256GB）",
     "release_date": "2026-03-30",
-    "notes": "影像旗舰，天玑9500旗舰处理器，7100mAh蓝海电池，蔡司影像系统，兼顾性能与长续航"
+    "notes": "影像旗舰，天玑9500旗舰处理器，7100mAh蓝海电池，蔡司影像系统，兼顾性能与长续航",
+    "reviews": [
+      {
+        "title": "「小白」vivo X300s测评：标准版里的长枪大炮怎么样？",
+        "url": "https://www.bilibili.com/video/BV1VPQSBsEHb/",
+        "cover": "https://i1.hdslb.com/bfs/archive/7de841613819f4857f4d0e07d45dc42430f79e7c.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2026-03-26",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "vivo X300s超能小V单 详细体验 | 影像和性能都很顶的旗舰手机 随手一拍就是专业质感照片",
+        "url": "https://www.bilibili.com/video/BV1ggXHBrEVM/",
+        "cover": "https://i1.hdslb.com/bfs/archive/b08ec420b7afb53e852466378dd346583abf2252.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2026-03-26",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "vivo-x300-ultra",

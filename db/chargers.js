@@ -83,7 +83,18 @@ var chargers = [
     },
     "price": "参考价 130 元",
     "release_date": "2024-03",
-    "notes": "C1/C2支持PD 3.1 EPR 28V/5A 140W；功率密度约0.84W/cm³"
+    "notes": "C1/C2支持PD 3.1 EPR 28V/5A 140W；功率密度约0.84W/cm³",
+    "reviews": [
+      {
+        "title": "140W PD3.1与120W小米快充全都要！连UFCS融合快充也要！CUKTECH酷态科15号充电器评测",
+        "url": "https://www.bilibili.com/video/BV15J4m1n7fw/",
+        "cover": "https://i2.hdslb.com/bfs/archive/1c6d4f567eb721b757c88f0e36f1d109d7b314d7.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2024-04-30",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-zhixian-lite-100w",
@@ -161,7 +172,27 @@ var chargers = [
     },
     "price": "参考价 88 元",
     "release_date": "2024-11",
-    "notes": "C2口支持华为SCP 22.5W；厚度仅14.23mm比银行卡还小；玩家版2025年10月发布售99元"
+    "notes": "C2口支持华为SCP 22.5W；厚度仅14.23mm比银行卡还小；玩家版2025年10月发布售99元",
+    "reviews": [
+      {
+        "title": "99元值不值？评测拆解酷态科6号超薄氮化镓",
+        "url": "https://www.bilibili.com/video/BV1N2m6YDE44/",
+        "cover": "https://i2.hdslb.com/bfs/archive/18f0d42e836f8f0b2b76f7f5b61f8c498dc3ab91.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-11-10",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "能否再续辉煌？体验拆解酷态科新款6号卡片充电器",
+        "url": "https://www.bilibili.com/video/BV1jn3b6rECf/",
+        "cover": "https://i1.hdslb.com/bfs/archive/e0de8c77e735f4baf7072a59ec7edddce0457edd.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-07-31",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-30-300w-ultra",
@@ -350,7 +381,36 @@ var chargers = [
     },
     "price": "参考价 139 元（单体）/ 159 元（套装）",
     "release_date": "2026-03",
-    "notes": "6号系列旗舰，必易微KP2208XH+KP4060合封氮化镓方案；天德钰JD6628协议芯片控制2C1A智能分配；TFT屏支持功率/电压/电流可视化及放心充等模式"
+    "notes": "6号系列旗舰，必易微KP2208XH+KP4060合封氮化镓方案；天德钰JD6628协议芯片控制2C1A智能分配；TFT屏支持功率/电压/电流可视化及放心充等模式",
+    "reviews": [
+      {
+        "title": "149元值不值？评测拆解酷态科6号屏显充Ultra",
+        "url": "https://www.bilibili.com/video/BV1C7PvzaE3A/",
+        "cover": "https://i1.hdslb.com/bfs/archive/072eadfe99f9894baaa3f3083cbe5739a4bb857b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-03-05",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "149元值不值？开箱评测酷态科6号屏显充Ultra",
+        "url": "https://www.bilibili.com/video/BV1bYPKzfEuH/",
+        "cover": "https://i2.hdslb.com/bfs/archive/5269a0dee129d7b3db8ea38ef23c6f5a7d8d142f.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2026-03-05",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "酷态科6号屏显充Ultra真实体验：憋了一肚子话，只有小米用户才懂这含金量",
+        "url": "https://www.bilibili.com/video/BV1RVQ2BDEcp/",
+        "cover": "https://i0.hdslb.com/bfs/archive/0d88b2270f415b36bd0e783ccb96b69851fe7414.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2026-03-28",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-10-mini-120w",
@@ -523,7 +583,18 @@ var chargers = [
     },
     "price": "参考价 89 元",
     "release_date": "2025-11",
-    "notes": "车载充电器形态；宝砾微PL5501同步升降压方案用于拉拉线；南芯科技SC8110降压方案用于1A1C接口；华源智信HYC5323UB协议芯片控制1A1C输出"
+    "notes": "车载充电器形态；宝砾微PL5501同步升降压方案用于拉拉线；南芯科技SC8110降压方案用于1A1C接口；华源智信HYC5323UB协议芯片控制1A1C输出",
+    "reviews": [
+      {
+        "title": "90W真能长时间跑吗？酷态科10号超级车充深度测试，结果很真实！",
+        "url": "https://www.bilibili.com/video/BV15Gjh6WEJU/",
+        "cover": "https://i1.hdslb.com/bfs/archive/6cd26734038ad77a4ffb1d5fae4b8da5e01c2479.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2026-06-21",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-cp3-40w",
@@ -578,7 +649,18 @@ var chargers = [
     },
     "price": "参考价 24 元",
     "release_date": "2023-06",
-    "notes": "入门级单C口充电器，固定插脚；南芯科技SC3055+SC3512+SC2151A全套方案，SC3055内置650V氮化镓；主打极致性价比"
+    "notes": "入门级单C口充电器，固定插脚；南芯科技SC3055+SC3512+SC2151A全套方案，SC3055内置650V氮化镓；主打极致性价比",
+    "reviews": [
+      {
+        "title": "iPhone用户的最爱！酷态科30W氮化镓充电器开箱",
+        "url": "https://www.bilibili.com/video/BV16pRcYEEbB/",
+        "cover": "https://i0.hdslb.com/bfs/archive/9265accd3ccfa40d561e1d0bc97e939de9028a27.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-03-06",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-prime-160w",
@@ -654,7 +736,18 @@ var chargers = [
     },
     "price": "参考价 119 元",
     "release_date": "2025-07",
-    "notes": "两路开关电源设计；智融科技SW1121P+SW1608（A口）+必易微KP2208X+KP4060（C口）双方案；拓尔微IM2423P+TMI9431协议芯片"
+    "notes": "两路开关电源设计；智融科技SW1121P+SW1608（A口）+必易微KP2208X+KP4060（C口）双方案；拓尔微IM2423P+TMI9431协议芯片",
+    "reviews": [
+      {
+        "title": "安克新品70W氮化镓充电器测评，到底值不值168？",
+        "url": "https://www.bilibili.com/video/BV1RNJBzwEpK/",
+        "cover": "https://i1.hdslb.com/bfs/archive/ece708eef756c2a68ce1b4002b789822fedf0f3e.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-05-21",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-nano-30w",
@@ -682,7 +775,18 @@ var chargers = [
     },
     "price": "参考价 65 元",
     "release_date": "2022-9",
-    "notes": "智融科技SW1121P合封氮化镓+华源智信HYC935同步整流协议一体芯片，两颗芯片完成传统五颗芯片功能"
+    "notes": "智融科技SW1121P合封氮化镓+华源智信HYC935同步整流协议一体芯片，两颗芯片完成传统五颗芯片功能",
+    "reviews": [
+      {
+        "title": "Anker安克安芯充Pro快充套装上手体验：iPhone14系列的专属充电器",
+        "url": "https://www.bilibili.com/video/BV1mN4y1N7KR/",
+        "cover": "https://i2.hdslb.com/bfs/archive/6af4e5ee6d342dfe32878fde1f7e05bd7548619e.jpg",
+        "platform": "哔哩哔哩",
+        "author": "极果AI评测室",
+        "publishedAt": "2022-09-21",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-zhixian-140w",
@@ -717,7 +821,18 @@ var chargers = [
     },
     "price": "参考价 259 元",
     "release_date": "2024-10",
-    "notes": "奥海科技代工；PFC+AHB架构；杰华特JW1572+JW1556电源方案+JW1568K氮化镓半桥芯片；英诺赛科INN700D140C PFC开关管；MPS MP6951同步整流；三颗智融科技SW3566H二次降压控制四口输出"
+    "notes": "奥海科技代工；PFC+AHB架构；杰华特JW1572+JW1556电源方案+JW1568K氮化镓半桥芯片；英诺赛科INN700D140C PFC开关管；MPS MP6951同步整流；三颗智融科技SW3566H二次降压控制四口输出",
+    "reviews": [
+      {
+        "title": "评测拆解安克140W屏显充电器，有点意思！",
+        "url": "https://www.bilibili.com/video/BV1qHyhYNEcR/",
+        "cover": "https://i2.hdslb.com/bfs/archive/4cb8f74551cd9acc75f5a839ac805c439683c396.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-10-20",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-65w-2c1a",
@@ -775,7 +890,18 @@ var chargers = [
     },
     "price": "参考价 189 元",
     "release_date": "2025-04",
-    "notes": "OPPO/一加/realme系手机可握手SUPERVOOC满速充电；配套磁力集结线支持10A大电流；新国标首批绝缘护套充电器"
+    "notes": "OPPO/一加/realme系手机可握手SUPERVOOC满速充电；配套磁力集结线支持10A大电流；新国标首批绝缘护套充电器",
+    "reviews": [
+      {
+        "title": "不只看个皮毛，必须测详细！OPPO新款100W小方瓶氮化镓充电器详细测试",
+        "url": "https://www.bilibili.com/video/BV1PVj1zFEsP/",
+        "cover": "https://i1.hdslb.com/bfs/archive/e5b91a80ed8b75707d65d57af32686cc13f66c80.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2025-05-26",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "ugreen-xianxian-160w",
@@ -809,7 +935,18 @@ var chargers = [
     },
     "price": "参考价 229 元",
     "release_date": "2025-11",
-    "notes": "PFC+AHB+同步整流架构；立锜科技RT7333+RT7795M+RT7220E电源方案；英诺赛科ISG6106QA PFC开关管+INN700DA190B AHB开关管；至信微碳化硅二极管；智融SW3566H二次降压（C1/C2）；慧能泰HUSB392协议芯片（C3/C4/A）；PCBA灌胶工艺"
+    "notes": "PFC+AHB+同步整流架构；立锜科技RT7333+RT7795M+RT7220E电源方案；英诺赛科ISG6106QA PFC开关管+INN700DA190B AHB开关管；至信微碳化硅二极管；智融SW3566H二次降压（C1/C2）；慧能泰HUSB392协议芯片（C3/C4/A）；PCBA灌胶工艺",
+    "reviews": [
+      {
+        "title": "稳定性比参数更重要！绿联速显充160W五口氮化镓充电器深度测试",
+        "url": "https://www.bilibili.com/video/BV16ZiWBtEjF/",
+        "cover": "https://i2.hdslb.com/bfs/archive/25dbb638c7ee275b57a1cc248e518f61e0dabf20.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2026-01-06",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "sharge-pixel-140w",
@@ -840,7 +977,27 @@ var chargers = [
     },
     "price": "参考价 179 元",
     "release_date": "2025-05",
-    "notes": "PFC+AHB架构；芯格诺XP3323 PFC控制器+纳微NV6146C PFC开关管；东科DK8715AD AHB氮化镓合封芯片；MPS MP6951同步整流；三颗智融SW3566H二次降压；2026年红点设计奖获奖产品"
+    "notes": "PFC+AHB架构；芯格诺XP3323 PFC控制器+纳微NV6146C PFC开关管；东科DK8715AD AHB氮化镓合封芯片；MPS MP6951同步整流；三颗智融SW3566H二次降压；2026年红点设计奖获奖产品",
+    "reviews": [
+      {
+        "title": "亮点缺点都很突出！评测拆解闪极140W点阵屏充电器",
+        "url": "https://www.bilibili.com/video/BV1u3jBz7EJJ/",
+        "cover": "https://i1.hdslb.com/bfs/archive/17bac6e99b6b84faeac63da1756fc337de1a3945.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-05-28",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "SHARGE闪极点阵屏140W氮化镓充电器拆解：可控像素点阵，支持接口和充电功率显示",
+        "url": "https://www.bilibili.com/video/BV1U5g2zRECn/",
+        "cover": "https://i2.hdslb.com/bfs/archive/ded84b33e01d8d544111024d4e658519588d5262.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "publishedAt": "2025-07-01",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "sharge-pixel-100w",
@@ -869,7 +1026,18 @@ var chargers = [
     },
     "price": "参考价 149 元",
     "release_date": "2025-05",
-    "notes": "140W版本的3C1A低功率版；像素点阵屏灵感源自1958年博朗收音机"
+    "notes": "140W版本的3C1A低功率版；像素点阵屏灵感源自1958年博朗收音机",
+    "reviews": [
+      {
+        "title": "89元值不值？闪极100W点阵屏充电器体验评测",
+        "url": "https://www.bilibili.com/video/BV1soR3BLE6k/",
+        "cover": "https://i0.hdslb.com/bfs/archive/54532e109e9b9d11032b6c7a5863793b464d5f49.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-05-02",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "vivo-120w-2c1a",
@@ -938,7 +1106,18 @@ var chargers = [
     },
     "price": "参考价 199 元",
     "release_date": "2023-10",
-    "notes": "奥海为全球知名ODM充电器厂商，自有品牌AOHI；PFC+三路独立QR反激架构"
+    "notes": "奥海为全球知名ODM充电器厂商，自有品牌AOHI；PFC+三路独立QR反激架构",
+    "reviews": [
+      {
+        "title": "AOHi奥海140W三口旗舰版氮化镓充电器详细评测",
+        "url": "https://www.bilibili.com/video/BV1zx4y1z7dG/",
+        "cover": "https://i2.hdslb.com/bfs/archive/b22a59bf7e49c6ee8f9b841a0b43216e7d33d2ca.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2024-04-29",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "huawei-mate80-66w",
@@ -969,7 +1148,27 @@ var chargers = [
     },
     "price": "参考价 109 元",
     "release_date": "2025-11",
-    "notes": "华为Mate80随机附送；英诺赛科氮化镓器件；平面变压器设计；PCBA多块小板堆叠；兼容UFCS和PD协议可为第三方设备充电"
+    "notes": "华为Mate80随机附送；英诺赛科氮化镓器件；平面变压器设计；PCBA多块小板堆叠；兼容UFCS和PD协议可为第三方设备充电",
+    "reviews": [
+      {
+        "title": "HUAWEI华为66W全能充评测：88W小弟版来袭，自带66W UFCS与65W PD",
+        "url": "https://www.bilibili.com/video/BV1Dq421F7jy/",
+        "cover": "https://i1.hdslb.com/bfs/archive/8ccfa6d04845831a8daef54ae1ffe2b166f5fd8b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2024-04-12",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "HUAWEI华为66W冰糖全能充开箱：Pura X机型原装快充，通过UFCS协会认证",
+        "url": "https://www.bilibili.com/video/BV1sGfAYBEB1/",
+        "cover": "https://i0.hdslb.com/bfs/archive/4c9942db0511af2fea35c8aa791b6c0d8bbdc230.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2025-04-02",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "miiiw-140w-ca514pro",
@@ -1005,7 +1204,27 @@ var chargers = [
     },
     "price": "参考价 229 元",
     "release_date": "2025-12",
-    "notes": "必易微KP2815+KP4060单级高PF电源方案；英诺赛科INN700D105C氮化镓开关管；三路硅动力SP1250HN二次降压；华源智信HY5515E+HY5324协议芯片；小米生态链企业米物科技出品"
+    "notes": "必易微KP2815+KP4060单级高PF电源方案；英诺赛科INN700D105C氮化镓开关管；三路硅动力SP1250HN二次降压；华源智信HY5515E+HY5324协议芯片；小米生态链企业米物科技出品",
+    "reviews": [
+      {
+        "title": "高速全能充，智显随身行！米物140W智显充充电器体验评测",
+        "url": "https://www.bilibili.com/video/BV1F2keBMEbb/",
+        "cover": "https://i1.hdslb.com/bfs/archive/9fc35cc3e58021345ab60e76a016ed10429726dd.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-01-19",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "支持澎湃闪充！MIIIW米物140W智显充电器米系设备充电兼容性测试",
+        "url": "https://www.bilibili.com/video/BV1CmfXBTEdR/",
+        "cover": "https://i2.hdslb.com/bfs/archive/60589d68bb24f01f386d8e95e724b6df738c55d6.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2026-02-10",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-a121d",
@@ -1036,14 +1255,24 @@ var chargers = [
     },
     "price": "参考价 130 元",
     "release_date": "2025-10",
-    "notes": "Nano系列屏显单C口充电器。协议与屏幕功能参考充电头网2025年10月28日拆解；上市月份参考安克2025年度报告。重量保留约75g，拆解样品约73g，ChargeDB所列60g未获支持；不同地区插脚版本可能不同。"
+    "notes": "Nano系列屏显单C口充电器。协议与屏幕功能参考充电头网2025年10月28日拆解；上市月份参考安克2025年度报告。重量保留约75g，拆解样品约73g，ChargeDB所列60g未获支持；不同地区插脚版本可能不同。",
+    "reviews": [
+      {
+        "title": "5A PPS+可OTA升级！安克45W新款Smart+屏显充电器深度体验，居然能跑55W？",
+        "url": "https://www.bilibili.com/video/BV16Tbs61EbV/",
+        "cover": "https://i1.hdslb.com/bfs/archive/83a98efc6cf71ec7300a6648ab95fa68e57d21cc.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-09-06",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "baseus-e01258-jufeng3",
     "category": "充电器",
     "name": "倍思飓风3号",
     "brand": "倍思 Baseus",
-    "model": "E01258",
     "tags": [
       "氮化镓",
       "160W",
@@ -1066,9 +1295,6 @@ var chargers = [
       "特色功能": "氮化镓、主动风冷散热（磁悬浮马达12500RPM、风量0.96CFM、散热效率+35%）、1.8英寸TFT智慧屏（BaseusView 2.0：实时功率/温度/充电报告）、PowerTune 3.0动态功率分配（3秒巡检）、AI自适应控温（2584mm²石墨烯）、智能断电、睡眠模式",
       "配色": "星际黑"
     },
-    "price": "参考价 399 元（首发价）",
-    "release_date": "2026-10",
-    "notes": "官方全名「倍思 EnerGeek GH21 满速充主动散热屏显快充充电器 3C 160W」；产品图片以京东新品主图为参考；附赠线材官方未公开（京东首发赠线属促销活动）；PPS/AVS电压范围及UFCS支持未公开，需实测确认；单口140W是否在100V低压输入下成立官方未说明",
     "reviews": [
       {
         "title": "自带风扇降温的充电器！倍思飓风3号160W屏显充电器体验，支持AVS协议+140W持续",
@@ -1077,8 +1303,20 @@ var chargers = [
         "author": "充电行者",
         "publishedAt": "2026-10-28",
         "cover": "http://i0.hdslb.com/bfs/archive/e71a905d249f705ea88f17eaae90afdc7851f6a0.jpg"
+      },
+      {
+        "title": "倍思飓风3号 160w屏显风冷充电器详细测评!!",
+        "url": "https://www.bilibili.com/video/BV1YNHc65E7S/",
+        "platform": "哔哩哔哩",
+        "author": "依晟の小电站",
+        "cover": "https://i0.hdslb.com/bfs/archive/71cf016b16ddd0f140adfd4c3ed441b2d8de4772.jpg",
+        "publishedAt": "2026-10-27"
       }
-    ]
+    ],
+    "model": "E01258",
+    "price": "参考价 399 元（首发价）",
+    "release_date": "2026-10",
+    "notes": "官方全名「倍思 EnerGeek GH21 满速充主动散热屏显快充充电器 3C 160W」；产品图片以京东新品主图为参考；附赠线材官方未公开（京东首发赠线属促销活动）；PPS/AVS电压范围及UFCS支持未公开，需实测确认；单口140W是否在100V低压输入下成立官方未说明"
   },
   {
     "id": "cuktech-10-ta1208",
@@ -1352,7 +1590,36 @@ var chargers = [
     },
     "price": "参考价 129",
     "release_date": "2025-12",
-    "notes": "低压输入下单口最高100W；高压三口合计137W。上市年月及可靠参考价待核实，留空。协议实测数据来自充电头网；套装线材以实际购买配置为准。"
+    "notes": "低压输入下单口最高100W；高压三口合计137W。上市年月及可靠参考价待核实，留空。协议实测数据来自充电头网；套装线材以实际购买配置为准。",
+    "reviews": [
+      {
+        "title": "Huntkey航嘉高能S140 Pro氮化镓评测：适配小米90W澎湃协议，140W三口独立输出",
+        "url": "https://www.bilibili.com/video/BV14ovWBNEMD/",
+        "cover": "https://i0.hdslb.com/bfs/archive/4e1b4be8b06e1c27fb118476abdfe58cc1edc853.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2025-12-31",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "140W PD3.1 硬核输出！航嘉高能S140 Pro充电全程",
+        "url": "https://www.bilibili.com/video/BV1cEfoBCEmm/",
+        "cover": "https://i1.hdslb.com/bfs/archive/adabf326f3ee1b6a7b67a29ec994e766c36a4328.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2026-02-18",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "同时兼顾小米私有协议！航嘉S140Pro氮化镓充电器评测",
+        "url": "https://www.bilibili.com/video/BV1NoPWzTEEx/",
+        "cover": "https://i0.hdslb.com/bfs/archive/a86d792f72ea5115093d20b502bc7551beec3016.jpg",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "publishedAt": "2026-03-06",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "apple-40w-dynamic-a3365",
@@ -1383,7 +1650,27 @@ var chargers = [
     },
     "price": "参考价 239",
     "release_date": "2025-09",
-    "notes": "录入国行A3365版本。动态60W需设备协商，实际功率会随负载与温度变化；固定PDO不等于动态峰值。规格来自苹果官网及充电头网铭牌/协议实测。参考价缺少90天统计，留空。"
+    "notes": "录入国行A3365版本。动态60W需设备协商，实际功率会随负载与温度变化；固定PDO不等于动态峰值。规格来自苹果官网及充电头网铭牌/协议实测。参考价缺少90天统计，留空。",
+    "reviews": [
+      {
+        "title": "苹果40W动态电源适配器评测：体积接近20W，可持续29分钟60W输出！",
+        "url": "https://www.bilibili.com/video/BV1Zrpiz6EGh/",
+        "cover": "https://i2.hdslb.com/bfs/archive/10f2d9740463dd21ae018461638e18a98084c967.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2025-09-18",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "苹果40W动态电源适配器兼容性测试：完美兼容苹果全家桶，支持MacBook 60W快充，专为iPhone 17系列打造",
+        "url": "https://www.bilibili.com/video/BV1cbp1z6Erv/",
+        "cover": "https://i0.hdslb.com/bfs/archive/d3fb2e191c9200c195f9475cc23b02af721cefce.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "publishedAt": "2025-09-16",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "hagibis-pd380",
@@ -1427,7 +1714,6 @@ var chargers = [
     "category": "充电器",
     "name": "魅族PANDAER 80W GaN超薄三口潮充",
     "brand": "魅族 PANDAER",
-    "model": "PTC16",
     "tags": [
       "氮化镓",
       "80W",
@@ -1445,6 +1731,17 @@ var chargers = [
       "特色功能": "超薄卡片机身、双料注塑、半透面板",
       "配色": "白金独角兽"
     },
+    "reviews": [
+      {
+        "title": "有惊喜，也有“惊喜”！魅族80W三口超薄充电器首发体验拆解",
+        "url": "https://www.bilibili.com/video/BV15Lug6LE8n/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i1.hdslb.com/bfs/archive/5b0cbd6375062911bd51f07f31571bd051cc5c1b.jpg",
+        "publishedAt": "2026-08-08"
+      }
+    ],
+    "model": "PTC16",
     "price": "上新价 169 元",
     "release_date": "2026-08",
     "notes": "用户确认的80W超薄三口款PTC16，3个接口均为USB-C。此前误录为PTC05单口款，本次整体纠正；不沿用旧款的UFCS、输入电压、PD65W限制和PPS档位。型号由产品实拍资料交叉确认；3C、功率、厚度、重量及上新价据2026年8月PANDAER发布会资料。输入电压、各口完整PDO/PPS/AVS档位及多口分配表尚未取得可核实铭牌，暂留空。"
@@ -1479,7 +1776,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "EnerFill FH22，单USB-C口E01243；不可与FE22三口版混用参数。105W为PPS报文上限，不作为额定功率。参考价与准确上市年月待核实。"
+    "notes": "EnerFill FH22，单USB-C口E01243；不可与FE22三口版混用参数。105W为PPS报文上限，不作为额定功率。参考价与准确上市年月待核实。",
+    "reviews": [
+      {
+        "title": "倍思89元超小体积100W充电器实测：真百瓦，还是超频头？",
+        "url": "https://www.bilibili.com/video/BV1mt9fB2EBg/",
+        "cover": "https://i2.hdslb.com/bfs/archive/5535a1ac76126a591acb341f1d871a03fe0c1aa8.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2026-05-04",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "baseus-fe22-e01239-100w",
@@ -1512,7 +1820,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "2026-02",
-    "notes": "EnerFill FE22的100W版。官方商城混列70W/100W，70W图亦出现E01239，因此以100W铭牌及端口规格识别；本条使用100W专用厂商参数图。参考价缺少90天统计，留空。"
+    "notes": "EnerFill FE22的100W版。官方商城混列70W/100W，70W图亦出现E01239，因此以100W铭牌及端口规格识别；本条使用100W专用厂商参数图。参考价缺少90天统计，留空。",
+    "reviews": [
+      {
+        "title": "63性价比还不错！倍思100W三口小米澎湃闪充氮化镓充电器体验，协议和功率分配都合理！",
+        "url": "https://www.bilibili.com/video/BV1JiLF6kESM/",
+        "cover": "https://i0.hdslb.com/bfs/archive/1afd6e30d489acf3e2acf83c0b4404f78f09676b.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-05-18",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "candysign-cp02-160w",
@@ -1572,7 +1891,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。不支持UFCS；不得与140W的737或其他Prime充电器混用参数。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。不支持UFCS；不得与140W的737或其他Prime充电器混用参数。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "Anker安克3C1A氮化镓充电器拆解：总输出最高为150W，支持全时功率分配",
+        "url": "https://www.bilibili.com/video/BV1BN411U78b/",
+        "cover": "https://i1.hdslb.com/bfs/archive/13da69f21680534ad170e1dca62c56f68ea360a7.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "publishedAt": "2023-07-01",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "xiaomi-67w-mdy16ej",
@@ -1603,7 +1933,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "录入MDY-16-EJ单C口版本，不与早期小布丁型号混用。固定PD及UFCS档位参考wolflsi原始协议测试；尺寸重量参考ChargeDB样品。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "录入MDY-16-EJ单C口版本，不与早期小布丁型号混用。固定PD及UFCS档位参考wolflsi原始协议测试；尺寸重量参考ChargeDB样品。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "【评测拆解】小米67W小布丁二代，升级UFCS，169元值不值得买？",
+        "url": "https://www.bilibili.com/video/BV1GH4y1X7gd/",
+        "cover": "https://i0.hdslb.com/bfs/archive/1e5e6b8cb494a2575b2433aaf4053a301a4addc4.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2023-09-07",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "candysign-pa768-68w",
@@ -1631,7 +1972,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "2025-06",
-    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。2025年6月18日品牌发布稿确认上市。仅按所采样品记录协议，不混入后续AVS版或其他固件参数；可靠参考价未核实，留空。"
+    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。2025年6月18日品牌发布稿确认上市。仅按所采样品记录协议，不混入后续AVS版或其他固件参数；可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "过度营销还是物有所值？硬糖68W充电器开箱评测",
+        "url": "https://www.bilibili.com/video/BV1fe6oBoEj3/",
+        "cover": "https://i0.hdslb.com/bfs/archive/501ef60c558c8dc5075cf915be2c2bb0293f6e56.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2026-01-12",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-nano-a2692-45w",
@@ -1658,7 +2010,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。固定档参考Anker官方A2692产品说明。不同地区插脚及重量可能不同，本条尺寸重量采用ChargeDB样品，不能与其他地区规格直接合并。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。固定档参考Anker官方A2692产品说明。不同地区插脚及重量可能不同，本条尺寸重量采用ChargeDB样品，不能与其他地区规格直接合并。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "卖的贵就一定好？安克新品45W氮化镓充电器测评",
+        "url": "https://www.bilibili.com/video/BV1gCEqzWE6f/",
+        "cover": "https://i2.hdslb.com/bfs/archive/9ec54d9437cc24382832b9839d42c1116ba48b53.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-05-15",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-zolo-a2698-30w",
@@ -1685,7 +2048,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "固定PD档位来自Anker官方A2698说明书，PPS支持由Anker官方店产品页确认；ChargeDB顶层列PPS但档位为空，不据此写为不支持。尺寸重量为ChargeDB样品，不混入欧规重量。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "固定PD档位来自Anker官方A2698说明书，PPS支持由Anker官方店产品页确认；ChargeDB顶层列PPS但档位为空，不据此写为不支持。尺寸重量为ChargeDB样品，不混入欧规重量。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "评测拆解安克30W冰点充氮化镓，59.9元值不值？",
+        "url": "https://www.bilibili.com/video/BV1R7421R7Dj/",
+        "cover": "https://i0.hdslb.com/bfs/archive/b7ed15269a2ea46efc778c8cebfd903d7e05913a.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-06-08",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "huawei-p0013-40w",
@@ -1721,7 +2095,27 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "输入、输出及接口定义以华为官网为准；铭牌输出包含华为私有档，不等同于固定PDO列表。只有1个融合口，不能当作2口并充。UFCS上限参考ChargeDB样品；上市年月与参考价留空。"
+    "notes": "输入、输出及接口定义以华为官网为准；铭牌输出包含华为私有档，不等同于固定PDO列表。只有1个融合口，不能当作2口并充。UFCS上限参考ChargeDB样品；上市年月与参考价留空。",
+    "reviews": [
+      {
+        "title": "确实很不错！开箱评测华为40W冰糖充电器",
+        "url": "https://www.bilibili.com/video/BV1ep2QBHEo3/",
+        "cover": "https://i1.hdslb.com/bfs/archive/0f50da8f92ea351d002bb48cb211da291ad1c40a.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-12-09",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「Charlie」华为冰糖40W全能充电器型号P0013｜全国产方案+纹波低又稳｜iPhone17/18系列请谨慎使用｜小体积华为充电器｜目前性价比拉满",
+        "url": "https://www.bilibili.com/video/BV1rhad63Ehx/",
+        "cover": "https://i2.hdslb.com/bfs/archive/a9a90f139c3c80e4ba718ea3cda6f8135742ddea.jpg",
+        "platform": "哔哩哔哩",
+        "author": "Charlie执行日日不断",
+        "publishedAt": "2026-09-30",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "candysign-pa503-40w",
@@ -1748,7 +2142,18 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。不支持UFCS（所采样品记录）。不将SPR AVS区间与PPS区间混用。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "基础参数及协议上限来自ChargeDB样品记录；PPS仅列已记录的上限点，不推断完整区间。不支持UFCS（所采样品记录）。不将SPR AVS区间与PPS区间混用。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "喜恶同因，瑕瑜互见！硬糖40W氮化镓充电器评测",
+        "url": "https://www.bilibili.com/video/BV1s3xUz8EfU/",
+        "cover": "https://i0.hdslb.com/bfs/archive/5f1c07ce04299b9a3c16f4c195341c6f3d00ed6c.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-10-07",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "belkin-wca013yz-45w",
@@ -1774,7 +2179,27 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "ChargeDB型号WCA03yz疑为漏字，按实际产品系列及国行型号录为WCA013yz，避免建立错误型号。固定档与PPS采用贝尔金WCA013官方FAQ；ChargeDB上限16V/3A与官方2.8A有差异，保留国行批次待核实说明。尺寸重量为ChargeDB样品；插脚形态随地区变化，不合并其他地区规格。准确上市年月和可靠参考价未核实，留空。"
+    "notes": "ChargeDB型号WCA03yz疑为漏字，按实际产品系列及国行型号录为WCA013yz，避免建立错误型号。固定档与PPS采用贝尔金WCA013官方FAQ；ChargeDB上限16V/3A与官方2.8A有差异，保留国行批次待核实说明。尺寸重量为ChargeDB样品；插脚形态随地区变化，不合并其他地区规格。准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "凭什么卖这么贵？贝尔金45W苹果充电头测评",
+        "url": "https://www.bilibili.com/video/BV1YZVqzLEAv/",
+        "cover": "https://i1.hdslb.com/bfs/archive/8e4b64988062bb42404aed2efa2000e61934fcb2.jpg",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2025-05-05",
+        "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "贝尔金45W USB-C快充详细实测：温升效率兼容性一次讲清",
+        "url": "https://www.bilibili.com/video/BV1QJ3izvEGz/",
+        "cover": "https://i2.hdslb.com/bfs/archive/3906e9d20f214e0b0b6440bb80d6a79b49bb77df.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2025-07-06",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-ac45b-45w",
@@ -1840,6 +2265,17 @@ var chargers = [
       "特色功能": "GaNPrime氮化镓、2.26英寸LCD屏、旋钮操控、Wi-Fi连接App、蓝牙辅助配网、自定义功率分配及固件升级"
     },
     "release_date": "2024-12",
-    "notes": "PPS/UFCS上限来自ChargeDB样品记录，PPS不推断完整区间。输入、尺寸、重量及多口上限采用Anker官方参数；ChargeDB样品约642g不替代官方640g。UFCS 33W不等于其他协议的输出上限；准确上市年月和可靠参考价未核实，留空。"
+    "notes": "PPS/UFCS上限来自ChargeDB样品记录，PPS不推断完整区间。输入、尺寸、重量及多口上限采用Anker官方参数；ChargeDB样品约642g不替代官方640g。UFCS 33W不等于其他协议的输出上限；准确上市年月和可靠参考价未核实，留空。",
+    "reviews": [
+      {
+        "title": "老款的遗憾，这次全补上了？安克Prime桌面充Pro+深度测试：兼容性、调度、烤机全看透！",
+        "url": "https://www.bilibili.com/video/BV1bbPfzGE79/",
+        "cover": "https://i2.hdslb.com/bfs/archive/1d999c796197c03a9dcfd0811d0ac48dfed907aa.jpg",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "publishedAt": "2026-03-10",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   }
 ];

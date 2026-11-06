@@ -6,7 +6,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "酷态科10号超级电能棒",
     "brand": "酷态科 CUKTECH",
-    "model": "PB100P",
     "tags": [
       "10000mAh",
       "150W",
@@ -33,9 +32,6 @@ var powerbanks = [
       "附赠线材": "0.5m 6A C to C（支持240W EPR）",
       "配色": "金属灰"
     },
-    "price": "参考价 160 元",
-    "release_date": "2023-11",
-    "notes": "柱状造型，支持笔记本+手机同时快充，36Wh可上飞机",
     "valueInputs": {
       "ratedEnergyWh": 36,
       "energyBasis": "电芯标称能量（典型值）",
@@ -52,8 +48,21 @@ var powerbanks = [
         "author": "TimMcMahon",
         "publishedAt": "2025-09-06",
         "scope": "PB100P，英文测评"
+      },
+      {
+        "title": "100W性能小钢炮！酷态科10号充电宝首发详细评测",
+        "url": "https://www.bilibili.com/video/BV1rC4y1d7pX/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "http://i1.hdslb.com/bfs/archive/9247a3d81e6ae778459ec9e3014a9323ca497cb1.jpg",
+        "publishedAt": "2023-10-13",
+        "scope": "详细评测"
       }
-    ]
+    ],
+    "model": "PB100P",
+    "price": "参考价 160 元",
+    "release_date": "2023-11",
+    "notes": "柱状造型，支持笔记本+手机同时快充，36Wh可上飞机"
   },
   {
     "id": "cuktech-10-mini-pb1055",
@@ -105,7 +114,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "酷态科6号超级电能块",
     "brand": "酷态科 CUKTECH",
-    "model": "PB060",
     "tags": [
       "6000mAh",
       "55W",
@@ -130,6 +138,33 @@ var powerbanks = [
       "附赠线材": "17.5cm C to C（6A，支持240W EPR）",
       "配色": "黑金"
     },
+    "reviews": [
+      {
+        "title": "129元迷你小钢炮！首发评测酷态科6号充电宝",
+        "url": "https://www.bilibili.com/video/BV1qm421T75Y/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i0.hdslb.com/bfs/archive/735ee4c9e3c5478687e446117813bfd4f85462c6.jpg",
+        "publishedAt": "2024-05-13"
+      },
+      {
+        "title": "酷态科6号超级电能块终于回来了？新酷态科6号评测！",
+        "url": "https://www.bilibili.com/video/BV1G119BHER8/",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "cover": "https://i0.hdslb.com/bfs/archive/8db8f405329e6f06abaca617a62f39943c17cb9d.jpg",
+        "publishedAt": "2025-11-08"
+      },
+      {
+        "title": "酷态科6号超级电能块拆解：具备双USB-C接口，最大输出功率为55W",
+        "url": "https://www.bilibili.com/video/BV1WJyUY8EHv/",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "cover": "https://i2.hdslb.com/bfs/archive/84dc4eb3410b59558a0b995f1f9ce0fcc18cb26d.jpg",
+        "publishedAt": "2024-10-27"
+      }
+    ],
+    "model": "PB060",
     "price": "参考价 91 元",
     "release_date": "2024-05",
     "notes": "耳机盒大小超便携；21.5Wh可上飞机"
@@ -194,12 +229,19 @@ var powerbanks = [
         "platform": "哔哩哔哩",
         "author": "阿甘体验",
         "publishedAt": "2025-11-25"
+      },
+      {
+        "title": "这可能是200以内最好的充电搭子！旅差大容量充电宝推荐",
+        "url": "https://www.bilibili.com/video/BV1yF9bBWEUT/",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "cover": "https://i0.hdslb.com/bfs/archive/0f2959beb5eb9c9a1bccad3dbc224d8758564aa9.jpg",
+        "publishedAt": "2026-04-30"
       }
     ],
     "category": "充电宝",
     "name": "酷态科25号超级电能块SE",
     "brand": "酷态科 CUKTECH",
-    "model": "LPB252N",
     "tags": [
       "25000mAh",
       "120W",
@@ -224,6 +266,7 @@ var powerbanks = [
       "附赠线材": "自带Type-C线",
       "配色": "黑色、珠白"
     },
+    "model": "LPB252N",
     "price": "参考价 179 元",
     "release_date": "2025-11",
     "notes": "大容量性价比之选；25000mAh+120W澎湃秒充+100W PD自充；自带Type-C线；79.33Wh可上飞机"
@@ -261,7 +304,18 @@ var powerbanks = [
     },
     "price": "参考价 249 元",
     "release_date": "2025-06",
-    "notes": "力神电芯版15号电能柱；2C1A三口输出最大150W；C1支持120W澎湃秒充；74Wh可上飞机"
+    "notes": "力神电芯版15号电能柱；2C1A三口输出最大150W；C1支持120W澎湃秒充；74Wh可上飞机",
+    "reviews": [
+      {
+        "title": "换芯后有变化吗？酷态科15号电能柱力神版体验评测，2026年了还值得买吗？",
+        "url": "https://www.bilibili.com/video/BV1W5w3z8Eyb/",
+        "cover": "https://i2.hdslb.com/bfs/archive/4b4cc0e698322275c7148bd73344ca91e7c7afd8.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-03-15",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-cp12-wpb100l",
@@ -334,7 +388,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "酷态科CP25电能块自带线",
     "brand": "酷态科 CUKTECH",
-    "model": "PB200N",
     "tags": [
       "20000mAh",
       "55W",
@@ -360,6 +413,41 @@ var powerbanks = [
       "附赠线材": "自带Type-C线",
       "配色": "黑色、蓝色、白色、橙色"
     },
+    "reviews": [
+      {
+        "title": "129元全体起立？首发评测酷态科55W自带线充电宝",
+        "url": "https://www.bilibili.com/video/BV17s421G7pJ/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i2.hdslb.com/bfs/archive/418fb00be0236a7838fc5ea1f43f5827f9544219.jpg",
+        "publishedAt": "2024-05-25"
+      },
+      {
+        "title": "【全网首拆】酷态科55W自带线充电，看看129元值不值？",
+        "url": "https://www.bilibili.com/video/BV1Uz421a7Tm/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i2.hdslb.com/bfs/archive/eb911beb7032ad1e3af4d9eb5d19865576ccf72b.jpg",
+        "publishedAt": "2024-05-25"
+      },
+      {
+        "title": "CUKTECH酷态科能量块评测：20000mAh容量，支持小米55W快充",
+        "url": "https://www.bilibili.com/video/BV1HcpueCEsf/",
+        "platform": "哔哩哔哩",
+        "author": "充电头网评测室",
+        "cover": "https://i0.hdslb.com/bfs/archive/32aaed293f406eaffbf97eb3066d2004117d26b0.jpg",
+        "publishedAt": "2024-09-06"
+      },
+      {
+        "title": "当年容量神机，如今回归主流水平，酷态科CP25单线",
+        "url": "https://www.bilibili.com/video/BV13nuM6PEzu/",
+        "platform": "哔哩哔哩",
+        "author": "并夕规格书",
+        "cover": "https://i1.hdslb.com/bfs/archive/898eee52a73111cb7ef169b0f65fedf1ade3bc2a.jpg",
+        "publishedAt": "2026-08-08"
+      }
+    ],
+    "model": "PB200N",
     "price": "参考价 99 元",
     "release_date": "2024-05",
     "notes": "CP系列大容量款；自带线+2C1A三口输出最大55W；74Wh可上飞机"
@@ -369,7 +457,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "Anker Prime 充电宝 26250mAh 300W",
     "brand": "安克 Anker",
-    "model": "A110A",
     "tags": [
       "26250mAh",
       "300W",
@@ -400,6 +487,25 @@ var powerbanks = [
       "附赠线材": "240W C to C 编织线",
       "配色": "黑色"
     },
+    "reviews": [
+      {
+        "title": "软包电芯的“荣光”！安克Prime A110A移动电源评测",
+        "url": "https://www.bilibili.com/video/BV1kvXUBMEAd/",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "cover": "https://i0.hdslb.com/bfs/archive/d9722a796c7adb4ceaa86f52a873b34196858166.jpg",
+        "publishedAt": "2026-03-29"
+      },
+      {
+        "title": "1099元值不值？评测拆解安克A110A充电宝",
+        "url": "https://www.bilibili.com/video/BV1f8XYBxEQp/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i0.hdslb.com/bfs/archive/6dea97e1734ea56439ed1e12cfa011d033f92aa5.jpg",
+        "publishedAt": "2026-04-01"
+      }
+    ],
+    "model": "A110A",
     "price": "1099 元（京东百亿补贴 859 元）",
     "release_date": "2026-03",
     "notes": "中国大陆金标定制版；支持小米120W+华为66W私有协议；双口自充250W；可上飞机"
@@ -436,7 +542,18 @@ var powerbanks = [
     },
     "price": "参考价 228 元",
     "release_date": "2024-03",
-    "notes": "自带C线可收纳当提绳；36Wh可上飞机"
+    "notes": "自带C线可收纳当提绳；36Wh可上飞机",
+    "reviews": [
+      {
+        "title": "129元值不值得买？评测拆解安克30W自带线充电宝",
+        "url": "https://www.bilibili.com/video/BV1Q142117hC/",
+        "cover": "https://i0.hdslb.com/bfs/archive/fdb59b0dddad0093d49fa879e4e50c5198b093e1.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-05-28",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-a1289",
@@ -469,7 +586,18 @@ var powerbanks = [
     },
     "price": "参考价 549 元",
     "release_date": "2023-09",
-    "notes": "PD3.1 140W双向快充；86.4Wh可上飞机"
+    "notes": "PD3.1 140W双向快充；86.4Wh可上飞机",
+    "reviews": [
+      {
+        "title": "支持PD3.1 140W双向快充，ANKER 24000mAh移动电源兼容性测试",
+        "url": "https://www.bilibili.com/video/BV15g411C7Y2/",
+        "cover": "https://i2.hdslb.com/bfs/archive/461ebceaf8632a2f24392be5dcd57ec9530cc959.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "publishedAt": "2022-08-15",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "anker-a1335",
@@ -535,7 +663,18 @@ var powerbanks = [
     },
     "price": "参考价 269 元",
     "release_date": "2024-08",
-    "notes": "充电器+充电宝二合一；氮化镓AC插头；34.56Wh可上飞机"
+    "notes": "充电器+充电宝二合一；氮化镓AC插头；34.56Wh可上飞机",
+    "reviews": [
+      {
+        "title": "ANKER Prime安克二合一9600mAh移动电源拆解：搭载国标双脚插头，支持65W PD快充",
+        "url": "https://www.bilibili.com/video/BV1KeyiYaELq/",
+        "cover": "https://i1.hdslb.com/bfs/archive/760ac3f87225b2fac6c47fd797d51f84689f6721.jpg",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "publishedAt": "2024-10-21",
+        "checkedAt": "2026-11-07"
+      }
+    ]
   },
   {
     "id": "cuktech-pb150p",

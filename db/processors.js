@@ -224,7 +224,29 @@ var processors =
    "3DMark WLE": "5,170",
    "发布日期": "2023-10",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "小米14性能分析：骁龙8Gen3到底有多强？",
+    "url": "https://www.bilibili.com/video/BV1me411R7Ha/",
+    "cover": "https://i2.hdslb.com/bfs/archive/2d87d01dd71b375c4cb07da3e1426a992095c54a.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2023-10-26",
+    "checkedAt": "2026-11-07",
+    "scope": "基于小米14 的骁龙8 Gen 3 性能实测"
+   },
+   {
+    "title": "「小白」小米14性能测评：骁龙8Gen3到底什么水平？",
+    "url": "https://www.bilibili.com/video/BV17M411R7qy/",
+    "cover": "https://i0.hdslb.com/bfs/archive/7389cc397da48542daf85310d333f0bc90442d4b.jpg",
+    "platform": "哔哩哔哩",
+    "author": "小白测评",
+    "publishedAt": "2023-10-26",
+    "checkedAt": "2026-11-07",
+    "scope": "基于小米14 的骁龙8 Gen 3 性能测评"
+   }
+  ]
  },
  {
   "id": "sd8elite",
@@ -244,7 +266,39 @@ var processors =
    "3DMark WLE": "6,949",
    "发布日期": "2024-10",
    "说明": "极客湾（跑分数据来自极客湾跑分Excel）"
-  }
+  },
+  "reviews": [
+   {
+    "title": "高通新旗舰来啦！骁龙8至尊版强不强？",
+    "url": "https://www.bilibili.com/video/BV1fMyLYZE1n/",
+    "cover": "https://i0.hdslb.com/bfs/archive/9acefd13e64b15de29ac88e279353dd17b67145e.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2024-10-22",
+    "checkedAt": "2026-11-07",
+    "scope": "骁龙8至尊版（8 Elite）芯片首发分析"
+   },
+   {
+    "title": "骁龙8 Elite首发评测：一加13能效有多好？",
+    "url": "https://www.bilibili.com/video/BV1xvysYwEcX/",
+    "cover": "https://i0.hdslb.com/bfs/archive/03dfea0da7feaf0a45fb2ad031cc47abe26f81ca.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2024-10-23",
+    "checkedAt": "2026-11-07",
+    "scope": "基于一加13 的骁龙8 Elite 首发评测（一加13 为首发机型，库外测试机）"
+   },
+   {
+    "title": "「小白」小米15 Pro性能测评：小米驯龙表现如何？",
+    "url": "https://www.bilibili.com/video/BV1WQykY5E9V/",
+    "cover": "https://i1.hdslb.com/bfs/archive/3547e0c303da6c327e5eb35f9b8e30ecf2810c7e.jpg",
+    "platform": "哔哩哔哩",
+    "author": "小白测评",
+    "publishedAt": "2024-10-25",
+    "checkedAt": "2026-11-07",
+    "scope": "基于小米15 Pro 的骁龙8至尊版性能测评"
+   }
+  ]
  },
  {
   "id": "sd8elite5",
@@ -264,7 +318,29 @@ var processors =
    "3DMark WLE": "7,640",
    "发布日期": "2025-09",
    "说明": "极客湾（GB6），IT之家实测（WLE）"
-  }
+  },
+  "reviews": [
+   {
+    "title": "「小白」一加15性能实测： 首台骁龙8Elite Gen5怎么样？",
+    "url": "https://www.bilibili.com/video/BV1FNJ9zEE17/",
+    "cover": "https://i2.hdslb.com/bfs/archive/11a85d149fb2709517862df4e045a7fb30e52122.jpg",
+    "platform": "哔哩哔哩",
+    "author": "小白测评",
+    "publishedAt": "2025-09-25",
+    "checkedAt": "2026-11-07",
+    "scope": "基于一加15 的第五代骁龙8至尊版性能实测"
+   },
+   {
+    "title": "「小白」骁龙8 Elite Gen5性能首测：这能效 有东西！",
+    "url": "https://www.bilibili.com/video/BV1TGJRzaEVa/",
+    "cover": "https://i1.hdslb.com/bfs/archive/68024266778f166d6207532f63bd5a3a096e4331.jpg",
+    "platform": "哔哩哔哩",
+    "author": "小白测评",
+    "publishedAt": "2025-09-25",
+    "checkedAt": "2026-11-07",
+    "scope": "骁龙8 Elite Gen5 性能首测（量产机）"
+   }
+  ]
  },
  {
   "id": "sd865",
@@ -283,7 +359,19 @@ var processors =
    "3DMark WLE": "1,124",
    "发布日期": "2019-12",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "「科技美学直播」小米10 Pro（5G）开箱上手体验 骁龙865 一亿像素四摄 | 全系双曲面屏、LPDDR5 |3999元起售",
+    "url": "https://www.bilibili.com/video/BV1v741137cs/",
+    "cover": "https://i2.hdslb.com/bfs/archive/9945197a68c5ef8f2f367e21ed74977563583cbb.jpg",
+    "platform": "哔哩哔哩",
+    "author": "科技美学",
+    "publishedAt": "2020-02-13",
+    "checkedAt": "2026-11-07",
+    "scope": "基于小米10 Pro 的骁龙865 开箱实测"
+   }
+  ]
  },
  {
   "id": "sd870",
@@ -321,7 +409,19 @@ var processors =
    "3DMark WLE": "~650",
    "发布日期": "2019-12",
    "说明": "IT之家实测（GB5），极客湾（WLE）"
-  }
+  },
+  "reviews": [
+   {
+    "title": "「科技美学直播」小米10青春版开箱上手体验 | 骁龙765G | 50倍潜望镜头 售价2099元起",
+    "url": "https://www.bilibili.com/video/BV16i4y1t74z/",
+    "cover": "https://i2.hdslb.com/bfs/archive/b1c15803be1a8085d5816556d891f01130cfec06.jpg",
+    "platform": "哔哩哔哩",
+    "author": "科技美学",
+    "publishedAt": "2020-04-27",
+    "checkedAt": "2026-11-07",
+    "scope": "基于小米10青春版的骁龙765G 开箱实测"
+   }
+  ]
  },
  {
   "id": "dimensity-8400-ultra",
@@ -381,7 +481,49 @@ var processors =
    "3DMark WLE": "8,251",
    "发布日期": "2025-09",
    "说明": "极客湾（GB6），NotebookCheck（WLE）"
-  }
+  },
+  "reviews": [
+   {
+    "title": "天玑9500首发评测：Find X9 Pro性能有多强？",
+    "url": "https://www.bilibili.com/video/BV1qHnwzBEvt/",
+    "cover": "https://i1.hdslb.com/bfs/archive/0950cc3cf8db109a17d2c4fd24f23d817b07400f.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-09-22",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 OPPO Find X9 Pro 的天玑9500首发评测（库外测试机）"
+   },
+   {
+    "title": "天玑9500前瞻上手：GPU巨强！",
+    "url": "https://www.bilibili.com/video/BV1RWnFzbED3/",
+    "cover": "https://i0.hdslb.com/bfs/archive/c24fdf1475ef5c1d3285b193b62f58b809f5950a.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-09-22",
+    "checkedAt": "2026-11-07",
+    "scope": "天玑9500 前瞻上手：GPU 性能分析"
+   },
+   {
+    "title": "vivo X300 Pro上手体验：蓝厂新旗舰性能前瞻",
+    "url": "https://www.bilibili.com/video/BV13XJSzfE83/",
+    "cover": "https://i0.hdslb.com/bfs/archive/a9970380a8f7633a779faedd747a71707773eab7.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-09-24",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 vivo X300 Pro 的天玑9500 性能前瞻"
+   },
+   {
+    "title": "红米K90 Max & K Pad 2上手体验：火力全开的天玑9500机型",
+    "url": "https://www.bilibili.com/video/BV1UUdbBBEDC/",
+    "cover": "https://i1.hdslb.com/bfs/archive/9bade4704a22e33b1941060d89ddb4cd04168413.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-04-16",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 REDMI K90 Max 的天玑9500 上手实测"
+   }
+  ]
  },
  {
   "id": "a15-bionic",
@@ -398,7 +540,29 @@ var processors =
    "3DMark WLE": "3,056",
    "发布日期": "2021-09",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone14系列性能分析：散热改进，但A16提升有限",
+    "url": "https://www.bilibili.com/video/BV1tW4y1i7tN/",
+    "cover": "https://i0.hdslb.com/bfs/archive/a5811d5dd41952d4007041c519557ffef85ed009.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2022-09-15",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone14 系列性能分析：覆盖 A15（14/14Plus）与 A16（Pro 系列）"
+   },
+   {
+    "title": "iPhone 14 Plus性能简评，是新一代8 Plus吗？和mini 6相比游戏性能又如何",
+    "url": "https://www.bilibili.com/video/BV1MR4y1976g/",
+    "cover": "https://i0.hdslb.com/bfs/archive/86a9280f33c266fc74f9c97cf2f619b9e8b72cbf.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2022-10-19",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 iPhone 14 Plus 的 A15 仿生性能简评"
+   }
+  ]
  },
  {
   "id": "a16-bionic",
@@ -415,7 +579,19 @@ var processors =
    "3DMark WLE": "3,383",
    "发布日期": "2022-09",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone14系列性能分析：散热改进，但A16提升有限",
+    "url": "https://www.bilibili.com/video/BV1tW4y1i7tN/",
+    "cover": "https://i0.hdslb.com/bfs/archive/a5811d5dd41952d4007041c519557ffef85ed009.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2022-09-15",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone14 系列性能分析：覆盖 A16（14 Pro 系列）"
+   }
+  ]
  },
  {
   "id": "a19-bionic",
@@ -432,7 +608,19 @@ var processors =
    "3DMark WLE": "~5,000（估算）",
    "发布日期": "2025-09",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone 17系列性能分析：挤爆牙膏！",
+    "url": "https://www.bilibili.com/video/BV1cBp4zQENM/",
+    "cover": "https://i2.hdslb.com/bfs/archive/a4f8580886054ba97e2155f65728e2063aac665a.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-09-17",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone 17 系列性能分析：覆盖 A19 与 A19 Pro"
+   }
+  ]
  },
  {
   "id": "a19-pro-bionic",
@@ -449,7 +637,19 @@ var processors =
    "3DMark WLE": "6,557",
    "发布日期": "2025-09",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone 17系列性能分析：挤爆牙膏！",
+    "url": "https://www.bilibili.com/video/BV1cBp4zQENM/",
+    "cover": "https://i2.hdslb.com/bfs/archive/a4f8580886054ba97e2155f65728e2063aac665a.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-09-17",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone 17 系列性能分析：覆盖 A19 Pro（17 Pro 系列）"
+   }
+  ]
  },
  {
   "id": "a18-bionic",
@@ -466,7 +666,19 @@ var processors =
    "发布日期": "2024-09",
    "说明": "极客湾",
    "3DMark WLE": "4,588"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone 16系列性能分析：A18兄弟挺强的！",
+    "url": "https://www.bilibili.com/video/BV178tEeVEMD/",
+    "cover": "https://i1.hdslb.com/bfs/archive/5b13a6711e8d380f21dd376bb96437b7b75bf2a0.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2024-09-19",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone 16 系列性能分析：A18 与 A18 Pro 实测"
+   }
+  ]
  },
  {
   "id": "a18-pro-bionic",
@@ -483,7 +695,19 @@ var processors =
    "3DMark WLE": "5,148",
    "发布日期": "2024-09",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone 16系列性能分析：A18兄弟挺强的！",
+    "url": "https://www.bilibili.com/video/BV178tEeVEMD/",
+    "cover": "https://i1.hdslb.com/bfs/archive/5b13a6711e8d380f21dd376bb96437b7b75bf2a0.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2024-09-19",
+    "checkedAt": "2026-11-07",
+    "scope": "iPhone 16 系列性能分析：A18 Pro（16 Pro 系列）实测"
+   }
+  ]
  },
  {
   "id": "sd7gen4",
@@ -523,7 +747,19 @@ var processors =
    "3DMark WLE": "7,130",
    "发布日期": "2025-05",
    "说明": "REDMI K80 至尊版首发；性能数据参照天玑9400（极客湾实测）"
-  }
+  },
+  "reviews": [
+   {
+    "title": "vivo X200s上手体验：天玑9400+新机上市",
+    "url": "https://www.bilibili.com/video/BV1bFRkYLEfP/",
+    "cover": "https://i1.hdslb.com/bfs/archive/cc58465528c84a7e40a19f9c7e15bc4c7d323458.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2025-04-07",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 vivo X200s 的天玑9400+ 上手体验（库外测试机）"
+   }
+  ]
  },
  {
   "id": "dimensity-9300-plus",
@@ -620,7 +856,29 @@ var processors =
    "3DMark WLE": "7500",
    "发布日期": "2026-01-15",
    "说明": "天玑9500降频版；全大核架构；性能接近骁龙8至尊版；首发于REDMI Turbo 5 Max"
-  }
+  },
+  "reviews": [
+   {
+    "title": "红米Turbo 5 Max上手体验：天玑9500s性能表现究竟如何？",
+    "url": "https://www.bilibili.com/video/BV1rErfBzE6u/",
+    "cover": "https://i2.hdslb.com/bfs/archive/a20466c4e70f5cc09ce9faccba32840585c4653d.jpg",
+    "platform": "哔哩哔哩",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-01-15",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 REDMI Turbo 5 Max 的天玑9500s 性能实测"
+   },
+   {
+    "title": "「小白」REDMI Turbo 5 Max性能实测：天玑9500s表现如何？",
+    "url": "https://www.bilibili.com/video/BV1YerpBXEqZ/",
+    "cover": "https://i2.hdslb.com/bfs/archive/6379f2e30f318e52a9fbac7797a59b8760366edb.jpg",
+    "platform": "哔哩哔哩",
+    "author": "小白测评",
+    "publishedAt": "2026-01-15",
+    "checkedAt": "2026-11-07",
+    "scope": "基于 REDMI Turbo 5 Max 的天玑9500s 性能实测（小白）"
+   }
+  ]
  },
  {
   "id": "sd6g3",

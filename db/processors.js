@@ -24,7 +24,19 @@ var processors =
    "3DMark SNL": "~4,453（拟合）",
    "发布日期": "2026-09",
    "说明": "小白测评参考机（Notebookcheck转引）；非量产。"
-  }
+  },
+  "reviews": [
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "sd8-elite-extreme-gen6",
@@ -43,7 +55,29 @@ var processors =
    "3DMark SNL": "~4,220（拟合）",
    "发布日期": "2026-09",
    "说明": "骁龙8超级至尊版；ComputerBase参考机，WLE估算。"
-  }
+  },
+  "reviews": [
+   {
+    "title": "骁龙8 Elite Extreme Gen6前瞻上手：高通新旗舰手机来啦！",
+    "url": "https://www.bilibili.com/video/BV17uhW6VE2R/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-09-23",
+    "cover": "https://i2.hdslb.com/bfs/archive/c9ef7c9b942f0fc657639fc0b42e7fc3febff5ac.jpg",
+    "scope": "骁龙8 Elite Extreme Gen 6，QRD 工程机前瞻实测",
+    "checkedAt": "2026-11-06"
+   },
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "a20-pro",
@@ -60,7 +94,29 @@ var processors =
    "3DMark SNL": "4,198",
    "发布日期": "2026-09",
    "说明": "Notebookcheck（iPhone 18 Pro实测）。"
-  }
+  },
+  "reviews": [
+   {
+    "title": "iPhone18 Pro性能分析：五年来最强的芯片升级！",
+    "url": "https://www.bilibili.com/video/BV1oZeA6fERD/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-09-16",
+    "cover": "https://i0.hdslb.com/bfs/archive/bee297258fc9a148cf0b6a8c8c646979045ff2e9.jpg",
+    "scope": "基于 iPhone 18 Pro 系列的 A20 Pro 性能与能效实测",
+    "checkedAt": "2026-11-06"
+   },
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "xring-o3",
@@ -79,7 +135,19 @@ var processors =
    "3DMark SNL": "4,658",
    "发布日期": "2026-08",
    "说明": "小白测评（小米平板9 Pro Max量产机）。"
-  }
+  },
+  "reviews": [
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "xring-o1",
@@ -116,7 +184,6 @@ var processors =
    "GPU": "Adreno 740",
    "内存支持": "LPDDR5X 4200MHz",
    "基带": "骁龙X70 5G",
-
    "GeekBench 5 单核": "1,485",
    "GeekBench 5 多核": "5,195",
    "GeekBench 6 单核": "2,036",
@@ -126,7 +193,19 @@ var processors =
    "GFXBench Manhattan 3.1": "226 fps",
    "发布日期": "2022-11",
    "说明": "极客湾"
-  }
+  },
+  "reviews": [
+   {
+    "title": "小米13性能分析：骁龙8Gen2能效不错！",
+    "url": "https://www.bilibili.com/video/BV1RP4y1S77y/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2022-12-12",
+    "cover": "https://i1.hdslb.com/bfs/archive/050c8577887206dbba9fc13d0e4662e9d026d6eb.jpg",
+    "checkedAt": "2026-11-06",
+    "scope": "基于小米13 / 13 Pro 的骁龙8 Gen 2 实测"
+   }
+  ]
  },
  {
   "id": "sd8g3",
@@ -140,7 +219,6 @@ var processors =
    "GPU": "Adreno 750",
    "内存支持": "LPDDR5X 4800MHz",
    "基带": "骁龙X75 5G",
-
    "GeekBench 6 单核": "2,213",
    "GeekBench 6 多核": "7,466",
    "3DMark WLE": "5,170",
@@ -161,7 +239,6 @@ var processors =
    "NPU": "Hexagon NPU",
    "内存支持": "LPDDR5X",
    "基带": "骁龙X80 5G",
-
    "GeekBench 6 单核": "3,237",
    "GeekBench 6 多核": "10,244",
    "3DMark WLE": "6,949",
@@ -182,7 +259,6 @@ var processors =
    "NPU": "Hexagon NPU",
    "内存支持": "LPDDR5X",
    "基带": "骁龙X80 5G",
-
    "GeekBench 6 单核": "3,836",
    "GeekBench 6 多核": "12,352",
    "3DMark WLE": "7,640",
@@ -202,7 +278,6 @@ var processors =
    "GPU": "Adreno 650",
    "内存支持": "LPDDR5 2750MHz",
    "基带": "骁龙X55 5G（外挂）",
-
    "GeekBench 6 单核": "1,150",
    "GeekBench 6 多核": "3,352",
    "3DMark WLE": "1,124",
@@ -222,7 +297,6 @@ var processors =
    "GPU": "Adreno 650",
    "内存支持": "LPDDR5 2750MHz",
    "基带": "骁龙X55 5G（外挂）",
-
    "GeekBench 6 单核": "1,282",
    "GeekBench 6 多核": "3,437",
    "3DMark WLE": "1,248",
@@ -242,7 +316,6 @@ var processors =
    "GPU": "Adreno 620",
    "内存支持": "LPDDR4X 2133MHz",
    "基带": "骁龙X52 5G（集成）",
-
    "GeekBench 5 单核": "615",
    "GeekBench 5 多核": "1,848",
    "3DMark WLE": "~650",
@@ -263,7 +336,6 @@ var processors =
    "NPU": "联发科 NPU 780",
    "内存支持": "LPDDR5X 4266MHz",
    "基带": "联发科 M80 5G",
-
    "GeekBench 6 单核": "1,722",
    "GeekBench 6 多核": "6,906",
    "3DMark WLE": "4,128",
@@ -284,7 +356,6 @@ var processors =
    "NPU": "联发科 APU 790",
    "内存支持": "LPDDR5T 9600MHz",
    "基带": "联发科 M80 5G",
-
    "GeekBench 6 单核": "2,264",
    "GeekBench 6 多核": "7,857",
    "3DMark WLE": "5,822",
@@ -305,7 +376,6 @@ var processors =
    "NPU": "联发科 NPU 990",
    "内存支持": "LPDDR5X 10667Mbps",
    "基带": "联发科 Release 17 5G",
-
    "GeekBench 6 单核": "3,709",
    "GeekBench 6 多核": "10,716",
    "3DMark WLE": "8,251",
@@ -323,7 +393,6 @@ var processors =
    "GPU": "5核 GPU",
    "NPU": "16核神经网络引擎",
    "内存支持": "LPDDR4X",
-
    "GeekBench 6 单核": "2,442",
    "GeekBench 6 多核": "6,454",
    "3DMark WLE": "3,056",
@@ -341,7 +410,6 @@ var processors =
    "GPU": "5核 GPU",
    "NPU": "16核神经网络引擎",
    "内存支持": "LPDDR5",
-
    "GeekBench 6 单核": "2,671",
    "GeekBench 6 多核": "7,271",
    "3DMark WLE": "3,383",
@@ -488,7 +556,6 @@ var processors =
    "NPU": "达芬奇NPU",
    "内存支持": "LPDDR5",
    "基带": "巴龙5G",
-
    "GeekBench 6 单核": "1,442",
    "GeekBench 6 多核": "4,471",
    "3DMark WLE": "~1,600",
@@ -508,7 +575,6 @@ var processors =
    "AI ISP": "NPU图像理解能力↑200%，AI色彩引擎↑43%",
    "内存支持": "LPDDR5X",
    "基带": "巴龙5G",
-
    "GeekBench 6 单核": "~1,533",
    "GeekBench 6 多核": "~4,714",
    "3DMark WLE": "~3,500",
@@ -516,7 +582,6 @@ var processors =
    "说明": "网易（安兔兔128-132万），性能略逊于骁龙8 Gen2，影像专用芯"
   }
  },
- // ========== 新增处理器 ==========
  {
   "id": "dimensity-8500-ultra",
   "name": "天玑8500-Ultra",
@@ -530,7 +595,6 @@ var processors =
    "NPU": "NPU 880",
    "内存支持": "LPDDR5X 9600Mbps",
    "基带": "5G",
-
    "GeekBench 6 单核": "1732",
    "GeekBench 6 多核": "6967",
    "3DMark WLE": "5160",
@@ -551,7 +615,6 @@ var processors =
    "NPU": "旗舰级NPU",
    "内存支持": "LPDDR5X 9600Mbps",
    "基带": "5G R17，四载波聚合，下行7Gbps",
-
    "GeekBench 6 单核": "3040",
    "GeekBench 6 多核": "9600",
    "3DMark WLE": "7500",
@@ -571,7 +634,6 @@ var processors =
    "GPU": "Adreno 710",
    "内存支持": "LPDDR4X",
    "基带": "骁龙X62 5G",
-
    "GeekBench 6 单核": "920",
    "GeekBench 6 多核": "2800",
    "3DMark WLE": "1500",
@@ -590,7 +652,6 @@ var processors =
    "NPU": "第六代AI引擎",
    "内存支持": "LPDDR4X + UFS2.2",
    "基带": "5G",
-
    "GeekBench 6 单核": "1228",
    "GeekBench 6 多核": "3230",
    "GFXBench Manhattan 3.1": "66 fps",
@@ -610,7 +671,6 @@ var processors =
    "GPU": "Mali-G615 MC2",
    "内存支持": "LPDDR4X + UFS2.2",
    "基带": "5G",
-
    "GeekBench 6 单核": "1050",
    "GeekBench 6 多核": "2939",
    "3DMark WLE": "1010",
@@ -633,7 +693,6 @@ var processors =
    "NPU": "Hexagon",
    "内存支持": "LPDDR5X 4800MHz",
    "基带": "骁龙X80 5G",
-
    "GeekBench 6 单核": "2,969",
    "GeekBench 6 多核": "10,037",
    "3DMark WLE": "5,683",
@@ -654,7 +713,6 @@ var processors =
    "NPU": "Hexagon NPU",
    "内存支持": "LPDDR5X 4800MHz",
    "基带": "骁龙X70 5G",
-
    "GeekBench 6 单核": "2,016",
    "GeekBench 6 多核": "5,408",
    "3DMark WLE": "3,251",
@@ -673,7 +731,6 @@ var processors =
    "NPU": "联发科 NPU 850",
    "内存支持": "LPDDR5 6400Mbps",
    "基带": "联发科 5G 下行5.2Gbps",
-
    "GeekBench 6 单核": "1,120",
    "GeekBench 6 多核": "3,480",
    "3DMark WLE": "2,050",
@@ -693,7 +750,6 @@ var processors =
    "GPU": "Adreno 540（710MHz）",
    "内存支持": "LPDDR4X 1866MHz",
    "基带": "骁龙X16 LTE（外挂）",
-
    "GeekBench 6 单核": "427",
    "GeekBench 6 多核": "1,500",
    "3DMark WLE": "368",
@@ -701,7 +757,6 @@ var processors =
    "说明": "NanoReview（GB6/3DMark）"
   }
  },
- // ========== 2021年以来主流移动SoC补录 第1批（旗舰） ==========
  {
   "id": "sd888plus",
   "name": "骁龙888+",
@@ -899,9 +954,20 @@ var processors =
    "3DMark WLE": "7,130",
    "发布日期": "2024-10",
    "说明": "MT6991，2024-10-09发布；极客湾SOCPK（GB5/GB6/WLE，采集2026-10-30），安兔兔SoC均分"
-  }
+  },
+  "reviews": [
+   {
+    "title": "天玑9400首发评测：量产机有多强？",
+    "url": "https://www.bilibili.com/video/BV1iu2AY4EcX/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2024-10-09",
+    "cover": "https://i1.hdslb.com/bfs/archive/c7f849245f08e6dfc54777ad101c4a4c14b7677c.jpg",
+    "checkedAt": "2026-11-06",
+    "scope": "基于 OPPO Find X8 Pro 量产机的性能与能效实测"
+   }
+  ]
  },
- // ========== 2021年以来主流移动SoC补录 第2批（天玑中高端与中端、Exynos） ==========
  {
   "id": "dimensity-1100",
   "name": "天玑1100",
@@ -1202,7 +1268,6 @@ var processors =
    "说明": "2024-03-28 高通正式公布，随 Galaxy A55 上市；SOCPK未收录芯片级GB6/GB5/WLE，仅方案C计分（安兔兔SoC均分，2026-10-30）"
   }
  },
- // ========== 2021年以来主流移动SoC补录 第3批（高通 7系/6系/4系） ==========
  {
   "id": "sd778g",
   "name": "骁龙778G",
@@ -1608,7 +1673,6 @@ var processors =
    "说明": "SM4850，2026-05-07 与骁龙6 Gen 5 同场发布；SOCPK 与安兔兔榜均未单列，暂无可用评分方案"
   }
  },
- // ========== 2021年以来主流移动SoC补录 第4批（华为麒麟、Google Tensor、紫光展锐、A17 Pro） ==========
  {
   "id": "kirin-9000s",
   "name": "麒麟9000S",
@@ -1725,7 +1789,19 @@ var processors =
    "NPU": "达芬奇 NPU",
    "发布日期": "2026-09",
    "说明": "华为 Mate 90 Pro Max 参数页标注 Mate 90 Pro Max 与典藏版搭载麒麟9050 Pro；官方未公开制程与频率，暂无可用评分方案"
-  }
+  },
+  "reviews": [
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "kirin-8000",
@@ -1867,7 +1943,19 @@ var processors =
    "内存支持": "LPDDR5X",
    "发布日期": "2026-08",
    "说明": "2026-08 随 Pixel 11 系列面世；SOCPK 与安兔兔榜均未收录芯片级分数，暂无可用评分方案"
-  }
+  },
+  "reviews": [
+   {
+    "title": "旗舰手机芯片大横评：苹果高通发哥玄戒谁最强？",
+    "url": "https://www.bilibili.com/video/BV1kMxM6FECM/",
+    "platform": "B站",
+    "author": "极客湾Geekerwan",
+    "publishedAt": "2026-10-27",
+    "cover": "https://i1.hdslb.com/bfs/archive/a5504c58614fd9d4890ab2fa11d50b49dd303fcc.jpg",
+    "scope": "芯片横评，覆盖 A20 Pro、骁龙8EE6、天玑9600 Pro、玄戒O3、麒麟9050 Pro、Tensor G6",
+    "checkedAt": "2026-11-06"
+   }
+  ]
  },
  {
   "id": "unisoc-t606",
@@ -2004,7 +2092,6 @@ var processors =
    "说明": "2023-09 随 iPhone 15 Pro 系列发布；极客湾SOCPK（GB5/GB6/WLE，采集2026-10-30）；安兔兔榜未收录 Apple 芯片，无方案C"
   }
  },
- // ========== 2021年以来主流移动SoC补录 第5批（天玑中端与入门、Helio、Exynos 中端、展锐补录） ==========
  {
   "id": "dimensity-1300",
   "name": "天玑1300",

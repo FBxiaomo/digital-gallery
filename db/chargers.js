@@ -32,7 +32,24 @@ var chargers = [
     },
     "price": "参考价 108 元",
     "release_date": "2024-08",
-    "notes": "首次搭载自研ADC 2.1实时动态功率分配；功率密度约0.9W/cm3"
+    "notes": "首次搭载自研ADC 2.1实时动态功率分配；功率密度约0.9W/cm3",
+    "valueInputs": {
+      "singlePortPowerW": 120,
+      "powerConditions": "C1/C2，220V 输入，小米私有快充；PD 最大 100W",
+      "sourceUrl": "https://www.chongdiantou.com/archives/362857.html"
+    },
+    "reviews": [
+      {
+        "title": "32分钟深度测试 酷态科10号充电器 120W AD1003",
+        "url": "https://www.bilibili.com/video/BV1PkHNeKEUE/",
+        "cover": "https://i1.hdslb.com/bfs/archive/37c3263748f0ed55004f74b9382ddd5b2c9b2a1e.jpg",
+        "platform": "哔哩哔哩",
+        "scope": "AD1003 2C1A 充电器",
+        "author": "机电匠",
+        "publishedAt": "2024-08-29",
+        "checkedAt": "2026-11-06"
+      }
+    ]
   },
   {
     "id": "cuktech-15-140w",
@@ -100,7 +117,18 @@ var chargers = [
     },
     "price": "参考价 150 元",
     "release_date": "2025-05",
-    "notes": "品牌首款小米90W Max官方授权认证充电器；给小米手机充电时屏幕显示澎湃秒充标识"
+    "notes": "品牌首款小米90W Max官方授权认证充电器；给小米手机充电时屏幕显示澎湃秒充标识",
+    "reviews": [
+      {
+        "title": "评测拆解安克100W屏显充电器，支持小米90W快充，199元值不值？",
+        "url": "https://www.bilibili.com/video/BV1LuTuz9E4M/",
+        "platform": "B站",
+        "author": "阿甘体验",
+        "publishedAt": "2025-06-06",
+        "cover": "https://i2.hdslb.com/bfs/archive/731c6cc923c91afc0aee72acb7b485a07716b1d4.jpg",
+        "checkedAt": "2026-11-06"
+      }
+    ]
   },
   {
     "id": "cuktech-6-card-ad652s",
@@ -137,6 +165,24 @@ var chargers = [
   },
   {
     "id": "cuktech-30-300w-ultra",
+    "reviews": [
+      {
+        "title": "300W性能怪兽！首发评测酷态科30号超级电能站Ultra",
+        "url": "https://www.bilibili.com/video/BV1k577zmEU3/",
+        "cover": "https://i1.hdslb.com/bfs/archive/889d452a32a74647eba7de3f667984973e16f047.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-05-30"
+      },
+      {
+        "title": "全网首拆酷态科30号Ultra电能站，如何实现300W狂暴输出的？",
+        "url": "https://www.bilibili.com/video/BV1Nr7pzvEcR/",
+        "cover": "https://i1.hdslb.com/bfs/archive/739f400c5626e8e5e9636480a4be48c7ce37f364.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-05-31"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科30号超级电能站Ultra",
     "brand": "酷态科 CUKTECH",
@@ -175,6 +221,24 @@ var chargers = [
   },
   {
     "id": "cuktech-10-ultra-120w",
+    "reviews": [
+      {
+        "title": "后发制人！酷态科10号Ultra充电器首发评测",
+        "url": "https://www.bilibili.com/video/BV1R7MMzHEHx/",
+        "cover": "https://i1.hdslb.com/bfs/archive/17bc46ac69618022f5aabaf11fc25a78efd1d0f3.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-06-13"
+      },
+      {
+        "title": "219元值不值？全网首拆酷态科10号Ultra充电器",
+        "url": "https://www.bilibili.com/video/BV1eHNvzXEZd/",
+        "cover": "https://i2.hdslb.com/bfs/archive/03a683f2f1774f42b8f35c3220030b4213d0e9d2.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-06-17"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科10号超级电能充Ultra",
     "brand": "酷态科 CUKTECH",
@@ -240,7 +304,18 @@ var chargers = [
     },
     "price": "参考价 89 元（单体）/ 99 元（套装）",
     "release_date": "2026-01",
-    "notes": "10号mini青春版，小米90W澎湃秒充+65W PD；南芯科技SC3057B合封氮化镓方案；PCBA灌胶工艺"
+    "notes": "10号mini青春版，小米90W澎湃秒充+65W PD；南芯科技SC3057B合封氮化镓方案；PCBA灌胶工艺",
+    "reviews": [
+      {
+        "title": "99元值不值？首发评测酷态科6号Mini充电器",
+        "url": "https://www.bilibili.com/video/BV1TJktBaEDR/",
+        "platform": "B站",
+        "author": "阿甘体验",
+        "publishedAt": "2026-01-19",
+        "cover": "https://i1.hdslb.com/bfs/archive/b9eab3c1cfe5159f1654b47cb6867968527d21e9.jpg",
+        "checkedAt": "2026-11-06"
+      }
+    ]
   },
   {
     "id": "cuktech-6-ultra-100w",
@@ -279,6 +354,16 @@ var chargers = [
   },
   {
     "id": "cuktech-10-mini-120w",
+    "reviews": [
+      {
+        "title": "不止于小！评测拆解酷态科10号Mini充电器",
+        "url": "https://www.bilibili.com/video/BV12V8CztES2/",
+        "cover": "https://i2.hdslb.com/bfs/archive/993a40e12d2532688c4b4b078c0ea72b310084a8.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-07-31"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科10号超级电能充mini",
     "brand": "酷态科 CUKTECH",
@@ -315,6 +400,16 @@ var chargers = [
   },
   {
     "id": "cuktech-cp6-67w",
+    "reviews": [
+      {
+        "title": "149元值不值得买？评测拆解酷态科CP6伸缩线充电器",
+        "url": "https://www.bilibili.com/video/BV1dAKHzHEW1/",
+        "cover": "https://i1.hdslb.com/bfs/archive/63aaf6e7a5ed4870b1feff11ced05e30fd511aa7.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-06-26"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科CP6电能充（伸缩线）",
     "brand": "酷态科 CUKTECH",
@@ -349,6 +444,16 @@ var chargers = [
   },
   {
     "id": "cuktech-15-station-140w",
+    "reviews": [
+      {
+        "title": "399元值不值？评测拆解酷态科15号超级电能站",
+        "url": "https://www.bilibili.com/video/BV1wjW1zkEWx/",
+        "cover": "https://i2.hdslb.com/bfs/archive/de03dff18c1096b1bc59feb6900e5c54636f1906.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-10-20"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科15号超级电能站",
     "brand": "酷态科 CUKTECH",
@@ -477,6 +582,16 @@ var chargers = [
   },
   {
     "id": "anker-prime-160w",
+    "reviews": [
+      {
+        "title": "新标杆！安克智显充Pro 160W首发评测",
+        "url": "https://www.bilibili.com/video/BV1yCikBSEEk/",
+        "cover": "https://i1.hdslb.com/bfs/archive/8c16597ae15aa7466611d0f522934e2b9b0798f4.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-01-04"
+      }
+    ],
     "category": "充电器",
     "name": "安克Prime智显充Pro 160W",
     "brand": "安克 Anker",
@@ -781,7 +896,18 @@ var chargers = [
     },
     "price": "参考价 179 元",
     "release_date": "2025-10",
-    "notes": "南芯科技SC3004+SC1856高频QR电源方案；纳微NV6144C氮化镓器件；平伟同步整流管；南芯科技SC9712B三路DC-DC二次降压；vivo/iQOO系手机可握手VFCP满速充电"
+    "notes": "南芯科技SC3004+SC1856高频QR电源方案；纳微NV6144C氮化镓器件；平伟同步整流管；南芯科技SC9712B三路DC-DC二次降压；vivo/iQOO系手机可握手VFCP满速充电",
+    "reviews": [
+      {
+        "title": "149元有惊喜！评测拆解vivo iQOO 120W三口氮化镓",
+        "url": "https://www.bilibili.com/video/BV1PV1MB1Eos/",
+        "platform": "B站",
+        "author": "阿甘体验",
+        "publishedAt": "2025-10-31",
+        "cover": "https://i2.hdslb.com/bfs/archive/77675084b4ad1472628324fb0d0241a6cbdb76dc.jpg",
+        "checkedAt": "2026-11-06"
+      }
+    ]
   },
   {
     "id": "aohi-140w-2c1a",
@@ -942,10 +1068,30 @@ var chargers = [
     },
     "price": "参考价 399 元（首发价）",
     "release_date": "2026-10",
-    "notes": "官方全名「倍思 EnerGeek GH21 满速充主动散热屏显快充充电器 3C 160W」；产品图片以京东新品主图为参考；附赠线材官方未公开（京东首发赠线属促销活动）；PPS/AVS电压范围及UFCS支持未公开，需实测确认；单口140W是否在100V低压输入下成立官方未说明"
+    "notes": "官方全名「倍思 EnerGeek GH21 满速充主动散热屏显快充充电器 3C 160W」；产品图片以京东新品主图为参考；附赠线材官方未公开（京东首发赠线属促销活动）；PPS/AVS电压范围及UFCS支持未公开，需实测确认；单口140W是否在100V低压输入下成立官方未说明",
+    "reviews": [
+      {
+        "title": "自带风扇降温的充电器！倍思飓风3号160W屏显充电器体验，支持AVS协议+140W持续",
+        "url": "https://www.bilibili.com/video/BV1ksxj6nEAT/",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-10-28",
+        "cover": "http://i0.hdslb.com/bfs/archive/e71a905d249f705ea88f17eaae90afdc7851f6a0.jpg"
+      }
+    ]
   },
   {
     "id": "cuktech-10-ta1208",
+    "reviews": [
+      {
+        "title": "329元值不值？评测拆解酷态科10号电能基站",
+        "url": "https://www.bilibili.com/video/BV1UhVU6pEJU/",
+        "cover": "https://i0.hdslb.com/bfs/archive/27aa00dd03484c1fd7ffc5812aee2b3269f1e458.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-06-01"
+      }
+    ],
     "category": "充电器",
     "name": "酷态科10号电能基站",
     "brand": "酷态科 CUKTECH",
@@ -1015,7 +1161,17 @@ var chargers = [
     },
     "price": "参考价 119 元（首发价）",
     "release_date": "2026-07",
-    "notes": "90W需PPS或小米私有路径达成，PD3.0固定档最高65W；C2口仅22.5W且无PPS/UFCS；110V输入下C1仅45W；AVS支持存疑（三体联名版宣传60W AVS，普通版未公开）；重量官方未公开，实测值仅供参考；无附赠线材"
+    "notes": "90W需PPS或小米私有路径达成，PD3.0固定档最高65W；C2口仅22.5W且无PPS/UFCS；110V输入下C1仅45W；AVS支持存疑（三体联名版宣传60W AVS，普通版未公开）；重量官方未公开，实测值仅供参考；无附赠线材",
+    "reviews": [
+      {
+        "title": "加20块值不值？开箱实测酷态科新版6号卡片Air充电器",
+        "url": "https://www.bilibili.com/video/BV1NDuE6WEDz/",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2026-08-06",
+        "cover": "http://i2.hdslb.com/bfs/archive/7778303504e9ec650f76e419496a9ff007e4bf8b.jpg"
+      }
+    ]
   },
   {
     "id": "cuktech-cp6-mini-ac452",
@@ -1047,7 +1203,17 @@ var chargers = [
     },
     "price": "参考价 79 元（单体首发价）/ 99 元（套装首发价）",
     "release_date": "2026-08",
-    "notes": "67W档位仅在输入2（200-240V）下达成，100-240V宽幅输入下最高60W；双口时C2降至5V⎓2A 10W；PPS档位未公开；套装版含1m编织线，单体不含线；重量未公开"
+    "notes": "67W档位仅在输入2（200-240V）下达成，100-240V宽幅输入下最高60W；双口时C2降至5V⎓2A 10W；PPS档位未公开；套装版含1m编织线，单体不含线；重量未公开",
+    "reviews": [
+      {
+        "title": "79元值不值？体验拆解酷态科CP6 Mini双口",
+        "url": "https://www.bilibili.com/video/BV1cctq6LEvv/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-09-04",
+        "cover": "http://i0.hdslb.com/bfs/archive/b9f7f41f31d7d391716c5baab28f00ca64818454.jpg"
+      }
+    ]
   },
   {
     "id": "cuktech-30-ad330d",
@@ -1078,7 +1244,33 @@ var chargers = [
     },
     "price": "参考价 499 元（首销价）",
     "release_date": "2026-09",
-    "notes": "纯DC单口笔记本适配器，与桌面充电站TA3005U（30号超级电能站Ultra）为不同产品；360W为单一DC口20V/18A档位，非多口组合，需20V直流输入的笔记本并搭配对应转接头；两档输出（360W/240W）与两段输入电压的对应关系官方未明示；无USB口故无PD等协议；100-130V段仅标60Hz；9月4日官宣、10月23日上架、10月30日首销，官网暂无产品页；重量与配色未公开"
+    "notes": "纯DC单口笔记本适配器，与桌面充电站TA3005U（30号超级电能站Ultra）为不同产品；360W为单一DC口20V/18A档位，非多口组合，需20V直流输入的笔记本并搭配对应转接头；两档输出（360W/240W）与两段输入电压的对应关系官方未明示；无USB口故无PD等协议；100-130V段仅标60Hz；9月4日官宣、10月23日上架、10月30日首销，官网暂无产品页；重量与配色未公开",
+    "reviews": [
+      {
+        "title": "带风扇的360W！酷态科30号笔记本适配器首发评测拆解",
+        "url": "https://www.bilibili.com/video/BV1kvxF6zEyz/",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2026-10-30",
+        "cover": "http://i2.hdslb.com/bfs/archive/c8de685dc8de8872e070bbf834145ff862f6eaa5.jpg"
+      },
+      {
+        "title": "不鸣则已，一鸣惊人！开箱实测酷态科30号笔记本充电器",
+        "url": "https://www.bilibili.com/video/BV18Hxe6jEq6/",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "publishedAt": "2026-10-30",
+        "cover": "http://i0.hdslb.com/bfs/archive/871dd710411a267963383d86f6a89e4445db012b.jpg"
+      },
+      {
+        "title": "360W强劲输出！酷态科30号笔记本电源适配器体验",
+        "url": "https://www.bilibili.com/video/BV1Jxxx6rEdh/",
+        "platform": "哔哩哔哩",
+        "author": "充电行者",
+        "publishedAt": "2026-11-01",
+        "cover": "http://i1.hdslb.com/bfs/archive/a96eef35bada2ac7303b0e55b96cce1c069bb7c3.jpg"
+      }
+    ]
   },
   {
     "id": "huntkey-s67-mini",
@@ -1114,7 +1306,17 @@ var chargers = [
     },
     "price": "参考价109元（单体上市定价）",
     "release_date": "2026-09",
-    "notes": "9月官方展会介绍及上市报道，10月发售报道；协议档位来自充电头网实测，三口同时输出合计60W。"
+    "notes": "9月官方展会介绍及上市报道，10月发售报道；协议档位来自充电头网实测，三口同时输出合计60W。",
+    "reviews": [
+      {
+        "title": "前方……高能？航嘉S67Mini充电器评析",
+        "url": "https://www.bilibili.com/video/BV1qJHm6nEzM/",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "publishedAt": "2026-10-08",
+        "cover": "http://i0.hdslb.com/bfs/archive/8f79d47318a3fffb2938e08f4bb0073c451b11e4.jpg"
+      }
+    ]
   },
   {
     "id": "huntkey-s140-pro",
@@ -1208,7 +1410,17 @@ var chargers = [
     },
     "price": "",
     "release_date": "",
-    "notes": "型号PD380，380W是整机总功率，单口最高140W。官方未提供可核实的完整铭牌、PPS档位、尺寸重量及功率分配表，暂不填入；上市年月与参考价留空。官网部分渲染图顶部印字与380W名称不一致，图片仅作外观示意。"
+    "notes": "型号PD380，380W是整机总功率，单口最高140W。官方未提供可核实的完整铭牌、PPS档位、尺寸重量及功率分配表，暂不填入；上市年月与参考价留空。官网部分渲染图顶部印字与380W名称不一致，图片仅作外观示意。",
+    "reviews": [
+      {
+        "title": "380w一小时不降档，海备思380w桌面充电站",
+        "url": "https://www.bilibili.com/video/BV1yDYH6WE9Y/",
+        "platform": "哔哩哔哩",
+        "author": "北昇充电站",
+        "publishedAt": "2026-09-09",
+        "cover": "http://i1.hdslb.com/bfs/archive/4a8da2d8b3aadd9e45edc764b89da496e803e31b.jpg"
+      }
+    ]
   },
   {
     "id": "meizu-pandaer-80w-ptc16",

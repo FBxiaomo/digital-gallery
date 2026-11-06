@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>设备详情 | 数码图鉴</title><link rel="icon" href="logo/favicon.ico"><link rel="canonical" id="canonical" href="https://xiaomowiki.top/device.html"><style>
+:root {
+  --bg: #f5f6f8;
+  --text: #2c2c2a;
+  --text2: #5f5e5a;
+  --text3: #999;
+  --border: #e0e0db;
+  --primary: #185fa5;
+  --primary-bg: #e6f1fb;
+  --accent-text: #245f92;
+  --accent-soft: rgba(36,95,146,0.10);
+  --accent-border: rgba(36,95,146,0.14);
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+  --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+  --card-mask-from: rgba(255,255,255,0.92);
+  --card-mask-mid: rgba(255,255,255,0.78);
+  --card-mask-to: rgba(255,255,255,0.3);
+  --card-glow: rgba(56,89,138,0.15);
+  --card-name-shadow: none;
+  --badge-bg: rgba(0,0,0,0.06);
+  --badge-border: rgba(0,0,0,0.08);
+  --badge-color: #2c2c2a;
+  --badge-power-bg: linear-gradient(135deg,#f59e0b,#ef4444);
+  --badge-power-color: #fff;
+  --badge-port-bg: rgba(24,95,165,0.1);
+  --badge-port-border: rgba(24,95,165,0.2);
+  --badge-port-color: #185fa5;
+  --badge-proto-bg: rgba(0,0,0,0.04);
+  --badge-proto-border: rgba(0,0,0,0.06);
+  --badge-proto-color: #5f5e5a;
+  --badge-purple-bg: rgba(124,58,237,0.1);
+  --badge-purple-border: rgba(124,58,237,0.2);
+  --badge-purple-color: #7c3aed;
+  --badge-bat-bg: rgba(220,38,38,0.08);
+  --badge-bat-border: rgba(220,38,38,0.15);
+  --badge-bat-color: #dc2626;
+  --badge-cap-bg: rgba(234,88,12,0.08);
+  --badge-cap-border: rgba(234,88,12,0.15);
+  --badge-cap-color: #ea580c;
+  --badge-cyan-bg: rgba(8,145,178,0.08);
+  --badge-cyan-border: rgba(8,145,178,0.15);
+  --badge-cyan-color: #0891b2;
+  --badge-proc-perf-bg: rgba(22,163,74,0.08);
+  --badge-proc-perf-border: rgba(22,163,74,0.15);
+  --badge-proc-perf-color: #16a34a;
+  --expand-bar-bg: rgba(0,0,0,0.15);
+  --expand-bar-active: rgba(0,0,0,0.25);
+  --panel-bg: #ffffff;
+  --panel-border: rgba(0,0,0,0.06);
+  --detail-label: rgba(0,0,0,0.4);
+  --detail-border: rgba(0,0,0,0.06);
+  --detail-note-color: rgba(0,0,0,0.4);
+  --surface-subtle: rgba(0,0,0,0.04);
+  --perf-bar-track-bg: rgba(0,0,0,0.08);
+  --review-badge-bg: rgba(0,0,0,0.45);
+  --review-badge-color: #ffffff;
+  --review-badge-hover-bg: rgba(0,0,0,0.6);
+  --perf-bar-label: rgba(0,0,0,0.5);
+  --perf-bar-name: rgba(0,0,0,0.35);
+  --slider-track: rgba(0,0,0,0.08);
+  --slider-thumb-border: #ffffff;
+  --proc-phone-item-bg: rgba(24,95,165,0.08);
+  --proc-phone-item-color: #185fa5;
+  --proc-link-color: #185fa5;
+  --modal-mask: rgba(0,0,0,0.3);
+  --modal-bg: #ffffff;
+  --modal-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  --modal-border: #e0e0db;
+  --topbar-bg: rgba(255,255,255,0.72);
+  --drawer-bg: rgba(255,255,255,0.6);
+  --drawer-border: rgba(0,0,0,0.05);
+  --perf-high: #3b6d11;
+  --perf-mid: #185fa5;
+  --perf-low: #92400e;
+  --changelog-devices-bg: #f5f6f8;
+  --searchbar-clearance:72px;
+}
+[data-theme="dark"] {
+  --bg: #111111;
+  --text: #f0f0f0;
+  --text2: #a0a0a0;
+  --text3: #666666;
+  --border: rgba(255,255,255,0.08);
+  --primary: #3b82f6;
+  --primary-bg: rgba(59,130,246,0.15);
+  --accent-text: #a6c9ed;
+  --accent-soft: rgba(123,177,230,0.14);
+  --accent-border: rgba(150,195,235,0.17);
+  --card-bg: #1a1a1a;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.06);
+  --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+  --card-mask-from: rgba(17,17,17,0.93);
+  --card-mask-mid: rgba(17,17,17,0.75);
+  --card-mask-to: rgba(17,17,17,0.35);
+  --card-glow: rgba(80,80,80,0.4);
+  --card-name-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  --badge-bg: rgba(255,255,255,0.1);
+  --badge-border: rgba(255,255,255,0.15);
+  --badge-color: #fff;
+  --badge-port-bg: rgba(255,255,255,0.08);
+  --badge-port-border: rgba(255,255,255,0.12);
+  --badge-port-color: #93c5fd;
+  --badge-proto-bg: rgba(255,255,255,0.06);
+  --badge-proto-border: rgba(255,255,255,0.1);
+  --badge-proto-color: #cbd5e1;
+  --badge-purple-bg: rgba(167,139,250,0.2);
+  --badge-purple-border: rgba(167,139,250,0.3);
+  --badge-purple-color: #c4b5fd;
+  --badge-bat-bg: rgba(251,113,133,0.2);
+  --badge-bat-border: rgba(251,113,133,0.3);
+  --badge-bat-color: #fda4af;
+  --badge-cap-bg: rgba(251,146,60,0.2);
+  --badge-cap-border: rgba(251,146,60,0.3);
+  --badge-cap-color: #fdba74;
+  --badge-cyan-bg: rgba(34,211,238,0.15);
+  --badge-cyan-border: rgba(34,211,238,0.25);
+  --badge-cyan-color: #67e8f9;
+  --badge-proc-perf-bg: rgba(74,222,128,0.15);
+  --badge-proc-perf-border: rgba(74,222,128,0.25);
+  --badge-proc-perf-color: #86efac;
+  --expand-bar-bg: rgba(255,255,255,0.4);
+  --expand-bar-active: rgba(255,255,255,0.5);
+  --panel-bg: #222222;
+  --panel-border: rgba(255,255,255,0.08);
+  --detail-label: rgba(255,255,255,0.4);
+  --detail-border: rgba(255,255,255,0.06);
+  --detail-note-color: rgba(255,255,255,0.4);
+  --surface-subtle: rgba(255,255,255,0.05);
+  --perf-bar-track-bg: rgba(255,255,255,0.08);
+  --review-badge-bg: rgba(0,0,0,0.45);
+  --review-badge-color: #ffffff;
+  --review-badge-hover-bg: rgba(0,0,0,0.6);
+  --perf-bar-label: rgba(255,255,255,0.5);
+  --perf-bar-name: rgba(255,255,255,0.35);
+  --slider-track: rgba(255,255,255,0.1);
+  --slider-thumb-border: #1e293b;
+  --proc-phone-item-bg: rgba(255,255,255,0.08);
+  --proc-phone-item-color: #93c5fd;
+  --proc-link-color: #93c5fd;
+  --modal-mask: rgba(0,0,0,0.5);
+  --modal-bg: #1a1a1a;
+  --modal-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --modal-border: rgba(255,255,255,0.08);
+  --topbar-bg: rgba(17,17,17,0.85);
+  --drawer-bg: rgba(17,17,17,0.7);
+  --drawer-border: rgba(255,255,255,0.05);
+  --perf-high: #4ade80;
+  --perf-mid: #60a5fa;
+  --perf-low: #fbbf24;
+  --changelog-devices-bg: rgba(255,255,255,0.04);
+}
+.glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px double rgba(255,255,255,0.12);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.7),inset -2px 2px 1px -1px rgba(255,255,255,0.7),inset 6px -6px 1px -6px rgba(255,255,255,0.4),inset -6px 6px 1px -6px rgba(255,255,255,0.4),inset 0 0 2px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.12);transition:background .3s ease,border-color .3s ease,box-shadow .3s ease}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+.glass::before{content:'';position:absolute;z-index:-1;top:40%;left:50%;transform:translateX(-50%);width:calc(100% - 12px);height:calc(100% - 12px);border-radius:inherit;border:1px solid rgba(0,0,0,0.6);filter:blur(8px)}
+.glass::after{content:'';position:absolute;z-index:1;top:0;left:0;width:100%;height:100%;border-radius:inherit;filter:blur(2px);background:linear-gradient(135deg,rgba(255,255,255,0.6) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.6) 100%);pointer-events:none}
+
+[data-theme="dark"] .glass{background:rgba(255,255,255,0.02);border-color:rgba(255,255,255,0.04);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.25),inset -2px 2px 1px -1px rgba(255,255,255,0.25),inset 6px -6px 1px -6px rgba(255,255,255,0.1),inset -6px 6px 1px -6px rgba(255,255,255,0.1),inset 0 0 2px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.3)}
+[data-theme="dark"] .glass::before{border-color:rgba(0,0,0,0.8)}
+[data-theme="dark"] .glass::after{background:linear-gradient(135deg,rgba(255,255,255,0.08) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.08) 100%)}
+
+
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+html{scrollbar-gutter:stable}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--text3)}
+a{color:inherit}button,input,select{font:inherit}select[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.topbar{position:sticky;top:0;z-index:100;background:var(--topbar-bg);border-bottom:none;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
+.topbar>*{position:relative;z-index:2}.brand{display:flex;align-items:center;gap:6px;font-size:18px;font-weight:600;text-decoration:none}.brand img{width:30px;height:30px;border-radius:6px;transition:transform .35s cubic-bezier(.22,1,.36,1)}.brand:hover img{transform:rotate(15deg)}.page-context{font-size:12px;color:var(--text2)}
+.layout{display:flex;min-height:calc(100vh - 56px)}.nav-mask{display:contents}
+.sidebar{width:180px;flex-shrink:0;padding:16px 0;position:sticky;top:56px;height:calc(100vh - 56px);display:flex;flex-direction:column;background:var(--drawer-bg)}
+.sidebar.glass::before{display:none}.sidebar>*{position:relative;z-index:2}.nav-label{font-size:11px;color:var(--text3);letter-spacing:1px;padding:0 20px;margin-bottom:8px}
+.page-links{list-style:none;padding:4px;margin:0 12px;border:1px solid var(--border);border-radius:18px;background:var(--surface-subtle)}.page-links a{display:flex;align-items:center;gap:10px;min-height:40px;padding:10px 12px;font-size:14px;border-radius:14px;color:var(--text2);text-decoration:none;transition:background .2s ease,color .2s ease}.page-links a:hover{background:var(--surface-subtle);color:var(--text)}.page-links [aria-current="page"]{color:var(--text);font-weight:600;background:var(--card-bg)}.page-links [aria-current="page"] .ico{color:var(--primary)}
+.ico{width:1em;height:1em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:-.125em}.page-links .ico{font-size:18px}
+.sidebar-theme{margin:auto 12px 0;border-top:.5px solid var(--drawer-border);padding-top:10px;height:47px}.sidebar-theme .field-title{display:none}.sidebar-theme .pill-anchor{width:62px;min-width:62px}.sidebar-theme .pill-select{bottom:0;top:auto}.sidebar-theme .pill-select.open{border-radius:18px}.sidebar-theme .pill-option{padding:0 16px;text-align:center}.sidebar-theme .pill-select::after{display:block}
+.nav-toggle{display:none}.main{flex:1;min-width:0;padding:24px}.page-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.intro{font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:10px;max-width:820px}h1{font-size:20px;font-weight:600}.back-link{text-decoration:none;white-space:nowrap;flex-shrink:0}
+.surface{position:relative;border-radius:24px}.surface.glass::before{display:none}.surface>*{position:relative;z-index:2}
+.controls>.fields{z-index:4}.controls .field .pill-select.open{background:var(--modal-bg)}
+.controls{padding:20px;margin-bottom:20px;z-index:5}.fields{display:flex;gap:16px;flex-wrap:wrap;align-items:end}.fields label,.fields .field{display:grid;gap:7px;font-size:12px;color:var(--text2);min-width:0}.field-title{font-size:12px;color:var(--text2)}.field{position:relative}.field.is-open{z-index:12}
+.pill-anchor{position:relative;height:36px;width:180px;max-width:100%;min-width:130px;z-index:1}.pill-select{position:absolute;top:0;left:0;width:100%;max-height:36px;border-radius:18px;overflow:hidden;cursor:pointer;transition:max-height .35s cubic-bezier(.22,1,.36,1),background .3s ease,border-color .3s ease,box-shadow .3s ease;color:var(--text2);outline-offset:2px}.pill-select.glass::before{display:none}.pill-select.glass::after{pointer-events:none}.pill-select.open{max-height:var(--menu-height,216px);border-radius:18px;z-index:20}.pill-anchor.opens-up .pill-select{top:auto;bottom:0}.pill-viewport{max-height:216px;overflow:hidden;position:relative;z-index:2}.pill-select.open .pill-viewport{overflow-y:auto;overscroll-behavior:contain}.pill-track{transition:transform .35s cubic-bezier(.22,1,.36,1)}.pill-option{height:36px;line-height:36px;padding:0 16px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .15s,background .15s}.pill-option.active{color:var(--text);font-weight:500}.pill-option:hover,.pill-select.open .pill-option.is-highlighted{color:var(--primary);background:var(--surface-subtle)}.pill-option[aria-disabled="true"]{opacity:.45}.pill-select[aria-disabled="true"]{opacity:.5;cursor:default}
+.pill-menu-bottom{display:none;position:absolute;left:0;right:0;bottom:0;height:28px;z-index:1;border-radius:0 0 18px 18px;background:linear-gradient(to bottom,transparent,var(--modal-bg));backdrop-filter:blur(14px) saturate(180%);-webkit-backdrop-filter:blur(14px) saturate(180%);mask-image:linear-gradient(to bottom,transparent,#000);-webkit-mask-image:linear-gradient(to bottom,transparent,#000);pointer-events:none}.pill-select.open .pill-menu-bottom{display:block}
+.action-pill{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 16px;border-radius:18px;color:var(--text2);font-size:13px;line-height:1.4;cursor:pointer;text-decoration:none}.action-pill.glass::before{display:none}.action-pill:hover{color:var(--primary)}.action-pill:active{transform:scale(.97)}.action-pill>*{position:relative;z-index:2}.action-pill .ico{font-size:16px}
+.input-shell{position:relative;border-radius:18px;height:36px;display:flex;align-items:center;min-width:0}.input-shell.glass::before{display:none}.input-shell:focus-within{outline:2px solid var(--primary);outline-offset:2px}.input-shell input{position:relative;z-index:2;display:block;border:.5px solid transparent;border-radius:18px;background:transparent;color:var(--text);width:100%;height:100%;min-width:0;padding:8px 14px;outline:none;font-size:13px}.input-shell input::placeholder{color:var(--text3)}.input-shell:has(input:disabled){opacity:.45}.fields .input-shell:has(input[type="search"]){width:220px}.range-fields .input-shell{width:140px}
+.ranges{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}.disclosure-toggle{display:inline-flex;gap:8px}.disclosure-toggle .ico{transition:transform .35s cubic-bezier(.22,1,.36,1)}details[open]>.disclosure-toggle .ico{transform:rotate(180deg)}.range-fields{margin-top:16px}.status{font-size:12px;color:var(--text2);line-height:1.7;margin-top:12px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 20px;padding:22px 0;gap:20px}.kpi{border-right:1px solid var(--border);padding:0 22px}.kpi:last-child{border:0}.kpi strong{display:block;font-size:32px;line-height:1.2;font-weight:600;letter-spacing:-.5px;font-variant-numeric:tabular-nums}.kpi .unit{font-size:13px;letter-spacing:0;margin-left:4px;color:var(--text2)}.kpi-label{font-size:12px;color:var(--text2);margin-top:8px}
+.charts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}.chart-panel{padding:20px}.chart-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:20px}.chart-title h2{font-size:16px;font-weight:600}.chart-title span{font-size:11px;color:var(--text2)}.chart-row{margin:18px 0}.chart-label{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:12px;margin-bottom:8px;overflow-wrap:anywhere}.chart-value{flex-shrink:0;font-variant-numeric:tabular-nums;color:var(--text2)}.chart-track{height:6px;border-radius:3px;background:var(--perf-bar-track-bg);overflow:hidden}.chart-fill{height:100%;border-radius:3px;background:var(--primary)}
+.note{font-size:12px;color:var(--text2);line-height:1.8}.empty{padding:35px 20px}.method{margin-top:20px;padding:16px 20px}.method p{max-width:920px;margin-top:12px}.footer{margin-top:28px;border-top:1px solid var(--border);padding:18px 0;font-size:11px;color:var(--text2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.footer a{color:var(--text2);text-decoration:none}.footer a:hover{color:var(--primary)}
+@media(max-width:768px){.topbar{padding:0 16px}.brand{font-size:16px}.brand img{width:28px;height:28px}.main{padding:16px;padding-bottom:80px}.page-heading{align-items:end}.page-heading .back-link{width:36px;min-width:36px;padding:0}.back-link .button-text{display:none}.controls{padding:16px}.fields{gap:14px 10px}.fields label,.fields .field{flex:1 1 130px}.pill-anchor,.fields .input-shell:has(input[type="search"]),.range-fields .input-shell{width:100%;max-width:100%;min-width:0}.charts{grid-template-columns:1fr}.chart-panel{padding:16px}.kpis{gap:0;padding:20px 0}.kpi{padding:0 12px}.kpi strong{font-size:24px}.kpi .unit{font-size:11px}.kpi-label{font-size:11px}.nav-mask{display:block;position:fixed;inset:0;z-index:200;background:var(--modal-mask);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}.nav-mask.open{opacity:1;visibility:visible;pointer-events:auto}.sidebar{position:absolute;top:0;left:0;height:100%;width:240px;transform:translateX(-100%);transition:transform .25s cubic-bezier(.22,1,.36,1);padding-top:20px;background:var(--drawer-bg)}.nav-mask.open .sidebar{transform:translateX(0)}.nav-toggle{display:flex;align-items:center;justify-content:center;position:fixed;bottom:8px;left:16px;z-index:90;width:48px;height:48px;border-radius:50%;color:var(--text2);font-size:20px;cursor:pointer}.nav-toggle.glass::before{display:none}.nav-toggle .ico{font-size:20px}.chart-title span{max-width:50%;text-align:right}.sidebar-theme .pill-anchor{width:62px;min-width:62px}}
+@media(prefers-reduced-motion:reduce){.pill-select,.pill-track,.disclosure-toggle .ico,.sidebar,.nav-mask,.brand img{transition:none}}
+
+[data-theme="dark"] .topbar.glass{border:none;border-bottom:1px solid rgba(255,255,255,0.04);box-shadow:inset 0 -2px 1px -1px rgba(255,255,255,0.1),0 4px 16px rgba(0,0,0,0.3)}
+[data-theme="dark"]  .pill-select.glass,[data-theme="dark"] .action-pill.glass{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.15);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.08),inset -1px 1px 1px -1px rgba(255,255,255,0.08),0 2px 8px rgba(0,0,0,0.3);color:var(--text)}
+
+/* 设备详情 */
+.detail-actions,.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.detail-actions{justify-content:space-between;margin-bottom:18px}.action-pill{position:relative;text-decoration:none;cursor:pointer}.action-pill:disabled{opacity:.4;cursor:default}.notice{min-height:1.5em;font-size:12px;color:var(--text2);margin-bottom:8px}.detail-surface{position:relative;border-radius:24px;background:var(--card-bg);border:1px solid var(--panel-border);box-shadow:var(--card-shadow);padding:24px;margin-bottom:20px}.hero{display:grid;grid-template-columns:minmax(260px,1fr) minmax(0,1fr);gap:32px;align-items:center}.photo-button{width:100%;border:0;border-radius:18px;background:var(--surface-subtle);cursor:zoom-in;display:grid;place-items:center;min-height:360px;overflow:hidden;color:var(--text2)}.photo-button img{width:100%;height:360px;object-fit:contain}.photo-button:disabled{cursor:default}.thumbs{display:flex;gap:8px;margin-top:12px;overflow:auto}.thumbs button{border:1px solid var(--border);background:var(--surface-subtle);border-radius:12px;width:56px;height:56px;flex:none;cursor:pointer}.thumbs button[aria-pressed=true]{border:2px solid var(--primary)}.thumbs img{width:100%;height:100%;object-fit:contain}.eyebrow{font-size:12px;color:var(--text2);margin-bottom:10px}.hero h1{font-size:clamp(24px,3vw,38px);line-height:1.2}.price{font-size:21px;font-weight:600;margin-top:18px}.muted{font-size:12px;line-height:1.8;color:var(--text2)}.hero .muted{margin-top:9px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;padding:5px 10px;background:var(--badge-bg);border-radius:14px}.section-title{font-size:17px;margin-bottom:16px}.spec-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}.spec-row{display:grid;grid-template-columns:minmax(86px,130px) minmax(0,1fr);gap:12px;border-bottom:1px solid var(--detail-border);padding:10px 0;font-size:13px;line-height:1.7;overflow-wrap:anywhere}.spec-row dt{color:var(--text2)}.spec-group{grid-column:1/-1;font-size:13px;font-weight:600;margin-top:20px}.metrics{display:flex;gap:30px;flex-wrap:wrap}.metric-method,.metric-source{margin-top:12px}.metric strong{display:block;font-size:27px;font-variant-numeric:tabular-nums}.metric span{font-size:12px;color:var(--text2)}.source-list,.related-list{display:flex;gap:10px;flex-wrap:wrap}.related{color:inherit;text-decoration:none;border-radius:16px;background:var(--surface-subtle);padding:14px;display:block;min-width:200px;flex:1}.related:hover{color:var(--primary)}.review-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:12px}.review{position:relative;color:inherit;text-decoration:none;border-radius:16px;background:var(--surface-subtle);display:flex;flex-direction:column;overflow:hidden;transition:background .2s ease,transform .2s ease}.review:hover{background:var(--card-bg);transform:translateY(-2px)}.review:focus-visible{outline:2px solid var(--primary);outline-offset:2px}.review-cover{position:relative;display:block;aspect-ratio:16/9;background:var(--perf-bar-track-bg);overflow:hidden}.review-cover img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;display:block}.review-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--review-badge-bg);color:var(--review-badge-color);transition:transform .2s ease,background .2s ease}.review-play .ico{font-size:17px;margin-left:2px}.review:hover .review-play{transform:translate(-50%,-50%) scale(1.1);background:var(--review-badge-hover-bg)}.review-body{display:flex;flex-direction:column;gap:6px;padding:12px 14px 14px}.review strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:600;line-height:1.5}.review .muted{overflow-wrap:anywhere}.review-scope{font-size:12px;line-height:1.6;color:var(--text2);overflow-wrap:anywhere}.viewer{border:0;background:var(--modal-bg);color:var(--text);width:min(1000px,96vw);height:min(800px,94dvh);max-width:none;max-height:none;margin:auto;border-radius:24px;box-shadow:var(--modal-shadow);padding:16px;overflow:hidden}.viewer::backdrop,.manual-copy::backdrop{background:var(--modal-mask);backdrop-filter:blur(8px)}.viewer[open]{display:flex;flex-direction:column}.viewer-head,.viewer-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}.viewer-stage{flex:1;min-height:0;overflow:hidden;display:grid;place-items:center;touch-action:none;cursor:grab}.viewer-stage img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;transition:transform .2s cubic-bezier(.22,1,.36,1)}.viewer-actions{justify-content:center;flex-wrap:wrap}.manual-copy{margin:auto;width:min(560px,90vw);padding:24px;border:0;border-radius:24px;background:var(--modal-bg);color:var(--text)}.manual-copy textarea{width:100%;height:240px;margin:12px 0;padding:12px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:12px}.manual-copy p{margin-top:8px;color:var(--text2)}@media(max-width:768px){.detail-actions{align-items:flex-start}.hero{grid-template-columns:1fr;gap:20px}.detail-surface{padding:18px}.photo-button,.photo-button img{min-height:240px;height:260px}.spec-list{grid-template-columns:1fr}.spec-row{grid-template-columns:95px minmax(0,1fr)}.viewer{width:100%;height:100dvh;border-radius:0}.actions{gap:6px}.actions .action-pill{padding:0 10px}.metrics{gap:20px}}
+@media(prefers-reduced-motion:reduce){.viewer-stage img{transition:none}}
+#viewer-retry[hidden]{display:none}
+.viewer-stage.is-dragging{cursor:grabbing}
+.viewer-stage.is-dragging img{transition:none}
+.purchase-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.purchase-item{max-width:100%;min-width:0}
+.purchase-link{max-width:100%;overflow-wrap:anywhere;text-align:center}
+.purchase-item .purchase-meta{margin:5px 0 0;overflow-wrap:anywhere}
+.review-meta{display:flex;flex-wrap:wrap;gap:2px 6px}
+.review-date{white-space:nowrap}
+@media(max-width:768px){
+ .review-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .review{min-width:0;border-radius:12px}
+ .review-body{gap:5px;padding:9px 10px 11px}
+ .review strong{font-size:12px;line-height:1.5}
+ .review .muted,.review-scope{font-size:10px;line-height:1.6}
+ .review-play{width:30px;height:30px}
+ .review-play .ico{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.review,.review-play{transition:none}.review:hover{transform:none}.review:hover .review-play{transform:translate(-50%,-50%)}}
+</style></head><body><svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5M12 16V6M17 16V9"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h18"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.8v14.4c0 .8.9 1.3 1.6.9l11.2-7.2c.6-.4.6-1.4 0-1.8L8.6 3.9c-.7-.4-1.6.1-1.6.9z" fill="currentColor" stroke="none"/></symbol></svg>
+<header class="topbar glass"><a class="brand" href="index.html"><img src="logo/apple-touch-icon.png" alt="">数码图鉴</a><span class="page-context">设备详情</span></header>
+<div class="layout">
+  <div class="nav-mask" id="nav-mask"><nav class="sidebar glass" id="page-navigation" aria-label="页面导航"><p class="nav-label">导航</p><ul class="page-links"><li><a href="index.html"><svg class="ico" aria-hidden="true"><use href="#i-gallery"/></svg>设备图鉴</a></li><li><a href="analysis.html"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg>数据分析</a></li></ul><div class="sidebar-theme"><label>主题模式<select id="theme-mode" aria-label="主题模式"><option value="auto">自动</option><option value="light">浅色</option><option value="dark">深色</option></select></label></div></nav></div>
+<main class="main" id="main-content"><div class="detail-actions"><a class="action-pill glass" href="index.html?restore=1">← 返回图鉴</a><div class="actions"><button type="button" class="action-pill glass" id="copy">复制参数</button><button type="button" class="action-pill glass" id="compare">加入对比</button><button type="button" class="action-pill glass" id="share">分享</button></div></div><p id="notice" class="notice" role="status"></p><div id="result"></div><noscript>请启用 JavaScript 查看设备详情。</noscript></main></div><button type="button" id="nav-toggle" class="nav-toggle glass" aria-label="打开导航" aria-expanded="false" aria-controls="page-navigation"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button><dialog id="viewer" class="viewer"><div class="viewer-head"><span id="viewer-label"></span><button type="button" id="viewer-close" class="action-pill glass">关闭</button></div><div class="viewer-stage" id="viewer-stage"><img id="viewer-image" alt=""><button type="button" id="viewer-retry" class="action-pill glass" hidden>图片加载失败，点击重试</button></div><div class="viewer-actions"><button type="button" class="action-pill glass" id="previous">上一张</button><button type="button" class="action-pill glass" id="zoom-out" aria-label="缩小">−</button><button type="button" class="action-pill glass" id="zoom-reset">复位</button><button type="button" class="action-pill glass" id="zoom-in" aria-label="放大">＋</button><button type="button" class="action-pill glass" id="next">下一张</button></div></dialog><dialog id="manual-copy" class="manual-copy"><h2>复制内容</h2><p>请选择文本后复制</p><textarea id="manual-copy-text" readonly></textarea><button type="button" class="action-pill glass" id="manual-close">关闭</button></dialog><script src="db/processors.js"></script><script src="db/phones.js"></script><script src="db/chargers.js"></script><script src="db/powerbanks.js"></script><script>
+(function(){
+'use strict';
+var PERF_BASELINE = { GB6s: 2036, GB6m: 5697, WLE: 3782, GB5s: 1485, GB5m: 5195, MH31: 226, antutuCpu: 610530, antutuGpu: 424415 };
+var PERF_ANTUTU_WEIGHT = { cpu: 0.68, gpu: 0.32 };
+function parseNum(v) { if (!v) return null; const n = parseFloat(String(v).replace(/[,~\s]/g, '')); return isNaN(n) ? null : n; }
+function getPerfSchemes(s) {
+  const schemes = {};
+  if (!s) return schemes;
+  const readScore = function(key) { const n = parseNum(String(s[key] || '').replace(/～/g, '~')); return Number.isFinite(n) && n > 0 ? n : null; };
+  const g6s = readScore('GeekBench 6 单核'), g6m = readScore('GeekBench 6 多核');
+  const g5s = readScore('GeekBench 5 单核'), g5m = readScore('GeekBench 5 多核');
+  const wle = readScore('3DMark WLE'), mh31 = readScore('GFXBench Manhattan 3.1');
+  const gpu = wle !== null ? wle : (mh31 !== null ? mh31 / PERF_BASELINE.MH31 * PERF_BASELINE.WLE : null);
+  const isEstimated = function(keys) { return keys.some(function(key) { return /[~～]|估算|拟合/.test(String(s[key] || '')); }); };
+  const gpuKey = wle !== null ? '3DMark WLE' : 'GFXBench Manhattan 3.1';
+  if (g6s && g6m && gpu) {
+    schemes.A = { value: ((g6s/PERF_BASELINE.GB6s)*0.375 + (g6m/PERF_BASELINE.GB6m)*0.375 + (gpu/PERF_BASELINE.WLE)*0.25) * 100, estimated: wle === null || isEstimated(['GeekBench 6 单核', 'GeekBench 6 多核', gpuKey]), scheme: 'A' };
+  }
+  if (g5s && g5m && gpu) {
+    schemes.B = { value: ((g5s/PERF_BASELINE.GB5s)*0.30 + (g5m/PERF_BASELINE.GB5m)*0.40 + (gpu/PERF_BASELINE.WLE)*0.30) * 100, estimated: wle === null || isEstimated(['GeekBench 5 单核', 'GeekBench 5 多核', gpuKey]), scheme: 'B' };
+  }
+  const antutuCpu = readScore('安兔兔 SoC CPU'), antutuGpu = readScore('安兔兔 SoC GPU');
+  if (antutuCpu && antutuGpu) {
+    const wCpu = PERF_ANTUTU_WEIGHT.cpu, wGpu = PERF_ANTUTU_WEIGHT.gpu;
+    schemes.C = { value: (antutuCpu*wCpu + antutuGpu*wGpu) / (PERF_BASELINE.antutuCpu*wCpu + PERF_BASELINE.antutuGpu*wGpu) * 100, estimated: isEstimated(['安兔兔 SoC CPU', '安兔兔 SoC GPU']), scheme: 'C' };
+  }
+  return schemes;
+}
+function getPerfResult(s, preferred) {
+  const schemes = getPerfSchemes(s);
+  if (Object.prototype.hasOwnProperty.call(schemes, preferred)) return schemes[preferred];
+  return schemes.A || schemes.B || schemes.C || null;
+}
+
+const el = id => document.getElementById(id);
+const pillControls = new Map();
+var FIELD_ORDER = {
+  '手机': ['处理器','--- 存储与屏幕 ---','内存/存储','内存','存储','屏幕','--- 相机 ---','后置摄像头','后置相机','前置摄像头','前置相机','--- 充电规格 ---','电池容量','有线快充','无线快充','反向充电','PD协议','PPS协议','QC协议','UFCS','标配充电器','--- 其他 ---','网络与连接','散热','尺寸','重量','防水防尘','配色','出厂系统','材质','视频播放'],
+  '充电器': ['最大功率','接口配置','输入电压','AC供电','单口最大输出','C口输出','C口最大输出','C口PPS','C口 AVS','C口 UFCS','C1/C2输出','C1/C2 PPS','C1/C2 AVS','C1/C2 UFCS','C1/C2/C3输出','C1自带线输出','C1输出','C1 PPS','C1 UFCS','C2输出','C2 PPS','C2 UFCS','C3输出','C3 PPS','C3 UFCS','A口输出','A口 UFCS','C3/A口输出','DC口输出','PogoPin输出','磁吸无线充','无线充','多口功率分配','私有协议','尺寸','体积','重量','快充协议','特色功能','附赠线材','配色'],
+  '充电宝': ['电池容量','最大功率','接口配置','C口输出','C口最大输出','C口PPS','C口 UFCS','C口输入','C1/C2输出','C1/C2 PPS','C1输出','C1 PPS','C2输出','C2 PPS','A口输出','A口 UFCS','多口同时输出','多口功率分配','私有协议','尺寸','重量','快充协议','特色功能','电池类型','附赠线材','配色'],
+  '处理器': ['制程','CPU架构','GPU','NPU','内存支持','基带','安兔兔 SoC CPU','安兔兔 SoC GPU','GeekBench 5 单核','GeekBench 5 多核','GeekBench 6 单核','GeekBench 6 多核','3DMark WLE','3DMark SNL','GFXBench 5 1080p','GFXBench 5 1440p','GFXBench Manhattan 3.0','GFXBench Manhattan 3.1','发布日期','说明']
+};
+
+function sortKeysByCategory(keys, category) {
+  const order = FIELD_ORDER[category];
+  if (!order) return keys;
+  const ordered = [], rest = [], used = {};
+  for (let i = 0; i < order.length; i++) {
+    for (let j = 0; j < keys.length; j++) { if (!used[j] && keys[j] === order[i]) { ordered.push(keys[j]); used[j] = true; } }
+  }
+  for (let i = 0; i < order.length; i++) {
+    for (let j = 0; j < keys.length; j++) { if (!used[j] && (keys[j].indexOf(order[i]) === 0 || order[i].indexOf(keys[j]) === 0)) { ordered.push(keys[j]); used[j] = true; } }
+  }
+  for (let j = 0; j < keys.length; j++) { if (!used[j]) rest.push(keys[j]); }
+  return ordered.concat(rest);
+}
+
+function copyParameterValue(value) {
+  return value == null ? '' : String(value).replace(/[\r\n]+/g,'；').trim();
+}
+function buildCopyParameters(d, sourceUrl) {
+  const s = d.specs || {}, isPhone = d.category === '手机', isProcessor = !d.category;
+  const processor = isProcessor ? d : getProcById(d.processor_id);
+  const ps = processor ? processor.specs || {} : {};
+  const header = [copyParameterValue(d.name) || '未命名设备'];
+  const price = copyParameterValue(d.price);
+  if (isPhone) {
+    const memory = copyParameterValue(s['内存/存储']);
+    const config = price.match(/[（(]\s*(\d+)\s*(?:GB)?\s*\+\s*(\d+)\s*(GB|TB)\s*[）)]/i);
+    if (config) header.push(config[1]+'GB+'+config[2]+config[3].toUpperCase());
+    else if (memory) header.push(memory);
+  } else if (d.model) header.push(copyParameterValue(d.model));
+  if (!isProcessor) {
+    const amount = price.replace(/\s*元\s*/g,'').replace(/[（(]\s*\d+\s*(?:GB)?\s*\+\s*\d+\s*(?:GB|TB)\s*[）)]/gi,'').trim();
+    header.push('价格(元)：'+(amount || '未收录'));
+  }
+  const lines = [header.join('　')];
+  const sizeWeight = [s['尺寸'],s['重量']].map(copyParameterValue).filter(Boolean).join(' ');
+  if (isPhone) {
+    lines.push('屏幕：'+(copyParameterValue(s['屏幕']) || '未收录'));
+    lines.push('尺寸重量：'+(sizeWeight || '未收录'));
+    lines.push('处理器：'+(copyParameterValue(s['处理器']) || copyParameterValue(processor && processor.name) || '未收录'));
+  } else {
+    if (d.brand) lines.push('品牌：'+copyParameterValue(d.brand));
+    const keys = sortKeysByCategory(Object.keys(s),isProcessor ? '处理器' : d.category);
+    keys.forEach(key => {
+      if (key.startsWith('---') || /^GeekBench [56] (单核|多核)$/.test(key) || key === '尺寸' || key === '重量') return;
+      const value = copyParameterValue(s[key]);
+      if (value) lines.push(key+'：'+value);
+    });
+    if (sizeWeight) lines.push('尺寸重量：'+sizeWeight);
+  }
+  if (isPhone || isProcessor) {
+    [5,6].forEach(version => {
+      const single = copyParameterValue(ps['GeekBench '+version+' 单核']);
+      const multi = copyParameterValue(ps['GeekBench '+version+' 多核']);
+      if (single || multi) lines.push('Geekbench'+version+' 单核：'+(single || '未收录')+'  多核：'+(multi || '未收录'));
+    });
+    const perf = getProcessorPerfResult(processor);
+    if (perf) lines.push('相对性能　骁龙8 Gen 2的'+Math.round(perf.value)+'%性能（处理器评分，方案'+perf.scheme+(perf.estimated?'，含估算或拟合数据':'')+'）');
+    else lines.push('相对性能：未收录');
+  }
+  lines.push('来自 '+(sourceUrl || 'https://xiaomowiki.top/'));
+  return lines.join('\n');
+}
+class PillSelect {
+  constructor(select) {
+    this.select = select;
+    const label = select.closest('label');
+    const title = document.createElement('span');
+    title.className = 'field-title'; title.id = select.id+'-label';
+    title.textContent = select.getAttribute('aria-label') || [...label.childNodes].filter(n => n.nodeType === Node.TEXT_NODE).map(n => n.textContent).join('').trim();
+    this.field = document.createElement('div'); this.field.className = 'field';
+    label.before(this.field); this.field.append(title,select); label.remove();
+    select.hidden = true;
+    this.anchor = document.createElement('div'); this.anchor.className = 'pill-anchor';
+    this.control = document.createElement('div'); this.control.className = 'pill-select glass';
+    this.control.id = select.id+'-control'; this.control.tabIndex = 0;
+    this.control.setAttribute('role','combobox');
+    this.control.setAttribute('aria-haspopup','listbox');
+    this.control.setAttribute('aria-expanded','false');
+    this.control.setAttribute('aria-labelledby',title.id);
+    this.control.setAttribute('aria-controls',select.id+'-options');
+    this.viewport = document.createElement('div'); this.viewport.className = 'pill-viewport';
+    this.track = document.createElement('div'); this.track.className = 'pill-track';
+    this.track.id = select.id+'-options'; this.track.setAttribute('role','listbox');
+    this.track.setAttribute('aria-hidden','true');
+    this.track.setAttribute('aria-labelledby',title.id);
+    this.viewport.append(this.track); this.control.append(this.viewport);
+    const bottom = document.createElement('div'); bottom.className = 'pill-menu-bottom';
+    bottom.setAttribute('aria-hidden','true'); this.control.append(bottom);
+    this.anchor.append(this.control); this.field.append(this.anchor);
+    this.control.addEventListener('click',e => {
+      if (select.disabled) return;
+      if (!this.isOpen) { this.open(); return; }
+      const option = e.target.closest('[data-option-index]');
+      if (option) this.choose(Number(option.dataset.optionIndex));
+    });
+    this.control.addEventListener('keydown',e => this.keydown(e));
+    select.addEventListener('change',() => this.sync());
+    this.sync();
+  }
+  sync() {
+    const options = [...this.select.options];
+    const signature = JSON.stringify(options.map(o => [o.value,o.textContent,o.disabled]));
+    if (this.signature !== signature) {
+      this.close(false); this.signature = signature; this.track.replaceChildren();
+      options.forEach((option,index) => {
+        const row = document.createElement('div'); row.className = 'pill-option';
+        row.id = this.select.id+'-option-'+index; row.dataset.optionIndex = index;
+        row.setAttribute('role','option'); row.setAttribute('aria-disabled',String(option.disabled));
+        row.textContent = option.textContent; row.title = option.textContent;
+        this.track.append(row);
+      });
+    }
+    const index = Math.max(0,this.select.selectedIndex);
+    this.control.setAttribute('aria-labelledby',this.select.id+'-label '+this.select.id+'-option-'+index);
+    this.control.setAttribute('aria-disabled',String(this.select.disabled));
+    this.control.tabIndex = this.select.disabled ? -1 : 0;
+    [...this.track.children].forEach((row,i) => { row.classList.toggle('active',i === index); row.setAttribute('aria-selected',String(i === index)); });
+    if (!this.isOpen) {
+      this.highlight = index; this.viewport.scrollTop = 0;
+      this.track.style.transform = 'translateY('+(-index*36)+'px)';
+      this.control.setAttribute('aria-activedescendant',this.select.id+'-option-'+index);
+    }
+  }
+  open() {
+    closePills(this);
+    if (this.select.disabled || !this.select.options.length) return;
+    const rect = this.anchor.getBoundingClientRect();
+    const height = Math.min(6,this.select.options.length)*36;
+    this.anchor.classList.toggle('opens-up',innerHeight-rect.bottom < height && rect.top > height);
+    this.control.style.setProperty('--menu-height',height+'px');
+    this.isOpen = true; this.field.classList.add('is-open'); this.control.classList.add('open');
+    this.control.setAttribute('aria-expanded','true');
+    this.track.setAttribute('aria-hidden','false');
+    this.track.style.transform = 'translateY(0)';
+    this.highlight = Math.max(0,this.select.selectedIndex); this.markHighlight();
+    this.control.focus({preventScroll:true});
+  }
+  markHighlight() {
+    [...this.track.children].forEach((row,i) => row.classList.toggle('is-highlighted',i === this.highlight));
+    this.control.setAttribute('aria-activedescendant',this.select.id+'-option-'+this.highlight);
+    const top = this.highlight*36, bottom = top+36;
+    if (top < this.viewport.scrollTop) this.viewport.scrollTop = top;
+    else if (bottom > this.viewport.scrollTop+216) this.viewport.scrollTop = bottom-216;
+  }
+  close(focus) {
+    this.isOpen = false; this.field.classList.remove('is-open'); this.control.classList.remove('open');
+    this.control.setAttribute('aria-expanded','false'); this.viewport.scrollTop = 0;
+    this.track.setAttribute('aria-hidden','true');
+    const index = Math.max(0,this.select.selectedIndex);
+    this.track.style.transform = 'translateY('+(-index*36)+'px)';
+    this.control.setAttribute('aria-activedescendant',this.select.id+'-option-'+index);
+    if (focus) this.control.focus({preventScroll:true});
+  }
+  choose(index) {
+    const option = this.select.options[index];
+    if (!option || option.disabled) return;
+    this.select.value = option.value; this.close(true);
+    this.select.dispatchEvent(new Event('change',{bubbles:true})); this.sync();
+  }
+  keydown(e) {
+    if (this.select.disabled) return;
+    if (e.key === 'Tab') { this.close(false); return; }
+    if (e.key === 'Escape' && this.isOpen) { e.preventDefault(); e.stopPropagation(); this.close(true); return; }
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); e.stopPropagation();
+      if (this.isOpen) this.choose(this.highlight); else this.open();
+      return;
+    }
+    if (['ArrowDown','ArrowRight','ArrowUp','ArrowLeft','Home','End'].includes(e.key)) {
+      e.preventDefault(); e.stopPropagation();
+      if (!this.isOpen) this.open();
+      const count = this.select.options.length;
+      this.highlight = e.key === 'Home' ? 0 : e.key === 'End' ? count-1 : (this.highlight+(['ArrowDown','ArrowRight'].includes(e.key) ? 1 : count-1))%count;
+      this.markHighlight();
+    } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault(); if (!this.isOpen) this.open();
+      const index = [...this.select.options].findIndex(o => o.textContent.toLowerCase().startsWith(e.key.toLowerCase()));
+      if (index >= 0) { this.highlight = index; this.markHighlight(); }
+    }
+  }
+}
+function syncPills() { pillControls.forEach(control => control.sync()); }
+function closePills(except) { pillControls.forEach(control => { if (control !== except) control.close(false); }); }
+document.addEventListener('pointerdown',e => { if (!e.target.closest('.pill-select')) closePills(); });
+window.addEventListener('resize',() => closePills());
+window.addEventListener('scroll',e => { if (!(e.target instanceof Element) || !e.target.closest('.pill-select')) closePills(); },true);
+const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+function applyTheme(mode) {
+  document.documentElement.dataset.theme = mode === 'auto' ? (systemTheme.matches ? 'dark' : 'light') : mode;
+}
+let storedTheme = 'auto';
+try { storedTheme = localStorage.getItem('theme') || 'auto'; } catch (err) { /* Theme works without storage. */ }
+el('theme-mode').value = ['auto','light','dark'].includes(storedTheme) ? storedTheme : 'auto';
+applyTheme(el('theme-mode').value);
+let themeTransition = null;
+function switchThemeWithRipple(mode) {
+  const next = mode === 'auto' ? (systemTheme.matches ? 'dark' : 'light') : mode;
+  const apply = () => { applyTheme(mode); try { localStorage.setItem('theme',mode); } catch (err) { /* Storage is optional. */ } };
+  if (themeTransition) { themeTransition.skipTransition(); themeTransition = null; }
+  if (next === document.documentElement.dataset.theme || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) { apply(); return; }
+  const origin = pillControls.get('theme-mode').control.getBoundingClientRect();
+  const x = origin.left+origin.width/2, y = origin.top+origin.height/2;
+  const radius = Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));
+  const transition = document.startViewTransition(apply); themeTransition = transition;
+  transition.ready.then(() => document.documentElement.animate({clipPath:['circle(0px at '+x+'px '+y+'px)','circle('+radius+'px at '+x+'px '+y+'px)']},{duration:550,easing:'cubic-bezier(.22,1,.36,1)',pseudoElement:'::view-transition-new(root)'})).catch(() => {});
+  transition.finished.then(() => { if (themeTransition === transition) themeTransition = null; },() => { if (themeTransition === transition) themeTransition = null; });
+}
+el('theme-mode').addEventListener('change',function() { switchThemeWithRipple(this.value); });
+systemTheme.addEventListener('change',() => { if (el('theme-mode').value === 'auto') applyTheme('auto'); });
+window.addEventListener('storage',e => { if (e.key === 'theme') { el('theme-mode').value = ['auto','light','dark'].includes(e.newValue) ? e.newValue : 'auto'; applyTheme(el('theme-mode').value); syncPills(); } });
+function closeNavigation() { closePills(); el('nav-mask').classList.remove('open'); el('nav-toggle').setAttribute('aria-expanded','false'); el('main-content').inert = false; if (innerWidth <= 768) el('nav-toggle').focus(); }
+el('nav-toggle').addEventListener('click',() => {
+  el('nav-mask').classList.add('open'); el('nav-toggle').setAttribute('aria-expanded','true'); el('main-content').inert = true;
+  el('page-navigation').querySelector('a').focus();
+});
+// Visibility changes with the drawer animation. Restore focus once its controls
+// are actually focusable, including a selector opened during that transition.
+el('nav-mask').addEventListener('transitionend',e => {
+  if (e.target !== el('nav-mask') || e.propertyName !== 'opacity' || !el('nav-mask').classList.contains('open')) return;
+  const open = el('page-navigation').querySelector('.pill-select.open');
+  if (open) open.focus({preventScroll:true});
+  else if (!el('page-navigation').contains(document.activeElement)) el('page-navigation').querySelector('a').focus({preventScroll:true});
+});
+el('nav-mask').addEventListener('click',e => { if (e.target === el('nav-mask')) closeNavigation(); });
+el('page-navigation').addEventListener('keydown',e => {
+  if (innerWidth > 768) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeNavigation(); }
+  if (e.key === 'Tab') { const links = [...el('page-navigation').querySelectorAll('a, .pill-select')]; const index = links.indexOf(document.activeElement); e.preventDefault(); links[(index+(e.shiftKey ? links.length-1 : 1))%links.length].focus(); }
+});
+document.addEventListener('keydown',e => {
+  if (e.key !== 'Escape' || e.defaultPrevented || !el('nav-mask').classList.contains('open')) return;
+  const open = [...pillControls.values()].find(control => control.isOpen);
+  if (open) open.close(true); else closeNavigation();
+  e.preventDefault();
+});
+matchMedia('(min-width:769px)').addEventListener('change',() => { el('nav-mask').classList.remove('open'); el('nav-toggle').setAttribute('aria-expanded','false'); el('main-content').inert = false; });
+
+function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
+const selectedPerfSchemes = new Map();
+const processorMap = new Map(processors.map(p => [p.id,p]));
+function getProcById(id) { return processorMap.get(id) || null; }
+function getProcessorPerfResult(p) { return p ? getPerfResult(p.specs,selectedPerfSchemes.get(p.id)) : null; }
+document.querySelectorAll('select').forEach(select => pillControls.set(select.id,new PillSelect(select)));
+const collections = { phones, processors, chargers, powerbanks };
+const names = { phones:'手机', processors:'处理器', chargers:'充电器', powerbanks:'充电宝' };
+const params = new URLSearchParams(location.search), category = params.get('category'), id = params.get('id');
+const device = Object.hasOwn(collections,category) ? collections[category].find(item => item.id === id) : null;
+const categoryName = names[category];
+const notice = message => { el('notice').textContent = message; };
+function safeUrl(value) { if (typeof value !== 'string' || !/^https?:\/\//i.test(value)) return ''; try { const url = new URL(value); return ['http:','https:'].includes(url.protocol) ? url.href : ''; } catch (e) { return ''; } }
+function imagePath(value) { return typeof value === 'string' && /^(db\/images\/|logo\/)/.test(value) && !value.includes('..') && !/[?#\\]/.test(value) ? value : ''; }
+// 测评封面：本地路径直接用；外链经 safeUrl 校验，B 站图床追加 @480w 缩略参数
+function reviewCover(r) { const local = imagePath(r && r.cover); if (local) return local; const safe = safeUrl(r && r.cover); if (!safe) return ''; return /^https?:\/\/i\d+\.hdslb\.com\/bfs\//.test(safe) ? safe + '@480w.jpg' : safe; }
+function detailUrl(cat,itemId) { const p = new URLSearchParams({category:cat,id:itemId}); return 'device.html?'+p.toString(); }
+function linksToSource(url, text) { const safe = safeUrl(url); return safe ? '<a href="'+esc(safe)+'" target="_blank" rel="noopener noreferrer">'+esc(text)+'</a>' : esc(text); }
+function readCompare() { try { const data = JSON.parse(sessionStorage.getItem('atlas-compare') || '[]'); return Array.isArray(data) ? data.filter(x => x && typeof x.category === 'string' && typeof x.id === 'string') : []; } catch (e) { return []; } }
+function refreshCompare() { const selected = readCompare().some(x => x.category === categoryName && x.id === id); el('compare').textContent = selected ? '移出对比' : '加入对比'; }
+function toggleCompare() { let items = readCompare(); const found = items.some(x => x.category === categoryName && x.id === id); if (found) items = items.filter(x => !(x.category === categoryName && x.id === id)); else { if (items.length && items[0].category !== categoryName) { notice('只能对比同类设备，请先清空其他分类的选择。'); return; } if (items.length >= 4) { notice('最多选择 4 款设备。'); return; } items.push({category:categoryName,id}); } try { sessionStorage.setItem('atlas-compare',JSON.stringify(items)); refreshCompare(); notice(found ? '已移出对比' : '已加入对比'); } catch (e) { notice('无法保存对比选择，请检查浏览器存储设置。'); } }
+async function copyText(text, success) { try { await navigator.clipboard.writeText(text); notice(success); } catch (e) { el('manual-copy-text').value = text; el('manual-copy').showModal(); el('manual-copy-text').focus(); el('manual-copy-text').select(); } }
+function getImages(d) { const gallery = Array.isArray(d.gallery) ? d.gallery.filter(x => x && imagePath(x.src)) : []; if (gallery.length) return gallery; const candidates = []; if (imagePath(d.image)) candidates.push(d.image); if (category === 'processors') { const logo = {'高通':'logo/高通logo.png','联发科':'logo/联发科logo.png','苹果':'logo/苹果logo.png','华为':'logo/海思logo.png','小米':'logo/小米logo.svg'}[(d.brand || '').split(' ')[0]]; if (logo) candidates.push(logo); } else { [d.id,d.model,(d.name || '').replace(/\s+/g,'')].filter(Boolean).forEach(n => { [n,n.replace(/-/g,''),n.replace(/(^|-)([a-z])/g,(_,a,b) => a+b.toUpperCase())].forEach(name => candidates.push('db/images/'+category+'/'+name+'.webp')); }); } return [...new Set(candidates)].map(src => ({src,alt:d.name, fallback:true})); }
+let images = [], imageIndex = 0, zoom = 1, offsetX = 0, offsetY = 0, pointer = null, pinch = null;
+const activePointers = new Map();
+function setImage(index) { if (!images.length) return; imageIndex = (index+images.length)%images.length; const current=images[imageIndex], main=el('main-image'); main.hidden=false; el('image-empty').hidden=true; el('photo-button').disabled=false; main.src = current.src; main.alt = current.alt || device.name; el('viewer-image').hidden=false; el('viewer-retry').hidden=true; el('viewer-image').src = current.src; el('viewer-image').alt = current.alt || device.name; el('viewer-label').textContent = (current.caption || device.name)+' · '+(imageIndex+1)+' / '+images.length; el('image-source').innerHTML=current.sourceUrl?linksToSource(current.sourceUrl,'图片来源'):''; document.querySelectorAll('[data-image]').forEach((button,i) => button.setAttribute('aria-pressed',String(i===imageIndex))); el('previous').disabled = el('next').disabled = images.length < 2; resetZoom(); }
+function resetZoom() { zoom=1; offsetX=0; offsetY=0; transformImage(); }
+function transformImage() { el('viewer-image').style.transform = 'translate('+offsetX+'px,'+offsetY+'px) scale('+zoom+')'; }
+function setZoom(value) { zoom = Math.max(1,Math.min(4,value)); if (zoom === 1) { offsetX=0; offsetY=0; } transformImage(); }
+function displayPrice(d) { const p=d.referencePrice; if (p && Number.isFinite(p.amount) && p.amount>0) return [p.amount+' 元',p.variant,p.kind,p.observedAt].filter(Boolean).join(' · '); return d.price || '参考价未收录'; }
+function buildPurchaseLinks(device) {
+  const links = Array.isArray(device.purchaseLinks) ? device.purchaseLinks : [];
+  const valid = links.filter(item => item && typeof item.platform === 'string' && item.platform.trim() && safeUrl(item.url));
+  if (!valid.length) return '';
+  const items = valid.map(item => {
+    const label = typeof item.label === 'string' && item.label.trim() ? item.platform + ' · ' + item.label : '前往' + item.platform + '购买';
+    const info = [item.variant, item.priceNote, item.checkedAt ? '核验于 ' + item.checkedAt : ''].filter(value => typeof value === 'string' && value.trim()).join(' · ');
+    return '<div class="purchase-item"><a class="purchase-link action-pill glass" href="' + esc(safeUrl(item.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + ' ↗</a>' + (info ? '<p class="muted purchase-meta">' + esc(info) + '</p>' : '') + '</div>';
+  });
+  return '<div class="purchase-links" aria-label="购买链接">' + items.join('') + '</div>';
+}
+function metricHtml(d) { const p=d.referencePrice, price=p && Number.isFinite(p.amount) && p.amount>0 && p.currency==='CNY' && p.kind && p.observedAt && p.sourceUrl && (category !== 'phones' || p.variant) ? p.amount : null; const processor=category === 'phones' ? getProcById(d.processor_id) : category === 'processors' ? d : null; const perf=getProcessorPerfResult(processor); let html=''; if (perf) html+='<div class="metric"><strong>'+Math.round(perf.value)+'%</strong><span>相对性能 · 骁龙8 Gen 2 = 100% · 方案'+esc(perf.scheme)+(perf.estimated?' · 含估算':'')+'</span></div>'; if (category === 'phones') { if (price && perf) html+='<div class="metric"><strong>'+((perf.value*1000/price).toFixed(1))+'</strong><span>性能价格指数 · 每千元相对性能</span></div>'; else html+='<p class="muted">暂无性能价格指数，'+(!price?'缺少可核验的对应配置价格':'缺少处理器性能数据')+'。</p>'; } else if (category === 'processors') html+='<p class="muted">暂无独立售价，暂无法计算性价比。</p>'; else { const v=d.valueInputs || {}; const power=Number(v.singlePortPowerW); const energy=Number(v.ratedEnergyWh); if(price && power>0 && v.powerConditions) html+='<div class="metric"><strong>'+(power*100/price).toFixed(1)+' W</strong><span>每百元单口输出 · '+esc(v.powerConditions)+'</span></div>'; if(category === 'powerbanks' && price && energy>0 && v.energyBasis) html+='<div class="metric"><strong>'+(energy*100/price).toFixed(1)+' Wh</strong><span>每百元能量 · '+esc(v.energyBasis)+'</span></div>'; if(!price || !(power>0 && v.powerConditions) && !(category === 'powerbanks' && energy>0 && v.energyBasis)) html+='<p class="muted">暂无性价比指标，缺少可核验的价格或对应规格。</p>'; } return html; }
+function render() {
+ if (!device) { el('result').innerHTML='<section class="detail-surface"><h1>未找到设备</h1><p class="muted">请检查链接，或返回图鉴选择设备。</p></section>'; ['copy','compare','share'].forEach(id => el(id).disabled=true); return; }
+ document.title=device.name+' | 数码图鉴'; const canonical=new URL('https://xiaomowiki.top/device.html'); canonical.search=new URLSearchParams({category,id}).toString(); el('canonical').href=canonical.href;
+ images=getImages(device); const processor=category === 'phones' ? getProcById(device.processor_id) : category === 'processors' ? device : null;
+ const specs=device.specs || {}; const keys=sortKeysByCategory(Object.keys(specs),categoryName); let rows=''; keys.forEach(key => { if(key.startsWith('---')) rows+='<div class="spec-group">'+esc(key.replace(/^-+|-+$/g,'').trim())+'</div>'; else if(specs[key]) rows+='<div class="spec-row"><dt>'+esc(key)+'</dt><dd>'+esc(specs[key])+'</dd></div>'; });
+ const reviews = (Array.isArray(device.reviews) ? device.reviews : []).filter(review => review && safeUrl(review.url));
+ const reviewHtml = reviews.map(review => {
+  const cover = reviewCover(review);
+  const source = [review.platform, review.author].filter(Boolean).join(' · ');
+  const meta = (source ? '<span>' + esc(source) + '</span>' : '') +
+   (review.publishedAt ? '<span class="review-date">' + esc(review.publishedAt) + '</span>' : '');
+  return '<a class="review" target="_blank" rel="noopener noreferrer" href="' + esc(safeUrl(review.url)) + '">' +
+   '<span class="review-cover">' +
+   (cover ? '<img src="' + esc(cover) + '" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">' : '') +
+   '<span class="review-play" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span></span>' +
+   '<span class="review-body"><strong>' + esc(review.title) + '</strong>' +
+   (meta ? '<span class="muted review-meta">' + meta + '</span>' : '') +
+   (review.scope ? '<span class="review-scope">' + esc(review.scope) + '</span>' : '') +
+   '</span></a>';
+ }).join('');
+ let related=''; if(category === 'phones' && processor) related='<a class="related" href="'+detailUrl('processors',processor.id)+'">处理器 · '+esc(processor.name)+' →</a>'; if(category === 'processors') related=phones.filter(p => p.processor_id===id).map(p => '<a class="related" href="'+detailUrl('phones',p.id)+'">'+esc(p.name)+' →</a>').join('');
+ const ref=device.referencePrice || {}; const input=device.valueInputs || {};
+ const method=category==='phones'?'性能价格指数 = 相对性能百分数 × 1000 ÷ 对应配置参考价。':category==='chargers'?'每百元单口输出功率 = 单口最大功率 × 100 ÷ 参考价。':category==='powerbanks'?'每百元能量 = 同口径能量 × 100 ÷ 参考价；每百元单口输出功率 = 单口最大功率 × 100 ÷ 参考价。':'';
+ const metricNotes=(method?'<p class="muted metric-method">'+esc(method)+'</p>':'')+(input.sourceUrl?'<p class="muted metric-source">'+linksToSource(input.sourceUrl,'查看规格来源')+'</p>':'');
+ const source=(Array.isArray(device.sources)?device.sources:[]).map(s => linksToSource(s.url,s.name || '资料来源')).join(' · ');
+ el('result').innerHTML='<section class="detail-surface hero"><div><button type="button" class="photo-button" id="photo-button" '+(!images.length?'disabled':'')+'><img id="main-image" alt="" '+(!images.length?'hidden':'')+'><span id="image-empty" '+(images.length?'hidden':'')+'>暂无设备图片</span></button><div class="thumbs" id="thumbs"></div><p class="muted" id="image-source"></p></div><div><p class="eyebrow">'+esc(categoryName)+' · '+esc(device.brand)+'</p><h1>'+esc(device.name)+'</h1>'+(device.model?'<p class="muted">型号 '+esc(device.model)+'</p>':'')+'<p class="price">'+esc(displayPrice(device))+'</p>'+(ref.sourceUrl?'<p class="muted">'+linksToSource(ref.sourceUrl,'查看价格来源')+'</p>':'')+'<div class="tags">'+(device.tags || []).map(t => '<span class="tag">'+esc(t)+'</span>').join('')+'</div>'+(device.notes?'<p class="muted">'+esc(device.notes)+'</p>':'')+'</div></section><section class="detail-surface"><h2 class="section-title">性能与价值</h2><div class="metrics">'+metricHtml(device)+'</div>'+metricNotes+'</section><section class="detail-surface"><h2 class="section-title">完整参数</h2><dl class="spec-list">'+rows+'</dl></section>'+(related?'<section class="detail-surface"><h2 class="section-title">关联设备</h2><div class="related-list">'+related+'</div></section>':'')+'<section class="detail-surface"><h2 class="section-title">相关测评</h2><div class="review-list">'+(reviewHtml || '<p class="muted">暂无收录的测评视频</p>')+'</div></section><section class="detail-surface"><h2 class="section-title">资料来源</h2><p class="muted">'+(source || '资料来源待补充')+'</p></section>';
+ el('result').querySelector('.price').insertAdjacentHTML('afterend', buildPurchaseLinks(device));
+ el('result').querySelectorAll('.review-cover img').forEach(img => img.addEventListener('error',() => { img.remove(); }));
+ if(images.length) { const main=el('main-image'); main.addEventListener('load',() => { if(images[imageIndex] && images[imageIndex].fallback) { images=[images[imageIndex]]; imageIndex=0; el('viewer-label').textContent=device.name+' · 1 / 1'; el('previous').disabled=el('next').disabled=true; } }); main.addEventListener('error',() => { if(images[imageIndex] && images[imageIndex].fallback && imageIndex+1<images.length) { setImage(imageIndex+1); return; } main.hidden=true; el('image-empty').hidden=false; el('image-empty').textContent='图片加载失败，点击重试'; el('photo-button').disabled=false; }); if(!images[0].fallback) el('thumbs').innerHTML=images.map((img,i) => '<button type="button" data-image="'+i+'" aria-label="查看第 '+(i+1)+' 张图片" aria-pressed="false"><img src="'+esc(imagePath(img.thumbnail) || img.src)+'" alt=""></button>').join(''); setImage(0); el('thumbs').addEventListener('click',e => { const b=e.target.closest('[data-image]'); if(b) setImage(Number(b.dataset.image)); }); el('thumbs').querySelectorAll('img').forEach(img => img.addEventListener('error',() => { img.hidden=true; img.parentElement.textContent='图片'; })); el('photo-button').addEventListener('click',() => { if(main.hidden) { setImage(imageIndex); return; } el('viewer').showModal(); el('viewer-close').focus(); }); }
+ refreshCompare();
+}
+el('compare').addEventListener('click',toggleCompare);
+el('copy').addEventListener('click',() => { if(device) copyText(buildCopyParameters(device,el('canonical').href),'已复制参数'); });
+el('share').addEventListener('click',() => copyText(el('canonical').href,'已复制详情链接'));
+el('manual-close').addEventListener('click',() => el('manual-copy').close());
+el('viewer-image').addEventListener('error',() => { el('viewer-image').hidden=true; el('viewer-retry').hidden=false; });
+el('viewer-image').addEventListener('load',() => { el('viewer-image').hidden=false; el('viewer-retry').hidden=true; });
+el('viewer-retry').addEventListener('click',() => { if(images.length) el('viewer-image').src=images[imageIndex].src; });
+el('viewer-close').addEventListener('click',() => el('viewer').close());
+el('viewer').addEventListener('close',() => { activePointers.clear(); pointer=null; pinch=null; el('viewer-stage').classList.remove('is-dragging'); resetZoom(); });
+el('previous').addEventListener('click',() => setImage(imageIndex-1)); el('next').addEventListener('click',() => setImage(imageIndex+1));
+el('zoom-in').addEventListener('click',() => setZoom(zoom+.5)); el('zoom-out').addEventListener('click',() => setZoom(zoom-.5)); el('zoom-reset').addEventListener('click',resetZoom);
+el('viewer').addEventListener('keydown',e => { if(e.key==='ArrowLeft') setImage(imageIndex-1); if(e.key==='ArrowRight') setImage(imageIndex+1); });
+const viewerStage = el('viewer-stage');
+el('viewer-image').addEventListener('dragstart', e => e.preventDefault());
+viewerStage.addEventListener('pointerdown', e => {
+  if (e.target.closest('button') || (e.pointerType === 'mouse' && e.button !== 0)) return;
+  activePointers.set(e.pointerId, {x:e.clientX,y:e.clientY});
+  viewerStage.classList.add('is-dragging');
+  if (activePointers.size === 1) {
+    const swipe = e.pointerType === 'touch' && e.target === viewerStage && zoom === 1 && images.length > 1;
+    pointer = {id:e.pointerId,x:e.clientX,y:e.clientY,ox:offsetX,oy:offsetY,swipe};
+  } else if (activePointers.size === 2) {
+    const points = [...activePointers.values()];
+    pinch = {distance:Math.hypot(points[0].x-points[1].x,points[0].y-points[1].y),zoom};
+    pointer = null;
+  }
+  viewerStage.setPointerCapture(e.pointerId);
+});
+viewerStage.addEventListener('pointermove', e => {
+  if (!activePointers.has(e.pointerId)) return;
+  activePointers.set(e.pointerId, {x:e.clientX,y:e.clientY});
+  if (pinch && activePointers.size === 2) {
+    const points = [...activePointers.values()];
+    const distance = Math.hypot(points[0].x-points[1].x,points[0].y-points[1].y);
+    if (pinch.distance > 0) setZoom(pinch.zoom*distance/pinch.distance);
+    return;
+  }
+  if (!pointer || pointer.id !== e.pointerId || pointer.swipe) return;
+  offsetX = pointer.ox + e.clientX - pointer.x;
+  offsetY = pointer.oy + e.clientY - pointer.y;
+  transformImage();
+});
+function endViewerPointer(e, cancelled) {
+  if (!activePointers.has(e.pointerId)) return;
+  if (!cancelled && pointer && pointer.id === e.pointerId && pointer.swipe) {
+    const dx = e.clientX - pointer.x, dy = e.clientY - pointer.y;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) setImage(imageIndex + (dx < 0 ? 1 : -1));
+  }
+  activePointers.delete(e.pointerId);
+  pinch = null;
+  pointer = null;
+  if (activePointers.size === 1) {
+    const [id, point] = activePointers.entries().next().value;
+    pointer = {id,x:point.x,y:point.y,ox:offsetX,oy:offsetY,swipe:false};
+  } else if (!activePointers.size) viewerStage.classList.remove('is-dragging');
+}
+viewerStage.addEventListener('pointerup', e => endViewerPointer(e, false));
+viewerStage.addEventListener('pointercancel', e => endViewerPointer(e, true));
+el('viewer-stage').addEventListener('wheel',e => { e.preventDefault(); setZoom(zoom+(e.deltaY<0?.25:-.25)); },{passive:false});
+render();
+})();
+</script></body></html>

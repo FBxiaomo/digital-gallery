@@ -385,6 +385,8 @@ html{scrollbar-gutter:stable}
 .card-detail-panel{display:none;position:absolute;top:calc(100% + 10px);left:0;background:var(--panel-bg);border:0.5px solid var(--panel-border);border-radius:24px;overflow:hidden;z-index:10;will-change:transform,opacity;box-sizing:border-box;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
 .card-detail-panel.open{display:block;max-height:0;opacity:0;overflow:hidden;transform-origin:top center;transition:max-height .35s cubic-bezier(.22,1,.36,1),opacity .25s ease}
 .card-detail-panel .detail-inner{padding:14px 16px}
+.detail-full-link{display:inline-flex;align-items:center;min-height:36px;margin-top:14px;padding:0 16px;border-radius:18px;background:var(--surface-subtle);color:var(--text);font-size:12px;text-decoration:none}
+.detail-full-link:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
 [data-theme="dark"] .card-detail-panel{box-shadow:0 4px 16px rgba(0,0,0,0.35)}
 .card-detail-panel.closing{display:block;overflow:hidden;transform-origin:top center;transition:max-height .25s cubic-bezier(.22,1,.36,1),opacity .15s ease;max-height:0;opacity:0}
 
@@ -669,7 +671,7 @@ body.has-compare .search-bar-bottom{left:74px}
 <div class="ex-filter-group"><label for="ex-metric">参数范围</label><select id="ex-metric"></select><div class="ex-range"><span class="input-shell ex-control glass"><input type="number" inputmode="decimal" min="0" step="any" id="ex-min" placeholder="最低值" aria-label="参数下限"></span><span aria-hidden="true">—</span><span class="input-shell ex-control glass"><input type="number" inputmode="decimal" min="0" step="any" id="ex-max" placeholder="最高值" aria-label="参数上限"></span></div></div>
 </div><div class="ex-filter-foot"><p class="ex-note" role="status" id="ex-filter-status">条件即时生效，可与搜索叠加。</p><div class="ex-filter-actions"><button type="button" class="ex-control ex-filter-reset glass" id="ex-reset"><span>清空筛选</span></button><button type="button" class="ex-control ex-filter-done glass" id="ex-filter-done"><span>收起</span></button></div></div></div></div></section>
 <p class="ex-note ex-toast" role="status" id="ex-status"></p>
-<div class="ex-context glass" id="ex-context" aria-label="设备操作" hidden><button type="button" id="ex-context-copy">复制参数</button><button type="button" id="ex-context-action"></button></div>
+<div class="ex-context glass" id="ex-context" aria-label="设备操作" hidden><button type="button" id="ex-context-detail">查看详情</button><button type="button" id="ex-context-copy">复制参数</button><button type="button" id="ex-context-action"></button></div>
 <div class="grid" id="grid" role="list" aria-label="设备列表"></div>
     <footer class="site-footer" aria-label="站点信息">
       <div class="footer-main">
@@ -1792,7 +1794,7 @@ function toggleCard(el, idx) {
     belowCards.forEach(function(card) { card.style.opacity = '0.99'; });
     const np = document.createElement('div');
     np.className = 'card-detail-panel';
-    np.innerHTML = '<div class="detail-inner">' + detailHtml + '</div>';
+    np.innerHTML = '<div class="detail-inner">' + detailHtml + '<a class="detail-full-link" href="' + esc(exDetailUrl(detailRef.ref)) + '">查看完整详情 →</a></div>';
     el.style.overflow = 'visible';
     el.style.contain = 'layout style';
     el.appendChild(np);
@@ -1928,6 +1930,8 @@ function validateData() {
 function setupEventDelegation() {
   const grid = document.getElementById('grid');
   grid.addEventListener('click', function(e) {
+    const fullLink = e.target.closest('.detail-full-link');
+    if (fullLink) { const card = fullLink.closest('.card'); const ref = card && detailData[Number(card.dataset.idx)]; if (ref) exSaveReturn(ref.ref); return; }
     const schemeButton = e.target.closest('.perf-scheme-button');
     if (schemeButton) {
       e.stopPropagation();
@@ -2061,6 +2065,52 @@ function setupEventDelegation() {
 
 // Exploration uses stable category/id keys, independent from card render indices.
 const exSelected = new Map();
+const exCategoryNames = {'手机':'phones','处理器':'processors','充电器':'chargers','充电宝':'powerbanks'};
+function exDetailUrl(d) {
+  const params = new URLSearchParams({category:exCategoryNames[exCat(d)],id:d.id});
+  return 'device.html?' + params.toString();
+}
+function exSaveComparison() {
+  try { sessionStorage.setItem('atlas-compare', JSON.stringify([...exSelected.values()].map(d=>({category:exCat(d),id:d.id})))); } catch(e) {}
+}
+function exLoadComparison() {
+  try {
+    const rows = JSON.parse(sessionStorage.getItem('atlas-compare') || '[]');
+    if (!Array.isArray(rows)) return;
+    const found = []; let category = '';
+    rows.slice(0,4).forEach(row=>{
+      if (!row || typeof row.id !== 'string' || !exCategoryNames[row.category] || (category && category !== row.category)) return;
+      const item = (row.category === '处理器' ? processors : devices).find(d=>d.id === row.id && exCat(d) === row.category);
+      if (item && !found.includes(item)) { found.push(item); category = row.category; }
+    });
+    exSelected.clear(); found.forEach(d=>exSelected.set(exKey(d),d));
+  } catch(e) {}
+}
+function exSaveReturn(d) {
+  const filters = {};
+  ['brand','metric','price-min','price-max','min','max'].forEach(k=>{filters[k]=exEl(k).value;});
+  const state = {version:1,category:currentCat,search:searchQuery,searchInput:document.getElementById('search-input').value,sortField:currentSortField,sortDir:currentSortDir,filters,scrollY:window.scrollY,deviceId:d.id,deviceCategory:exCat(d)};
+  try { sessionStorage.setItem('atlas-detail-return',JSON.stringify(state)); } catch(e) {}
+  exSaveComparison();
+}
+function exRestoreReturn() {
+  if (new URLSearchParams(location.search).get('restore') !== '1') return;
+  try {
+    const state=JSON.parse(sessionStorage.getItem('atlas-detail-return') || 'null');
+    if (!state || state.version!==1 || !['全部','手机','处理器','充电器','充电宝'].includes(state.category)) return;
+    filterCat(state.category);
+    if ((CATEGORY_SORT_OPTIONS[currentCat] || []).some(option=>option.f===state.sortField)) currentSortField=state.sortField;
+    currentSortDir=state.sortDir==='asc'?'asc':'desc';
+    searchQuery=typeof state.search==='string'?state.search:'';
+    document.getElementById('search-input').value=typeof state.searchInput==='string'?state.searchInput:searchQuery;
+    toggleClearBtn();
+    const filters=state.filters || {};
+    ['brand','metric','price-min','price-max','min','max'].forEach(k=>{if(typeof filters[k]==='string') exEl(k).value=filters[k];});
+    updateSortButtons(); exRender();
+    requestAnimationFrame(()=>{window.scrollTo(0,Number.isFinite(state.scrollY)?state.scrollY:0);const card=[...document.querySelectorAll('#grid > .card')].find(el=>el.dataset.id===state.deviceId && el.dataset.compareKey===state.deviceCategory+':'+state.deviceId);if(card)card.focus({preventScroll:true});else exEl('filter-toggle').focus({preventScroll:true});});
+    const url=new URL(location.href);url.searchParams.delete('restore');history.replaceState(history.state,'',url);
+  } catch(e) {}
+}
 const exMetrics = {price:['参考价','元'],capacity:['电池容量','mAh'],power:['最大功率','W'],perf:['相对性能','%'],single:['GeekBench 6 单核','分'],multi:['GeekBench 6 多核','分'],weight:['重量','g']};
 function exEl(id) { return document.getElementById('ex-'+id); }
 function exCat(d) { return d.category || '处理器'; }
@@ -2160,6 +2210,7 @@ function exFly(card,key){
 }
 function exToggle(d,card){const key=exKey(d),first=exSelected.values().next().value;if(exSelected.has(key)){exSelected.delete(key);if(exFlights.has(key))exFlights.get(key).cancel();exNotice('已从对比清单移除：'+d.name);}else{if(first&&exCat(first)!==exCat(d)){exNotice('只能对比同类设备，请先清空其他分类的选择。');return;}if(exSelected.size>=4){exNotice('最多选择 4 款，请先移除一款。');return;}exSelected.set(key,d);exNotice('已加入对比：'+d.name);exTray();exFly(card,key);return;}exTray();}
 function exTray(){
+  exSaveComparison();
   document.querySelectorAll('#grid > .card[data-compare-key]').forEach(card=>card.classList.toggle('ex-selected',exSelected.has(card.dataset.compareKey)));
   const visible=exSelected.size>0,button=exEl('compare');document.body.classList.toggle('has-compare',visible);button.classList.toggle('visible',visible);button.setAttribute('aria-hidden',String(!visible));button.tabIndex=visible?0:-1;button.setAttribute('aria-label','对比清单，已选 '+exSelected.size+' 款');exEl('count').textContent=exSelected.size;
   const restoreFocus=exEl('dialog').open&&exEl('tray').contains(document.activeElement);
@@ -2241,11 +2292,11 @@ async function copyDeviceParameters(d) {
   exEl('copy-text').focus({preventScroll:true}); exEl('copy-text').select();
 }
 function exSetupContext(){
-  const grid=document.getElementById('grid'),menu=exEl('context'),action=exEl('context-action'),copy=exEl('context-copy');
+  const grid=document.getElementById('grid'),menu=exEl('context'),action=exEl('context-action'),copy=exEl('context-copy'),detail=exEl('context-detail');
   let selectedCard=null,selectedDevice=null,pressTimer=null,startX=0,startY=0,suppressClickUntil=0;
   function closeMenu(restore){menu.hidden=true;if(restore&&selectedCard&&selectedCard.isConnected)selectedCard.focus({preventScroll:true});selectedCard=null;selectedDevice=null;}
   function cardFor(target){const card=target.closest('.card');return card&&grid.contains(card)&&!target.closest('.card-detail-panel, .perf-slider, button, a, input')?card:null;}
-  function showMenu(card,x,y){const ref=detailData[Number(card.dataset.idx)];if(!ref||!ref.ref)return;selectedCard=card;selectedDevice=ref.ref;action.textContent=exSelected.has(exKey(selectedDevice))?'移出对比':'加入对比';menu.hidden=false;menu.style.left='0px';menu.style.top='0px';const rect=menu.getBoundingClientRect();menu.style.left=Math.max(8,Math.min(x,window.innerWidth-rect.width-8))+'px';menu.style.top=Math.max(8,Math.min(y,window.innerHeight-rect.height-8))+'px';copy.focus({preventScroll:true});}
+  function showMenu(card,x,y){const ref=detailData[Number(card.dataset.idx)];if(!ref||!ref.ref)return;selectedCard=card;selectedDevice=ref.ref;action.textContent=exSelected.has(exKey(selectedDevice))?'移出对比':'加入对比';menu.hidden=false;menu.style.left='0px';menu.style.top='0px';const rect=menu.getBoundingClientRect();menu.style.left=Math.max(8,Math.min(x,window.innerWidth-rect.width-8))+'px';menu.style.top=Math.max(8,Math.min(y,window.innerHeight-rect.height-8))+'px';detail.focus({preventScroll:true});}
   function cancelPress(){clearTimeout(pressTimer);pressTimer=null;}
   grid.addEventListener('contextmenu',e=>{const card=cardFor(e.target);if(!card)return;e.preventDefault();cancelPress();showMenu(card,e.clientX,e.clientY);});
   grid.addEventListener('keydown',e=>{const card=cardFor(e.target);if(card&&e.target===card&&(e.key==='ContextMenu'||(e.shiftKey&&e.key==='F10'))){e.preventDefault();const r=card.getBoundingClientRect();showMenu(card,r.left+16,r.top+16);}});
@@ -2256,10 +2307,11 @@ function exSetupContext(){
   window.addEventListener('scroll',()=>{cancelPress();if(!menu.hidden)closeMenu(false);},{passive:true});
   grid.addEventListener('click',e=>{if(Date.now()<suppressClickUntil){suppressClickUntil=0;e.preventDefault();e.stopImmediatePropagation();}},true);
   action.addEventListener('click',()=>{if(selectedDevice)exToggle(selectedDevice,selectedCard);closeMenu(true);});
+  detail.addEventListener('click',()=>{const device=selectedDevice;if(!device)return;exSaveReturn(device);location.href=exDetailUrl(device);});
   copy.addEventListener('click',()=>{const device=selectedDevice;closeMenu(true);if(device)copyDeviceParameters(device);});
   menu.addEventListener('keydown',e=>{
     if (['ArrowDown','ArrowUp','Home','End'].includes(e.key)) {
-      e.preventDefault();const buttons=[copy,action],index=buttons.indexOf(document.activeElement);
+      e.preventDefault();const buttons=[detail,copy,action],index=buttons.indexOf(document.activeElement);
       const next=e.key==='Home'?0:e.key==='End'?buttons.length-1:(index+(e.key==='ArrowDown'?1:buttons.length-1))%buttons.length;
       buttons[next].focus({preventScroll:true});
     } else if (e.key==='Tab') closeMenu(false);
@@ -2432,7 +2484,8 @@ function exInit(){
 
 try {
   document.getElementById('footer-year').textContent = new Date().getFullYear();
-  exInit(); validateData(); renderChangelog(); updateSortButtons(); setupEventDelegation(); updateCategoryIndicator(); exRender();
+  exInit(); exLoadComparison(); validateData(); renderChangelog(); updateSortButtons(); setupEventDelegation(); updateCategoryIndicator(); exRender(); exRestoreReturn();
+  window.addEventListener('pageshow',function(e){if(e.persisted){exLoadComparison();exTray();}});
 } catch(e) {
   const g = document.getElementById('grid');
   if (g) g.innerHTML = '<div class="empty"><p class="error-text">加载出错，请刷新页面重试</p></div>';

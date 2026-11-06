@@ -35,10 +35,38 @@ var powerbanks = [
     },
     "price": "参考价 160 元",
     "release_date": "2023-11",
-    "notes": "柱状造型，支持笔记本+手机同时快充，36Wh可上飞机"
+    "notes": "柱状造型，支持笔记本+手机同时快充，36Wh可上飞机",
+    "valueInputs": {
+      "ratedEnergyWh": 36,
+      "energyBasis": "电芯标称能量（典型值）",
+      "singlePortPowerW": 120,
+      "powerConditions": "USB-C 单口最大输出",
+      "sourceUrl": "https://www.chongdiantou.com/archives/278994.html"
+    },
+    "reviews": [
+      {
+        "title": "CUKTECH 10 PB100P Power Bank Review",
+        "url": "https://www.bilibili.com/video/BV18KYTzMEfa/",
+        "cover": "https://i0.hdslb.com/bfs/archive/a7ecc6e4f9a533c4e38a8f70fdb892ef173bd1c7.jpg",
+        "platform": "哔哩哔哩",
+        "author": "TimMcMahon",
+        "publishedAt": "2025-09-06",
+        "scope": "PB100P，英文测评"
+      }
+    ]
   },
   {
     "id": "cuktech-10-mini-pb1055",
+    "reviews": [
+      {
+        "title": "评测拆解酷态科10号Mini，159元是不是你的菜？",
+        "url": "https://www.bilibili.com/video/BV1ZSo2Y5EEs/",
+        "cover": "https://i0.hdslb.com/bfs/archive/ec9106f4f0889c13491dddd550a9b1ee19f99e17.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-03-25"
+      }
+    ],
     "category": "充电宝",
     "name": "酷态科10号超级电能棒Mini",
     "brand": "酷态科 CUKTECH",
@@ -108,6 +136,16 @@ var powerbanks = [
   },
   {
     "id": "cuktech-10-fusion-ba652u",
+    "reviews": [
+      {
+        "title": "Turbo模式是亮点！首发评测酷态科10号Fusion二合一电能充",
+        "url": "https://www.bilibili.com/video/BV1disHzeE34/",
+        "cover": "https://i0.hdslb.com/bfs/archive/3447c34c2620be2bfd9edd2c988530f9a44cacc5.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-10-24"
+      }
+    ],
     "category": "充电宝",
     "name": "酷态科10号超级电能充Fusion",
     "brand": "酷态科 CUKTECH",
@@ -148,6 +186,16 @@ var powerbanks = [
   },
   {
     "id": "cuktech-25-se-lpb252n",
+    "reviews": [
+      {
+        "title": "179元真香！首发评测酷态科25号SE 25000mAh",
+        "url": "https://www.bilibili.com/video/BV1KiUrBSES9/",
+        "cover": "https://i0.hdslb.com/bfs/archive/8bfa8e25cc59e1d271cf280fb2580528fe36baee.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2025-11-25"
+      }
+    ],
     "category": "充电宝",
     "name": "酷态科25号超级电能块SE",
     "brand": "酷态科 CUKTECH",
@@ -491,6 +539,23 @@ var powerbanks = [
   },
   {
     "id": "cuktech-pb150p",
+    "purchaseLinks": [
+      {
+        "platform": "京东",
+        "url": "https://item.jd.com/100133267851.html",
+        "variant": "PB150P 15000mAh"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "229元又有惊喜？评测拆解酷态科10号Plus充电宝",
+        "url": "https://www.bilibili.com/video/BV1o2k9YbEwL/",
+        "cover": "https://i0.hdslb.com/bfs/archive/e5a1841b424f92f4cce459c5306287bd7b076ab1.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-12-24"
+      }
+    ],
     "category": "充电宝",
     "name": "酷态科10号超级电能棒Plus",
     "brand": "酷态科 CUKTECH",
@@ -589,7 +654,18 @@ var powerbanks = [
     },
     "price": "参考价 229 元",
     "release_date": "2023-09",
-    "notes": "15号电能柱经典款；71.5Wh可上飞机"
+    "notes": "15号电能柱经典款；71.5Wh可上飞机",
+    "reviews": [
+      {
+        "title": "酷态科15号电能柱评测：内置4颗21700车规级动力电芯，最高150W输出",
+        "url": "https://www.bilibili.com/video/BV1hF411D72Z/",
+        "platform": "B站",
+        "author": "充电头网",
+        "publishedAt": "2023-09-25",
+        "cover": "https://i1.hdslb.com/bfs/archive/53ea130713792e9c49573b2daaf20de9d3a4251a.jpg",
+        "checkedAt": "2026-11-06"
+      }
+    ]
   },
   {
     "id": "cuktech-pb200",
@@ -619,10 +695,40 @@ var powerbanks = [
     },
     "price": "参考价 179 元",
     "release_date": "2024-05",
-    "notes": "15号电能柱性价比款；72Wh可上飞机"
+    "notes": "15号电能柱性价比款；72Wh可上飞机",
+    "reviews": [
+      {
+        "title": "双口100W Max，支持小米67W协议，酷态科15号电能柱SE米系手机快充兼容性测试",
+        "url": "https://www.bilibili.com/video/BV1fr421j7zu/",
+        "platform": "B站",
+        "author": "充电头网评测室",
+        "publishedAt": "2024-05-21",
+        "cover": "https://i0.hdslb.com/bfs/archive/d7298cc7b7529619d67781953456fa89ca3d18ae.jpg",
+        "checkedAt": "2026-11-06",
+        "scope": "米系手机快充兼容性测试"
+      }
+    ]
   },
   {
     "id": "cuktech-pb200u",
+    "reviews": [
+      {
+        "title": "再一次越级！酷态科15号Ultra充电宝首发详细评测",
+        "url": "https://www.bilibili.com/video/BV1Fw4m1C7Zt/",
+        "cover": "https://i1.hdslb.com/bfs/archive/8bbe966e5b1887ffd23772e848107627502db7ca.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-08-20"
+      },
+      {
+        "title": "全网首拆酷态科15号Ultra，看它是如何实现210W狂暴性能的？",
+        "url": "https://www.bilibili.com/video/BV1vH4y1c7aJ/",
+        "cover": "https://i2.hdslb.com/bfs/archive/836b30ac601e0daa039a4a205c544ebf9e2e5826.jpg",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "publishedAt": "2024-08-20"
+      }
+    ],
     "category": "充电宝",
     "name": "酷态科15号超级电能柱Ultra",
     "brand": "酷态科 CUKTECH",

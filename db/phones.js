@@ -4,6 +4,252 @@
 
 var phones = [
   {
+    "id": "iphone-18-pro",
+    "processor_id": "a20-pro",
+    "category": "手机",
+    "name": "iPhone 18 Pro",
+    "brand": "苹果 Apple",
+    "tags": [
+      "A20 Pro",
+      "120Hz",
+      "15W无线",
+      "IP68",
+      "可变光圈"
+    ],
+    "specs": {
+      "处理器": "Apple A20 Pro（6核CPU：2超级核心+4能效核心，7核GPU，双16核神经网络引擎）",
+      "--- 存储与屏幕 ---": "",
+      "内存/存储": "256GB / 512GB / 1TB / 2TB；运行内存未公布",
+      "屏幕": "6.3″ OLED，2622×1206，460ppi，ProMotion最高120Hz，全天候显示，1000nit典型亮度、1600nit HDR峰值、3000nit户外峰值，抗反射涂层",
+      "--- 相机 ---": "",
+      "后置摄像头": "4800万融合式主摄，24mm，可变光圈ƒ/1.48、ƒ/1.8、ƒ/2.8、ƒ/4.0，第二代传感器位移式光学防抖；4800万融合式超广角，13mm ƒ/2.2，120°；4800万融合式长焦，100mm ƒ/2.8，4倍光学变焦，3D传感器位移式光学防抖",
+      "前置摄像头": "1800万像素Center Stage摄像头，ƒ/1.9，自动对焦",
+      "--- 充电规格 ---": "",
+      "电池容量": "4056mAh（充电头网实测资料）",
+      "有线快充": "约15分钟最多充至50%（需支持AVS的60瓦或更大功率USB-C电源适配器及充电线）",
+      "无线快充": "MagSafe / Qi2 最高15W",
+      "标配充电器": "无；附1米USB-C充电线",
+      "--- 其他 ---": "",
+      "网络与连接": "5G，Apple C2基带，Apple N1无线芯片，Wi-Fi 7，蓝牙6，Thread，NFC，双频GPS，USB-C（USB 3最高10Gbps、DisplayPort），双nano-SIM或nano-SIM与eSIM或双eSIM（具体支持视地区而定）",
+      "尺寸": "150.0 × 71.9 × 8.75 mm",
+      "重量": "211 g",
+      "防水防尘": "IP68（最深6米水下最长30分钟）",
+      "配色": "黑色、银色、冰川蓝色、勃艮第酒红色",
+      "材质": "铝金属一体成型；正面超瓷晶面板2，背面超瓷晶面板",
+      "出厂系统": "iOS 27",
+      "视频播放": "视频播放最长34小时，流媒体视频播放最长31小时"
+    },
+    "referencePrice": {
+      "amount": 9999,
+      "currency": "CNY",
+      "variant": "256GB",
+      "kind": "首发价",
+      "observedAt": "2026-09-09",
+      "sourceUrl": "https://www.apple.com.cn/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/"
+    },
+    "sources": [
+      {
+        "name": "Apple 中国大陆：iPhone 18 Pro系列技术规格",
+        "url": "https://www.apple.com.cn/iphone-18-pro/specs/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "Apple 中国大陆：发布与起售价",
+        "url": "https://www.apple.com.cn/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "ChargerLAB：iPhone 18 Pro充电评测",
+        "url": "https://www.chargerlab.com/charging-review-of-iphone-18-pro/",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "「小白」iPhone18 Pro/Max全面测评：你想看的都在这！",
+        "url": "https://www.bilibili.com/video/BV1WCec6aEY3/",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2026-09-16",
+        "cover": "https://i1.hdslb.com/bfs/archive/ea3501f3a0f26c8d1dc8cbeb3c5bf9d9c4102941.jpg",
+        "scope": "系列全面测评，覆盖 iPhone 18 Pro 与 Pro Max",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "title": "选哪个？iPhone 18 Pro&Duo深度上手",
+        "url": "https://www.bilibili.com/video/BV1cSec6tEux/",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "publishedAt": "2026-09-16",
+        "cover": "https://i1.hdslb.com/bfs/archive/aec12235afcae7c12ed1eb3684c103ed407434bf.jpg",
+        "scope": "iPhone 18 Pro 与 iPhone Duo 的深度上手体验",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "price": "9999元起（256GB ）",
+    "release_date": "2026-09-09",
+    "notes": "中国大陆版规格以苹果中国官网为准；60瓦是官方快充测试所需适配器条件，不代表手机充电功率。"
+  },
+  {
+    "id": "iphone-18-pro-max",
+    "processor_id": "a20-pro",
+    "category": "手机",
+    "name": "iPhone 18 Pro Max",
+    "brand": "苹果 Apple",
+    "tags": [
+      "A20 Pro",
+      "120Hz",
+      "15W无线",
+      "IP68",
+      "可变光圈"
+    ],
+    "specs": {
+      "处理器": "Apple A20 Pro（6核CPU：2超级核心+4能效核心，7核GPU，双16核神经网络引擎）",
+      "--- 存储与屏幕 ---": "",
+      "内存/存储": "256GB / 512GB / 1TB / 2TB；运行内存未公布",
+      "屏幕": "6.9″ OLED，2868×1320，460ppi，ProMotion最高120Hz，全天候显示，1000nit典型亮度、1600nit HDR峰值、3000nit户外峰值，抗反射涂层",
+      "--- 相机 ---": "",
+      "后置摄像头": "4800万融合式主摄，24mm，可变光圈ƒ/1.48、ƒ/1.8、ƒ/2.8、ƒ/4.0，第二代传感器位移式光学防抖；4800万融合式超广角，13mm ƒ/2.2，120°；4800万融合式长焦，100mm ƒ/2.8，4倍光学变焦，3D传感器位移式光学防抖",
+      "前置摄像头": "1800万像素Center Stage摄像头，ƒ/1.9，自动对焦",
+      "--- 充电规格 ---": "",
+      "电池容量": "5391mAh（欧版能效标签资料，国行容量待核）",
+      "有线快充": "约15分钟最多充至50%（需支持AVS的60瓦或更大功率USB-C电源适配器及充电线）",
+      "无线快充": "MagSafe / Qi2 最高15W",
+      "标配充电器": "无；附1米USB-C充电线",
+      "--- 其他 ---": "",
+      "网络与连接": "5G，Apple C2基带，Apple N1无线芯片，Wi-Fi 7，蓝牙6，Thread，NFC，双频GPS，USB-C（USB 3最高10Gbps、DisplayPort），双nano-SIM或nano-SIM与eSIM或双eSIM（具体支持视地区而定）",
+      "尺寸": "163.4 × 78.0 × 8.75 mm",
+      "重量": "249 g",
+      "防水防尘": "IP68（最深6米水下最长30分钟）",
+      "配色": "黑色、银色、冰川蓝色、勃艮第酒红色",
+      "材质": "铝金属一体成型；正面超瓷晶面板2，背面超瓷晶面板",
+      "出厂系统": "iOS 27",
+      "视频播放": "视频播放最长43小时，流媒体视频播放最长38小时"
+    },
+    "referencePrice": {
+      "amount": 10999,
+      "currency": "CNY",
+      "variant": "256GB",
+      "kind": "首发价",
+      "observedAt": "2026-09-09",
+      "sourceUrl": "https://www.apple.com.cn/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/"
+    },
+    "sources": [
+      {
+        "name": "Apple 中国大陆：iPhone 18 Pro系列技术规格",
+        "url": "https://www.apple.com.cn/iphone-18-pro/specs/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "Apple 中国大陆：发布与起售价",
+        "url": "https://www.apple.com.cn/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "欧洲能效标签容量资料（国行待核）",
+        "url": "https://www.thepaper.cn/newsDetail_forward_34109890",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "「小白」iPhone18 Pro/Max全面测评：你想看的都在这！",
+        "url": "https://www.bilibili.com/video/BV1WCec6aEY3/",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2026-09-16",
+        "cover": "https://i1.hdslb.com/bfs/archive/ea3501f3a0f26c8d1dc8cbeb3c5bf9d9c4102941.jpg",
+        "scope": "系列全面测评，覆盖 iPhone 18 Pro 与 Pro Max",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "price": "10999元起（256GB ）",
+    "release_date": "2026-09-09",
+    "notes": "中国大陆版规格以苹果中国官网为准；60瓦是官方快充测试所需适配器条件，不代表手机充电功率。"
+  },
+  {
+    "id": "iphone-duo",
+    "processor_id": "a20-pro",
+    "category": "手机",
+    "name": "iPhone Duo",
+    "brand": "苹果 Apple",
+    "tags": [
+      "A20 Pro",
+      "折叠屏",
+      "7.6″",
+      "15W无线",
+      "IP68"
+    ],
+    "specs": {
+      "处理器": "Apple A20 Pro（6核CPU：2性能核+4能效核，7核GPU，双16核神经网络引擎）",
+      "--- 存储与屏幕 ---": "",
+      "内存/存储": "256GB / 512GB / 1TB / 2TB；运行内存未公布",
+      "屏幕": "内屏：7.6″可折叠超视网膜XDR OLED，1878×2670，430ppi，纳米纹理表层；外屏：5.4″超视网膜XDR OLED，1398×2034，460ppi；均支持ProMotion最高120Hz、全天候显示、原彩显示、P3广色域，1000nit典型亮度、1600nit HDR峰值、3000nit户外峰值、最低1nit，防油渍防指纹及抗反射涂层",
+      "--- 相机 ---": "",
+      "后置摄像头": "4800万像素融合式主摄，26mm ƒ/1.6，传感器位移式光学防抖，支持2倍光学品质长焦；4800万像素融合式超广角，13mm ƒ/2.2，120°视角",
+      "前置摄像头": "外屏：1200万像素Center Stage摄像头，ƒ/2.2；内屏：屏下FaceTime摄像头，ƒ/1.8，1080p视频",
+      "--- 充电规格 ---": "",
+      "电池容量": "4883mAh（双电池，拆解资料）",
+      "有线快充": "约20分钟最多充至50%（需60瓦或更高功率USB-C PD电源适配器及支持60瓦或更高功率的USB-C线）",
+      "无线快充": "MagSafe / Qi2 最高15W",
+      "标配充电器": "无；附1米USB-C充电线",
+      "--- 其他 ---": "",
+      "网络与连接": "5G，Apple C2基带，Apple N1无线芯片，Wi-Fi 7，蓝牙6，Thread，NFC，双频GPS，USB-C（USB 3最高10Gbps、DisplayPort），双eSIM（无实体SIM卡槽）",
+      "尺寸": "展开：117.8 × 164.6 × 5.2 mm；折叠：117.8 × 84.1 × 11.3 mm",
+      "重量": "254 g",
+      "防水防尘": "IP68（最深6米水下最长30分钟）",
+      "配色": "夜空色、星光白色",
+      "材质": "钛金属可折叠设计；正面超瓷晶面板2，背面超瓷晶面板",
+      "出厂系统": "iOS 27",
+      "视频播放": "外屏最长44小时、内屏最长31小时；流媒体视频外屏最长37小时、内屏最长26小时"
+    },
+    "referencePrice": {
+      "amount": 15999,
+      "currency": "CNY",
+      "variant": "256GB",
+      "kind": "首发价",
+      "observedAt": "2026-09-09",
+      "sourceUrl": "https://www.apple.com.cn/newsroom/2026/09/apple-unveils-iphone-duo/"
+    },
+    "sources": [
+      {
+        "name": "Apple 中国大陆：iPhone Duo 技术规格",
+        "url": "https://www.apple.com.cn/iphone-duo/specs/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "Apple 中国大陆：发布与起售价",
+        "url": "https://www.apple.com.cn/newsroom/2026/09/apple-unveils-iphone-duo/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "IT之家：各存储版本价格",
+        "url": "https://www.ithome.com/1/017/426.htm",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "name": "IT之家：双电池拆解容量",
+        "url": "https://www.ithome.com/1/017/578.htm",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "折1万次，会坏吗？iPhone Duo深度评测",
+        "url": "https://www.bilibili.com/video/BV1xrnz6gEVD/",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "publishedAt": "2026-10-21",
+        "scope": "iPhone Duo 深度评测，包含屏幕与铰链、折叠测试和软件体验",
+        "checkedAt": "2026-11-09",
+        "cover": "https://i0.hdslb.com/bfs/archive/ccacc1c956715cf06db7a29b634c3c269654acea.jpg"
+      }
+    ],
+    "price": "15999元起（256GB ）",
+    "release_date": "2026-09-09",
+    "notes": "侧边按钮集成触控ID；内外屏均支持Apple Pencil（USB-C），需兼容系统版本。"
+  },
+  {
     "id": "xiaomi-13",
     "processor_id": "sd8g2",
     "category": "手机",
@@ -59,7 +305,8 @@ var phones = [
         "platform": "哔哩哔哩",
         "author": "极客湾Geekerwan",
         "publishedAt": "2022-12-12",
-        "scope": "小米13与小米13 Pro性能测试"
+        "scope": "小米13与小米13 Pro性能测试",
+        "checkedAt": "2026-11-08"
       },
       {
         "title": "【大家测】3999元起售 小米13开箱体验 | 直角边框+6.36寸直屏 | 联合徕卡研发！第二代骁龙8 / IP68防尘防水",
@@ -67,23 +314,8 @@ var phones = [
         "platform": "哔哩哔哩",
         "author": "大家测",
         "cover": "https://i2.hdslb.com/bfs/archive/9351f01507ae4fa7042dbaadc5e51b16a6dd6a53.jpg",
-        "publishedAt": "2022-12-12"
-      },
-      {
-        "title": "「小白」小米13测评：确实像苹果但确实够精致！",
-        "url": "https://www.bilibili.com/video/BV1SP411K7DL/",
-        "platform": "哔哩哔哩",
-        "author": "小白测评",
-        "cover": "https://i0.hdslb.com/bfs/archive/54f35aa1fc57bcecb10c339587c4a0538952279e.jpg",
-        "publishedAt": "2022-12-12"
-      },
-      {
-        "title": "续航离谱！小米13、13Pro体验评测：有小米6内味了 | 大米评测",
-        "url": "https://www.bilibili.com/video/BV1F84y1x7Mu/",
-        "platform": "哔哩哔哩",
-        "author": "大米评测",
-        "cover": "https://i2.hdslb.com/bfs/archive/20a1618c853342dc31b95174e3c64002ae2e501d.jpg",
-        "publishedAt": "2022-12-24"
+        "publishedAt": "2022-12-12",
+        "checkedAt": "2026-11-08"
       },
       {
         "title": "「花生」超越标准的标准版/小米13使用报告",
@@ -91,7 +323,26 @@ var phones = [
         "platform": "哔哩哔哩",
         "author": "花生説",
         "cover": "https://i1.hdslb.com/bfs/archive/4a94bb1ecb5b3f02cc7893846b6e1c4140a19452.jpg",
-        "publishedAt": "2022-12-12"
+        "publishedAt": "2022-12-12",
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "title": "「小白」小米13测评：确实像苹果但确实够精致！",
+        "url": "https://www.bilibili.com/video/BV1SP411K7DL/",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "cover": "https://i0.hdslb.com/bfs/archive/54f35aa1fc57bcecb10c339587c4a0538952279e.jpg",
+        "publishedAt": "2022-12-12",
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "title": "续航离谱！小米13、13Pro体验评测：有小米6内味了 | 大米评测",
+        "url": "https://www.bilibili.com/video/BV1F84y1x7Mu/",
+        "platform": "哔哩哔哩",
+        "author": "大米评测",
+        "cover": "https://i2.hdslb.com/bfs/archive/20a1618c853342dc31b95174e3c64002ae2e501d.jpg",
+        "publishedAt": "2022-12-24",
+        "checkedAt": "2026-11-08"
       }
     ],
     "price": "3999 元起（8+128GB）",
@@ -717,6 +968,32 @@ var phones = [
       "配色": "祥云白、浅海青、暗影黑",
       "出厂系统": "Xiaomi HyperOS 2"
     },
+    "reviews": [
+      {
+        "title": "【大家测】REDMI Turbo 4开箱体验 低温续航有保障 搭载天玑8400-Ultra处理器",
+        "platform": "哔哩哔哩",
+        "author": "大家测",
+        "cover": "https://i1.hdslb.com/bfs/archive/b25720683c0f785e0f1a293794ddc0bf8b96756d.jpg",
+        "publishedAt": "2025-01-06",
+        "url": "https://www.bilibili.com/video/BV1werVYpERF/"
+      },
+      {
+        "title": "「英短」Turbo4量产机测评：首发新中端适合什么人？",
+        "platform": "哔哩哔哩",
+        "author": "咕科技",
+        "cover": "https://i2.hdslb.com/bfs/archive/a345926c82a538494bfa86cb54550d31876340e7.jpg",
+        "publishedAt": "2025-01-04",
+        "url": "https://www.bilibili.com/video/BV19Vr4YVEd6/"
+      },
+      {
+        "title": "「小白」红米Turbo 4测评：天玑8400落地表现如何？",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "cover": "https://i2.hdslb.com/bfs/archive/e59ed77b671b319aa530f7766d0a09d4fca91c23.jpg",
+        "publishedAt": "2025-01-02",
+        "url": "https://www.bilibili.com/video/BV1fz6qYGEn1/"
+      }
+    ],
     "price": "1599 元起（12+256GB）",
     "release_date": "2025-01-02",
     "notes": "天玑8400-Ultra全大核架构，6550mAh超大电池+90W快充；公有PD/PPS约27W，私有90W"

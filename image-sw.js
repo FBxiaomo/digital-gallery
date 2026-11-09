@@ -1,5 +1,5 @@
 /* 仅缓存本站图片。更新 logo 或彩蛋图片时递增 CACHE_NAME；设备图更新时递增 index.html 的 IMG_V。 */
-const CACHE_NAME = 'digital-atlas-images-v1';
+const CACHE_NAME = 'digital-atlas-images-v2';
 const CACHE_PREFIX = 'digital-atlas-images-';
 const IMAGE_DIRS = ['db/images/', 'logo/', 'easter-egg-img/'];
 

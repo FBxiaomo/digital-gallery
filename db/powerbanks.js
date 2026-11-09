@@ -939,7 +939,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "安克Prime如意棒充电宝 20100mAh 220W",
     "brand": "安克 Anker",
-    "model": "A110G",
     "tags": [
       "20100mAh",
       "220W",
@@ -967,6 +966,27 @@ var powerbanks = [
       "配色": "黑金（黑神话悟空联名）",
       "底座输入": "Pogo Pin：15-25.2V/5A（100W Max，底座另购）"
     },
+    "reviews": [
+      {
+        "url": "https://www.bilibili.com/video/BV1kyyZBCEnY/",
+        "title": "安克黑神话联名充电宝Prime 220W充电宝",
+        "platform": "哔哩哔哩",
+        "author": "新手玩数码",
+        "cover": "https://i1.hdslb.com/bfs/archive/745d6f5e5061c3b04f77c969a9d1bb74b102d81b.jpg",
+        "publishedAt": "2025-11-02"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1PFpgzCEUq/",
+        "title": "当国产3A天花板遇上硬核充电科技，安克×黑神话悟空联名充电装备体验",
+        "platform": "哔哩哔哩",
+        "author": "轻电科技",
+        "cover": "https://i0.hdslb.com/bfs/archive/f157f76c5576f423b1e2942e05e4839b8d8e2afa.jpg",
+        "publishedAt": "2025-09-16"
+      }
+    ],
+    "model": "A110G",
+    "price": "参考价 469元",
+    "release_date": "2025-10",
     "notes": "220W为整机总输出，USB-C单口最高140W，自充最高100W。容量及电池能量按安克A110G官方联名款规格记录为20100mAh/72.36Wh；海外说明书的电池组为21.6V/3350mAh（6枚3350mAh电芯串联）。尺寸、重量、电芯信息及套装线材注明海外资料来源，国行对应值仍待铭牌核实。通过A1902底座自充时不支持边充边放，A1903底座支持。国行参考价、准确上市年月及完整PPS/UFCS档位暂留空。"
   }
 ];

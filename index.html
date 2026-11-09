@@ -105,6 +105,10 @@
   --perf-mid: #185fa5;
   --perf-low: #92400e;
   --changelog-devices-bg: #f5f6f8;
+  --theme-pill-bg: #ffffff;
+  --theme-pill-shadow: 0 1px 4px rgba(0,0,0,0.10), 0 0 0 1px rgba(24,95,165,0.12);
+  --theme-group-bg: rgba(24,95,165,0.10);
+  --theme-group-border: rgba(24,95,165,0.16);
   --searchbar-clearance:72px;
 }
 
@@ -178,6 +182,10 @@
   --perf-mid: #60a5fa;
   --perf-low: #fbbf24;
   --changelog-devices-bg: rgba(255,255,255,0.04);
+  --theme-pill-bg: #262626;
+  --theme-pill-shadow: 0 1px 4px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
+  --theme-group-bg: rgba(59,130,246,0.16);
+  --theme-group-border: rgba(150,195,235,0.20);
 }
 
 .glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px double rgba(255,255,255,0.12);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.7),inset -2px 2px 1px -1px rgba(255,255,255,0.7),inset 6px -6px 1px -6px rgba(255,255,255,0.4),inset -6px 6px 1px -6px rgba(255,255,255,0.4),inset 0 0 2px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.12);transition:background .3s ease,border-color .3s ease,box-shadow .3s ease}
@@ -222,9 +230,11 @@ html{scrollbar-gutter:stable}
 
 .about-mask,.changelog-mask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--modal-mask);z-index:200;align-items:center;justify-content:center;padding:20px}
 .about-mask.open,.changelog-mask.open{display:flex}
-.about-panel,.changelog-panel{background:var(--modal-bg);border-radius:24px;max-width:520px;width:100%;max-height:80vh;overflow-y:auto;padding:24px 28px;position:relative;box-shadow:var(--modal-shadow);border:0.5px solid var(--modal-border)}
+.about-panel,.changelog-panel{background:var(--modal-bg);border-radius:24px;max-width:520px;width:100%;max-height:min(80vh,calc(100dvh - 40px));overflow:hidden;position:relative;box-shadow:var(--modal-shadow);border:0.5px solid var(--modal-border)}
+.modal-scroll{max-height:min(calc(80vh - 18px),calc(100dvh - 58px));margin:8px;overflow-y:auto;overflow-x:hidden;padding:16px 20px;overflow-wrap:anywhere;overscroll-behavior:contain}
+.modal-scroll:focus-visible{outline:2px solid var(--primary);outline-offset:-2px;border-radius:16px}
 .about-panel.glass,.changelog-panel.glass{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px double rgba(255,255,255,0.12);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.7),inset -2px 2px 1px -1px rgba(255,255,255,0.7),inset 6px -6px 1px -6px rgba(255,255,255,0.4),inset -6px 6px 1px -6px rgba(255,255,255,0.4),inset 0 0 2px rgba(0,0,0,0.15),0 4px 16px rgba(0,0,0,0.12)}
-.about-panel.glass::after,.changelog-panel.glass::after{display:none}
+.about-panel.glass::before,.changelog-panel.glass::before,.about-panel.glass::after,.changelog-panel.glass::after{display:none}
 [data-theme="dark"] .about-panel.glass,[data-theme="dark"] .changelog-panel.glass{background:rgba(26,26,26,0.92);border-color:rgba(255,255,255,0.04);box-shadow:inset 2px -2px 1px -1px rgba(255,255,255,0.25),inset -2px 2px 1px -1px rgba(255,255,255,0.25),inset 6px -6px 1px -6px rgba(255,255,255,0.1),inset -6px 6px 1px -6px rgba(255,255,255,0.1),inset 0 0 2px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.3)}
 .about-panel .modal-title,.changelog-panel .modal-title{font-size:15px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;justify-content:space-between}
 .about-close,.changelog-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2);padding:0 4px}
@@ -235,9 +245,11 @@ html{scrollbar-gutter:stable}
 .about-body a{color:var(--primary);text-decoration:none}
 .about-body a:hover{text-decoration:underline}
 .perf-note{font-size:13px;color:var(--text);margin-bottom:12px}
-.perf-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px}
+.perf-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:13px;margin-bottom:12px;overflow-wrap:anywhere}
 .perf-table th,.perf-table td{padding:6px 8px;border-bottom:0.5px solid var(--border);text-align:left}
+.perf-table th:first-child,.perf-table td:first-child{width:40%}.perf-table th:nth-child(2),.perf-table td:nth-child(2){width:25%}.perf-table th:last-child,.perf-table td:last-child{width:35%}
 .perf-table th{background:var(--surface-subtle);font-weight:600;color:var(--text)}
+@media(max-width:360px){.perf-table{font-size:12px}.perf-table th,.perf-table td{padding:6px 3px}}
 
 .changelog-list{list-style:none}
 .changelog-list li{font-size:13px;color:var(--text);padding:10px 0;border-bottom:0.5px solid var(--border);line-height:1.6}
@@ -260,28 +272,32 @@ html{scrollbar-gutter:stable}
 .drawer-item.active .ico{color:var(--primary)}
 .drawer-item .ico{transition:color .2s ease}
 .drawer-item:focus-visible,.theme-option:focus-visible,.card:focus-visible,.proc-link:focus-visible,.proc-phone-item:focus-visible{outline:2px solid var(--primary);outline-offset:-2px}
-.drawer-theme-wrap{position:relative;margin-top:auto;width:calc(100% - 24px);margin-left:12px;margin-right:12px;display:flex;border-top:0.5px solid var(--drawer-border);height:36px;align-items:center}
-.theme-anchor{position:relative;height:36px;width:62px;flex-shrink:0;overflow:visible;z-index:11}
-.theme-selector{position:absolute;bottom:0;left:0;border-radius:18px;overflow:hidden;cursor:pointer;transition:max-height .35s cubic-bezier(.22,1,.36,1);max-height:36px}
-.theme-selector.open{max-height:108px}
-.theme-selector-track{position:relative;z-index:2;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.theme-menu-bottom{display:none;position:absolute;left:0;right:0;bottom:0;height:28px;z-index:1;border-radius:0 0 18px 18px;background:linear-gradient(to bottom,transparent,var(--modal-bg));backdrop-filter:blur(14px) saturate(180%);-webkit-backdrop-filter:blur(14px) saturate(180%);mask-image:linear-gradient(to bottom,transparent,#000);-webkit-mask-image:linear-gradient(to bottom,transparent,#000);pointer-events:none}
-.theme-selector.open .theme-menu-bottom{display:block}
-.theme-option{height:36px;line-height:36px;padding:0 16px;font-size:13px;text-align:center;color:var(--text2);cursor:pointer;transition:color .15s;white-space:nowrap}
-.theme-option:hover{color:var(--primary)}
-.theme-option.active{color:var(--text);font-weight:500}
-.side-btns{position:absolute;right:0;bottom:0;display:flex;gap:6px;z-index:12}
-.side-btn{position:relative;width:36px;height:36px;border-radius:999px;color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .15s,background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .15s}
-.side-btn:hover{color:var(--primary)}
-.side-btn:active{transform:scale(.92)}
-.side-btn.glass::before{display:none}
+.drawer-theme-wrap{position:relative;margin-top:auto;width:calc(100% - 24px);margin-left:12px;margin-right:12px;padding-top:10px;border-top:0.5px solid var(--drawer-border);display:flex;align-items:center}
+.theme-selector{position:relative;display:flex;align-items:stretch;width:100%;height:36px;padding:2px;border-radius:18px;user-select:none}
+.theme-selector.glass::before{display:none}
+.theme-switch-pill{position:absolute;top:2px;bottom:2px;left:2px;width:calc((100% - 4px) * .42);border-radius:16px;background:var(--theme-pill-bg);box-shadow:var(--theme-pill-shadow);z-index:1;pointer-events:none;transition:left .35s cubic-bezier(.22,1,.36,1),width .35s cubic-bezier(.22,1,.36,1),background-color .3s ease,box-shadow .3s ease}
+.theme-selector:not([data-mode="auto"]) .theme-switch-pill{left:calc(2px + (100% - 4px) * .42);width:calc((100% - 4px) * .58);background:var(--theme-group-bg);box-shadow:inset 0 0 0 1px var(--theme-group-border)}
+.theme-option{position:relative;z-index:2;border:0;background:transparent;font:inherit;font-size:12px;line-height:1;color:var(--text2);cursor:pointer;padding:0;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;transition:color .2s ease,opacity .2s ease}
+.theme-option:hover{color:var(--text)}
+.theme-option.active{color:var(--text);font-weight:600}
+.theme-opt-auto{flex:0 0 42%;height:100%;border-radius:16px}
+.theme-manual-group{position:relative;flex:0 0 58%;height:100%;display:flex;align-items:stretch;padding:2px;border-radius:16px;z-index:2}
+.theme-switch-sub-pill{position:absolute;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);border-radius:14px;background:var(--theme-pill-bg);box-shadow:var(--theme-pill-shadow);z-index:1;pointer-events:none;opacity:0;transform:translateX(0) scale(.88);transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .22s ease,background-color .3s ease,box-shadow .3s ease}
+.theme-selector[data-mode="light"] .theme-switch-sub-pill{opacity:1;transform:translateX(0) scale(1)}
+.theme-selector[data-mode="dark"] .theme-switch-sub-pill{opacity:1;transform:translateX(100%) scale(1)}
+.theme-manual-summary{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;transition:opacity .2s ease,transform .25s cubic-bezier(.22,1,.36,1)}
+.theme-manual-title{font-size:11px;font-weight:600;line-height:1.15;color:var(--text2);transition:color .2s ease}
+.theme-manual-sub{font-size:9px;line-height:1.1;color:var(--text3);margin-top:1px;letter-spacing:-0.2px}
+.theme-manual-group:hover .theme-manual-title{color:var(--text)}
+.theme-selector:not([data-mode="auto"]) .theme-manual-summary,.theme-manual-group:focus-within .theme-manual-summary{opacity:0;transform:scale(.92)}
+.theme-opt-sub{flex:1;height:100%;border-radius:14px}
+.theme-selector[data-mode="auto"] .theme-manual-group:not(:focus-within) .theme-opt-sub{opacity:0}
 .ico{width:1em;height:1em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:-0.125em}
 .drawer-item .ico{font-size:18px}
-.side-btn .ico{font-size:17px;position:relative;z-index:2}
 .fab-toggle .ico{font-size:20px}
 .search-btn .ico{font-size:18px}
 .empty .ico{font-size:44px;stroke-width:1.5;margin-bottom:16px}
-[data-theme="dark"] .theme-selector.glass,[data-theme="dark"] .side-btn{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.15);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.08),inset -1px 1px 1px -1px rgba(255,255,255,0.08),0 2px 8px rgba(0,0,0,0.3);color:var(--text)}
+[data-theme="dark"] .theme-selector.glass{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.15);box-shadow:inset 1px -1px 1px -1px rgba(255,255,255,0.08),inset -1px 1px 1px -1px rgba(255,255,255,0.08),0 2px 8px rgba(0,0,0,0.3);color:var(--text)}
 .content{flex:1;min-width:0;padding:24px}
 .content-header{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 16px;margin-bottom:20px}
 .content-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px;min-width:0}
@@ -473,7 +489,7 @@ html{scrollbar-gutter:stable}
 @media (min-width:769px){
 .search-bar-bottom{left:196px}
 }
-@media (prefers-reduced-motion:reduce){.drawer-list::before,.drawer-item,.drawer-item .ico,.drawer-mask,.drawer{transition:none}}
+@media (prefers-reduced-motion:reduce){.drawer-list::before,.drawer-item,.drawer-item .ico,.drawer-mask,.drawer,.theme-switch-pill,.theme-switch-sub-pill,.theme-option,.theme-manual-summary{transition:none}}
 
 .drawer-page-links{margin:14px 12px;padding-top:10px;border-top:1px solid var(--border)}
 .drawer-page-links a{text-decoration:none}
@@ -641,19 +657,18 @@ body.has-compare .search-bar-bottom{left:74px}
       </ul>
       <div class="drawer-page-links"><a class="drawer-item" href="analysis.html" id="nav-analysis"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg>数据分析</a></div>
       <div class="drawer-theme-wrap" id="drawer-theme">
-        <div class="theme-anchor">
-          <div class="theme-selector glass" id="theme-selector" role="radiogroup" aria-label="主题模式">
-            <div class="theme-selector-track" id="theme-selector-track">
-              <div class="theme-option" role="radio" aria-checked="false" tabindex="0" data-value="auto">自动</div>
-              <div class="theme-option" role="radio" aria-checked="false" tabindex="0" data-value="light">浅色</div>
-              <div class="theme-option active" role="radio" aria-checked="true" tabindex="0" data-value="dark">深色</div>
-            </div>
-            <div class="theme-menu-bottom" aria-hidden="true"></div>
+        <div class="theme-selector glass" id="theme-selector" role="radiogroup" aria-label="主题模式" data-mode="auto">
+          <span class="theme-switch-pill" aria-hidden="true"></span>
+          <button type="button" class="theme-option theme-opt-auto active" role="radio" aria-checked="true" tabindex="0" data-value="auto">自动</button>
+          <div class="theme-manual-group">
+            <span class="theme-switch-sub-pill" aria-hidden="true"></span>
+            <span class="theme-manual-summary" aria-hidden="true">
+              <span class="theme-manual-title">手动</span>
+              <span class="theme-manual-sub">浅色 · 深色</span>
+            </span>
+            <button type="button" class="theme-option theme-opt-sub" role="radio" aria-checked="false" tabindex="-1" data-value="light">浅色</button>
+            <button type="button" class="theme-option theme-opt-sub" role="radio" aria-checked="false" tabindex="-1" data-value="dark">深色</button>
           </div>
-        </div>
-        <div class="side-btns">
-          <button type="button" class="side-btn glass" id="btn-changelog" title="更新日志" aria-label="更新日志"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg></button>
-          <button type="button" class="side-btn glass" id="btn-about" title="关于" aria-label="关于"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg></button>
         </div>
       </div>
     </nav>
@@ -713,13 +728,16 @@ body.has-compare .search-bar-bottom{left:74px}
 
 <div class="changelog-mask" id="changelog-mask" role="dialog" aria-modal="true" aria-label="更新日志">
   <div class="changelog-panel glass">
+    <div class="modal-scroll" tabindex="0" role="region" aria-label="更新日志内容">
     <h2 class="modal-title">更新日志 <button type="button" class="changelog-close" id="changelog-close" aria-label="关闭">&times;</button></h2>
     <ul class="changelog-list" id="changelog-list"></ul>
+    </div>
   </div>
 </div>
 
 <div class="about-mask" id="about-mask" role="dialog" aria-modal="true" aria-label="关于">
   <div class="about-panel glass">
+    <div class="modal-scroll" tabindex="0" role="region" aria-label="关于内容">
     <h2 class="modal-title">关于<button type="button" class="about-close" id="about-close" aria-label="关闭">&times;</button></h2>
     <div class="about-body">
       <div id="perf-note" class="perf-note"></div>
@@ -731,6 +749,7 @@ body.has-compare .search-bar-bottom{left:74px}
       <h3>免责声明</h3>
       <p>本网站为个人非商业项目，所有数据仅供参考，不构成任何购买建议。</p>
       <p>跑分数据来源于极客湾、IT之家、NotebookCheck等公开评测，如有误差以官方数据为准。</p>
+    </div>
     </div>
   </div>
 </div>
@@ -767,50 +786,33 @@ if ('serviceWorker' in navigator && window.isSecureContext &&
   var saved = localStorage.getItem('theme');
   var mql = window.matchMedia('(prefers-color-scheme: dark)');
   mql.addEventListener('change', function(e) {
-    if (localStorage.getItem('theme') === 'auto') {
+    var cur = localStorage.getItem('theme');
+    if (cur === 'auto' || !cur) {
       document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
       updateThemeIcon('auto');
       refreshAllSliders();
     }
   });
-  if (saved === 'auto') {
-    document.documentElement.setAttribute('data-theme', mql.matches ? 'dark' : 'light');
-    updateThemeIcon('auto');
+  if (saved === 'light' || saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeIcon(saved);
     return;
   }
-  if (!saved) {
-    saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  document.documentElement.setAttribute('data-theme', saved);
-  updateThemeIcon(saved);
+  document.documentElement.setAttribute('data-theme', mql.matches ? 'dark' : 'light');
+  updateThemeIcon('auto');
 })();
 
 function updateThemeIcon(mode) {
-  var theme = document.documentElement.getAttribute('data-theme');
   var selector = document.getElementById('theme-selector');
-  var track = document.getElementById('theme-selector-track');
-  if (!selector || !track) return;
-  
-  var options = track.querySelectorAll('.theme-option');
-  var activeIndex = 0;
-  options.forEach(function(opt, idx) {
-    var val = opt.dataset.value;
-    var isActive = (mode === 'auto' && val === 'auto') || 
-                   (mode !== 'auto' && val === theme);
+  if (!selector) return;
+  var currentMode = (mode === 'light' || mode === 'dark') ? mode : 'auto';
+  selector.setAttribute('data-mode', currentMode);
+  selector.querySelectorAll('.theme-option').forEach(function(opt) {
+    var isActive = opt.dataset.value === currentMode;
     opt.classList.toggle('active', isActive);
     opt.setAttribute('aria-checked', isActive ? 'true' : 'false');
     opt.tabIndex = isActive ? 0 : -1;
-    if (isActive) activeIndex = idx;
   });
-  
-  var optionHeight = 36;
-  var targetOffset = -activeIndex * optionHeight;
-  
-  if (selector.classList.contains('open')) {
-    track.style.transform = 'translateY(0)';
-  } else {
-    track.style.transform = 'translateY(' + targetOffset + 'px)';
-  }
 }
 
 function refreshAllSliders() {
@@ -866,7 +868,7 @@ window._hmt = window._hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-var IMG_V = '20261103';
+var IMG_V = '20261109-2';
 var imgCache = {};
 var devices = [];
 var processorsMap = {};
@@ -1886,17 +1888,7 @@ function jumpToDevice(category, id) {
 
 var drawerMask = document.getElementById('drawer-mask');
 function openDrawer() { drawerMask.classList.add('open'); }
-function closeDrawer() { drawerMask.classList.remove('open'); closeThemeSelector(); }
-function closeThemeSelector() {
-  var sel = document.getElementById('theme-selector');
-  var trk = document.getElementById('theme-selector-track');
-  if (!sel || !sel.classList.contains('open')) return;
-  var idx = 0;
-  trk.querySelectorAll('.theme-option').forEach(function(o, i) { if (o.classList.contains('active')) idx = i; });
-  sel.classList.remove('open');
-  trk.style.transform = 'translateY(' + (-idx * 36) + 'px)';
-  if (sel.contains(document.activeElement)) trk.querySelector('.theme-option.active').focus();
-}
+function closeDrawer() { drawerMask.classList.remove('open'); }
 
 function updateCategoryIndicator() {
   var list = document.querySelector('.drawer-list');
@@ -1968,31 +1960,9 @@ function setupEventDelegation() {
   document.getElementById('search-btn').addEventListener('click', handleSearch);
   document.getElementById('search-clear').addEventListener('click', clearSearch);
   document.getElementById('drawer-theme').addEventListener('click', function(e) {
-    var selector = document.getElementById('theme-selector');
-    var track = document.getElementById('theme-selector-track');
     var option = e.target.closest('.theme-option');
-    
-    if (!selector.classList.contains('open')) {
-      selector.classList.add('open');
-      track.style.transform = 'translateY(0)';
-      return;
-    }
-    
-    if (option) {
-      var val = option.dataset.value;
-      var options = track.querySelectorAll('.theme-option');
-      var newActiveIndex = 0;
-      options.forEach(function(opt, idx) {
-        if (opt.dataset.value === val) newActiveIndex = idx;
-      });
-      
-      var optionHeight = 36;
-      var newOffset = -newActiveIndex * optionHeight;
-      selector.classList.remove('open');
-      track.style.transform = 'translateY(' + newOffset + 'px)';
-      
-      switchThemeWithRipple(val, option);
-    }
+    if (!option) return;
+    switchThemeWithRipple(option.dataset.value, option);
   });
   document.getElementById('theme-selector').addEventListener('keydown', function(e) {
     var selector = this, options = Array.prototype.slice.call(selector.querySelectorAll('.theme-option'));
@@ -2000,20 +1970,22 @@ function setupEventDelegation() {
     if (!current) return;
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      current.click();
-      if (!selector.classList.contains('open')) selector.querySelector('.theme-option.active').focus();
-    } else if (selector.classList.contains('open') && (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowLeft')) {
+      switchThemeWithRipple(current.dataset.value, current);
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'Home' || e.key === 'End') {
       e.preventDefault();
-      var step = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : -1;
-      options[(options.indexOf(current) + step + options.length) % options.length].focus();
+      var idx = options.indexOf(current);
+      var nextIdx = e.key === 'Home' ? 0 : e.key === 'End' ? options.length - 1 : (idx + ((e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : -1) + options.length) % options.length;
+      var nextOpt = options[nextIdx];
+      switchThemeWithRipple(nextOpt.dataset.value, nextOpt);
+      nextOpt.focus();
     }
   });
-  document.addEventListener('click', function(e) {
-    var sel = document.getElementById('theme-selector');
-    if (sel && sel.classList.contains('open') && !sel.contains(e.target)) closeThemeSelector();
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'theme') {
+      if (e.newValue === 'light' || e.newValue === 'dark') setTheme(e.newValue);
+      else followSystemTheme();
+    }
   });
-  document.getElementById('btn-changelog').addEventListener('click', function(e) { e.stopPropagation(); toggleChangelog(); });
-  document.getElementById('btn-about').addEventListener('click', function(e) { e.stopPropagation(); toggleAbout(); });
   document.querySelector('.site-footer').addEventListener('click', function(e) {
     var category = e.target.closest('[data-footer-cat]');
     if (category) { filterCat(category.dataset.footerCat); window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); return; }
@@ -2026,7 +1998,7 @@ function setupEventDelegation() {
   document.getElementById('changelog-mask').addEventListener('click', function(e) { if (e.target === this) toggleChangelog(); });
   document.getElementById('about-mask').addEventListener('click', function(e) { if (e.target === this) toggleAbout(); });
   document.getElementById('changelog-list').addEventListener('click', function(e) { const t = e.target.closest('.changelog-toggle'); if (t) { const dd = t.nextElementSibling; if (dd) { dd.classList.toggle('open'); t.textContent = dd.classList.contains('open') ? '收起设备▼' : '查看新增设备 ▶'; } } });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { const sel = document.getElementById('theme-selector'); if (sel && sel.classList.contains('open')) { closeThemeSelector(); sel.querySelector('.theme-option.active').focus(); return; } const cl = document.getElementById('changelog-mask'), ab = document.getElementById('about-mask'); if (cl.classList.contains('open')) toggleChangelog(); else if (ab.classList.contains('open')) toggleAbout(); else if (activePanel) { var card = activePanel.parentNode; closeActivePanel(); if (card) card.focus({ preventScroll: true }); } } });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { const cl = document.getElementById('changelog-mask'), ab = document.getElementById('about-mask'); if (cl.classList.contains('open')) toggleChangelog(); else if (ab.classList.contains('open')) toggleAbout(); else if (activePanel) { var card = activePanel.parentNode; closeActivePanel(); if (card) card.focus({ preventScroll: true }); } } });
   var sliderRafId = null;
   grid.addEventListener('input', function(e) {
     const slider = e.target.closest('.perf-slider');

@@ -1948,14 +1948,27 @@ function setupEventDelegation() {
   document.querySelector('.drawer-list').addEventListener('click', function(e) { const item = e.target.closest('.drawer-item'); if (item && item.dataset.cat) filterCat(item.dataset.cat); });
   document.querySelector('.drawer-list').addEventListener('keydown', function(e) { const item = e.target.closest('.drawer-item'); if (item && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); item.click(); } });
   document.getElementById('search-input').addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); handleSearch(); } if (e.key === 'Escape') { document.getElementById('search-input').blur(); } });
+  var easterEggLoading = false;
   document.getElementById('search-input').addEventListener('input', function() {
     toggleClearBtn();
-    if (this.value.trim() === '33550336' && !window.__loopCollapse) {
-      this.value = ''; toggleClearBtn();
-      var s = document.createElement('script');
-      s.src = 'easter-egg.js'; s.async = true;
-      document.body.appendChild(s);
-    }
+    var trigger = this.value.trim();
+    var variant = trigger === '杀生樱' ? 'sakura' : trigger === '大杀生咒禁' ? 'curse' : '';
+    if (trigger !== '33550336' && !variant) return;
+    if (easterEggLoading || window.__loopCollapse || window.__yaeEasterActive) return;
+
+    easterEggLoading = true;
+    this.value = '';
+    toggleClearBtn();
+    var script = document.createElement('script');
+    script.src = variant ? 'yae-easter-egg.js' : 'easter-egg.js';
+    script.async = true;
+    if (variant) script.dataset.variant = variant;
+    script.addEventListener('load', function() { easterEggLoading = false; }, { once: true });
+    script.addEventListener('error', function() {
+      easterEggLoading = false;
+      script.remove();
+    }, { once: true });
+    document.body.appendChild(script);
   });
   document.getElementById('search-btn').addEventListener('click', handleSearch);
   document.getElementById('search-clear').addEventListener('click', clearSearch);

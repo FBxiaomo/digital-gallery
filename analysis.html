@@ -225,7 +225,7 @@ a{color:inherit}button,input,select{font:inherit}select[hidden]{display:none!imp
     <noscript><p>启用 JavaScript 后可查看数据图表。</p></noscript>
     <form class="controls surface glass" id="analysis-controls" aria-label="分析条件">
       <div class="fields">
-        <label>设备分类<select id="category"><option>手机</option><option>处理器</option><option>充电器</option><option>充电宝</option></select></label>
+        <label>设备分类<select id="category"><option>手机</option><option>处理器</option><option>充电器</option><option>充电宝</option><option>耳机</option></select></label>
         <label>分析指标<select id="metric"></select></label>
         <label>品牌<select id="brand"><option value="">全部品牌</option></select></label>
         <label>搜索设备<span class="input-shell glass"><input type="search" id="query" maxlength="100" placeholder="名称、型号或参数"></span></label>
@@ -243,7 +243,7 @@ a{color:inherit}button,input,select{font:inherit}select[hidden]{display:none!imp
 <script src="db/processors.js"></script>
 <script src="db/phones.js"></script>
 <script src="db/chargers.js"></script>
-<script src="db/powerbanks.js"></script>
+<script src="db/powerbanks.js"></script><script src="db/earphones.js"></script>
 <script>
 (function() {
 'use strict';
@@ -282,9 +282,9 @@ function getPerfResult(s, preferred) {
 
 const el = id => document.getElementById(id);
 const pillControls = new Map();
-const metrics = {price:['参考价','元'],capacity:['电池容量','mAh'],power:['最大功率','W'],perf:['相对性能','%'],single:['GeekBench 6 单核','分'],multi:['GeekBench 6 多核','分'],weight:['重量','g']};
-const categories = {'手机':phones,'处理器':processors,'充电器':chargers,'充电宝':powerbanks};
-const categoryMetrics = {'手机':['price','capacity','power','perf','weight'],'处理器':['perf','single','multi'],'充电器':['price','power','weight'],'充电宝':['price','capacity','power','weight']};
+const metrics = {earBattery:['单耳续航','小时'],totalBattery:['总续航','小时'],anc:['降噪深度','dB'],driver:['动圈单元直径','mm'],earWeight:['单耳重量','g'],price:['参考价','元'],capacity:['电池容量','mAh'],power:['最大功率','W'],perf:['相对性能','%'],single:['GeekBench 6 单核','分'],multi:['GeekBench 6 多核','分'],weight:['重量','g']};
+const categories = {'手机':phones,'处理器':processors,'充电器':chargers,'充电宝':powerbanks,'耳机':earphones};
+const categoryMetrics = {'耳机':['price','earBattery','totalBattery','anc','driver','earWeight'],'手机':['price','capacity','power','perf','weight'],'处理器':['perf','single','multi'],'充电器':['price','power','weight'],'充电宝':['price','capacity','power','weight']};
 const processorMap = new Map(processors.map(p => [p.id,p]));
 function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
 function number(v, unit) {
@@ -294,6 +294,7 @@ function number(v, unit) {
 }
 function value(d,k) {
   const s = d.specs || {};
+  const earField={earBattery:['单耳续航','小时'],totalBattery:['总续航','小时'],anc:['降噪深度','dB'],driver:['发声单元','mm'],earWeight:['单耳重量','g']}[k]; if(earField)return number(s[earField[0]],earField[1]);
   if (k === 'price') return number(d.price);
   if (k === 'capacity') return number(s['电池容量'],'mAh');
   if (k === 'weight') return number(s['重量'],'g');

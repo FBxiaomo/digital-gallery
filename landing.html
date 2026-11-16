@@ -639,7 +639,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   transition: transform .25s var(--ease-proj), opacity .2s var(--ease);
 }
 .closing-copy .text-link:hover { color: var(--bg); opacity: .9; transform: translateY(-2px); gap: 10px; }
-.landing-footer { position: relative; overflow: hidden; background: #000000; color: #f0f0f0; padding: 58px 40px 20px; }
+.landing-footer { position: relative; overflow: hidden; background: #000000; color: #f0f0f0; padding: 58px 40px 0; }
 .footer-inner { position: relative; z-index: 2; max-width: 1160px; margin: 0 auto; }
 .footer-columns { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
 .footer-brand { display: flex; align-items: center; gap: 9px; font-size: 17px; font-weight: 650; letter-spacing: 0; text-decoration: none; }
@@ -649,11 +649,21 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .footer-list { display: flex; flex-direction: column; gap: 3px; list-style: none; padding: 0; margin: 0; }
 .footer-list a { display: inline-flex; align-items: center; min-height: 32px; color: rgba(255,255,255,.55); text-decoration: none; font-size: 12px; transition: color .2s var(--ease); }
 .footer-list a:hover { color: #fff; }
-.footer-horizon { position: relative; height: 300px; width: calc(100% + 80px); margin: 0 -40px; pointer-events: none; overflow: hidden; mask-image: linear-gradient(to bottom, #000 76%, transparent); -webkit-mask-image: linear-gradient(to bottom, #000 76%, transparent); }
-.horizon-halo { position: absolute; width: 740px; height: 340px; left: 50%; top: 0; transform: translateX(-50%); background: radial-gradient(ellipse at 50% 73%, rgba(209,182,255,.82) 0%, rgba(127,77,245,.50) 12%, rgba(97,46,227,.19) 35%, transparent 66%); }
-.horizon-arc { position: absolute; width: 160%; height: 400px; left: -30%; top: 208px; border-top: 2px solid #b897ff; border-radius: 50%; background: radial-gradient(ellipse at 50% 0, rgba(131,84,241,.52), rgba(73,34,180,.12) 34%, transparent 60%); box-shadow: 0 -2px 8px #ab82ff, 0 -8px 32px rgba(109,55,231,.62); }
-.horizon-sun { position: absolute; top: 177px; left: 50%; width: 116px; height: 70px; transform: translateX(-50%); border-radius: 50%; background: #f6eeff; box-shadow: 0 0 24px 12px #dbbdff, 0 0 65px 34px rgba(144,85,255,.85); filter: blur(13px); }
-.footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 18px; font-size: 10px; color: rgba(255,255,255,.5); }
+@font-face {
+  font-family: "DinkieBitmap-9pxDemo";
+  src: url("fonts/DinkieBitmap-9pxDemo.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.footer-wordmark {
+  position: relative; z-index: 1; box-sizing: content-box;
+  width: 100%; max-width: 1160px; aspect-ratio: 9 / 1; padding-top: 40px; margin: 0 auto;
+  overflow: hidden; color: #222222;
+}
+.footer-wordmark svg { display: block; width: 100%; height: auto; overflow: visible; }
+.footer-wordmark text { fill: currentColor; font-family: "DinkieBitmap-9pxDemo", sans-serif; font-size: 240px; font-weight: 400; letter-spacing: 0; text-anchor: middle; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 32px; font-size: 10px; color: rgba(255,255,255,.5); }
 .footer-bottom a { color: rgba(255,255,255,.65); text-decoration: none; }
 @media (max-width: 900px) {
   .section-shell { padding: 72px 24px; }
@@ -690,13 +700,10 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .wall-tile { border-radius: var(--r-md); }
   .closing { padding-bottom: 60px; }
   .scroll-cue { padding-top: 18px; }
-  .landing-footer { padding: 40px 22px 22px; }
+  .landing-footer { padding: 40px 22px 0; }
   .footer-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px; }
   .footer-intro { grid-column: 1 / -1; }
-  .footer-horizon { height: 240px; width: calc(100% + 44px); margin: 0 -22px; }
-  .horizon-arc { width: 200%; left: -50%; top: 173px; }
-  .horizon-halo { width: 490px; height: 280px; }
-  .horizon-sun { top: 154px; width: 78px; height: 45px; }
+  .footer-wordmark { width: calc(100% + 44px); max-width: none; margin: 0 -22px; }
   .footer-bottom { line-height: 1.8; }
 }
 @media (max-height: 700px) { .scroll-cue { display: none; } }
@@ -796,8 +803,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
       <nav aria-label="作者链接"><h2 class="footer-heading">作者</h2><ul class="footer-list"><li><a href="https://fbxiaomo.github.io/" target="_blank" rel="noopener noreferrer">个人主页 ↗</a></li><li><a href="https://space.bilibili.com/267057576" target="_blank" rel="noopener noreferrer">B 站主页 ↗</a></li></ul></nav>
     </div>
   </div>
-  <div class="footer-horizon" aria-hidden="true"><div class="horizon-halo"></div><div class="horizon-arc"></div><div class="horizon-sun"></div></div>
   <div class="footer-inner footer-bottom"><span>© <span id="footer-year">2026</span> 风暴小末</span><a href="#main-content">数码图鉴 ↑</a></div>
+  <div class="footer-wordmark" aria-hidden="true"><svg viewBox="0 0 1160 210" focusable="false"><text x="580" y="174">Xiaomowiki</text></svg></div>
 </footer>
 <script src="db/phones.js"></script>
 <script src="db/chargers.js"></script>

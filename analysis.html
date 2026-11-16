@@ -282,7 +282,7 @@ function getPerfResult(s, preferred) {
 
 const el = id => document.getElementById(id);
 const pillControls = new Map();
-const metrics = {earBattery:['单耳续航','小时'],totalBattery:['总续航','小时'],anc:['降噪深度','dB'],driver:['动圈单元直径','mm'],earWeight:['单耳重量','g'],price:['参考价','元'],capacity:['电池容量','mAh'],power:['最大功率','W'],perf:['相对性能','%'],single:['GeekBench 6 单核','分'],multi:['GeekBench 6 多核','分'],weight:['重量','g']};
+const metrics = {earBattery:['单耳续航','小时'],totalBattery:['总续航','小时'],anc:['降噪深度','dB'],driver:['发声单元直径','mm'],earWeight:['单耳重量','g'],price:['参考价','元'],capacity:['电池容量','mAh'],power:['最大功率','W'],perf:['相对性能','%'],single:['GeekBench 6 单核','分'],multi:['GeekBench 6 多核','分'],weight:['重量','g']};
 const categories = {'手机':phones,'处理器':processors,'充电器':chargers,'充电宝':powerbanks,'耳机':earphones};
 const categoryMetrics = {'耳机':['price','earBattery','totalBattery','anc','driver','earWeight'],'手机':['price','capacity','power','perf','weight'],'处理器':['perf','single','multi'],'充电器':['price','power','weight'],'充电宝':['price','capacity','power','weight']};
 const processorMap = new Map(processors.map(p => [p.id,p]));

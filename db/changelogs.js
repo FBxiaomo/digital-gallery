@@ -2,12 +2,16 @@
 
 var changelogs =
 [
+  { date: '2026-11-16', ver: 'v1.31', text: '新增独立引导页，包含透视设备带与边缘拖影、设备精选、使用方式、常见问题、渐隐图片墙和地平线页脚；支持暂停、拖拽、主题及窄屏，三页 Logo 可返回引导页。' },
+  { date: '2026-11-16', ver: 'v1.30', text: '保留自动、浅色、深色切换，新增独立的默认、海洋、森野浅色主题预设；深色保持原配色，图鉴、分析和设备详情分别记忆并共享明暗模式与主题选择。' },
+  { date: '2026-11-16', ver: 'v1.29', text: '设备详情在参考价下方固定显示购买入口：已核验的商品链接优先，未录入京东商品页的手机、充电器、充电宝和耳机按设备名称生成京东检索链接，处理器不提供购买入口；京东入口采用浅色品牌红底色。' },
+  { date: '2026-11-16', ver: 'v1.28', text: '补充 5 条 B 站实测，新增 6 处设备关联：科技美学的小米10 与小米10 Pro 零售版开箱对比、影视飓风的小米10 至尊纪念版 8K 视频对比、小白测评的 vivo S30 系列体验（补挂 S30 Pro mini）、小猪隊长的 S30 Pro mini 十天使用和盐酸HClknight 的自费对比。', devices: ['小米10', '小米10 Pro', '小米10 至尊纪念版', 'vivo S30 Pro mini'] },
   { date: '2026-11-12', ver: 'v1.27', text: '搜索栏直接显示，并在对比按钮出现时直接调整位置。' },
   { date: '2026-11-12', ver: 'v1.26', text: '优化卡片操作菜单的弹簧入场，调整设备图片的悬停反馈。' },
   { date: '2026-11-12', ver: 'v1.25', text: '优化筛选面板圆角阴影，搜索栏和对比按钮增加连贯的弹簧动效。' },
   { date: '2026-11-12', ver: 'v1.24', text: '分类指示块、筛选面板和筛选下拉菜单采用弹簧动画，连续切换时接续当前速度，适配减少动态效果。' },
   { date: '2026-11-11', ver: 'v1.23', text: '补充部分耳机的相关测评。' },
-  { date: '2026-11-10', ver: 'v1.22', text: '精简耳机参数及图片展示，修正红米耳机卡片背景图。' },
+  { date: '2026-11-10', ver: 'v1.22', text: '耳机图鉴扩充，新增 QCY、水月雨、弱水时砂、原道 99 款，覆盖入耳、半入耳、头戴、耳夹与挂耳形态。', devices: ['原道 OriG in 原点', 'QCY Crossky C70', 'QCY H6 Neo', 'QCY H6 Ultra', 'QCY MeloBuds N20 Pro', 'QCY Heroad GT2 五模游戏耳机', 'QCY MeloBuds N65', 'QCY Crossky C50i', 'QCY A30', 'QCY T13Pro', 'QCY AilyBuds E50', 'QCY Crossky R50', 'QCY MeloBuds N20', 'QCY MeloBuds N70', 'QCY H3S', 'QCY MeloBuds N60', 'QCY Crossky C50', 'QCY Era 5', 'QCY Era 7', 'QCY Buds ANC', 'QCY Crossky C10', 'QCY AilyBuds E10', 'QCY AilyBuds E20', 'QCY Buds', 'QCY Crossky R70', 'QCY Crossky C30S', 'QCY MeloBuds N30', 'QCY H3 Pro', 'QCY Crossky C30', 'QCY MeloBuds Neo', 'QCY MeloBuds Pro', 'QCY AilyBuds Clear', 'QCY Crossky GTR2', 'QCY H3 Lite', 'QCY AilyBuds Pro+', 'QCY Crossky Link2', 'QCY AilyBuds Lite', 'QCY H3', 'QCY H4', 'QCY G1', 'QCY Crossky GTR', 'QCY Crossky Link', 'QCY MeloBuds ANC', 'QCY-T13 ANC', 'QCY ArcBuds', 'QCY T13', 'QCY T13 X', 'QCY ArcBuds Lite', '弱水时砂 寒武纪', '弱水时砂 琉璃 MK2', '弱水时砂 琉璃 Ultra', '弱水时砂 OpenFun', '弱水时砂 SportFeel', '弱水时砂 踏浪', '弱水时砂 HeadFeel', '弱水时砂 Speakfeel', '弱水时砂 光翼 Luminous', '弱水时砂 Earfeel i7', '弱水时砂 阿斯特 Astro-X', '弱水时砂 锆势', '弱水时砂 欧泊', '弱水时砂 踏浪2', '弱水时砂 浩天使', '弱水时砂 BudsFeel Mk2', '弱水时砂 Mirror', '弱水时砂 OpenFeel MK2', '弱水时砂 珊瑚Coral', '弱水时砂 茉莉', '弱水时砂 风信子', '水月雨 海市蜃楼 MIRAGE', '水月雨 布丁 PUDDING', '水月雨 可露凯 KLUKAI', '水月雨 鸣潮 U.C.T.S.', '水月雨 太空漫游2 Ultra', '水月雨 少女前线 猫饼 QBZ-191', '水月雨 音乐胶囊 PILL', '水月雨 太空漫游2', '水月雨 梦回2 GOLDEN AGES 2', '水月雨 羽翼 EDGE', '水月雨 知更鸟 ROBIN', '水月雨 梦回 安野希世乃', '水月雨 超声波 ULTRASONIC', '水月雨 猫咖 MOCA', '水月雨 须佐之男 SPACE TRAVEL', '水月雨 长征五号 太空漫游', '水月雨 梦回1979 GOLDEN AGES', '水月雨 太空漫游 SPACE TRAVEL', '水月雨 三体太空军 SPACE FORCE', '水月雨 爱丽丝 ALICE', '水月雨 灰烬战线 猫饼 NEKOCAKE', '水月雨 猫饼 NEKOCAKE', '水月雨 火花 SPARKS', '水月雨 羽翼2 EDGE 2', '水月雨 × PANDAER 太空漫游2', '水月雨 × 战双帕弥什 太空漫游', 'QCY H2 Pro', 'QCY T17', 'QCY AilyPods', 'QCY T18 MeloBuds'] },
   { date: '2026-11-10', ver: 'v1.21', text: '新增耳机分类，支持参数筛选、续航排序、对比和独立详情，首批收录两款降噪耳机并区分标称与拆解资料。', devices: ['vivo TWS Air3 Pro', 'Redmi AirDots 3 Pro'] },
   { date: '2026-11-10', ver: 'v1.20', text: '优化了部分视觉效果。' },
   { date: '2026-11-10', ver: 'v1.19', text: '优化了部分交互体验。' },

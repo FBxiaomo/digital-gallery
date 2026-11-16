@@ -604,7 +604,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "Anker Prime 充电宝 12000mAh 130W",
     "brand": "安克 Anker",
-    "model": "A1335",
     "tags": [
       "12000mAh",
       "130W",
@@ -628,9 +627,20 @@ var powerbanks = [
       "电池类型": "锂离子电池",
       "配色": "黑色"
     },
+    "model": "A1335",
     "price": "参考价 549 元",
     "release_date": "2024-06",
-    "notes": "Prime系列；2C双口各65W，合计130W；支持OPPO私有协议；可搭配磁吸底座（另购）；43.2Wh可上飞机"
+    "notes": "Prime系列；2C双口各65W，合计130W；支持OPPO私有协议；可搭配磁吸底座（另购）；43.2Wh可上飞机",
+    "reviews": [
+      {
+        "url": "https://www.bilibili.com/video/BV1ecVkzfEi3/",
+        "title": "这么贵的充电宝值吗？安克prime 130W移动电源详细测试",
+        "platform": "哔哩哔哩",
+        "author": "离火测拆",
+        "cover": "https://i2.hdslb.com/bfs/archive/343902a2a088d5354a51bdb13ba84388b5130ddc.jpg",
+        "publishedAt": "2025-05-05"
+      }
+    ]
   },
   {
     "id": "anker-a1339",
@@ -731,7 +741,6 @@ var powerbanks = [
     "category": "充电宝",
     "name": "酷态科15号超级电能卡Air",
     "brand": "酷态科 CUKTECH",
-    "model": "PB150S",
     "tags": [
       "15000mAh",
       "100W",
@@ -759,9 +768,36 @@ var powerbanks = [
       "附赠线材": "240W C to C 充电线",
       "配色": "钛灰色"
     },
+    "model": "PB150S",
     "price": "参考价 269 元",
     "release_date": "2025-07",
-    "notes": "碳硅负极电池仅21mm厚；支持小米90W澎湃快充；57.75Wh可上飞机"
+    "notes": "碳硅负极电池仅21mm厚；支持小米90W澎湃快充；57.75Wh可上飞机",
+    "reviews": [
+      {
+        "url": "https://www.bilibili.com/video/BV1zgGGz7EHL/",
+        "title": "CUKTECH酷态科15号超级电能卡Air拆解：内置碳硅负极电池，厚度仅2.1cm",
+        "platform": "哔哩哔哩",
+        "author": "充电头网",
+        "cover": "https://i0.hdslb.com/bfs/archive/43e9dc9a94b02dc02e68fa2dec208ef6154c1f48.jpg",
+        "publishedAt": "2025-07-11"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1txGMzDEjU/",
+        "title": "关公卖豆腐！酷态科新品15Air充电宝自费评测",
+        "platform": "哔哩哔哩",
+        "author": "站长巨帅",
+        "cover": "https://i1.hdslb.com/bfs/archive/a1cf518447b768ef61aa02de94c759ba845001a2.jpg",
+        "publishedAt": "2025-07-10"
+      },
+      {
+        "url": "https://www.bilibili.com/video/BV1Kd3xzwEj4/",
+        "title": "硅碳负极和氮化镓！评测拆解酷态科15Air充电宝",
+        "platform": "哔哩哔哩",
+        "author": "阿甘体验",
+        "cover": "https://i2.hdslb.com/bfs/archive/31e15ae9eb9c71031b8bf83c1bb8b1a16773f66d.jpg",
+        "publishedAt": "2025-07-04"
+      }
+    ]
   },
   {
     "id": "cuktech-pb200p",

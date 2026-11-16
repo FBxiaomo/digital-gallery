@@ -1104,7 +1104,19 @@ var phones = [
     },
     "price": "3999 元起（8+128GB）",
     "release_date": "2020-02-13",
-    "notes": "小米十周年旗舰，1亿像素主摄+30W无线快充；公有PD/PPS约27W，私有Charge Turbo 30W"
+    "notes": "小米十周年旗舰，1亿像素主摄+30W无线快充；公有PD/PPS约27W，私有Charge Turbo 30W",
+    "reviews": [
+      {
+        "title": "「科技美学直播」小米10、小米10Pro 有何区别？零售版开箱对比体验",
+        "url": "https://www.bilibili.com/video/BV1d7411w7KQ/",
+        "cover": "https://i1.hdslb.com/bfs/archive/b1ddb4582e53865cb3136851486b2b55dfff70fc.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2020-02-21",
+        "checkedAt": "2026-11-16",
+        "scope": "小米10 与小米10 Pro 零售版开箱对比"
+      }
+    ]
   },
   {
     "id": "xiaomi-10-pro",
@@ -1175,6 +1187,16 @@ var phones = [
         "author": "小白测评",
         "publishedAt": "2020-02-13",
         "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "「科技美学直播」小米10、小米10Pro 有何区别？零售版开箱对比体验",
+        "url": "https://www.bilibili.com/video/BV1d7411w7KQ/",
+        "cover": "https://i1.hdslb.com/bfs/archive/b1ddb4582e53865cb3136851486b2b55dfff70fc.jpg",
+        "platform": "哔哩哔哩",
+        "author": "科技美学",
+        "publishedAt": "2020-02-21",
+        "checkedAt": "2026-11-16",
+        "scope": "小米10 与小米10 Pro 零售版开箱对比"
       }
     ]
   },
@@ -1247,6 +1269,16 @@ var phones = [
         "author": "科技美学",
         "publishedAt": "2020-08-12",
         "checkedAt": "2026-11-07"
+      },
+      {
+        "title": "【影视飓风】米10超大杯8K VS 5K电影机，参数代表一切吗？",
+        "url": "https://www.bilibili.com/video/BV1YD4y127Gw/",
+        "cover": "https://i2.hdslb.com/bfs/archive/188197402244cb85f31317208b57bf6ad710dfc9.jpg",
+        "platform": "哔哩哔哩",
+        "author": "影视飓风",
+        "publishedAt": "2020-08-24",
+        "checkedAt": "2026-11-16",
+        "scope": "小米10 至尊纪念版 8K 视频拍摄对比 RED 5K 电影机"
       }
     ]
   },
@@ -2463,7 +2495,38 @@ var phones = [
     },
     "price": "3199 元起（12+256GB）",
     "release_date": "2025-05-29",
-    "notes": "小屏旗舰影像机，天玑9300+全大核；6.31″小屏+6500mAh大电池创纪录；IP68+IP69双防护；希区柯克变焦实况；磐石抗摔结构"
+    "notes": "小屏旗舰影像机，天玑9300+全大核；6.31″小屏+6500mAh大电池创纪录；IP68+IP69双防护；希区柯克变焦实况；磐石抗摔结构",
+    "reviews": [
+      {
+        "title": "「小白」vivo S30系列体验：撞色设计 氛围感出片！",
+        "url": "https://www.bilibili.com/video/BV1BE7Vz8EQk/",
+        "cover": "https://i0.hdslb.com/bfs/archive/a7428b18773ff892e541a56013e775a378662992.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小白测评",
+        "publishedAt": "2025-05-29",
+        "checkedAt": "2026-11-16",
+        "scope": "vivo S30 系列体验，覆盖 S30 与 S30 Pro mini"
+      },
+      {
+        "title": "硬件≠体验?! vivo S30 Pro mini 10天使用，实话实说!",
+        "url": "https://www.bilibili.com/video/BV1Zo7pzWEHJ/",
+        "cover": "https://i2.hdslb.com/bfs/archive/6929ff96fb1925c152ca27ca6c7785f4a8187f03.jpg",
+        "platform": "哔哩哔哩",
+        "author": "小猪隊长",
+        "publishedAt": "2025-05-30",
+        "checkedAt": "2026-11-16"
+      },
+      {
+        "title": "自费拿下! vivo S30 Pro mini好用吗？对比X200pm怎么说？优缺点都有啥？一期视频全拿下",
+        "url": "https://www.bilibili.com/video/BV1gaMgzDE9o/",
+        "cover": "https://i0.hdslb.com/bfs/archive/c34c326ab0dbf008520ff130ea745b0e1d1a9850.jpg",
+        "platform": "哔哩哔哩",
+        "author": "盐酸HClknight",
+        "publishedAt": "2025-06-13",
+        "checkedAt": "2026-11-16",
+        "scope": "vivo S30 Pro mini 自费体验，与 X200 Pro mini 对比"
+      }
+    ]
   },
   {
     "id": "honor-win",

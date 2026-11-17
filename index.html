@@ -74,6 +74,10 @@
   --card-mask-to: rgba(255,255,255,0.3);
   --card-glow: rgba(56,89,138,0.15);
   --card-name-shadow: none;
+  /* 图片加载中的卡片标题：银/金多段金属渐变。周期 170px 与标题沿 45° 轴的跨度（约 78px）同量级，
+     高光会依次扫过文字而不是整行同时变亮；约七成行程停在深灰可读色，银、金各一道窄峰。
+     瓦片边长取 170/√2≈120.21px，四边相位对齐，对角平移一个瓦片后与起始帧完全重合，循环无接缝。 */
+  --metal-shimmer: repeating-linear-gradient(45deg,#33353c 0px,#33353c 68px,#6a707a 74px,#949cab 78px,#c8d0de 81px,#949cab 84px,#6a707a 88px,#33353c 94px,#33353c 119px,#6b5216 124px,#8f6a1c 128px,#d4bc7c 131px,#f2e3b4 133px,#d4bc7c 135px,#8f6a1c 138px,#6b5216 142px,#33353c 170px);
   --badge-bg: rgba(0,0,0,0.06);
   --badge-border: rgba(0,0,0,0.08);
   --badge-color: #2c2c2a;
@@ -153,6 +157,8 @@
   --card-mask-to: rgba(17,17,17,0.35);
   --card-glow: rgba(80,80,80,0.4);
   --card-name-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  /* 深色卡片：基调抬到中灰，保证 #1a1a1a 卡面上仍有足够亮度与跨度 */
+  --metal-shimmer: repeating-linear-gradient(45deg,#9a9da7 0px,#9a9da7 68px,#b6bac4 74px,#cfd3dc 78px,#f2f5fa 81px,#cfd3dc 84px,#b6bac4 88px,#9a9da7 94px,#9a9da7 119px,#b08a2c 124px,#d8ab45 128px,#f8e2a4 131px,#fff7d6 133px,#f8e2a4 135px,#d8ab45 138px,#b08a2c 142px,#9a9da7 170px);
   --badge-bg: rgba(255,255,255,0.1);
   --badge-border: rgba(255,255,255,0.15);
   --badge-color: #fff;
@@ -504,6 +510,13 @@ html{scrollbar-gutter:stable}
 /* 处理器卡片：展开时隐藏背景光晕 */
 .card[data-cat-type="processor"].has-img.expanded::before{opacity:0}
 .card-name{font-size:15px;font-weight:450;margin-bottom:8px;line-height:1.3;flex:1;min-width:0;color:var(--text);text-shadow:var(--card-name-shadow);font-family:'SmileySans',sans-serif}
+/* 图片加载态：仅当卡片确有候选图且加载未完成时，标题呈银/金金属扫光；无图卡片不加 .img-loading。
+   渐变沿 45° 轴排列，background-size 取 170/√2≈120.208px 的正方形瓦片；
+   动画把 background-position 沿对角线平移一整块瓦片，终点相位与起点完全重合，循环无接缝。 */
+.card.img-loading .card-name{color:transparent;-webkit-text-fill-color:transparent;background-image:var(--metal-shimmer);background-size:120.208px 120.208px;background-position:0 0;background-repeat:repeat;-webkit-background-clip:text;background-clip:text;text-shadow:none;animation:metalShimmer 2.6s linear infinite}
+/* 估算标记等行内子元素在裁切态下会丢色，加载期间先隐藏，完成后自然恢复 */
+.card.img-loading .card-name>*{visibility:hidden}
+@keyframes metalShimmer{from{background-position:0 0}to{background-position:120.208px -120.208px}}
 .card-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .card-info{flex:1;min-width:0}
 .card[data-summary="power"] .card-name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
@@ -746,7 +759,7 @@ body.has-compare .search-bar-bottom{left:74px}
 @media (min-width:769px){.ex-fab{left:196px}body.has-compare .search-bar-bottom{left:254px}}
 @media (max-width:768px){.ex-fab{left:72px}body.has-compare .search-bar-bottom{left:130px}}
 @media (prefers-reduced-motion:reduce){.search-bar-bottom,.ex-fab,.card::after{transition:none}}
-@media (prefers-reduced-motion:reduce){.card,.card-bg{transition:none}.card:hover{transform:none}.card:hover .card-bg,.card[data-cat-type="processor"]:hover .card-bg{transform:none}.card[data-cat-type="device"].has-img.expanded .card-bg{transform:scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.card,.card-bg{transition:none}.card:hover{transform:none}.card:hover .card-bg,.card[data-cat-type="processor"]:hover .card-bg{transform:none}.card[data-cat-type="device"].has-img.expanded .card-bg{transform:scale(1.1)}.card.img-loading .card-name{animation:none;background-image:none;-webkit-text-fill-color:var(--text2);color:var(--text2)}}
 .ex-dialog .ex-tray{margin:12px 0;gap:6px}
 .ex-dialog .ex-tray .ex-btn{font-size:12px;padding:6px 9px}
 .ex-context{position:fixed;z-index:300;min-width:150px;padding:5px;border-radius:18px}
@@ -1959,6 +1972,7 @@ function buildCardBg(item, isProcessor) {
 function tryLoadImage(bg, candidates, idx, card) {
   if (idx >= candidates.length) {
     // 所有图片都失败，留空白背景
+    stopImgShimmer(card);
     bg.classList.remove('bg-init');
     return;
   }
@@ -1966,6 +1980,7 @@ function tryLoadImage(bg, candidates, idx, card) {
   var srcV = src + '?v=' + IMG_V;
   // JS内存缓存：已加载过的图片直接使用，跳过网络请求
   if (imgCache[srcV]) {
+    stopImgShimmer(card);
     bg.style.backgroundImage = 'url(' + imgCache[srcV] + ')';
     if (card && card.isConnected) card.classList.add('has-img');
     bg.classList.remove('bg-init');
@@ -1979,6 +1994,7 @@ function tryLoadImage(bg, candidates, idx, card) {
   function onSuccess() {
     if (done) return; done = true;
     clearTimeout(timer);
+    stopImgShimmer(card);
     if (!bg.isConnected) return;
     imgCache[srcV] = srcV;
     bg.style.backgroundImage = 'url(' + srcV + ')';
@@ -1990,6 +2006,7 @@ function tryLoadImage(bg, candidates, idx, card) {
   img.onerror = function() {
     if (done) return;
     clearTimeout(timer);
+    // 首个候选常因命名风格不匹配而失败（后续变体仍可能命中），扫光维持到全部候选用完
     tryLoadImage(bg, candidates, idx + 1, card);
   };
   img.src = srcV;
@@ -1997,6 +2014,25 @@ function tryLoadImage(bg, candidates, idx, card) {
 }
 
 var _imgIO = null;
+/* 金属扫光加载态：仅在卡片确有候选图、且请求仍在进行超过一小段时间时启用。
+   候选图快速失败（设备无实图）时会在计时器触发前被 stopImgShimmer 清掉，因此无图卡片不会出现加载动效；
+   内存缓存命中同样立即清除，不会闪烁。 */
+var IMG_SHIMMER_DELAY = 180;
+function startImgShimmer(card) {
+  if (!card || card.dataset.imgShimmerTimer) return;
+  card.dataset.imgShimmerTimer = setTimeout(function() {
+    delete card.dataset.imgShimmerTimer;
+    if (card.isConnected && !card.classList.contains('has-img')) card.classList.add('img-loading');
+  }, IMG_SHIMMER_DELAY);
+}
+function stopImgShimmer(card) {
+  if (!card) return;
+  if (card.dataset.imgShimmerTimer) {
+    clearTimeout(Number(card.dataset.imgShimmerTimer));
+    delete card.dataset.imgShimmerTimer;
+  }
+  card.classList.remove('img-loading');
+}
 function bindImgErrors(container) {
   var els = container.querySelectorAll('.card-bg[data-img-candidates]');
   if (!els.length) return;
@@ -2023,6 +2059,7 @@ function loadImageForBg(bg) {
   try { candidates = JSON.parse(raw); } catch(e) { return; }
   if (!candidates || !candidates.length) return;
   var card = bg.closest('.card');
+  startImgShimmer(card);
   tryLoadImage(bg, candidates, 0, card);
 }
 

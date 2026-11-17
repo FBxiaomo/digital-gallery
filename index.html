@@ -77,7 +77,7 @@
   /* 图片加载中的卡片标题：银/金多段金属渐变。周期 170px 与标题沿 45° 轴的跨度（约 78px）同量级，
      高光会依次扫过文字而不是整行同时变亮；约七成行程停在深灰可读色，银、金各一道窄峰。
      瓦片边长取 170/√2≈120.21px，四边相位对齐，对角平移一个瓦片后与起始帧完全重合，循环无接缝。 */
-  --metal-shimmer: repeating-linear-gradient(45deg,#33353c 0px,#33353c 68px,#6a707a 74px,#949cab 78px,#c8d0de 81px,#949cab 84px,#6a707a 88px,#33353c 94px,#33353c 119px,#6b5216 124px,#8f6a1c 128px,#d4bc7c 131px,#f2e3b4 133px,#d4bc7c 135px,#8f6a1c 138px,#6b5216 142px,#33353c 170px);
+  --metal-shimmer: repeating-linear-gradient(45deg,#33353c 0px,#33353c 68px,#6a707a 74px,#949cab 78px,#c8d0de 81px,#949cab 84px,#6a707a 88px,#33353c 94px,#33353c 119px,#9a8144 124px,#b89a58 128px,#e0cf9e 131px,#f6ecd2 133px,#e0cf9e 135px,#b89a58 138px,#9a8144 142px,#33353c 170px);
   --badge-bg: rgba(0,0,0,0.06);
   --badge-border: rgba(0,0,0,0.08);
   --badge-color: #2c2c2a;
@@ -158,7 +158,7 @@
   --card-glow: rgba(80,80,80,0.4);
   --card-name-shadow: 0 1px 3px rgba(0,0,0,0.6);
   /* 深色卡片：基调抬到中灰，保证 #1a1a1a 卡面上仍有足够亮度与跨度 */
-  --metal-shimmer: repeating-linear-gradient(45deg,#9a9da7 0px,#9a9da7 68px,#b6bac4 74px,#cfd3dc 78px,#f2f5fa 81px,#cfd3dc 84px,#b6bac4 88px,#9a9da7 94px,#9a9da7 119px,#b08a2c 124px,#d8ab45 128px,#f8e2a4 131px,#fff7d6 133px,#f8e2a4 135px,#d8ab45 138px,#b08a2c 142px,#9a9da7 170px);
+  --metal-shimmer: repeating-linear-gradient(45deg,#9a9da7 0px,#9a9da7 68px,#b6bac4 74px,#cfd3dc 78px,#f2f5fa 81px,#cfd3dc 84px,#b6bac4 88px,#9a9da7 94px,#9a9da7 119px,#c0a464 124px,#dcc286 128px,#f4e6c2 131px,#fffaec 133px,#f4e6c2 135px,#dcc286 138px,#c0a464 142px,#9a9da7 170px);
   --badge-bg: rgba(255,255,255,0.1);
   --badge-border: rgba(255,255,255,0.15);
   --badge-color: #fff;
@@ -513,7 +513,7 @@ html{scrollbar-gutter:stable}
 /* 图片加载态：仅当卡片确有候选图且加载未完成时，标题呈银/金金属扫光；无图卡片不加 .img-loading。
    渐变沿 45° 轴排列，background-size 取 170/√2≈120.208px 的正方形瓦片；
    动画把 background-position 沿对角线平移一整块瓦片，终点相位与起点完全重合，循环无接缝。 */
-.card.img-loading .card-name{color:transparent;-webkit-text-fill-color:transparent;background-image:var(--metal-shimmer);background-size:120.208px 120.208px;background-position:0 0;background-repeat:repeat;-webkit-background-clip:text;background-clip:text;text-shadow:none;animation:metalShimmer 2.6s linear infinite}
+.card.img-loading .card-name{color:transparent;-webkit-text-fill-color:transparent;background-image:var(--metal-shimmer);background-size:120.208px 120.208px;background-position:0 0;background-repeat:repeat;-webkit-background-clip:text;background-clip:text;text-shadow:none;animation:metalShimmer 4.2s linear infinite}
 /* 估算标记等行内子元素在裁切态下会丢色，加载期间先隐藏，完成后自然恢复 */
 .card.img-loading .card-name>*{visibility:hidden}
 @keyframes metalShimmer{from{background-position:0 0}to{background-position:120.208px -120.208px}}
